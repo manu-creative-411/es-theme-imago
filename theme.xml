@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme defaultView="Imago">
+	<formatVersion>7</formatVersion>
+	<!-- Order matters: variables (colour set, branding) must be loaded before the layouts that use them. -->
+	<include subset="colorset" name="Black" displayName="Color set: Black">./_inc/colorsets/black.xml</include>
+	<include subset="colorset" name="Light gray" displayName="Color set: Light gray">./_inc/colorsets/light-gray.xml</include>
+	<include subset="colorset" name="Vivid red" displayName="Color set: Vivid red">./_inc/colorsets/vivid-red.xml</include>
+	<include subset="colorset" name="Deep blue" displayName="Color set: Deep blue">./_inc/colorsets/deep-blue.xml</include>
+	<include subset="colorset" name="Aqua green" displayName="Color set: Aqua green">./_inc/colorsets/aqua-green.xml</include>
+	<include subset="colorset" name="GameCube purple" displayName="Color set: GameCube purple">./_inc/colorsets/gamecube-purple.xml</include>
+	<include subset="branding" name="RetroBat" displayName="Branding: RetroBat">./_inc/branding/retrobat.xml</include>
+	<include subset="branding" name="Batocera" displayName="Branding: Batocera">./_inc/branding/batocera.xml</include>
+	<include subset="branding" name="Retrobox" displayName="Branding: Retrobox">./_inc/branding/retrobox.xml</include>
+	<include>./_inc/layout/common.xml</include>
+	<include>./_inc/layout/system-view.xml</include>
+	<include subset="gamerows" name="2 rows" displayName="Game rows: 2">./_inc/layout/gamelist-rows-2.xml</include>
+	<include subset="gamerows" name="1 row" displayName="Game rows: 1">./_inc/layout/gamelist-rows-1.xml</include>
+	<include subset="gamerows" name="3 rows" displayName="Game rows: 3">./_inc/layout/gamelist-rows-3.xml</include>
+	<include subset="gamerows" name="4 rows" displayName="Game rows: 4">./_inc/layout/gamelist-rows-4.xml</include>
+	<include subset="gamerows" name="5 rows" displayName="Game rows: 5">./_inc/layout/gamelist-rows-5.xml</include>
+</theme>

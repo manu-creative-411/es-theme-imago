@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+	<formatVersion>7</formatVersion>
+	<!-- Game list, 1 row(s). Tiles are ordered top-to-bottom, then left-to-right (scrollDirection=horizontal). -->
+	<customView name="Imago" inherits="grid">
+		<!-- Top half: cropped game image fading into the background -->
+		<image name="md_image">
+			<pos>0 0</pos>
+			<minSize>1 0.5</minSize>
+			<zIndex>30</zIndex>
+		</image>
+		<image name="e_fade" extra="true">
+			<path>${themePath}/assets/ui/white.png</path>
+			<pos>0 0.3</pos>
+			<size>1 0.2</size>
+			<color>${bg}00</color>
+			<colorEnd>${bg}</colorEnd>
+			<gradientType>vertical</gradientType>
+			<zIndex>32</zIndex>
+		</image>
+		<!-- Info box (rounded). Name + "developer - year". The marquee, when present, is drawn over it (z 35). -->
+		<ninepatch name="e_box" extra="true">
+			<path>${themePath}/assets/ui/round.png</path>
+			<cornerSize>16 16</cornerSize>
+			<pos>0.290 0.040</pos>
+			<size>0.42 0.170</size>
+			<color>${box}CC</color>
+			<zIndex>33</zIndex>
+		</ninepatch>
+		<text name="md_name">
+			<pos>0.5 0.057</pos>
+			<origin>0.5 0</origin>
+			<size>0.40 0.085</size>
+			<color>${text}</color>
+			<fontSize>0.061</fontSize>
+			<alignment>center</alignment>
+			<zIndex>34</zIndex>
+		</text>
+		<text name="md_developer">
+			<pos>0.494 0.149</pos>
+			<origin>1 0</origin>
+			<size>0.19 0.041</size>
+			<color>${subText}</color>
+			<fontSize>0.032</fontSize>
+			<alignment>right</alignment>
+			<zIndex>34</zIndex>
+		</text>
+		<text name="e_subtitle_sep" extra="true">
+			<text>-</text>
+			<pos>0.5 0.149</pos>
+			<origin>0.5 0</origin>
+			<size>0.012 0.041</size>
+			<color>${subText}</color>
+			<fontSize>0.032</fontSize>
+			<alignment>center</alignment>
+			<zIndex>34</zIndex>
+		</text>
+		<datetime name="md_releasedate">
+			<pos>0.506 0.149</pos>
+			<origin>0 0</origin>
+			<size>0.19 0.041</size>
+			<format>%Y</format>
+			<color>${subText}</color>
+			<fontSize>0.032</fontSize>
+			<alignment>left</alignment>
+			<zIndex>34</zIndex>
+		</datetime>
+		<image name="md_marquee">
+			<pos>0.5 0.040</pos>
+			<origin>0.5 0</origin>
+			<maxSize>0.40 0.170</maxSize>
+			<zIndex>35</zIndex>
+		</image>
+		<imagegrid name="gamegrid">
+			<pos>0.02 0.56</pos>
+			<size>0.96 0.38</size>
+			<autoLayout>5 1</autoLayout>
+			<autoLayoutSelectedZoom>1.08</autoLayoutSelectedZoom>
+			<scrollDirection>horizontal</scrollDirection>
+			<margin>0.004 0.006</margin>
+			<imageSource>thumbnail</imageSource>
+			<centerSelection>false</centerSelection>
+			<scrollLoop>false</scrollLoop>
+			<animateSelection>true</animateSelection>
+			<zIndex>40</zIndex>
+		</imagegrid>
+	</customView>
+</theme>

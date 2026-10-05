@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+	<formatVersion>7</formatVersion>
+	<!-- Colour set: Deep blue. All colours are RRGGBB; alpha is appended where used. -->
+	<variables>
+		<bg>06235E</bg>             <!-- background gradient start (top) -->
+		<bgEnd>0A56D6</bgEnd>       <!-- background gradient end (bottom) -->
+		<tile>0C3C9A</tile>         <!-- unselected tile / folder backdrop -->
+		<accent>FFFFFF</accent>     <!-- selected tile highlight -->
+		<accentText>0A3FA8</accentText> <!-- text drawn on top of the accent colour -->
+		<text>FFFFFF</text>         <!-- primary text -->
+		<subText>BFD5FF</subText>   <!-- secondary text (subtitle, help bar) -->
+		<box>031638</box>           <!-- rounded info box -->
+	</variables>
+</theme>

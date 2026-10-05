@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+	<formatVersion>7</formatVersion>
+	<!-- Colour set: GameCube purple. All colours are RRGGBB; alpha is appended where used. -->
+	<variables>
+		<bg>2A1B6B</bg>             <!-- background gradient start (top) -->
+		<bgEnd>6F4DE0</bgEnd>       <!-- background gradient end (bottom) -->
+		<tile>4B36A8</tile>         <!-- unselected tile / folder backdrop -->
+		<accent>FFFFFF</accent>     <!-- selected tile highlight -->
+		<accentText>3B2893</accentText> <!-- text drawn on top of the accent colour -->
+		<text>FFFFFF</text>         <!-- primary text -->
+		<subText>D8CCFF</subText>   <!-- secondary text (subtitle, help bar) -->
+		<box>170D40</box>           <!-- rounded info box -->
+	</variables>
+</theme>

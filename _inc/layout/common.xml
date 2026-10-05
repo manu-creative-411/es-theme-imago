@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+	<formatVersion>7</formatVersion>
+	<!-- Shared look for every view: background, branding, help bar, tiles, menu. -->
+	<view name="system, grid">
+		<image name="e_bg" extra="true">
+			<path>${themePath}/assets/ui/white.png</path>
+			<pos>0 0</pos>
+			<size>1 1</size>
+			<color>${bg}</color>
+			<colorEnd>${bgEnd}</colorEnd>
+			<gradientType>vertical</gradientType>
+			<zIndex>0</zIndex>
+		</image>
+		<image name="e_brand" extra="true">
+			<path>${brandLogo}</path>
+			<pos>0.02 0.025</pos>
+			<origin>0 0</origin>
+			<maxSize>0.14 0.06</maxSize>
+			<horizontalAlignment>left</horizontalAlignment>
+			<zIndex>60</zIndex>
+		</image>
+		<text name="clock">
+			<pos>0.98 0.03</pos>
+			<origin>1 0</origin>
+			<color>${subText}</color>
+			<fontSize>0.035</fontSize>
+			<alignment>right</alignment>
+		</text>
+		<helpsystem name="help">
+			<pos>0.02 0.955</pos>
+			<textColor>${subText}</textColor>
+			<iconColor>${subText}</iconColor>
+		</helpsystem>
+	</view>
+
+	<!-- Tiles (game icons). The rounded backdrop comes from assets/ui/round.png (nine-patch, 16px corners). -->
+	<view name="grid">
+		<image name="background">
+			<path>${themePath}/assets/ui/white.png</path>
+			<color>${bg}</color>
+			<colorEnd>${bgEnd}</colorEnd>
+			<gradientType>vertical</gradientType>
+		</image>
+		<gridtile name="default">
+			<backgroundImage>${themePath}/assets/ui/round.png</backgroundImage>
+			<backgroundCornerSize>16 16</backgroundCornerSize>
+			<backgroundColor>${tile}</backgroundColor>
+			<imageSizeMode>maxSize</imageSizeMode>
+			<padding>10 10</padding>
+		</gridtile>
+		<gridtile name="selected">
+			<backgroundImage>${themePath}/assets/ui/round.png</backgroundImage>
+			<backgroundCornerSize>16 16</backgroundCornerSize>
+			<backgroundColor>${accent}</backgroundColor>
+			<imageSizeMode>maxSize</imageSizeMode>
+			<padding>10 10</padding>
+		</gridtile>
+	</view>
+
+	<view name="menu">
+		<menuBackground name="menubg">
+			<color>${box}F2</color>
+		</menuBackground>
+		<menuText name="menutext">
+			<color>${text}</color>
+			<selectedColor>${accentText}</selectedColor>
+			<selectorColor>${accent}</selectorColor>
+			<separatorColor>${subText}55</separatorColor>
+		</menuText>
+		<menuText name="menutitle">
+			<color>${text}</color>
+		</menuText>
+		<menuText name="menufooter">
+			<color>${subText}</color>
+		</menuText>
+		<menuTextSmall name="menutextsmall">
+			<color>${subText}</color>
+		</menuTextSmall>
+	</view>
+</theme>
