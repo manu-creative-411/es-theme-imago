@@ -3,13 +3,13 @@
 	<formatVersion>7</formatVersion>
 	<!-- Colour set: Vivid red. All colours are RRGGBB; alpha is appended where used. -->
 	<variables>
-		<bg>7A0010</bg>             <!-- background gradient start (top) -->
-		<bgEnd>E10B24</bgEnd>       <!-- background gradient end (bottom) -->
+		<bg>E10B24</bg>             <!-- flat page background (single colour) -->
 		<tile>A3101F</tile>         <!-- unselected tile / folder backdrop -->
 		<accent>FFFFFF</accent>     <!-- selected tile highlight -->
 		<accentText>B3001A</accentText> <!-- text drawn on top of the accent colour -->
 		<text>FFFFFF</text>         <!-- primary text -->
 		<subText>FFC9CF</subText>   <!-- secondary text (subtitle, help bar) -->
 		<box>4D000A</box>           <!-- rounded info box -->
+			<boxFile>box-vivid-red</boxFile> <!-- assets/ui/box-<set>-h??.svg, default info box -->
 	</variables>
 </theme>

@@ -3,30 +3,38 @@
 	<formatVersion>7</formatVersion>
 	<!-- Game list, 2 row(s). Tiles are ordered top-to-bottom, then left-to-right (scrollDirection=horizontal). -->
 	<customView name="Imago" inherits="grid">
-		<!-- Top half: cropped game image fading into the background -->
+		<!-- Top half: photo cropped to 100% x 50% of the screen (cover, centred). Overflow below 50% is hidden by e_overflow. -->
 		<image name="md_image">
-			<pos>0 0</pos>
+			<pos>0.5 0.25</pos>
+			<origin>0.5 0.5</origin>
 			<minSize>1 0.5</minSize>
 			<zIndex>30</zIndex>
 		</image>
-		<image name="e_fade" extra="true">
+		<image name="e_overflow" extra="true">
 			<path>${themePath}/assets/ui/white.png</path>
-			<pos>0 0.3</pos>
-			<size>1 0.2</size>
-			<color>${bg}00</color>
-			<colorEnd>${bg}</colorEnd>
-			<gradientType>vertical</gradientType>
+			<pos>0 0.5</pos>
+			<size>1 0.5</size>
+			<color>${bg}</color>
+			<zIndex>31</zIndex>
+		</image>
+		<!-- Rounded bottom corners of the photo: 36px @1080p = 0.01875 x 0.03333 of the screen. -->
+		<image name="e_corner_l" extra="true">
+			<path>${themePath}/assets/ui/corner-bl.png</path>
+			<pos>0 0.5</pos>
+			<origin>0 1</origin>
+			<size>0.01875 0.033333</size>
+			<color>${bg}</color>
 			<zIndex>32</zIndex>
 		</image>
-		<!-- Info box (rounded). Name + "developer - year". The marquee, when present, is drawn over it (z 35). -->
-		<ninepatch name="e_box" extra="true">
-			<path>${themePath}/assets/ui/round.png</path>
-			<cornerSize>16 16</cornerSize>
-			<pos>0.290 0.040</pos>
-			<size>0.42 0.170</size>
-			<color>${box}CC</color>
-			<zIndex>33</zIndex>
-		</ninepatch>
+		<image name="e_corner_r" extra="true">
+			<path>${themePath}/assets/ui/corner-br.png</path>
+			<pos>1 0.5</pos>
+			<origin>1 1</origin>
+			<size>0.01875 0.033333</size>
+			<color>${bg}</color>
+			<zIndex>32</zIndex>
+		</image>
+		<!-- Info texts. The rounded box is the DEFAULT of md_marquee, so it is only drawn when the game has no marquee. -->
 		<text name="md_name">
 			<pos>0.5 0.057</pos>
 			<origin>0.5 0</origin>
@@ -66,10 +74,11 @@
 			<zIndex>34</zIndex>
 		</datetime>
 		<image name="md_marquee">
+			<default>${themePath}/assets/ui/${boxFile}-h17.svg</default>
 			<pos>0.5 0.040</pos>
 			<origin>0.5 0</origin>
-			<maxSize>0.40 0.170</maxSize>
-			<zIndex>35</zIndex>
+			<maxSize>0.42 0.170</maxSize>
+			<zIndex>33</zIndex>
 		</image>
 		<imagegrid name="gamegrid">
 			<pos>0.02 0.48</pos>

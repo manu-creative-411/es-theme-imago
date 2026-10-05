@@ -1,23 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <theme>
 	<formatVersion>7</formatVersion>
-	<!-- Shared look for every view: background, branding, help bar, tiles, menu. -->
+	<!-- Shared look for every view: flat background, branding (top-right), help bar, tiles, menu. -->
 	<view name="system, grid">
 		<image name="e_bg" extra="true">
 			<path>${themePath}/assets/ui/white.png</path>
 			<pos>0 0</pos>
 			<size>1 1</size>
 			<color>${bg}</color>
-			<colorEnd>${bgEnd}</colorEnd>
-			<gradientType>vertical</gradientType>
 			<zIndex>0</zIndex>
 		</image>
 		<image name="e_brand" extra="true">
 			<path>${brandLogo}</path>
-			<pos>0.02 0.025</pos>
-			<origin>0 0</origin>
+			<pos>0.915 0.03</pos>
+			<origin>1 0</origin>
 			<maxSize>0.14 0.06</maxSize>
-			<horizontalAlignment>left</horizontalAlignment>
+			<horizontalAlignment>right</horizontalAlignment>
 			<zIndex>60</zIndex>
 		</image>
 		<text name="clock">
@@ -36,12 +34,18 @@
 
 	<!-- Tiles (game icons). The rounded backdrop comes from assets/ui/round.png (nine-patch, 16px corners). -->
 	<view name="grid">
-		<image name="background">
-			<path>${themePath}/assets/ui/white.png</path>
-			<color>${bg}</color>
-			<colorEnd>${bgEnd}</colorEnd>
-			<gradientType>vertical</gradientType>
+		<!-- Console logo: top-left, over the photo. Missing file = nothing is drawn (the header text is hidden). -->
+		<image name="logo">
+			<path>${themePath}/assets/systems/${system.theme}.svg</path>
+			<pos>0.025 0.035</pos>
+			<origin>0 0</origin>
+			<maxSize>0.16 0.08</maxSize>
+			<horizontalAlignment>left</horizontalAlignment>
+			<zIndex>50</zIndex>
 		</image>
+		<text name="logoText">
+			<visible>false</visible>
+		</text>
 		<gridtile name="default">
 			<backgroundImage>${themePath}/assets/ui/round.png</backgroundImage>
 			<backgroundCornerSize>16 16</backgroundCornerSize>

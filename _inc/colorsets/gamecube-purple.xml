@@ -3,13 +3,13 @@
 	<formatVersion>7</formatVersion>
 	<!-- Colour set: GameCube purple. All colours are RRGGBB; alpha is appended where used. -->
 	<variables>
-		<bg>2A1B6B</bg>             <!-- background gradient start (top) -->
-		<bgEnd>6F4DE0</bgEnd>       <!-- background gradient end (bottom) -->
+		<bg>6F4DE0</bg>             <!-- flat page background (single colour) -->
 		<tile>4B36A8</tile>         <!-- unselected tile / folder backdrop -->
 		<accent>FFFFFF</accent>     <!-- selected tile highlight -->
 		<accentText>3B2893</accentText> <!-- text drawn on top of the accent colour -->
 		<text>FFFFFF</text>         <!-- primary text -->
 		<subText>D8CCFF</subText>   <!-- secondary text (subtitle, help bar) -->
 		<box>170D40</box>           <!-- rounded info box -->
+			<boxFile>box-gamecube-purple</boxFile> <!-- assets/ui/box-<set>-h??.svg, default info box -->
 	</variables>
 </theme>

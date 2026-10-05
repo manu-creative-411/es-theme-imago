@@ -3,13 +3,13 @@
 	<formatVersion>7</formatVersion>
 	<!-- Colour set: Aqua green. All colours are RRGGBB; alpha is appended where used. -->
 	<variables>
-		<bg>03665F</bg>             <!-- background gradient start (top) -->
-		<bgEnd>14C9B0</bgEnd>       <!-- background gradient end (bottom) -->
+		<bg>14C9B0</bg>             <!-- flat page background (single colour) -->
 		<tile>0A8F82</tile>         <!-- unselected tile / folder backdrop -->
 		<accent>FFFFFF</accent>     <!-- selected tile highlight -->
 		<accentText>036B62</accentText> <!-- text drawn on top of the accent colour -->
 		<text>FFFFFF</text>         <!-- primary text -->
 		<subText>CFFFF6</subText>   <!-- secondary text (subtitle, help bar) -->
 		<box>013B37</box>           <!-- rounded info box -->
+			<boxFile>box-aqua-green</boxFile> <!-- assets/ui/box-<set>-h??.svg, default info box -->
 	</variables>
 </theme>

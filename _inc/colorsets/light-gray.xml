@@ -3,13 +3,13 @@
 	<formatVersion>7</formatVersion>
 	<!-- Colour set: Light gray. All colours are RRGGBB; alpha is appended where used. -->
 	<variables>
-		<bg>D4D4DA</bg>             <!-- background gradient start (top) -->
-		<bgEnd>F2F2F6</bgEnd>       <!-- background gradient end (bottom) -->
+		<bg>D4D4DA</bg>             <!-- flat page background (single colour) -->
 		<tile>FFFFFF</tile>         <!-- unselected tile / folder backdrop -->
 		<accent>3A3A46</accent>     <!-- selected tile highlight -->
 		<accentText>FFFFFF</accentText> <!-- text drawn on top of the accent colour -->
 		<text>22222B</text>         <!-- primary text -->
 		<subText>6B6B78</subText>   <!-- secondary text (subtitle, help bar) -->
 		<box>FFFFFF</box>           <!-- rounded info box -->
+			<boxFile>box-light-gray</boxFile> <!-- assets/ui/box-<set>-h??.svg, default info box -->
 	</variables>
 </theme>
