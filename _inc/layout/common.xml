@@ -10,6 +10,12 @@
 			<color>${bg}</color>
 			<zIndex>0</zIndex>
 		</image>
+		<image name="e_wallpaper" extra="true">
+			<path>${wallpaper}</path>
+			<pos>0 0</pos>
+			<size>1 1</size>
+			<zIndex>1</zIndex>
+		</image>
 		<image name="e_brand" extra="true">
 			<path>${brandLogo}</path>
 			<pos>0.915 0.03</pos>
@@ -39,7 +45,8 @@
 			<visible>false</visible>
 		</image>
 		<image name="e_logo" extra="true">
-			<path>firstfile("${themePath}/_inc/system_logos/${system.theme}/${tone}-${region}.svg", "${themePath}/_inc/system_logos/${system.theme}/${region}.svg", "${themePath}/_inc/system_logos/${system.theme}/${tone}.svg", "${themePath}/_inc/system_logos/${system.theme}.svg", "${themePath}/_inc/system_logos/${system.theme}/us.svg")</path>
+			<path>${themePath}/_inc/system_logos/${tone}-${region}/${system.theme}.svg</path>
+			<default>${themePath}/_inc/system_logos/${tone}-eu/${system.theme}.svg</default>
 			<pos>0.025 0.035</pos>
 			<origin>0 0</origin>
 			<maxSize>0.16 0.08</maxSize>

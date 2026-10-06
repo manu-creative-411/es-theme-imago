@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+	<formatVersion>7</formatVersion>
+	<!-- Wallpaper OFF: imagen transparente en lugar del fondo (debe cargarse DESPUES de los colorsets). -->
+	<variables>
+		<wallpaper>${themePath}/assets/wallpapers/none.png</wallpaper>
+		<wallpaperB1>${themePath}/assets/wallpapers/none.png</wallpaperB1>
+		<wallpaperB2>${themePath}/assets/wallpapers/none.png</wallpaperB2>
+	</variables>
+</theme>

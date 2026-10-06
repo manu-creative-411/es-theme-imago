@@ -8,14 +8,15 @@
 	<include subset="colorset" name="Deep blue" displayName="Color set: Deep blue">./_inc/colorsets/deep-blue.xml</include>
 	<include subset="colorset" name="Aqua green" displayName="Color set: Aqua green">./_inc/colorsets/aqua-green.xml</include>
 	<include subset="colorset" name="GameCube purple" displayName="Color set: GameCube purple">./_inc/colorsets/gamecube-purple.xml</include>
+	<include subset="wallpaper" name="on" displayName="Wallpaper: on (default)">./_inc/options/wallpaper-on.xml</include>
+	<include subset="wallpaper" name="off" displayName="Wallpaper: off">./_inc/options/wallpaper-off.xml</include>
 	<include subset="branding" name="RetroBat" displayName="Branding: RetroBat">./_inc/branding/retrobat.xml</include>
 	<include subset="branding" name="Batocera" displayName="Branding: Batocera">./_inc/branding/batocera.xml</include>
 	<include subset="branding" name="Retrobox" displayName="Branding: Retrobox">./_inc/branding/retrobox.xml</include>
-	<include subset="logoregion" name="default" displayName="Console logo region: default">./_inc/options/logoregion-default.xml</include>
-	<include subset="logoregion" name="us" displayName="Console logo region: US">./_inc/options/logoregion-us.xml</include>
-	<include subset="logoregion" name="jp" displayName="Console logo region: JP">./_inc/options/logoregion-jp.xml</include>
-	<include subset="logoregion" name="eu" displayName="Console logo region: EU">./_inc/options/logoregion-eu.xml</include>
-	<include subset="logoregion" name="br" displayName="Console logo region: BR">./_inc/options/logoregion-br.xml</include>
+	<include subset="logoregion" name="eu" displayName="Console logo region: Europe (default)">./_inc/options/logoregion-eu.xml</include>
+	<include subset="logoregion" name="us" displayName="Console logo region: USA">./_inc/options/logoregion-us.xml</include>
+	<include subset="logoregion" name="jp" displayName="Console logo region: Japan">./_inc/options/logoregion-jp.xml</include>
+	<include subset="logoregion" name="br" displayName="Console logo region: Brazil">./_inc/options/logoregion-br.xml</include>
 	<include subset="banner" name="on" displayName="Banner: on (1-2 rows)">./_inc/options/banner-on.xml</include>
 	<include subset="banner" name="off" displayName="Banner: off">./_inc/options/banner-off.xml</include>
 	<include>./_inc/layout/common.xml</include>

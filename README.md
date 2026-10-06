@@ -30,11 +30,12 @@ Off, or 3-5 rows: info strip + grid, the grid vertically centred, slightly wider
 Implementation: no ifSubset (it did not filter in Batocera ES). Each option is an include-level subset; the Banner option files define
 the geometry as variables (gY1..gY5, ...) and visibility flags (bVis...) that the layouts read.
 
-## Artwork lookup (first existing file wins)
-- icon (system view tile): _inc/system_icons/<system.theme>.svg
-- console art (system banner; game banner when the game has no image): _inc/system_bg/<region>/<theme>.jpg > <theme>.jpg|png|svg|webp > collections/<theme>.jpg > collections/<system name>.jpg
-- console logo (game list top-left, system banner): _inc/system_logos/<theme>/<tone>-<region>.svg > <region>.svg > <tone>.svg > <theme>.svg > <theme>/us.svg
-  (tone = light for the light-gray set, dark otherwise; region from the option, 'default' skips it)
+## Artwork lookup (rutas simples; `firstfile()` NO funciona en este ES)
+- icon: _inc/system_icons/<system.theme>.svg
+- console art: _inc/system_bg/<system.theme>.jpg
+- console logo: _inc/system_logos/<tone>-<region>/<system.theme>.svg (default: <tone>-none/)
+- Estas carpetas se generan con `python3 tools/build_assets.py` (copia desde system_logos/<theme>/... y system_bg/collections/).
+  Ejecutalo de nuevo cada vez que anadas un logo o fondo nuevo.
 
 ## Known limits / to verify
 - System grid: in Batocera ES the system-view grid is `<imagegrid name="imagegrid">` (confirmed in es-theme-tiled, systemview/grid.xml;
@@ -52,3 +53,11 @@ the geometry as variables (gY1..gY5, ...) and visibility flags (bVis...) that th
 - Logos in assets/branding are placeholders; use the official artwork you are allowed to use.
 
 Renaming the theme = renaming the folder; all paths use `${themePath}` or are relative.
+
+## Wallpapers (assets/wallpapers/)
+- `<name>.svg` 16:9 (p. ej. 1280x720) = fondo a pantalla completa, capa `e_wallpaper` (z 1, sobre el color plano `bg`). **Debe estar aplanado** (sin `<use>`, `<clipPath>`, filtros ni capas ocultas: NanoSVG no los soporta). Si lo exportas de Inkscape: `python3 tools/flatten_svg.py original.svg assets/wallpapers/<nombre>.svg`.
+- Cada colorset elige el suyo en `_inc/colorsets/*.xml` (`wallpaper`, `wallpaperB1`, `wallpaperB2`). Hoy: Black -> `dark.svg`; el resto -> `none.png` (transparente).
+- `<name>-b1.svg` / `-b2.svg` los genera `python3 tools/build_assets.py`: recorte de la zona bajo el banner (1 y 2 filas) para que el fondo sea continuo
+  bajo la foto de consola (capa `e_overflow_wp`, z 31.5). Si cambias `bH1/bH2` en `banner-on.xml`, actualiza `BH` en el script.
+- Opcion de tema `Wallpaper: on/off` (off = usa `none.png`).
+- Para anadir otro: copia `assets/wallpapers/<name>.svg`, ejecuta el script y apunta las 3 variables del colorset a `<name>.svg`, `<name>-b1.svg`, `<name>-b2.svg`.

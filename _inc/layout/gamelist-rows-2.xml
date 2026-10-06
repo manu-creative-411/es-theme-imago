@@ -5,7 +5,7 @@
 	<customView name="Imago" inherits="grid">
 		<!-- BANNER (rows 1-2 only; toggled by the 'Banner' option through ${bVis}) -->
 		<image name="e_hero_default" extra="true">
-			<path>firstfile("${themePath}/_inc/system_bg/${region}/${system.theme}.jpg", "${themePath}/_inc/system_bg/${system.theme}.jpg", "${themePath}/_inc/system_bg/${system.theme}.png", "${themePath}/_inc/system_bg/${system.theme}.svg", "${themePath}/_inc/system_bg/${system.theme}.webp", "${themePath}/_inc/system_bg/collections/${system.theme}.jpg", "${themePath}/_inc/system_bg/collections/${system.name}.jpg")</path>
+			<path>${themePath}/_inc/system_bg/${system.theme}.jpg</path>
 			<visible>${bHeroVis}</visible>
 			<pos>0.5 ${bC2}</pos>
 			<origin>0.5 0.5</origin>
@@ -26,6 +26,13 @@
 			<size>1 ${bR2}</size>
 			<color>${bg}</color>
 			<zIndex>31</zIndex>
+		</image>
+		<image name="e_overflow_wp" extra="true">
+			<visible>${bVis}</visible>
+			<path>${wallpaperB2}</path>
+			<pos>0 ${bH2}</pos>
+			<size>1 ${bR2}</size>
+			<zIndex>31.5</zIndex>
 		</image>
 		<image name="e_corner_l" extra="true">
 			<visible>${bVis}</visible>
