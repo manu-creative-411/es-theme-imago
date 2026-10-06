@@ -21,13 +21,20 @@ assets/branding/                 retrobat.svg, batocera.svg, retrobox.svg (PLACE
 ```
 
 ## Options (UI Settings > Theme Configuration)
-Color set (6) / Branding (3) / System view (grid 1-5 rows or carousel) / Console logo region (default, US, JP, EU) /
-Game list (1-5 rows, with or without banner: 10 values). Then pick the **Imago** gamelist view.
-No ifSubset is used: it did not filter in Batocera ES (all variants got merged), so every option is an include-level subset.
+Color set (6) / Branding (3) / Console logo region (default, US, JP, EU, BR) / Banner (on, off) / System view (grid 1-5 rows, carousel) /
+Game list (1-5 rows). Then pick the **Imago** gamelist view.
 
-## Game list, top to bottom
-photo banner + marquee (or rounded box with the name when the game has no marquee) > info strip
-(name 2-33% | developer from 34% | year from 50%, three text shades) > grid. Name truncates with "..." (no horizontal text scroll in this ES).
+## Banner
+Only exists with 1 or 2 rows (system view and game list). On: bottom-anchored grid, info strip above it, banner above the strip with a gap.
+Off, or 3-5 rows: info strip + grid, the grid vertically centred, slightly wider column spacing.
+Implementation: no ifSubset (it did not filter in Batocera ES). Each option is an include-level subset; the Banner option files define
+the geometry as variables (gY1..gY5, ...) and visibility flags (bVis...) that the layouts read.
+
+## Artwork lookup (first existing file wins)
+- icon (system view tile): _inc/system_icons/<system.theme>.svg
+- console art (system banner; game banner when the game has no image): _inc/system_bg/<region>/<theme>.jpg > <theme>.jpg|png|svg|webp > collections/<theme>.jpg > collections/<system name>.jpg
+- console logo (game list top-left, system banner): _inc/system_logos/<theme>/<tone>-<region>.svg > <region>.svg > <tone>.svg > <theme>.svg > <theme>/us.svg
+  (tone = light for the light-gray set, dark otherwise; region from the option, 'default' skips it)
 
 ## Known limits / to verify
 - System grid: in Batocera ES the system-view grid is `<imagegrid name="imagegrid">` (confirmed in es-theme-tiled, systemview/grid.xml;

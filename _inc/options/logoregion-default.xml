@@ -2,6 +2,6 @@
 <theme>
 	<formatVersion>7</formatVersion>
 	<variables>
-		<region>none</region> <!-- 'none' = no regional logo, falls back to <tone>/generic -->
+		<region>none</region> <!-- 'none' = no regional variant -->
 	</variables>
 </theme>

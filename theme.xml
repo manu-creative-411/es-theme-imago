@@ -15,21 +15,19 @@
 	<include subset="logoregion" name="us" displayName="Console logo region: US">./_inc/options/logoregion-us.xml</include>
 	<include subset="logoregion" name="jp" displayName="Console logo region: JP">./_inc/options/logoregion-jp.xml</include>
 	<include subset="logoregion" name="eu" displayName="Console logo region: EU">./_inc/options/logoregion-eu.xml</include>
+	<include subset="logoregion" name="br" displayName="Console logo region: BR">./_inc/options/logoregion-br.xml</include>
+	<include subset="banner" name="on" displayName="Banner: on (1-2 rows)">./_inc/options/banner-on.xml</include>
+	<include subset="banner" name="off" displayName="Banner: off">./_inc/options/banner-off.xml</include>
 	<include>./_inc/layout/common.xml</include>
 	<include subset="systemview" name="Grid 2 rows" displayName="System view: grid, 2 rows">./_inc/layout/system-grid-rows-2.xml</include>
 	<include subset="systemview" name="Grid 1 row" displayName="System view: grid, 1 row">./_inc/layout/system-grid-rows-1.xml</include>
 	<include subset="systemview" name="Grid 3 rows" displayName="System view: grid, 3 rows">./_inc/layout/system-grid-rows-3.xml</include>
 	<include subset="systemview" name="Grid 4 rows" displayName="System view: grid, 4 rows">./_inc/layout/system-grid-rows-4.xml</include>
 	<include subset="systemview" name="Grid 5 rows" displayName="System view: grid, 5 rows">./_inc/layout/system-grid-rows-5.xml</include>
-	<include subset="systemview" name="Carousel" displayName="System view: single-row carousel (fallback)">./_inc/layout/system-carousel.xml</include>
-	<include subset="gamelist" name="2 rows, banner" displayName="Game list: 2 rows, banner">./_inc/layout/gamelist-2-banner.xml</include>
-	<include subset="gamelist" name="2 rows, no banner" displayName="Game list: 2 rows, no banner">./_inc/layout/gamelist-2-plain.xml</include>
-	<include subset="gamelist" name="1 row, banner" displayName="Game list: 1 row, banner">./_inc/layout/gamelist-1-banner.xml</include>
-	<include subset="gamelist" name="1 row, no banner" displayName="Game list: 1 row, no banner">./_inc/layout/gamelist-1-plain.xml</include>
-	<include subset="gamelist" name="3 rows, banner" displayName="Game list: 3 rows, banner">./_inc/layout/gamelist-3-banner.xml</include>
-	<include subset="gamelist" name="3 rows, no banner" displayName="Game list: 3 rows, no banner">./_inc/layout/gamelist-3-plain.xml</include>
-	<include subset="gamelist" name="4 rows, banner" displayName="Game list: 4 rows, banner">./_inc/layout/gamelist-4-banner.xml</include>
-	<include subset="gamelist" name="4 rows, no banner" displayName="Game list: 4 rows, no banner">./_inc/layout/gamelist-4-plain.xml</include>
-	<include subset="gamelist" name="5 rows, banner" displayName="Game list: 5 rows, banner">./_inc/layout/gamelist-5-banner.xml</include>
-	<include subset="gamelist" name="5 rows, no banner" displayName="Game list: 5 rows, no banner">./_inc/layout/gamelist-5-plain.xml</include>
+	<include subset="systemview" name="Carousel" displayName="System view: carousel (1 row, no banner)">./_inc/layout/system-carousel.xml</include>
+	<include subset="gamerows" name="2 rows" displayName="Game list: 2 rows">./_inc/layout/gamelist-rows-2.xml</include>
+	<include subset="gamerows" name="1 row" displayName="Game list: 1 row">./_inc/layout/gamelist-rows-1.xml</include>
+	<include subset="gamerows" name="3 rows" displayName="Game list: 3 rows">./_inc/layout/gamelist-rows-3.xml</include>
+	<include subset="gamerows" name="4 rows" displayName="Game list: 4 rows">./_inc/layout/gamelist-rows-4.xml</include>
+	<include subset="gamerows" name="5 rows" displayName="Game list: 5 rows">./_inc/layout/gamelist-rows-5.xml</include>
 </theme>

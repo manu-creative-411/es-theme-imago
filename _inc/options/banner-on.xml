@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+	<formatVersion>7</formatVersion>
+	<!-- Banner ON (only used by the 1- and 2-row layouts). Geometry of every row count, as variables. -->
+	<variables>
+		<gY1>0.600</gY1>
+		<gH1>0.340</gH1>
+		<gC1>5</gC1>
+		<gM1>0.004 0.006</gM1>
+		<gT1>0.535</gT1>
+		<gU1>0.539</gU1>
+		<gY2>0.480</gY2>
+		<gH2>0.460</gH2>
+		<gC2>7</gC2>
+		<gM2>0.004 0.006</gM2>
+		<gT2>0.415</gT2>
+		<gU2>0.419</gU2>
+		<gY3>0.197</gY3>
+		<gH3>0.660</gH3>
+		<gC3>8</gC3>
+		<gM3>0.010 0.006</gM3>
+		<gT3>0.132</gT3>
+		<gU3>0.136</gU3>
+		<gY4>0.197</gY4>
+		<gH4>0.720</gH4>
+		<gC4>9</gC4>
+		<gM4>0.010 0.006</gM4>
+		<gT4>0.132</gT4>
+		<gU4>0.136</gU4>
+		<gY5>0.197</gY5>
+		<gH5>0.740</gH5>
+		<gC5>12</gC5>
+		<gM5>0.010 0.006</gM5>
+		<gT5>0.132</gT5>
+		<gU5>0.136</gU5>
+		<bH1>0.506</bH1>
+		<bC1>0.253</bC1>
+		<bR1>0.494</bR1>
+		<bY1>0.040</bY1>
+		<bB1>0.170</bB1>
+		<bCY1>0.125</bCY1>
+		<bFS1>0.058</bFS1>
+		<bF1>h17</bF1>
+		<bH2>0.386</bH2>
+		<bC2>0.193</bC2>
+		<bR2>0.614</bR2>
+		<bY2>0.040</bY2>
+		<bB2>0.170</bB2>
+		<bCY2>0.125</bCY2>
+		<bFS2>0.058</bFS2>
+		<bF2>h17</bF2>
+		<bVis>true</bVis>
+		<bHeroVis>!exists({game:image})</bHeroVis>
+		<bNameVis>!exists({game:marquee})</bNameVis>
+	</variables>
+</theme>

@@ -34,13 +34,12 @@
 
 	<!-- Tiles (game icons). The rounded backdrop comes from assets/ui/round.png (nine-patch, 16px corners). -->
 	<view name="grid">
-		<!-- Console logo, top-left. First existing file wins (most specific first):
-		     _inc/system_logos/<system>/<scheme>-<region>.svg  >  <system>/<tone>.svg  >  <system>.svg -->
+		<!-- Console logo, top-left. First existing file wins (_inc/system_logos): <sys>/<tone>-<region>.svg > <sys>/<region>.svg > <sys>/<tone>.svg > <sys>.svg > <sys>/us.svg -->
 		<image name="logo">
 			<visible>false</visible>
 		</image>
 		<image name="e_logo" extra="true">
-			<path>firstfile("${themePath}/_inc/system_logos/${system.theme}/${scheme}-${region}.svg", "${themePath}/_inc/system_logos/${system.theme}/${tone}.svg", "${themePath}/_inc/system_logos/${system.theme}.svg")</path>
+			<path>firstfile("${themePath}/_inc/system_logos/${system.theme}/${tone}-${region}.svg", "${themePath}/_inc/system_logos/${system.theme}/${region}.svg", "${themePath}/_inc/system_logos/${system.theme}/${tone}.svg", "${themePath}/_inc/system_logos/${system.theme}.svg", "${themePath}/_inc/system_logos/${system.theme}/us.svg")</path>
 			<pos>0.025 0.035</pos>
 			<origin>0 0</origin>
 			<maxSize>0.16 0.08</maxSize>

@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <theme>
 	<formatVersion>7</formatVersion>
-	<!-- System view, 5 row(s): horizontal scrolling grid of square system icons.
-	     Element name per Batocera ES (es-theme-tiled systemview/grid.xml): <imagegrid name="imagegrid">.
-	     Tiles use gridtile + the system 'logo' image (no itemTemplate). -->
+	<!-- System view, 5 row(s): [banner: console art + logo] / info strip / icon grid. -->
 	<view name="system">
 		<imagegrid name="imagegrid">
-			<pos>0.02 0.220</pos>
-			<size>0.96 0.720</size>
-			<autoLayout>12 5</autoLayout>
+			<pos>0.02 ${gY5}</pos>
+			<size>0.96 ${gH5}</size>
+			<autoLayout>${gC5} 5</autoLayout>
+			<margin>${gM5}</margin>
 			<autoLayoutSelectedZoom>1.08</autoLayoutSelectedZoom>
 			<scrollDirection>horizontal</scrollDirection>
-			<margin>0.004 0.006</margin>
 			<centerSelection>false</centerSelection>
 			<scrollLoop>false</scrollLoop>
 			<animateSelection>true</animateSelection>
@@ -31,7 +29,7 @@
 			<imageSizeMode>maxSize</imageSizeMode>
 			<padding>10 10</padding>
 		</gridtile>
-		<!-- Tile content: same mechanism as before (per-system logo, text fallback). Icons: _inc/system_icons/<system.theme>.svg -->
+		<!-- Tile content: system icon (_inc/system_icons/<system.theme>.svg), text fallback -->
 		<image name="logo">
 			<path>${themePath}/_inc/system_icons/${system.theme}.svg</path>
 		</image>
@@ -40,31 +38,45 @@
 			<fontSize>0.04</fontSize>
 			<forceUppercase>true</forceUppercase>
 		</text>
-		<!-- Console art (_inc/system_bg/<system>.png|svg|jpg|webp), per system -->
-		<image name="e_hero" extra="true">
-			<path>firstfile("${themePath}/_inc/system_bg/${system.theme}.png", "${themePath}/_inc/system_bg/${system.theme}.svg", "${themePath}/_inc/system_bg/${system.theme}.jpg", "${themePath}/_inc/system_bg/${system.theme}.webp")</path>
-			<pos>0.5 0.120</pos>
-			<origin>0.5 0</origin>
-			<maxSize>0.6 0.040</maxSize>
-			<zIndex>30</zIndex>
-		</image>
-		<text name="e_system_name" extra="true">
+		<!-- Info strip: system name | manufacturer | release year | game count -->
+		<text name="e_sys_name" extra="true">
 			<text>${system.fullName}</text>
-			<pos>0.5 0.110</pos>
-			<origin>0.5 0</origin>
-			<size>0.9 0.045</size>
+			<pos>0.02 ${gT5}</pos>
+			<origin>0 0</origin>
+			<size>0.31 0.036</size>
 			<color>${text}</color>
-			<fontSize>0.045</fontSize>
-			<alignment>center</alignment>
+			<fontSize>0.036</fontSize>
+			<alignment>left</alignment>
+			<zIndex>45</zIndex>
+		</text>
+		<text name="e_sys_maker" extra="true">
+			<text>${system.manufacturer}</text>
+			<pos>0.34 ${gU5}</pos>
+			<origin>0 0</origin>
+			<size>0.15 0.030</size>
+			<color>${subText}</color>
+			<fontSize>0.030</fontSize>
+			<alignment>left</alignment>
+			<zIndex>45</zIndex>
+		</text>
+		<text name="e_sys_year" extra="true">
+			<text>${system.releaseYear}</text>
+			<pos>0.50 ${gU5}</pos>
+			<origin>0 0</origin>
+			<size>0.12 0.030</size>
+			<color>${dimText}</color>
+			<fontSize>0.030</fontSize>
+			<alignment>left</alignment>
 			<zIndex>45</zIndex>
 		</text>
 		<text name="systemInfo">
-			<pos>0.5 0.170</pos>
-			<origin>0.5 0</origin>
-			<size>0.8 0.028</size>
-			<color>${subText}</color>
-			<fontSize>0.028</fontSize>
-			<alignment>center</alignment>
+			<pos>0.64 ${gU5}</pos>
+			<origin>0 0</origin>
+			<size>0.20 0.030</size>
+			<color>${dimText}</color>
+			<fontSize>0.030</fontSize>
+			<alignment>left</alignment>
+			<zIndex>45</zIndex>
 		</text>
 	</view>
 </theme>
