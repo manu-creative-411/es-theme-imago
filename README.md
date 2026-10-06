@@ -5,29 +5,35 @@ Format version 7 (batocera-emulationstation).
 
 ## Layout
 ```
-theme.xml                      entry point; declares the options (subsets)
-_inc/colorsets/*.xml           6 colour palettes (variables only)
-_inc/branding/*.xml            brand logo selection (variables only)
-_inc/layout/common.xml         background, brand logo, clock, help bar, tiles, menu
-_inc/layout/system-view.xml    system view (icon carousel)
-_inc/layout/gamelist-rows-N.xml  game list with N rows (1..5)
-assets/ui/                     white.png (flat fills), round.png (9-patch), corner-bl/br.png (photo corner masks),
-                               box-<colorset>-h12|h15|h17.svg (default info box, one per palette/height)
-assets/branding/               retrobat.svg, batocera.svg, retrobox.svg (PLACEHOLDERS)
-assets/systems/                <system>.svg, one per system (drawn by hand)
+theme.xml                        entry point; declares the options (subsets)
+_inc/colorsets/*.xml             6 palettes (variables: bg, tile, accent, text, subText, dimText, box, tone, scheme)
+_inc/branding/*.xml              brand logo selection (variables only)
+_inc/options/                    variable files for the 'Console logo region' option
+_inc/layout/common.xml           background, brand, clock, help, tiles, console logo (top-left), menu
+_inc/layout/system-grid-rows-N.xml  system view: icon grid, N rows (1..5)
+_inc/layout/system-carousel.xml  system view: single-row carousel (fallback option)
+_inc/layout/gamelist-N-banner.xml | gamelist-N-plain.xml   game list, N rows (1..5), with / without the photo+marquee banner
+_inc/system_icons/               <system>.svg         square icon of each system (system view tiles)
+_inc/system_bg/                  <system>.png|svg|jpg Carbon console art (system view; fallback for games without image)
+_inc/system_logos/               console logo, see README.txt there (scheme-region > tone > generic)
+assets/ui/                       white.png, round.png, corner-bl/br.png, box-<set>-h12|h15|h17.svg
+assets/branding/                 retrobat.svg, batocera.svg, retrobox.svg (PLACEHOLDERS)
 ```
 
 ## Options (UI Settings > Theme Configuration)
-Color set (6) / Branding (3) / Game rows (1-5). Then pick the **Imago** gamelist view.
+Color set (6) / Branding (3) / System view (grid 1-5 rows or carousel) / Console logo region (default, US, JP, EU) /
+Game list (1-5 rows, with or without banner: 10 values). Then pick the **Imago** gamelist view.
+No ifSubset is used: it did not filter in Batocera ES (all variants got merged), so every option is an include-level subset.
 
-## System icons
-Name them after the system's `<theme>` tag in es_systems.cfg: `assets/systems/snes.svg`, `assets/systems/psx.svg`...
-If a file is missing, the system name is shown as text.
+## Game list, top to bottom
+photo banner + marquee (or rounded box with the name when the game has no marquee) > info strip
+(name 2-33% | developer from 34% | year from 50%, three text shades) > grid. Name truncates with "..." (no horizontal text scroll in this ES).
 
 ## Known limits / to verify
-- System view is a single-row carousel: stock ES has no multi-row grid for systems.
-- Info box: it is the `default` image of `md_marquee`, so it only appears when the game has NO marquee.
-  The name/developer/year texts cannot be hidden from XML: with a marquee they are still drawn (z 34) under it.
+- System grid: in Batocera ES the system-view grid is `<imagegrid name="imagegrid">` (confirmed in es-theme-tiled, systemview/grid.xml;
+  `systemgrid` and `systemcarousel` do NOT work: the latter logs "mismatched theme type ... expected carousel").
+  Still unverified: tile image source (assumed `<image name="logo">`), `autoLayout`/`scrollDirection` support in this view.
+  Carousel stays as fallback.
 - Photo crop: `md_image` uses minSize 1x0.5 centred; overflow below 50% is covered by `e_overflow`; the bottom corners
   (36px @1080p) are bg-coloured masks (corner-bl/br.png).
 - Console logo: `assets/systems/<system.theme>.svg`, top-left over the photo; the header text is hidden.

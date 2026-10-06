@@ -1,89 +1,116 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <theme>
 	<formatVersion>7</formatVersion>
-	<!-- Game list, 2 row(s). Tiles are ordered top-to-bottom, then left-to-right (scrollDirection=horizontal). -->
+	<!-- Game list, 2 row(s). ONE customView; the 'Top banner' option (topbanner:image|marquee|none) switches elements/properties with ifSubset, as es-theme-tiled does. -->
 	<customView name="Imago" inherits="grid">
-		<!-- Top half: photo cropped to 100% x 50% of the screen (cover, centred). Overflow below 50% is hidden by e_overflow. -->
-		<image name="md_image">
-			<pos>0.5 0.25</pos>
+		<!-- Top banner (mode 'image'): photo cropped to 100% x 0.386; console art when the game has no image -->
+		<image name="e_hero_default" extra="true" ifSubset="topbanner:image">
+			<path>firstfile("${themePath}/_inc/system_bg/${system.theme}.png", "${themePath}/_inc/system_bg/${system.theme}.svg", "${themePath}/_inc/system_bg/${system.theme}.jpg", "${themePath}/_inc/system_bg/${system.theme}.webp")</path>
+			<visible>!exists({game:image})</visible>
+			<pos>0.5 0.193</pos>
 			<origin>0.5 0.5</origin>
-			<minSize>1 0.5</minSize>
+			<maxSize>1 0.386</maxSize>
+			<zIndex>29</zIndex>
+		</image>
+		<image name="md_image" ifSubset="topbanner:image">
+			<pos>0.5 0.193</pos>
+			<origin>0.5 0.5</origin>
+			<minSize>1 0.386</minSize>
 			<zIndex>30</zIndex>
 		</image>
-		<image name="e_overflow" extra="true">
+		<image name="e_overflow" extra="true" ifSubset="topbanner:image">
 			<path>${themePath}/assets/ui/white.png</path>
-			<pos>0 0.5</pos>
-			<size>1 0.5</size>
+			<pos>0 0.386</pos>
+			<size>1 0.614</size>
 			<color>${bg}</color>
 			<zIndex>31</zIndex>
 		</image>
-		<!-- Rounded bottom corners of the photo: 36px @1080p = 0.01875 x 0.03333 of the screen. -->
-		<image name="e_corner_l" extra="true">
+		<image name="e_corner_l" extra="true" ifSubset="topbanner:image">
 			<path>${themePath}/assets/ui/corner-bl.png</path>
-			<pos>0 0.5</pos>
+			<pos>0 0.386</pos>
 			<origin>0 1</origin>
 			<size>0.01875 0.033333</size>
 			<color>${bg}</color>
 			<zIndex>32</zIndex>
 		</image>
-		<image name="e_corner_r" extra="true">
+		<image name="e_corner_r" extra="true" ifSubset="topbanner:image">
 			<path>${themePath}/assets/ui/corner-br.png</path>
-			<pos>1 0.5</pos>
+			<pos>1 0.386</pos>
 			<origin>1 1</origin>
 			<size>0.01875 0.033333</size>
 			<color>${bg}</color>
 			<zIndex>32</zIndex>
 		</image>
-		<!-- Info texts. The rounded box is the DEFAULT of md_marquee, so it is only drawn when the game has no marquee. -->
-		<text name="md_name">
-			<pos>0.5 0.057</pos>
+		<!-- Marquee; without one, the rounded box (default image) shows with the game name over it -->
+		<image name="md_marquee" ifSubset="topbanner:image|marquee">
+			<default ifSubset="topbanner:image">${themePath}/assets/ui/${boxFile}-h17.svg</default>
+			<default ifSubset="topbanner:marquee">${themePath}/assets/ui/${boxFile}-h12.svg</default>
+			<pos ifSubset="topbanner:image">0.5 0.040</pos>
+			<pos ifSubset="topbanner:marquee">0.5 0.146</pos>
 			<origin>0.5 0</origin>
-			<size>0.40 0.085</size>
+			<maxSize ifSubset="topbanner:image">0.42 0.170</maxSize>
+			<maxSize ifSubset="topbanner:marquee">0.42 0.120</maxSize>
+			<zIndex>35</zIndex>
+		</image>
+		<text name="e_box_name" extra="true" ifSubset="topbanner:image|marquee">
+			<text>{game:name}</text>
+			<visible>!exists({game:marquee})</visible>
+			<pos ifSubset="topbanner:image">0.5 0.125</pos>
+			<pos ifSubset="topbanner:marquee">0.5 0.206</pos>
+			<origin>0.5 0.5</origin>
+			<size ifSubset="topbanner:image">0.38 0.058</size>
+			<size ifSubset="topbanner:marquee">0.38 0.041</size>
 			<color>${text}</color>
-			<fontSize>0.061</fontSize>
+			<fontSize ifSubset="topbanner:image">0.058</fontSize>
+			<fontSize ifSubset="topbanner:marquee">0.041</fontSize>
 			<alignment>center</alignment>
-			<zIndex>34</zIndex>
+			<zIndex>36</zIndex>
+		</text>
+		<!-- Info strip: name (2-33%, ellipsis) | developer (from 34%) | year (from 50%) -->
+		<text name="md_name">
+			<pos ifSubset="topbanner:image">0.02 0.415</pos>
+			<pos ifSubset="topbanner:marquee">0.02 0.295</pos>
+			<pos ifSubset="topbanner:none">0.02 0.295</pos>
+			<origin>0 0</origin>
+			<size>0.31 0.036</size>
+			<color>${text}</color>
+			<fontSize>0.036</fontSize>
+			<alignment>left</alignment>
+			<zIndex>45</zIndex>
 		</text>
 		<text name="md_developer">
-			<pos>0.494 0.149</pos>
-			<origin>1 0</origin>
-			<size>0.19 0.041</size>
+			<pos ifSubset="topbanner:image">0.34 0.419</pos>
+			<pos ifSubset="topbanner:marquee">0.34 0.299</pos>
+			<pos ifSubset="topbanner:none">0.34 0.299</pos>
+			<origin>0 0</origin>
+			<size>0.15 0.030</size>
 			<color>${subText}</color>
-			<fontSize>0.032</fontSize>
-			<alignment>right</alignment>
-			<zIndex>34</zIndex>
-		</text>
-		<text name="e_subtitle_sep" extra="true">
-			<text>-</text>
-			<pos>0.5 0.149</pos>
-			<origin>0.5 0</origin>
-			<size>0.012 0.041</size>
-			<color>${subText}</color>
-			<fontSize>0.032</fontSize>
-			<alignment>center</alignment>
-			<zIndex>34</zIndex>
+			<fontSize>0.030</fontSize>
+			<alignment>left</alignment>
+			<zIndex>45</zIndex>
 		</text>
 		<datetime name="md_releasedate">
-			<pos>0.506 0.149</pos>
+			<pos ifSubset="topbanner:image">0.50 0.419</pos>
+			<pos ifSubset="topbanner:marquee">0.50 0.299</pos>
+			<pos ifSubset="topbanner:none">0.50 0.299</pos>
 			<origin>0 0</origin>
-			<size>0.19 0.041</size>
+			<size>0.12 0.030</size>
 			<format>%Y</format>
-			<color>${subText}</color>
-			<fontSize>0.032</fontSize>
+			<color>${dimText}</color>
+			<fontSize>0.030</fontSize>
 			<alignment>left</alignment>
-			<zIndex>34</zIndex>
+			<zIndex>45</zIndex>
 		</datetime>
-		<image name="md_marquee">
-			<default>${themePath}/assets/ui/${boxFile}-h17.svg</default>
-			<pos>0.5 0.040</pos>
-			<origin>0.5 0</origin>
-			<maxSize>0.42 0.170</maxSize>
-			<zIndex>33</zIndex>
-		</image>
 		<imagegrid name="gamegrid">
-			<pos>0.02 0.48</pos>
-			<size>0.96 0.46</size>
-			<autoLayout>7 2</autoLayout>
+			<pos ifSubset="topbanner:image">0.02 0.480</pos>
+			<pos ifSubset="topbanner:marquee">0.02 0.360</pos>
+			<pos ifSubset="topbanner:none">0.02 0.360</pos>
+			<size ifSubset="topbanner:image">0.96 0.460</size>
+			<size ifSubset="topbanner:marquee">0.96 0.580</size>
+			<size ifSubset="topbanner:none">0.96 0.580</size>
+			<autoLayout ifSubset="topbanner:image">7 2</autoLayout>
+			<autoLayout ifSubset="topbanner:marquee">6 2</autoLayout>
+			<autoLayout ifSubset="topbanner:none">6 2</autoLayout>
 			<autoLayoutSelectedZoom>1.08</autoLayoutSelectedZoom>
 			<scrollDirection>horizontal</scrollDirection>
 			<margin>0.004 0.006</margin>

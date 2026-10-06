@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+	<formatVersion>7</formatVersion>
+	<!-- System view, 3 row(s): horizontal scrolling grid of square system icons.
+	     Element name per Batocera ES (es-theme-tiled systemview/grid.xml): <imagegrid name="imagegrid">.
+	     Tiles use gridtile + the system 'logo' image (no itemTemplate). -->
+	<view name="system">
+		<imagegrid name="imagegrid">
+			<pos>0.02 0.340</pos>
+			<size>0.96 0.600</size>
+			<autoLayout>9 3</autoLayout>
+			<autoLayoutSelectedZoom>1.08</autoLayoutSelectedZoom>
+			<scrollDirection>horizontal</scrollDirection>
+			<margin>0.004 0.006</margin>
+			<centerSelection>false</centerSelection>
+			<scrollLoop>false</scrollLoop>
+			<animateSelection>true</animateSelection>
+			<zIndex>40</zIndex>
+		</imagegrid>
+		<gridtile name="default">
+			<backgroundImage>${themePath}/assets/ui/round.png</backgroundImage>
+			<backgroundCornerSize>16 16</backgroundCornerSize>
+			<backgroundColor>${tile}</backgroundColor>
+			<imageSizeMode>maxSize</imageSizeMode>
+			<padding>10 10</padding>
+		</gridtile>
+		<gridtile name="selected">
+			<backgroundImage>${themePath}/assets/ui/round.png</backgroundImage>
+			<backgroundCornerSize>16 16</backgroundCornerSize>
+			<backgroundColor>${accent}</backgroundColor>
+			<imageSizeMode>maxSize</imageSizeMode>
+			<padding>10 10</padding>
+		</gridtile>
+		<!-- Tile content: same mechanism as before (per-system logo, text fallback). Icons: _inc/system_icons/<system.theme>.svg -->
+		<image name="logo">
+			<path>${themePath}/_inc/system_icons/${system.theme}.svg</path>
+		</image>
+		<text name="logoText">
+			<color>${text}</color>
+			<fontSize>0.04</fontSize>
+			<forceUppercase>true</forceUppercase>
+		</text>
+		<!-- Console art (_inc/system_bg/<system>.png|svg|jpg|webp), per system -->
+		<image name="e_hero" extra="true">
+			<path>firstfile("${themePath}/_inc/system_bg/${system.theme}.png", "${themePath}/_inc/system_bg/${system.theme}.svg", "${themePath}/_inc/system_bg/${system.theme}.jpg", "${themePath}/_inc/system_bg/${system.theme}.webp")</path>
+			<pos>0.5 0.120</pos>
+			<origin>0.5 0</origin>
+			<maxSize>0.6 0.095</maxSize>
+			<zIndex>30</zIndex>
+		</image>
+		<text name="e_system_name" extra="true">
+			<text>${system.fullName}</text>
+			<pos>0.5 0.230</pos>
+			<origin>0.5 0</origin>
+			<size>0.9 0.045</size>
+			<color>${text}</color>
+			<fontSize>0.045</fontSize>
+			<alignment>center</alignment>
+			<zIndex>45</zIndex>
+		</text>
+		<text name="systemInfo">
+			<pos>0.5 0.290</pos>
+			<origin>0.5 0</origin>
+			<size>0.8 0.028</size>
+			<color>${subText}</color>
+			<fontSize>0.028</fontSize>
+			<alignment>center</alignment>
+		</text>
+	</view>
+</theme>

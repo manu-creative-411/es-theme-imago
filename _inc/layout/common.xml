@@ -34,9 +34,13 @@
 
 	<!-- Tiles (game icons). The rounded backdrop comes from assets/ui/round.png (nine-patch, 16px corners). -->
 	<view name="grid">
-		<!-- Console logo: top-left, over the photo. Missing file = nothing is drawn (the header text is hidden). -->
+		<!-- Console logo, top-left. First existing file wins (most specific first):
+		     _inc/system_logos/<system>/<scheme>-<region>.svg  >  <system>/<tone>.svg  >  <system>.svg -->
 		<image name="logo">
-			<path>${themePath}/assets/systems/${system.theme}.svg</path>
+			<visible>false</visible>
+		</image>
+		<image name="e_logo" extra="true">
+			<path>firstfile("${themePath}/_inc/system_logos/${system.theme}/${scheme}-${region}.svg", "${themePath}/_inc/system_logos/${system.theme}/${tone}.svg", "${themePath}/_inc/system_logos/${system.theme}.svg")</path>
 			<pos>0.025 0.035</pos>
 			<origin>0 0</origin>
 			<maxSize>0.16 0.08</maxSize>

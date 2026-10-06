@@ -11,5 +11,11 @@
 		<subText>D8CCFF</subText>   <!-- secondary text (subtitle, help bar) -->
 		<box>170D40</box>           <!-- rounded info box -->
 			<boxFile>box-gamecube-purple</boxFile> <!-- assets/ui/box-<set>-h??.svg, default info box -->
+		<dimText>A592F0</dimText>   <!-- tertiary text (year column) -->
+		<tone>dark</tone>         <!-- light|dark: picks _inc/system_logos/<system>/<tone>.svg -->
+		<scheme>gamecube-purple</scheme>     <!-- picks _inc/system_logos/<system>/<scheme>-<region>.svg -->
+		<dimText>A592F0</dimText>   <!-- tertiary text (year column) -->
+		<tone>dark</tone>         <!-- light|dark: picks _inc/system_logos/<system>/<tone>.svg -->
+		<scheme>gamecube-purple</scheme>     <!-- picks _inc/system_logos/<system>/<scheme>-<region>.svg -->
 	</variables>
 </theme>

@@ -11,5 +11,11 @@
 		<subText>6B6B78</subText>   <!-- secondary text (subtitle, help bar) -->
 		<box>FFFFFF</box>           <!-- rounded info box -->
 			<boxFile>box-light-gray</boxFile> <!-- assets/ui/box-<set>-h??.svg, default info box -->
+		<dimText>9A9AA6</dimText>   <!-- tertiary text (year column) -->
+		<tone>light</tone>         <!-- light|dark: picks _inc/system_logos/<system>/<tone>.svg -->
+		<scheme>light-gray</scheme>     <!-- picks _inc/system_logos/<system>/<scheme>-<region>.svg -->
+		<dimText>9A9AA6</dimText>   <!-- tertiary text (year column) -->
+		<tone>light</tone>         <!-- light|dark: picks _inc/system_logos/<system>/<tone>.svg -->
+		<scheme>light-gray</scheme>     <!-- picks _inc/system_logos/<system>/<scheme>-<region>.svg -->
 	</variables>
 </theme>
