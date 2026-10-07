@@ -4,11 +4,12 @@
 	<!-- System view, 3 row(s): [banner: console art + logo] / info strip / icon grid. -->
 	<view name="system">
 		<imagegrid name="imagegrid">
-			<pos>0.02 ${gY3}</pos>
-			<size>0.96 ${gH3}</size>
+			<pos>0 ${gY3}</pos>
+			<size>1 ${gH3}</size>
+			<padding>${gPad}</padding>
 			<autoLayout>${gC3} 3</autoLayout>
 			<margin>${gM3}</margin>
-			<autoLayoutSelectedZoom>1.08</autoLayoutSelectedZoom>
+			<autoLayoutSelectedZoom>${tZoom}</autoLayoutSelectedZoom>
 			<scrollDirection>horizontal</scrollDirection>
 			<centerSelection>false</centerSelection>
 			<scrollLoop>false</scrollLoop>
@@ -16,18 +17,20 @@
 			<zIndex>40</zIndex>
 		</imagegrid>
 		<gridtile name="default">
-			<backgroundImage>${themePath}/assets/ui/round.png</backgroundImage>
-			<backgroundCornerSize>16 16</backgroundCornerSize>
-			<backgroundColor>${tile}</backgroundColor>
+			<backgroundImage>${themePath}/assets/ui/neon.png</backgroundImage>
+			<backgroundCornerSize>${tPad} ${tPad}</backgroundCornerSize>
+			<backgroundColor>00000000</backgroundColor>
+			<selectionMode>image</selectionMode>
 			<imageSizeMode>maxSize</imageSizeMode>
-			<padding>10 10</padding>
+			<padding>${tPad} ${tPad}</padding>
 		</gridtile>
 		<gridtile name="selected">
-			<backgroundImage>${themePath}/assets/ui/round.png</backgroundImage>
-			<backgroundCornerSize>16 16</backgroundCornerSize>
-			<backgroundColor>${accent}</backgroundColor>
+			<backgroundImage>${themePath}/assets/ui/neon.png</backgroundImage>
+			<backgroundCornerSize>${tPad} ${tPad}</backgroundCornerSize>
+			<backgroundColor>${neon}</backgroundColor>
+			<selectionMode>image</selectionMode>
 			<imageSizeMode>maxSize</imageSizeMode>
-			<padding>10 10</padding>
+			<padding>${tPad} ${tPad}</padding>
 		</gridtile>
 		<!-- Tile content: system icon (_inc/system_icons/<system.theme>.svg), text fallback -->
 		<image name="logo">

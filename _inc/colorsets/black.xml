@@ -20,5 +20,6 @@
 		<wallpaper>${themePath}/assets/wallpapers/dark.svg</wallpaper> <!-- assets/wallpapers/: fondo a pantalla completa (none.png = sin fondo) -->
 		<wallpaperB1>${themePath}/assets/wallpapers/dark-b1.svg</wallpaperB1> <!-- recorte bajo el banner, 1 fila -->
 		<wallpaperB2>${themePath}/assets/wallpapers/dark-b2.svg</wallpaperB2> <!-- recorte bajo el banner, 2 filas -->
+		<neon>2DE2FF</neon>         <!-- color del selector neon (contorno + resplandor) -->
 	</variables>
 </theme>

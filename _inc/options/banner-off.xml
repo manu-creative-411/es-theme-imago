@@ -3,32 +3,32 @@
 	<formatVersion>7</formatVersion>
 	<!-- Banner OFF (only used by the 1- and 2-row layouts). Geometry of every row count, as variables. -->
 	<variables>
-		<gY1>0.300</gY1>
-		<gH1>0.400</gH1>
+		<gY1>0.280</gY1>
+		<gH1>0.440</gH1>
 		<gC1>4</gC1>
-		<gM1>0.010 0.006</gM1>
+		<gM1>0.006 0.010</gM1>
 		<gT1>0.235</gT1>
 		<gU1>0.239</gU1>
-		<gY2>0.220</gY2>
-		<gH2>0.560</gH2>
+		<gY2>0.200</gY2>
+		<gH2>0.600</gH2>
 		<gC2>6</gC2>
-		<gM2>0.010 0.006</gM2>
+		<gM2>0.006 0.010</gM2>
 		<gT2>0.155</gT2>
 		<gU2>0.159</gU2>
-		<gY3>0.197</gY3>
-		<gH3>0.660</gH3>
+		<gY3>0.177</gY3>
+		<gH3>0.700</gH3>
 		<gC3>8</gC3>
 		<gM3>0.010 0.006</gM3>
 		<gT3>0.132</gT3>
 		<gU3>0.136</gU3>
-		<gY4>0.197</gY4>
-		<gH4>0.720</gH4>
+		<gY4>0.177</gY4>
+		<gH4>0.760</gH4>
 		<gC4>9</gC4>
 		<gM4>0.010 0.006</gM4>
 		<gT4>0.132</gT4>
 		<gU4>0.136</gU4>
-		<gY5>0.197</gY5>
-		<gH5>0.740</gH5>
+		<gY5>0.177</gY5>
+		<gH5>0.780</gH5>
 		<gC5>12</gC5>
 		<gM5>0.010 0.006</gM5>
 		<gT5>0.132</gT5>

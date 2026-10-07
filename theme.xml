@@ -19,6 +19,7 @@
 	<include subset="logoregion" name="br" displayName="Console logo region: Brazil">./_inc/options/logoregion-br.xml</include>
 	<include subset="banner" name="on" displayName="Banner: on (1-2 rows)">./_inc/options/banner-on.xml</include>
 	<include subset="banner" name="off" displayName="Banner: off">./_inc/options/banner-off.xml</include>
+	<include>./_inc/options/tiles.xml</include>
 	<include>./_inc/layout/common.xml</include>
 	<include subset="systemview" name="Grid 2 rows" displayName="System view: grid, 2 rows">./_inc/layout/system-grid-rows-2.xml</include>
 	<include subset="systemview" name="Grid 1 row" displayName="System view: grid, 1 row">./_inc/layout/system-grid-rows-1.xml</include>

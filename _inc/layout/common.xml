@@ -38,7 +38,7 @@
 		</helpsystem>
 	</view>
 
-	<!-- Tiles (game icons). The rounded backdrop comes from assets/ui/round.png (nine-patch, 16px corners). -->
+	<!-- Tiles (game icons). Neon selector = assets/ui/neon.png (nine-patch, tinted with ${neon}); see _inc/options/tiles.xml. -->
 	<view name="grid">
 		<!-- Console logo, top-left. First existing file wins (_inc/system_logos): <sys>/<tone>-<region>.svg > <sys>/<region>.svg > <sys>/<tone>.svg > <sys>.svg > <sys>/us.svg -->
 		<image name="logo">
@@ -57,18 +57,20 @@
 			<visible>false</visible>
 		</text>
 		<gridtile name="default">
-			<backgroundImage>${themePath}/assets/ui/round.png</backgroundImage>
-			<backgroundCornerSize>16 16</backgroundCornerSize>
-			<backgroundColor>${tile}</backgroundColor>
+			<backgroundImage>${themePath}/assets/ui/neon.png</backgroundImage>
+			<backgroundCornerSize>${tPad} ${tPad}</backgroundCornerSize>
+			<backgroundColor>00000000</backgroundColor>
+			<selectionMode>image</selectionMode>
 			<imageSizeMode>maxSize</imageSizeMode>
-			<padding>10 10</padding>
+			<padding>${tPad} ${tPad}</padding>
 		</gridtile>
 		<gridtile name="selected">
-			<backgroundImage>${themePath}/assets/ui/round.png</backgroundImage>
-			<backgroundCornerSize>16 16</backgroundCornerSize>
-			<backgroundColor>${accent}</backgroundColor>
+			<backgroundImage>${themePath}/assets/ui/neon.png</backgroundImage>
+			<backgroundCornerSize>${tPad} ${tPad}</backgroundCornerSize>
+			<backgroundColor>${neon}</backgroundColor>
+			<selectionMode>image</selectionMode>
 			<imageSizeMode>maxSize</imageSizeMode>
-			<padding>10 10</padding>
+			<padding>${tPad} ${tPad}</padding>
 		</gridtile>
 	</view>
 

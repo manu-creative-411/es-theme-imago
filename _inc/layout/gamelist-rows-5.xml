@@ -33,12 +33,13 @@
 			<zIndex>45</zIndex>
 		</datetime>
 		<imagegrid name="gamegrid">
-			<pos>0.02 ${gY5}</pos>
-			<size>0.96 ${gH5}</size>
+			<pos>0 ${gY5}</pos>
+			<size>1 ${gH5}</size>
+			<padding>${gPad}</padding>
 			<autoLayout>${gC5} 5</autoLayout>
 			<margin>${gM5}</margin>
 			<imageSource>thumbnail</imageSource>
-			<autoLayoutSelectedZoom>1.08</autoLayoutSelectedZoom>
+			<autoLayoutSelectedZoom>${tZoom}</autoLayoutSelectedZoom>
 			<scrollDirection>horizontal</scrollDirection>
 			<centerSelection>false</centerSelection>
 			<scrollLoop>false</scrollLoop>

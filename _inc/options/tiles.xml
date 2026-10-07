@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+	<formatVersion>7</formatVersion>
+	<!-- Tiles (iconos de sistema y caratulas): sin placa, selector neon alrededor de la IMAGEN (selectionMode=image). -->
+	<variables>
+		<tPad>20</tPad>            <!-- px entre la imagen y el borde del tile = ancho de la banda del neon. DEBE coincidir con tools/make_neon.py (BAND) -->
+		<tZoom>1.06</tZoom>        <!-- zoom del tile seleccionado -->
+		<gPad>0.014 0.020 0.014 0.020</gPad> <!-- holgura del grid (izq arriba dcha abajo, relativa a la pantalla): evita que el zoom/neon se corten en los bordes -->
+	</variables>
+</theme>

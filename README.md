@@ -72,3 +72,13 @@ Renaming the theme = renaming the folder; all paths use `${themePath}` or are re
   Combos: Vivid Red #ff3b3b, Vivid Orange #ff8a2b, Amber Yellow #ffc61a, Spring Green #22e066, Azure Blue #1fa0ff, Royal Blue #1f7bff,
   Navy Blue #305591, Electric Violet #8347ff, Neon Magenta #d924ff, Slate Gray #6b7a88, Dusk Blue #47617a, Silver #d3dce6, Pure Magenta #ff00ff (marcador).
 - Degradado de cada combo: gris `#e5e5e5 -> #a8a8a8` multiplicado por el color base (arriba mas claro, abajo mas oscuro).
+
+## Selector neon y tiles (assets/ui/neon.png, _inc/options/tiles.xml)
+- Los tiles ya no tienen placa: icono/caratula a todo el ancho o alto del tile (`imageSizeMode=maxSize`). El seleccionado lleva un contorno neon que rodea
+  solo la imagen (`selectionMode=image`), tenido con `${neon}` (variable de cada color set). Si tu ES ignora `selectionMode`, el neon rodeara el tile entero.
+- `neon.png` es un nine-patch (nucleo + resplandor solo hacia fuera). Se regenera con `python3 tools/make_neon.py [BAND] [STROKE]`;
+  `BAND` debe ser igual a `tPad` (px entre la imagen y el borde del tile = `backgroundCornerSize`).
+- `tiles.xml`: `tPad` (20), `tZoom` (1.06, zoom del seleccionado) y `gPad` (holgura izq/arriba/dcha/abajo del grid, relativa a la pantalla).
+  Si el zoom o el neon se cortan en los bordes del grid, sube `gPad`; si quieres iconos mas grandes, baja `tPad` (y regenera el PNG con el mismo BAND).
+- El grid ocupa el 100 % del ancho (`pos 0`, `size 1`) y, en vertical, `gPad` extra arriba y abajo (la zona util es la de antes). Geometria en `banner-on/off.xml`
+  (`gY/gH/gC/gM`). Con banner: 1 fila = 6 columnas, 2 filas = 7.
