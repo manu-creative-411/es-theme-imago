@@ -61,3 +61,14 @@ Renaming the theme = renaming the folder; all paths use `${themePath}` or are re
   bajo la foto de consola (capa `e_overflow_wp`, z 31.5). Si cambias `bH1/bH2` en `banner-on.xml`, actualiza `BH` en el script.
 - Opcion de tema `Wallpaper: on/off` (off = usa `none.png`).
 - Para anadir otro: copia `assets/wallpapers/<name>.svg`, ejecuta el script y apunta las 3 variables del colorset a `<name>.svg`, `<name>-b1.svg`, `<name>-b2.svg`.
+
+## Iconos de sistema (_inc/system_icons/)
+- Se editan directamente estos SVG (Inkscape). Sin capas multiply ni modos de mezcla (ES/NanoSVG no los soporta): la carpeta son dos formas
+  (pestana + cuerpo) con degradado ya tintado, y encima los glifos.
+- Plantillas: `_template.svg` (carpeta con pestana) y `_template_app.svg` (carpeta de apps). Cada una trae **13 grupos de color** (capas de Inkscape,
+  una por combo) con su nombre en ingles; solo uno esta visible y los demas llevan `display:none`.
+  Para elegir color: panel Capas (Ctrl+Shift+L), muestra el combo que quieras y **borra los demas** antes de guardar el icono.
+  Cada grupo lleva en `desc` (Propiedades del objeto) los sistemas que ya usan ese color.
+  Combos: Vivid Red #ff3b3b, Vivid Orange #ff8a2b, Amber Yellow #ffc61a, Spring Green #22e066, Azure Blue #1fa0ff, Royal Blue #1f7bff,
+  Navy Blue #305591, Electric Violet #8347ff, Neon Magenta #d924ff, Slate Gray #6b7a88, Dusk Blue #47617a, Silver #d3dce6, Pure Magenta #ff00ff (marcador).
+- Degradado de cada combo: gris `#e5e5e5 -> #a8a8a8` multiplicado por el color base (arriba mas claro, abajo mas oscuro).
