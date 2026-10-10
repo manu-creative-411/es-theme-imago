@@ -8,20 +8,20 @@ Format version 7 (batocera-emulationstation).
 theme.xml                        entry point; declares the options (subsets)
 _inc/colorsets/*.xml             6 palettes (variables: bg, tile, accent, text, subText, dimText, box, tone, scheme)
 _inc/branding/*.xml              brand logo selection (variables only)
-_inc/options/                    variable files for the 'Console logo region' option
+_inc/options/                    option variable files (logoRegion, banner geometry, wallpaper, tiles)
 _inc/layout/common.xml           background, brand, clock, help, tiles, console logo (top-left), menu
 _inc/layout/system-grid-rows-N.xml  system view: icon grid, N rows (1..5)
 _inc/layout/system-carousel.xml  system view: single-row carousel (fallback option)
 _inc/layout/gamelist-N-banner.xml | gamelist-N-plain.xml   game list, N rows (1..5), with / without the photo+marquee banner
 _inc/system_icons/               <system>.svg         square icon of each system (system view tiles)
 _inc/system_bg/                  <system>.png|svg|jpg Carbon console art (system view; fallback for games without image)
-_inc/system_logos/               console logo, see README.txt there (scheme-region > tone > generic)
+_inc/system_logos/               console logo, ordered <path> chain (see README.txt there)
 assets/ui/                       white.png, round.png, corner-bl/br.png, box-<set>-h12|h15|h17.svg
 assets/branding/                 retrobat.svg, batocera.svg, retrobox.svg (PLACEHOLDERS)
 ```
 
 ## Options (UI Settings > Theme Configuration)
-Color set (6) / Branding (3) / Console logo region (default, US, JP, EU, BR) / Banner (on, off) / System view (grid 1-5 rows, carousel) /
+Color set (6) / Help icons (9) / Branding (3) / Console logo region (Europe [default], USA, Japan) / Banner (on, off) / System view (grid 1-5 rows, carousel) /
 Game list (1-5 rows). Then pick the **Imago** gamelist view.
 
 ## Banner
@@ -30,12 +30,13 @@ Off, or 3-5 rows: info strip + grid, the grid vertically centred, slightly wider
 Implementation: no ifSubset (it did not filter in Batocera ES). Each option is an include-level subset; the Banner option files define
 the geometry as variables (gY1..gY5, ...) and visibility flags (bVis...) that the layouts read.
 
-## Artwork lookup (rutas simples; `firstfile()` NO funciona en este ES)
+## Artwork lookup
 - icon: _inc/system_icons/<system.theme>.svg
 - console art: _inc/system_bg/<system.theme>.jpg
-- console logo: _inc/system_logos/<tone>-<region>/<system.theme>.svg (default: <tone>-none/)
-- Estas carpetas se generan con `python3 tools/build_assets.py` (copia desde system_logos/<theme>/... y system_bg/collections/).
-  Ejecutalo de nuevo cada vez que anadas un logo o fondo nuevo.
+- console logo: ordered list of `<path>` in the layouts (last existing file wins), same logic as es-theme-iconic. Variables `logoRegion`
+  (eu/us/jp, option "Console logo region") and `logoColorScheme` (dark/light, set per colour set). Full order in `_inc/system_logos/README.txt`.
+  No generated folders. NOTE: `firstfile()` only works inside expressions (`<visible>`), never as a `<path>` value.
+- `python3 tools/build_assets.py` only copies system_bg/collections, creates icon aliases and the wallpaper crops.
 
 ## Known limits / to verify
 - System grid: in Batocera ES the system-view grid is `<imagegrid name="imagegrid">` (confirmed in es-theme-tiled, systemview/grid.xml;
@@ -82,3 +83,33 @@ Renaming the theme = renaming the folder; all paths use `${themePath}` or are re
   Si el zoom o el neon se cortan en los bordes del grid, sube `gPad`; si quieres iconos mas grandes, baja `tPad` (y regenera el PNG con el mismo BAND).
 - El grid ocupa el 100 % del ancho (`pos 0`, `size 1`) y, en vertical, `gPad` extra arriba y abajo (la zona util es la de antes). Geometria en `banner-on/off.xml`
   (`gY/gH/gC/gM`). Con banner: 1 fila = 6 columnas, 2 filas = 7.
+
+## Fonts (assets/fonts/, _inc/options/fonts.xml)
+Poppins, all 18 files. Elements never hard-code a file: they use a **role variable** from `_inc/options/fonts.xml`, so a weight can be changed in one place.
+
+| Role variable | Weight | Used by |
+|---|---|---|
+| `fontMenuItem` | Light | main menu selectable entries (`menutext`) |
+| `fontMenuGroup` | Medium | menu group names (`menugroup`, coloured with `${neon}`) |
+| `fontMenuTitle` | Medium | menu title (`menutitle`) |
+| `fontMenuSmall` | Regular | menu small text and footer (`menutextsmall`, `menufooter`) |
+| `fontTitle` | Bold | console and game titles: info strip, name over the banner box, carousel title |
+| `fontInfo` | Regular | maker, developer, year, game count |
+| `fontUI` | Medium | clock, help bar |
+
+Raw weights (`fontThin` ... `fontBlack`) are also defined for new elements. Poppins is much wider than the default ES font, so sizes were reduced
+(titles 0.030, info 0.024, help 0.026, banner box name 0.040 via `bFS1/bFS2` in `banner-on/off.xml`, menu 0.021-0.036). Poppins is released under the SIL Open Font License:
+keep its license text if you redistribute the theme.
+
+## Menu icons (assets/icons/)
+The 14 menu icons come from es-theme-iconic (white SVG, 24x24; ES tints them with the menu text colour, so they work on dark and light colour sets),
+wired in the `menu` view of `_inc/layout/common.xml` (`menuIcons` + `menuTextEdit`). `menu-icon-controller.svg` and `gamepad.svg` are the custom controller icon
+(glyph scaled to 22/24 of the box so it matches the others). Use that same icon for anything related to controllers/gamepads
+(`gamepad.svg` is not used by a layout yet: it is reserved for a controller-activity indicator).
+
+## Help icons (_inc/help/, option "Help icons")
+Logic taken from es-theme-recalboxy: one preset file per style that overrides the `helpsystem name="help"` icons (A/B/X/Y, L/R, start/select, d-pad).
+Presets: snes (default), snesalt, xbox, xboxone, playstation, arcade, buttons, 6buttons, 8buttons. Included in `theme.xml` AFTER `common.xml` so they override its help element.
+Colour sets (snes/xbox/playstation/arcade...) reset `iconColor` to FFFFFFFF (no tint); monochrome sets (buttons/6buttons/8buttons) keep the theme tint (`${subText}`).
+Fonts and size of the help bar stay defined in `common.xml`. Notes: the blurred drop shadow (SVG `<filter>`, unsupported by NanoSVG) was removed from `Xbox_button_A/B/X/Y.svg`;
+`F1.svg` was not copied (uses `clipPath`, no preset references it). Icons sets are not edited, so recalboxy's artwork credits apply.

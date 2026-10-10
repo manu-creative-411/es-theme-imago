@@ -39,7 +39,7 @@
 		<bY1>0.040</bY1>
 		<bB1>0.170</bB1>
 		<bCY1>0.125</bCY1>
-		<bFS1>0.058</bFS1>
+		<bFS1>0.040</bFS1>
 		<bF1>h17</bF1>
 		<bH2>0.386</bH2>
 		<bC2>0.193</bC2>
@@ -47,7 +47,7 @@
 		<bY2>0.040</bY2>
 		<bB2>0.170</bB2>
 		<bCY2>0.125</bCY2>
-		<bFS2>0.058</bFS2>
+		<bFS2>0.040</bFS2>
 		<bF2>h17</bF2>
 		<bVis>true</bVis>
 		<bHeroVis>!exists({game:image})</bHeroVis>

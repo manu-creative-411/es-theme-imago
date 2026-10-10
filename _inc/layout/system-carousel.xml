@@ -18,26 +18,29 @@
 			<path>${themePath}/_inc/system_icons/${system.theme}.svg</path>
 		</image>
 		<text name="logoText">
+			<fontPath>${fontTitle}</fontPath>
 			<color>${text}</color>
-			<fontSize>0.04</fontSize>
+			<fontSize>0.034</fontSize>
 			<forceUppercase>true</forceUppercase>
 		</text>
 		<text name="e_system_name" extra="true">
+			<fontPath>${fontTitle}</fontPath>
 			<text>${system.fullName}</text>
 			<pos>0.5 0.30</pos>
 			<origin>0.5 0</origin>
 			<size>0.9 0.065</size>
 			<color>${text}</color>
-			<fontSize>0.065</fontSize>
+			<fontSize>0.052</fontSize>
 			<alignment>center</alignment>
 			<zIndex>45</zIndex>
 		</text>
 		<text name="systemInfo">
+			<fontPath>${fontInfo}</fontPath>
 			<pos>0.5 0.39</pos>
 			<origin>0.5 0</origin>
 			<size>0.8 0.028</size>
 			<color>${subText}</color>
-			<fontSize>0.028</fontSize>
+			<fontSize>0.024</fontSize>
 			<alignment>center</alignment>
 		</text>
 	</view>

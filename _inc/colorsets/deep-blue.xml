@@ -12,14 +12,10 @@
 		<box>031638</box>           <!-- rounded info box -->
 			<boxFile>box-deep-blue</boxFile> <!-- assets/ui/box-<set>-h??.svg, default info box -->
 		<dimText>86A9F0</dimText>   <!-- tertiary text (year column) -->
-		<tone>dark</tone>         <!-- light|dark: picks _inc/system_logos/<system>/<tone>.svg -->
-		<scheme>deep-blue</scheme>     <!-- picks _inc/system_logos/<system>/<scheme>-<region>.svg -->
-		<dimText>86A9F0</dimText>   <!-- tertiary text (year column) -->
-		<tone>dark</tone>         <!-- light|dark: picks _inc/system_logos/<system>/<tone>.svg -->
-		<scheme>deep-blue</scheme>     <!-- picks _inc/system_logos/<system>/<scheme>-<region>.svg -->
 		<wallpaper>${themePath}/assets/wallpapers/none.png</wallpaper> <!-- assets/wallpapers/: fondo a pantalla completa (none.png = sin fondo) -->
 		<wallpaperB1>${themePath}/assets/wallpapers/none.png</wallpaperB1> <!-- recorte bajo el banner, 1 fila -->
 		<wallpaperB2>${themePath}/assets/wallpapers/none.png</wallpaperB2> <!-- recorte bajo el banner, 2 filas -->
 		<neon>7DF9FF</neon>         <!-- color del selector neon (contorno + resplandor) -->
+		<logoColorScheme>dark</logoColorScheme> <!-- dark|light: picks <system>/<scheme>[-<region>].svg in _inc/system_logos -->
 	</variables>
 </theme>

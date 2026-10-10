@@ -25,13 +25,16 @@
 			<zIndex>60</zIndex>
 		</image>
 		<text name="clock">
+			<fontPath>${fontUI}</fontPath>
 			<pos>0.98 0.03</pos>
 			<origin>1 0</origin>
 			<color>${subText}</color>
-			<fontSize>0.035</fontSize>
+			<fontSize>0.028</fontSize>
 			<alignment>right</alignment>
 		</text>
 		<helpsystem name="help">
+			<fontPath>${fontUI}</fontPath>
+			<fontSize>0.026</fontSize>
 			<pos>0.02 0.955</pos>
 			<textColor>${subText}</textColor>
 			<iconColor>${subText}</iconColor>
@@ -40,13 +43,23 @@
 
 	<!-- Tiles (game icons). Neon selector = assets/ui/neon.png (nine-patch, tinted with ${neon}); see _inc/options/tiles.xml. -->
 	<view name="grid">
-		<!-- Console logo, top-left. First existing file wins (_inc/system_logos): <sys>/<tone>-<region>.svg > <sys>/<region>.svg > <sys>/<tone>.svg > <sys>.svg > <sys>/us.svg -->
+		<!-- Console logo, top-left. Several <path>: from LOWEST to HIGHEST priority, the last one that exists wins (same logic as es-theme-iconic).
+		     Order: <sys>.svg < <sys>-<region>.svg < <sys>/jp < jp-scheme < us < us-scheme < eu < eu-scheme < <scheme> < <region> < <scheme>-<region>.svg -->
 		<image name="logo">
 			<visible>false</visible>
 		</image>
 		<image name="e_logo" extra="true">
-			<path>${themePath}/_inc/system_logos/${tone}-${region}/${system.theme}.svg</path>
-			<default>${themePath}/_inc/system_logos/${tone}-eu/${system.theme}.svg</default>
+			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-jp.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-us.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-eu.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-${logoRegion}.svg</path>
 			<pos>0.025 0.035</pos>
 			<origin>0 0</origin>
 			<maxSize>0.16 0.08</maxSize>
@@ -54,6 +67,7 @@
 			<zIndex>50</zIndex>
 		</image>
 		<text name="logoText">
+			<fontPath>${fontTitle}</fontPath>
 			<visible>false</visible>
 		</text>
 		<gridtile name="default">
@@ -79,19 +93,55 @@
 			<color>${box}F2</color>
 		</menuBackground>
 		<menuText name="menutext">
+			<fontPath>${fontMenuItem}</fontPath>
+			<fontSize>0.027</fontSize>
 			<color>${text}</color>
 			<selectedColor>${accentText}</selectedColor>
 			<selectorColor>${accent}</selectorColor>
 			<separatorColor>${subText}55</separatorColor>
 		</menuText>
 		<menuText name="menutitle">
+			<fontPath>${fontMenuTitle}</fontPath>
+			<fontSize>0.036</fontSize>
 			<color>${text}</color>
 		</menuText>
+		<menuGroup name="menugroup">
+			<fontPath>${fontMenuGroup}</fontPath>
+			<fontSize>0.030</fontSize>
+			<color>${neon}</color>
+			<separatorColor>${subText}55</separatorColor>
+			<backgroundColor>00000000</backgroundColor>
+		</menuGroup>
 		<menuText name="menufooter">
+			<fontPath>${fontMenuSmall}</fontPath>
+			<fontSize>0.021</fontSize>
 			<color>${subText}</color>
 		</menuText>
 		<menuTextSmall name="menutextsmall">
+			<fontPath>${fontMenuSmall}</fontPath>
+			<fontSize>0.022</fontSize>
 			<color>${subText}</color>
 		</menuTextSmall>
+		<menuTextEdit name="menutextedit">
+			<inactive>${themePath}/assets/icons/menu-textinput.png</inactive>
+			<active>${themePath}/assets/icons/menu-textinput-active.png</active>
+		</menuTextEdit>
+		<menuIcons name="menuicons">
+			<iconSystem>${themePath}/assets/icons/menu-icon-system.svg</iconSystem>
+			<iconUpdates>${themePath}/assets/icons/menu-icon-update.svg</iconUpdates>
+			<iconControllers>${themePath}/assets/icons/menu-icon-controller.svg</iconControllers>
+			<iconGames>${themePath}/assets/icons/menu-icon-games.svg</iconGames>
+			<iconUI>${themePath}/assets/icons/menu-icon-ui.svg</iconUI>
+			<iconSound>${themePath}/assets/icons/menu-icon-sound.svg</iconSound>
+			<iconNetwork>${themePath}/assets/icons/menu-icon-network.svg</iconNetwork>
+			<iconScraper>${themePath}/assets/icons/menu-icon-scraper.svg</iconScraper>
+			<iconAdvanced>${themePath}/assets/icons/menu-icon-advanced.svg</iconAdvanced>
+			<iconQuit>${themePath}/assets/icons/menu-icon-quit.svg</iconQuit>
+			<iconRetroachievements>${themePath}/assets/icons/menu-icon-achievements.svg</iconRetroachievements>
+			<iconKodi>${themePath}/assets/icons/menu-icon-kodi.svg</iconKodi>
+			<iconRestart>${themePath}/assets/icons/menu-icon-restart.svg</iconRestart>
+			<iconShutdown>${themePath}/assets/icons/menu-icon-shutdown.svg</iconShutdown>
+			<iconFastShutdown>${themePath}/assets/icons/menu-icon-shutdown.svg</iconFastShutdown>
+		</menuIcons>
 	</view>
 </theme>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+    <formatVersion>7</formatVersion>
+    <view name="system,menu,screen,basic,detailed,video,gamecarousel,grid">
+        <helpsystem name="help">
+            <iconColor>FFFFFFFF</iconColor>
+            <iconA>${themePath}/_inc/help/icons/playstation/PlayStation_button_C.svg</iconA>
+            <iconB>${themePath}/_inc/help/icons/playstation/PlayStation_button_X.svg</iconB>
+            <iconX>${themePath}/_inc/help/icons/playstation/PlayStation_button_T.svg</iconX>
+            <iconY>${themePath}/_inc/help/icons/playstation/PlayStation_button_S.svg</iconY>
+            <iconL>${themePath}/_inc/help/icons/playstation/PlayStation_button_L1.svg</iconL>
+            <iconR>${themePath}/_inc/help/icons/playstation/PlayStation_button_R1.svg</iconR>
+            <iconStart>${themePath}/_inc/help/icons/playstation/PlayStation_button_Start.svg</iconStart>
+            <iconSelect>${themePath}/_inc/help/icons/playstation/PlayStation_button_Select.svg</iconSelect>
+            <iconUpDown>${themePath}/_inc/help/icons/playstation/PlayStation_UpDown_button.svg</iconUpDown>
+            <iconLeftRight>${themePath}/_inc/help/icons/playstation/PlayStation_LeftRight_button.svg</iconLeftRight>
+            <iconUpDownLeftRight>${themePath}/_inc/help/icons/playstation/PlayStation_UpDownLeftRight_button.svg</iconUpDownLeftRight>
+        </helpsystem>
+    </view>
+</theme>

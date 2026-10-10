@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+    <formatVersion>7</formatVersion>
+    <view name="system,menu,screen,basic,detailed,video,gamecarousel,grid">
+        <helpsystem name="help">
+            <iconColor>FFFFFFFF</iconColor>
+            <iconUpDown>${themePath}/_inc/help/icons/xboxone/updown.png</iconUpDown>
+            <iconLeftRight>${themePath}/_inc/help/icons/xboxone/leftright.png</iconLeftRight>
+            <iconUpDownLeftRight>${themePath}/_inc/help/icons/xboxone/all.png</iconUpDownLeftRight>
+            <iconA>${themePath}/_inc/help/icons/xboxone/a.png</iconA>
+            <iconB>${themePath}/_inc/help/icons/xboxone/b.png</iconB>
+            <iconX>${themePath}/_inc/help/icons/xboxone/x.png</iconX>
+            <iconY>${themePath}/_inc/help/icons/xboxone/y.png</iconY>
+            <iconL>${themePath}/_inc/help/icons/xboxone/l.png</iconL>
+            <iconR>${themePath}/_inc/help/icons/xboxone/r.png</iconR>
+            <iconStart>${themePath}/_inc/help/icons/xboxone/start.png</iconStart>
+            <iconSelect>${themePath}/_inc/help/icons/xboxone/select.png</iconSelect>
+        </helpsystem>
+    </view>
+</theme>

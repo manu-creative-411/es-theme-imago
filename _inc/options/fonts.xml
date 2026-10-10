@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+	<formatVersion>7</formatVersion>
+	<!-- Poppins (assets/fonts/). Roles pick a weight; change a role here and every element that uses it follows. -->
+	<variables>
+		<!-- Roles -->
+		<fontMenuItem>${themePath}/assets/fonts/Poppins-Light.otf</fontMenuItem> <!-- Light: selectable entries of the main menu -->
+		<fontMenuGroup>${themePath}/assets/fonts/Poppins-Medium.otf</fontMenuGroup> <!-- Medium: menu group names -->
+		<fontMenuTitle>${themePath}/assets/fonts/Poppins-Medium.otf</fontMenuTitle> <!-- Medium: menu title -->
+		<fontMenuSmall>${themePath}/assets/fonts/Poppins-Regular.otf</fontMenuSmall> <!-- Regular: menu small text / footer -->
+		<fontTitle>${themePath}/assets/fonts/Poppins-Bold.otf</fontTitle> <!-- Bold: console + game titles (info strip, banner box name) -->
+		<fontInfo>${themePath}/assets/fonts/Poppins-Regular.otf</fontInfo> <!-- Regular: secondary info: maker, developer, year, game count -->
+		<fontUI>${themePath}/assets/fonts/Poppins-Medium.otf</fontUI> <!-- Medium: clock and help bar -->
+		<!-- Raw weights (use these for new elements) -->
+		<fontThin>${themePath}/assets/fonts/Poppins-Thin.otf</fontThin>
+		<fontExtraLight>${themePath}/assets/fonts/Poppins-ExtraLight.otf</fontExtraLight>
+		<fontLight>${themePath}/assets/fonts/Poppins-Light.otf</fontLight>
+		<fontRegular>${themePath}/assets/fonts/Poppins-Regular.otf</fontRegular>
+		<fontMedium>${themePath}/assets/fonts/Poppins-Medium.otf</fontMedium>
+		<fontSemiBold>${themePath}/assets/fonts/Poppins-SemiBold.otf</fontSemiBold>
+		<fontBold>${themePath}/assets/fonts/Poppins-Bold.otf</fontBold>
+		<fontExtraBold>${themePath}/assets/fonts/Poppins-ExtraBold.otf</fontExtraBold>
+		<fontBlack>${themePath}/assets/fonts/Poppins-Black.otf</fontBlack>
+	</variables>
+</theme>

@@ -37,47 +37,52 @@
 			<path>${themePath}/_inc/system_icons/${system.theme}.svg</path>
 		</image>
 		<text name="logoText">
+			<fontPath>${fontTitle}</fontPath>
 			<color>${text}</color>
-			<fontSize>0.04</fontSize>
+			<fontSize>0.034</fontSize>
 			<forceUppercase>true</forceUppercase>
 		</text>
 		<!-- Info strip: system name | manufacturer | release year | game count -->
 		<text name="e_sys_name" extra="true">
+			<fontPath>${fontTitle}</fontPath>
 			<text>${system.fullName}</text>
 			<pos>0.02 ${gT5}</pos>
 			<origin>0 0</origin>
 			<size>0.31 0.036</size>
 			<color>${text}</color>
-			<fontSize>0.036</fontSize>
+			<fontSize>0.030</fontSize>
 			<alignment>left</alignment>
 			<zIndex>45</zIndex>
 		</text>
 		<text name="e_sys_maker" extra="true">
+			<fontPath>${fontInfo}</fontPath>
 			<text>${system.manufacturer}</text>
 			<pos>0.34 ${gU5}</pos>
 			<origin>0 0</origin>
 			<size>0.15 0.030</size>
 			<color>${subText}</color>
-			<fontSize>0.030</fontSize>
+			<fontSize>0.024</fontSize>
 			<alignment>left</alignment>
 			<zIndex>45</zIndex>
 		</text>
 		<text name="e_sys_year" extra="true">
+			<fontPath>${fontInfo}</fontPath>
 			<text>${system.releaseYear}</text>
 			<pos>0.50 ${gU5}</pos>
 			<origin>0 0</origin>
 			<size>0.12 0.030</size>
 			<color>${dimText}</color>
-			<fontSize>0.030</fontSize>
+			<fontSize>0.024</fontSize>
 			<alignment>left</alignment>
 			<zIndex>45</zIndex>
 		</text>
 		<text name="systemInfo">
+			<fontPath>${fontInfo}</fontPath>
 			<pos>0.64 ${gU5}</pos>
 			<origin>0 0</origin>
 			<size>0.20 0.030</size>
 			<color>${dimText}</color>
-			<fontSize>0.030</fontSize>
+			<fontSize>0.024</fontSize>
 			<alignment>left</alignment>
 			<zIndex>45</zIndex>
 		</text>

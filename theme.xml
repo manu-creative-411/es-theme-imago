@@ -16,11 +16,20 @@
 	<include subset="logoregion" name="eu" displayName="Console logo region: Europe (default)">./_inc/options/logoregion-eu.xml</include>
 	<include subset="logoregion" name="us" displayName="Console logo region: USA">./_inc/options/logoregion-us.xml</include>
 	<include subset="logoregion" name="jp" displayName="Console logo region: Japan">./_inc/options/logoregion-jp.xml</include>
-	<include subset="logoregion" name="br" displayName="Console logo region: Brazil">./_inc/options/logoregion-br.xml</include>
 	<include subset="banner" name="on" displayName="Banner: on (1-2 rows)">./_inc/options/banner-on.xml</include>
 	<include subset="banner" name="off" displayName="Banner: off">./_inc/options/banner-off.xml</include>
+	<include>./_inc/options/fonts.xml</include>
 	<include>./_inc/options/tiles.xml</include>
 	<include>./_inc/layout/common.xml</include>
+	<include subset="helpicons" name="snes" displayName="Help icons: SNES (default)">./_inc/help/snes.xml</include>
+	<include subset="helpicons" name="snesalt" displayName="Help icons: SNES alt">./_inc/help/snesalt.xml</include>
+	<include subset="helpicons" name="xbox" displayName="Help icons: Xbox">./_inc/help/xbox.xml</include>
+	<include subset="helpicons" name="xboxone" displayName="Help icons: Xbox One">./_inc/help/xboxone.xml</include>
+	<include subset="helpicons" name="playstation" displayName="Help icons: PlayStation">./_inc/help/playstation.xml</include>
+	<include subset="helpicons" name="arcade" displayName="Help icons: Arcade">./_inc/help/arcade.xml</include>
+	<include subset="helpicons" name="buttons" displayName="Help icons: Buttons">./_inc/help/buttons.xml</include>
+	<include subset="helpicons" name="6buttons" displayName="Help icons: 6 buttons">./_inc/help/6buttons.xml</include>
+	<include subset="helpicons" name="8buttons" displayName="Help icons: 8 buttons">./_inc/help/8buttons.xml</include>
 	<include subset="systemview" name="Grid 2 rows" displayName="System view: grid, 2 rows">./_inc/layout/system-grid-rows-2.xml</include>
 	<include subset="systemview" name="Grid 1 row" displayName="System view: grid, 1 row">./_inc/layout/system-grid-rows-1.xml</include>
 	<include subset="systemview" name="Grid 3 rows" displayName="System view: grid, 3 rows">./_inc/layout/system-grid-rows-3.xml</include>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+    <formatVersion>7</formatVersion>
+    <view name="system,menu,screen,basic,detailed,video,gamecarousel,grid">
+        <helpsystem name="help">
+            <iconColor>FFFFFFFF</iconColor>
+            <iconUpDown>${themePath}/_inc/help/icons/snesalt/updown.png</iconUpDown>
+            <iconLeftRight>${themePath}/_inc/help/icons/snesalt/leftright.png</iconLeftRight>
+            <iconUpDownLeftRight>${themePath}/_inc/help/icons/snesalt/all.png</iconUpDownLeftRight>
+            <iconA>${themePath}/_inc/help/icons/snesalt/a.png</iconA>
+            <iconB>${themePath}/_inc/help/icons/snesalt/b.png</iconB>
+            <iconX>${themePath}/_inc/help/icons/snesalt/x.png</iconX>
+            <iconY>${themePath}/_inc/help/icons/snesalt/y.png</iconY>
+            <iconL>${themePath}/_inc/help/icons/snesalt/l.png</iconL>
+            <iconR>${themePath}/_inc/help/icons/snesalt/r.png</iconR>
+            <iconStart>${themePath}/_inc/help/icons/snesalt/start.png</iconStart>
+            <iconSelect>${themePath}/_inc/help/icons/snesalt/select.png</iconSelect>
+        </helpsystem>
+    </view>
+</theme>
