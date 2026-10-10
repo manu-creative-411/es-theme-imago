@@ -108,8 +108,9 @@ wired in the `menu` view of `_inc/layout/common.xml` (`menuIcons` + `menuTextEdi
 (`gamepad.svg` is not used by a layout yet: it is reserved for a controller-activity indicator).
 
 ## Help icons (_inc/help/, option "Help icons")
-Logic taken from es-theme-recalboxy: one preset file per style that overrides the `helpsystem name="help"` icons (A/B/X/Y, L/R, start/select, d-pad).
-Presets: snes (default), snesalt, xbox, xboxone, playstation, arcade, buttons, 6buttons, 8buttons. Included in `theme.xml` AFTER `common.xml` so they override its help element.
-Colour sets (snes/xbox/playstation/arcade...) reset `iconColor` to FFFFFFFF (no tint); monochrome sets (buttons/6buttons/8buttons) keep the theme tint (`${subText}`).
-Fonts and size of the help bar stay defined in `common.xml`. Notes: the blurred drop shadow (SVG `<filter>`, unsupported by NanoSVG) was removed from `Xbox_button_A/B/X/Y.svg`;
-`F1.svg` was not copied (uses `clipPath`, no preset references it). Icons sets are not edited, so recalboxy's artwork credits apply.
+Same option and logic as es-theme-recalboxy (subset `helpicons`): Default (Batocera) / Xbox / PlayStation / SNES / Generic 4, 6 and 8 buttons / SNES alt / Xbox One / Arcade.
+`default.xml` is an empty preset (Batocera's own icons, tinted with the help colour). The others override the `helpsystem name="help"` icons and are included in `theme.xml`
+AFTER `common.xml`. Xbox, PlayStation and SNES map the *physical position* of Batocera's buttons (A = east, B = south, X = north, Y = west) and are full-colour icons
+(`iconColor` FFFFFFFF, not tinted); the generic sets keep the theme tint (`${subText}`). Font and size of the help bar stay in `common.xml`.
+
+**Licence:** the package mixes licences (own work, CC BY-SA 4.0 from Wikimedia Commons, CC BY-NC-SA from Recalbox/Carbon/Iconic). Read `NOTICE.md`, `_inc/help/NOTICE.md` and `_inc/help/CREDITS-wikimedia.txt` before redistributing: the package is non-commercial because of its third-party parts.

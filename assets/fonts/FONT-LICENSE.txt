@@ -1,0 +1,10 @@
+Poppins
+Copyright 2014-2017 Indian Type Foundry (info@indiantypefoundry.com)
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is available with a FAQ at: https://openfontlicense.org  (also http://scripts.sil.org/OFL)
+
+The same copyright notice, licence statement and licence URL are embedded in the metadata of every .otf in this folder (name table IDs 0, 13 and 14).
+The font files are distributed unmodified. They may be used, copied and redistributed (also with this package) as long as the notice and licence travel with them,
+they are not sold on their own, modified versions do not use the name "Poppins" without permission, and the fonts are not relicensed under another licence.
+(For the full legal text, put the official OFL.txt from https://openfontlicense.org next to these files.)

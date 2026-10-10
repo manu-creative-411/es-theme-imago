@@ -21,15 +21,16 @@
 	<include>./_inc/options/fonts.xml</include>
 	<include>./_inc/options/tiles.xml</include>
 	<include>./_inc/layout/common.xml</include>
-	<include subset="helpicons" name="snes" displayName="Help icons: SNES (default)">./_inc/help/snes.xml</include>
-	<include subset="helpicons" name="snesalt" displayName="Help icons: SNES alt">./_inc/help/snesalt.xml</include>
+	<include subset="helpicons" name="default" displayName="Help icons: Default (Batocera)">./_inc/help/default.xml</include>
 	<include subset="helpicons" name="xbox" displayName="Help icons: Xbox">./_inc/help/xbox.xml</include>
-	<include subset="helpicons" name="xboxone" displayName="Help icons: Xbox One">./_inc/help/xboxone.xml</include>
 	<include subset="helpicons" name="playstation" displayName="Help icons: PlayStation">./_inc/help/playstation.xml</include>
+	<include subset="helpicons" name="snes" displayName="Help icons: SNES">./_inc/help/snes.xml</include>
+	<include subset="helpicons" name="buttons" displayName="Help icons: Generic 4 buttons">./_inc/help/buttons.xml</include>
+	<include subset="helpicons" name="6buttons" displayName="Help icons: Generic 6 buttons">./_inc/help/6buttons.xml</include>
+	<include subset="helpicons" name="8buttons" displayName="Help icons: Generic 8 buttons">./_inc/help/8buttons.xml</include>
+	<include subset="helpicons" name="snesalt" displayName="Help icons: SNES alt">./_inc/help/snesalt.xml</include>
+	<include subset="helpicons" name="xboxone" displayName="Help icons: Xbox One">./_inc/help/xboxone.xml</include>
 	<include subset="helpicons" name="arcade" displayName="Help icons: Arcade">./_inc/help/arcade.xml</include>
-	<include subset="helpicons" name="buttons" displayName="Help icons: Buttons">./_inc/help/buttons.xml</include>
-	<include subset="helpicons" name="6buttons" displayName="Help icons: 6 buttons">./_inc/help/6buttons.xml</include>
-	<include subset="helpicons" name="8buttons" displayName="Help icons: 8 buttons">./_inc/help/8buttons.xml</include>
 	<include subset="systemview" name="Grid 2 rows" displayName="System view: grid, 2 rows">./_inc/layout/system-grid-rows-2.xml</include>
 	<include subset="systemview" name="Grid 1 row" displayName="System view: grid, 1 row">./_inc/layout/system-grid-rows-1.xml</include>
 	<include subset="systemview" name="Grid 3 rows" displayName="System view: grid, 3 rows">./_inc/layout/system-grid-rows-3.xml</include>

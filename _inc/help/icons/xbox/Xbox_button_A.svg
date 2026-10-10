@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="20" height="20" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    </defs>
+    <filter id="c" x="-.21961" y="-.25049" width="1.4392" height="1.501" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="1.14599"/>
+    </filter>
+  </defs>
   <linearGradient id="a" x1="10" x2="10" y2="20" gradientUnits="userSpaceOnUse">
     <stop stop-color="#3A4C14" offset="0"/>
     <stop stop-color="#415513" offset=".1812"/>
@@ -26,5 +29,6 @@
     <stop stop-color="#8EAC31" offset=".9698"/>
     <stop stop-color="#92B134" offset="1"/>
   </linearGradient>
+  <path d="M11.68 4.51H8.377L3.738 15.49h3.209l.887-2.184h4.346l.793 2.184h3.289zm-.403 6.58H8.668l1.32-3.465z" fill-opacity=".92348" filter="url(#c)" style="mix-blend-mode:normal"/>
   <path d="M11.68 4.51H8.377L3.738 15.49h3.209l.887-2.184h4.346l.793 2.184h3.289zm-.403 6.58H8.668l1.32-3.465z" fill="url(#d)"/>
 </svg>

@@ -1,0 +1,50 @@
+Wikimedia Commons credits - Xbox and PlayStation help icons
+Author (all files checked): VictorPines (https://commons.wikimedia.org/wiki/User:VictorPines)
+Licence: CC BY-SA 4.0 - https://creativecommons.org/licenses/by-sa/4.0/   (a few files are public domain, e.g. "Xbox Menu button")
+Files are shipped UNMODIFIED. The file page on Commons is authoritative for each file's author and licence;
+the links below assume each file keeps its Commons name (if one 404s, search the name on commons.wikimedia.org).
+
+_inc/help/icons/xbox/Xbox_Back_button.svg  ->  https://commons.wikimedia.org/wiki/File:Xbox_Back_button.svg
+_inc/help/icons/xbox/Xbox_D-Pad_Down.svg  ->  https://commons.wikimedia.org/wiki/File:Xbox_D-Pad_Down.svg
+_inc/help/icons/xbox/Xbox_D-Pad_Left.svg  ->  https://commons.wikimedia.org/wiki/File:Xbox_D-Pad_Left.svg
+_inc/help/icons/xbox/Xbox_D-Pad_LeftRight.svg  ->  https://commons.wikimedia.org/wiki/File:Xbox_D-Pad_LeftRight.svg
+_inc/help/icons/xbox/Xbox_D-Pad_Right.svg  ->  https://commons.wikimedia.org/wiki/File:Xbox_D-Pad_Right.svg
+_inc/help/icons/xbox/Xbox_D-Pad_Up.svg  ->  https://commons.wikimedia.org/wiki/File:Xbox_D-Pad_Up.svg
+_inc/help/icons/xbox/Xbox_D-Pad_UpDown.svg  ->  https://commons.wikimedia.org/wiki/File:Xbox_D-Pad_UpDown.svg
+_inc/help/icons/xbox/Xbox_D-Pad_UpDownLeftRight.svg  ->  https://commons.wikimedia.org/wiki/File:Xbox_D-Pad_UpDownLeftRight.svg
+_inc/help/icons/xbox/Xbox_Guide_button.svg  ->  https://commons.wikimedia.org/wiki/File:Xbox_Guide_button.svg
+_inc/help/icons/xbox/Xbox_Left_Bumper.svg  ->  https://commons.wikimedia.org/wiki/File:Xbox_Left_Bumper.svg
+_inc/help/icons/xbox/Xbox_Left_Trigger.svg  ->  https://commons.wikimedia.org/wiki/File:Xbox_Left_Trigger.svg
+_inc/help/icons/xbox/Xbox_Left_stick.svg  ->  https://commons.wikimedia.org/wiki/File:Xbox_Left_stick.svg
+_inc/help/icons/xbox/Xbox_Left_stick_button.svg  ->  https://commons.wikimedia.org/wiki/File:Xbox_Left_stick_button.svg
+_inc/help/icons/xbox/Xbox_Menu_button.svg  ->  https://commons.wikimedia.org/wiki/File:Xbox_Menu_button.svg
+_inc/help/icons/xbox/Xbox_Right_Bumper.svg  ->  https://commons.wikimedia.org/wiki/File:Xbox_Right_Bumper.svg
+_inc/help/icons/xbox/Xbox_Right_Trigger.svg  ->  https://commons.wikimedia.org/wiki/File:Xbox_Right_Trigger.svg
+_inc/help/icons/xbox/Xbox_Right_stick.svg  ->  https://commons.wikimedia.org/wiki/File:Xbox_Right_stick.svg
+_inc/help/icons/xbox/Xbox_Right_stick_button.svg  ->  https://commons.wikimedia.org/wiki/File:Xbox_Right_stick_button.svg
+_inc/help/icons/xbox/Xbox_Share_button.svg  ->  https://commons.wikimedia.org/wiki/File:Xbox_Share_button.svg
+_inc/help/icons/xbox/Xbox_Start_button.svg  ->  https://commons.wikimedia.org/wiki/File:Xbox_Start_button.svg
+_inc/help/icons/xbox/Xbox_button_A.svg  ->  https://commons.wikimedia.org/wiki/File:Xbox_button_A.svg
+_inc/help/icons/xbox/Xbox_button_B.svg  ->  https://commons.wikimedia.org/wiki/File:Xbox_button_B.svg
+_inc/help/icons/xbox/Xbox_button_X.svg  ->  https://commons.wikimedia.org/wiki/File:Xbox_button_X.svg
+_inc/help/icons/xbox/Xbox_button_Y.svg  ->  https://commons.wikimedia.org/wiki/File:Xbox_button_Y.svg
+_inc/help/icons/playstation/PlayStation_Down_button.svg  ->  https://commons.wikimedia.org/wiki/File:PlayStation_Down_button.svg
+_inc/help/icons/playstation/PlayStation_LeftRight_button.svg  ->  https://commons.wikimedia.org/wiki/File:PlayStation_LeftRight_button.svg
+_inc/help/icons/playstation/PlayStation_Left_button.svg  ->  https://commons.wikimedia.org/wiki/File:PlayStation_Left_button.svg
+_inc/help/icons/playstation/PlayStation_Right_button.svg  ->  https://commons.wikimedia.org/wiki/File:PlayStation_Right_button.svg
+_inc/help/icons/playstation/PlayStation_UpDownLeftRight_button.svg  ->  https://commons.wikimedia.org/wiki/File:PlayStation_UpDownLeftRight_button.svg
+_inc/help/icons/playstation/PlayStation_UpDown_button.svg  ->  https://commons.wikimedia.org/wiki/File:PlayStation_UpDown_button.svg
+_inc/help/icons/playstation/PlayStation_Up_button.svg  ->  https://commons.wikimedia.org/wiki/File:PlayStation_Up_button.svg
+_inc/help/icons/playstation/PlayStation_button_C.svg  ->  https://commons.wikimedia.org/wiki/File:PlayStation_button_C.svg
+_inc/help/icons/playstation/PlayStation_button_Home.svg  ->  https://commons.wikimedia.org/wiki/File:PlayStation_button_Home.svg
+_inc/help/icons/playstation/PlayStation_button_L1.svg  ->  https://commons.wikimedia.org/wiki/File:PlayStation_button_L1.svg
+_inc/help/icons/playstation/PlayStation_button_L2.svg  ->  https://commons.wikimedia.org/wiki/File:PlayStation_button_L2.svg
+_inc/help/icons/playstation/PlayStation_button_L3.svg  ->  https://commons.wikimedia.org/wiki/File:PlayStation_button_L3.svg
+_inc/help/icons/playstation/PlayStation_button_R1.svg  ->  https://commons.wikimedia.org/wiki/File:PlayStation_button_R1.svg
+_inc/help/icons/playstation/PlayStation_button_R2.svg  ->  https://commons.wikimedia.org/wiki/File:PlayStation_button_R2.svg
+_inc/help/icons/playstation/PlayStation_button_R3.svg  ->  https://commons.wikimedia.org/wiki/File:PlayStation_button_R3.svg
+_inc/help/icons/playstation/PlayStation_button_S.svg  ->  https://commons.wikimedia.org/wiki/File:PlayStation_button_S.svg
+_inc/help/icons/playstation/PlayStation_button_Select.svg  ->  https://commons.wikimedia.org/wiki/File:PlayStation_button_Select.svg
+_inc/help/icons/playstation/PlayStation_button_Start.svg  ->  https://commons.wikimedia.org/wiki/File:PlayStation_button_Start.svg
+_inc/help/icons/playstation/PlayStation_button_T.svg  ->  https://commons.wikimedia.org/wiki/File:PlayStation_button_T.svg
+_inc/help/icons/playstation/PlayStation_button_X.svg  ->  https://commons.wikimedia.org/wiki/File:PlayStation_button_X.svg
