@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <theme>
 	<formatVersion>7</formatVersion>
-	<!-- View "Imago Detailed": game info on the left (image, name, metadata, description), list on the right.
-	     List geometry and panel are the same as the "Vertical list" option (taken from es-theme-iconic). -->
 	<variables>
 		<detailListX>0.575</detailListX>
 	</variables>
-	<customView name="Imago Detailed" inherits="grid">
+	<!-- Vista "detailed": game info on the left (image, name, metadata, description), list on the right.
+	     List geometry and panel are the same as the "Vertical list" option (taken from es-theme-iconic). -->
+	<view name="detailed">
 		<image name="list-panel" extra="true">
 			<path>${themePath}/assets/list/gamelist-panel-${logoColorScheme}.png</path>
 			<pos>0 0</pos>
@@ -140,5 +140,5 @@
 				</text>
 			</itemTemplate>
 		</textlist>
-	</customView>
+	</view>
 </theme>
