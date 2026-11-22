@@ -13,7 +13,10 @@ _inc/layout/common.xml           background, brand, clock, help, tiles, console 
 _inc/layout/system-grid-rows-N.xml  system view: icon grid, N rows (1..5); tile size = sC<N>/sH<N> in _inc/options/banner-*.xml
 _inc/layout/system-carousel.xml  system view: single-row carousel (fallback option)
 _inc/layout/gamelist-rows-N.xml  game list, N rows (1..5), with the photo+marquee banner (1-2 rows)
-_inc/layout/gamelist-list.xml    game list as a vertical list (7 rows, panel from assets/list/); option "Game list: vertical list"
+_inc/layout/gamelist-common.xml  base of the Basic/Detailed views: background, brand, clock, console logo, help
+_inc/layout/gamelist-basic.xml   custom view "Imago Basic": list in a centred panel + developer/year under it
+_inc/layout/gamelist-detailed.xml  custom view "Imago Detailed": game info on the left, list on the right
+assets/list/                     list panels from es-theme-iconic (7 rows, dark/light); "centered-*" = shifted 490 px for Imago Basic
 _inc/system_icons/               <system>.svg         square icon of each system (system view tiles)
 _inc/system_bg/                  <system>.png|svg|jpg Carbon console art (system view; fallback for games without image)
 _inc/system_logos/               console logo, ordered <path> chain (see README.txt there)
@@ -23,7 +26,7 @@ assets/branding/                 retrobat.svg, batocera.svg, retrobox.svg (PLACE
 
 ## Options (UI Settings > Theme Configuration)
 Color set (6) / Help icons (9) / Branding (3) / Console logo region (Europe [default], USA, Japan) / Banner (on, off) / System view (grid 1-5 rows, carousel) /
-Game list (1-5 rows). Then pick the **Imago** gamelist view.
+Game list (1-5 rows). Then pick the **Imago**, **Imago Basic** or **Imago Detailed** gamelist view (UI Settings > Game List > view style).
 
 ## Banner
 Only exists with 1 or 2 rows (system view and game list). On: bottom-anchored grid, info strip above it, banner above the strip with a gap.

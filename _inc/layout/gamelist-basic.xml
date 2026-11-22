@@ -1,91 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <theme>
 	<formatVersion>7</formatVersion>
-	<!-- Elementos comunes de las vistas Basic y Detailed: fondo, marca, reloj, logo de consola y ayuda (copiados de common.xml). -->
+	<!-- Vista "Imago Basic": lista en un panel centrado (panel de iconic desplazado al centro) y, bajo el panel,
+	     desarrolladora y año del juego seleccionado. Hereda de "detailed" (la vista "basic" de ES no admite metadata).
+	     El panel tiene 7 separadores de fila: la lista debe mantener 7 filas, y = 0.09, alto = 0.7519. -->
 	<variables>
-		<basicListX>0.5</basicListX>
+		<basicListX>0.31979</basicListX> <!-- 0.575 (lista de iconic a la derecha) - 490/1920 (desplazamiento del panel) -->
 	</variables>
-	<view name="basic, detailed">
-		<image name="e_bg" extra="true">
-			<path>${themePath}/assets/ui/white.png</path>
+	<customView name="Imago Basic" inherits="detailed">
+		<image name="list-panel" extra="true">
+			<path>${themePath}/assets/list/gamelist-panel-centered-${logoColorScheme}.png</path>
 			<pos>0 0</pos>
 			<size>1 1</size>
-			<color>${bg}</color>
-			<zIndex>0</zIndex>
+			<zIndex>20</zIndex>
 		</image>
-		<image name="e_wallpaper" extra="true">
-			<path>${wallpaper}</path>
-			<pos>0 0</pos>
-			<size>1 1</size>
-			<zIndex>1</zIndex>
-		</image>
-		<image name="e_brand" extra="true">
-			<path>${brandLogo}</path>
-			<pos>0.915 0.03</pos>
-			<origin>1 0</origin>
-			<maxSize>0.14 0.06</maxSize>
-			<horizontalAlignment>right</horizontalAlignment>
-			<zIndex>60</zIndex>
-		</image>
-		<text name="clock">
-			<fontPath>${fontUI}</fontPath>
-			<pos>0.98 0.03</pos>
-			<origin>1 0</origin>
-			<color>${subText}</color>
-			<fontSize>0.028</fontSize>
-			<alignment>right</alignment>
-		</text>
-		<helpsystem name="help">
-			<fontPath>${fontUI}</fontPath>
-			<fontSize>0.026</fontSize>
-			<pos>0.02 0.955</pos>
-			<textColor>${subText}</textColor>
-			<iconColor>${subText}</iconColor>
-		</helpsystem>
-	
-		<!-- Console logo, top-left. Several <path>: from LOWEST to HIGHEST priority, the last one that exists wins (same logic as es-theme-iconic).
-		     Order: <sys>.svg < <sys>-<region>.svg < <sys>/jp < jp-scheme < us < us-scheme < eu < eu-scheme < <scheme> < <region> < <scheme>-<region>.svg -->
-		<image name="logo">
-			<visible>false</visible>
-		</image>
-		<image name="e_logo" extra="true">
-			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-${logoRegion}.svg</path>
-			<pos>0.025 0.035</pos>
-			<origin>0 0</origin>
-			<maxSize>0.16 0.08</maxSize>
-			<horizontalAlignment>left</horizontalAlignment>
-			<zIndex>50</zIndex>
-		</image>
-		<text name="logoText">
-			<fontPath>${fontTitle}</fontPath>
-			<visible>false</visible>
-		</text>
-		</view>
-
-	<!-- Vista "basic": lista centrada, con desarrolladora y año del juego seleccionado. -->
-	<view name="basic">
 		<textlist name="gamelist">
 			<fontPath>${fontTitle}</fontPath>
 			<selectorColor>00000000</selectorColor>
 			<selectedColor>${accentText}</selectedColor>
 			<primaryColor>${subText}</primaryColor>
 			<secondaryColor>${dimText}</secondaryColor>
-			<horizontalMargin>0.01</horizontalMargin>
+			<horizontalMargin>0.008333333333333</horizontalMargin>
 			<zIndex>40</zIndex>
-			<pos>${basicListX} 0.42</pos>
-			<origin>0.5 0.5</origin>
-			<size>0.46 0.62</size>
-			<fontSize>0.05</fontSize>
+			<pos>${basicListX} 0.09</pos>
+			<size>0.362 0.7519</size>
+			<fontSize>0.065</fontSize>
 			<lines>7</lines>
 			<alignment>center</alignment>
 			<itemTemplate>
@@ -103,10 +42,10 @@
 				</image>
 				<text name="list-row-title">
 					<text>{game:fullName}</text>
-					<pos>0.02 0</pos>
-					<size>0.96 1</size>
+					<pos>0.023 0</pos>
+					<size>0.954 1</size>
 					<fontPath>${fontTitle}</fontPath>
-					<fontSize>0.05</fontSize>
+					<fontSize>0.065</fontSize>
 					<color>${subText}</color>
 					<alignment>center</alignment>
 					<verticalAlignment>center</verticalAlignment>
@@ -127,24 +66,24 @@
 		</textlist>
 		<text name="md_developer">
 			<fontPath>${fontInfo}</fontPath>
-			<pos>0.5 0.86</pos>
+			<pos>0.5 0.893</pos>
 			<origin>0.5 0</origin>
 			<size>0.46 0.03</size>
 			<color>${subText}</color>
-			<fontSize>0.028</fontSize>
+			<fontSize>0.026</fontSize>
 			<alignment>center</alignment>
 			<zIndex>45</zIndex>
 		</text>
 		<datetime name="md_releasedate">
 			<fontPath>${fontInfo}</fontPath>
-			<pos>0.5 0.90</pos>
+			<pos>0.5 0.923</pos>
 			<origin>0.5 0</origin>
 			<size>0.46 0.03</size>
 			<format>%Y</format>
 			<color>${dimText}</color>
-			<fontSize>0.028</fontSize>
+			<fontSize>0.026</fontSize>
 			<alignment>center</alignment>
 			<zIndex>45</zIndex>
 		</datetime>
-	</view>
+	</customView>
 </theme>

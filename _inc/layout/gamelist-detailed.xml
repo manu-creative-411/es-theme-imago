@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <theme>
 	<formatVersion>7</formatVersion>
+	<!-- Vista "Imago Detailed": info del juego a la izquierda (imagen, nombre, metadata, descripción) y lista a la derecha,
+	     con el panel de es-theme-iconic. El panel tiene 7 separadores de fila: la lista debe mantener 7 filas, y = 0.09, alto = 0.7519. -->
 	<variables>
 		<detailListX>0.575</detailListX>
 	</variables>
-	<!-- Vista "detailed": game info on the left (image, name, metadata, description), list on the right.
-	     List geometry and panel are the same as the "Vertical list" option (taken from es-theme-iconic). -->
-	<view name="detailed">
+	<customView name="Imago Detailed" inherits="detailed">
 		<image name="list-panel" extra="true">
 			<path>${themePath}/assets/list/gamelist-panel-${logoColorScheme}.png</path>
 			<pos>0 0</pos>
@@ -140,5 +140,5 @@
 				</text>
 			</itemTemplate>
 		</textlist>
-	</view>
+	</customView>
 </theme>
