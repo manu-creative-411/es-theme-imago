@@ -10,9 +10,10 @@ _inc/colorsets/*.xml             6 palettes (variables: bg, tile, accent, text, 
 _inc/branding/*.xml              brand logo selection (variables only)
 _inc/options/                    option variable files (logoRegion, banner geometry, wallpaper, tiles)
 _inc/layout/common.xml           background, brand, clock, help, tiles, console logo (top-left), menu
-_inc/layout/system-grid-rows-N.xml  system view: icon grid, N rows (1..5)
+_inc/layout/system-grid-rows-N.xml  system view: icon grid, N rows (1..5); tile size = sC<N>/sH<N> in _inc/options/banner-*.xml
 _inc/layout/system-carousel.xml  system view: single-row carousel (fallback option)
-_inc/layout/gamelist-N-banner.xml | gamelist-N-plain.xml   game list, N rows (1..5), with / without the photo+marquee banner
+_inc/layout/gamelist-rows-N.xml  game list, N rows (1..5), with the photo+marquee banner (1-2 rows)
+_inc/layout/gamelist-list.xml    game list as a vertical list (7 rows, panel from assets/list/); option "Game list: vertical list"
 _inc/system_icons/               <system>.svg         square icon of each system (system view tiles)
 _inc/system_bg/                  <system>.png|svg|jpg Carbon console art (system view; fallback for games without image)
 _inc/system_logos/               console logo, ordered <path> chain (see README.txt there)

@@ -1,43 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <theme>
 	<formatVersion>7</formatVersion>
-	<!-- Lista vertical de juegos (arriba a abajo), estilo Imago.
-	     Se elige como vista de lista en el menú de estilo de vista de EmulationStation ("Imago List").
-	     Fila seleccionada = selector neon (assets/ui/neon.png, tintado con ${neon}); título con elipsis / desplazamiento.
-	     Hereda el fondo, logo de consola y ayuda de la vista "grid" (common.xml). -->
-	<customView name="Imago List" inherits="grid">
+	<!-- Game list as a vertical list (top to bottom), 7 rows. Selected via "Game list" > "List" in the theme options.
+	     Geometry and panel image taken from es-theme-iconic (gamelist-rows/7): the panel has the row separators baked in,
+	     so the text list must keep these values: 7 lines, y 0.09, height 0.7519. -->
+	<variables>
+		<gamelistX>0.575</gamelistX> <!-- x de la lista (panel a la derecha, como en iconic) -->
+	</variables>
+	<customView name="Imago" inherits="grid">
+		<image name="list-panel" extra="true">
+			<path>${themePath}/assets/list/gamelist-panel-${logoColorScheme}.png</path>
+			<pos>0 0</pos>
+			<size>1 1</size>
+			<zIndex>20</zIndex>
+		</image>
 		<textlist name="gamelist">
 			<fontPath>${fontTitle}</fontPath>
 			<selectorColor>00000000</selectorColor>
-			<selectedColor>${text}</selectedColor>
+			<selectedColor>${accentText}</selectedColor>
 			<primaryColor>${subText}</primaryColor>
 			<secondaryColor>${dimText}</secondaryColor>
-			<horizontalMargin>0.02</horizontalMargin>
+			<horizontalMargin>0.008333333333333</horizontalMargin>
 			<zIndex>40</zIndex>
-			<pos>0.20 0.22</pos>
-			<size>0.78 0.68</size>
-			<fontSize>0.040</fontSize>
+			<pos>${gamelistX} 0.09</pos>
+			<size>0.362 0.7519</size>
+			<fontSize>0.065</fontSize>
 			<lines>7</lines>
 			<alignment>left</alignment>
 			<itemTemplate>
-				<image name="list-row-selector" extra="true">
-					<path>${themePath}/assets/ui/neon.png</path>
+				<image name="list-row-selector">
+					<path>${themePath}/assets/ui/round.png</path>
 					<pos>0 0</pos>
 					<size>1 1</size>
-					<color>${neon}00</color>
+					<color>${accent}00</color>
 					<storyboard event="activate">
-						<animation property="color" to="${neon}FF" duration="0"/>
+						<animation property="color" to="${accent}FF" duration="0"/>
 					</storyboard>
 					<storyboard event="deactivate">
-						<animation property="color" to="${neon}00" duration="0"/>
+						<animation property="color" to="${accent}00" duration="0"/>
 					</storyboard>
 				</image>
 				<text name="list-row-title">
 					<text>{game:fullName}</text>
-					<pos>0.025 0</pos>
-					<size>0.950 1</size>
+					<pos>0.023 0</pos>
+					<size>0.954 1</size>
 					<fontPath>${fontTitle}</fontPath>
-					<fontSize>0.040</fontSize>
+					<fontSize>0.065</fontSize>
 					<color>${subText}</color>
 					<alignment>left</alignment>
 					<verticalAlignment>center</verticalAlignment>
@@ -46,7 +54,7 @@
 					<autoScrollDelay>1500</autoScrollDelay>
 					<autoScrollSpeed>50</autoScrollSpeed>
 					<storyboard event="activate">
-						<animation property="color" to="${text}" duration="0"/>
+						<animation property="color" to="${accentText}" duration="0"/>
 						<animation property="autoScroll" to="horizontal" duration="0"/>
 					</storyboard>
 					<storyboard event="deactivate">

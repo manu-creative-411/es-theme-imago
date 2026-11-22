@@ -5,9 +5,9 @@
 	<view name="system">
 		<imagegrid name="imagegrid">
 			<pos>0 ${gY2}</pos>
-			<size>1 ${gH2}</size>
+			<size>1 ${sH2}</size>
 			<padding>${gPad}</padding>
-			<autoLayout>${gC2} 2</autoLayout>
+			<autoLayout>${sC2} 2</autoLayout>
 			<margin>${gM2}</margin>
 			<autoLayoutSelectedZoom>${tZoom}</autoLayoutSelectedZoom>
 			<scrollDirection>horizontal</scrollDirection>

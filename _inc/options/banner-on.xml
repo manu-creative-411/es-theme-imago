@@ -52,5 +52,16 @@
 		<bVis>true</bVis>
 		<bHeroVis>!exists({game:image})</bHeroVis>
 		<bNameVis>!exists({game:marquee})</bNameVis>
-	</variables>
+			<!-- Iconos de sistema: +10% (columnas /1.1; alto x1.1 donde cabe) -->
+		<sC1>5.4545</sC1>
+		<sH1>0.38</sH1>
+		<sC2>6.3636</sC2>
+		<sH2>0.5</sH2>
+		<sC3>7.2727</sC3>
+		<sH3>0.77</sH3>
+		<sC4>8.1818</sC4>
+		<sH4>0.76</sH4>
+		<sC5>10.9091</sC5>
+		<sH5>0.78</sH5>
+</variables>
 </theme>
