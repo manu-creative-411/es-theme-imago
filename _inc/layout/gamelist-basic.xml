@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+	<formatVersion>7</formatVersion>
+	<!-- View "Imago Basic": centred vertical list, minimal info (developer and year of the selected game). -->
+	<variables>
+		<basicListX>0.5</basicListX>
+	</variables>
+	<customView name="Imago Basic" inherits="grid">
+		<textlist name="gamelist">
+			<fontPath>${fontTitle}</fontPath>
+			<selectorColor>00000000</selectorColor>
+			<selectedColor>${accentText}</selectedColor>
+			<primaryColor>${subText}</primaryColor>
+			<secondaryColor>${dimText}</secondaryColor>
+			<horizontalMargin>0.01</horizontalMargin>
+			<zIndex>40</zIndex>
+			<pos>${basicListX} 0.42</pos>
+			<origin>0.5 0.5</origin>
+			<size>0.46 0.62</size>
+			<fontSize>0.05</fontSize>
+			<lines>7</lines>
+			<alignment>center</alignment>
+			<itemTemplate>
+				<image name="list-row-selector">
+					<path>${themePath}/assets/ui/round.png</path>
+					<pos>0 0</pos>
+					<size>1 1</size>
+					<color>${accent}00</color>
+					<storyboard event="activate">
+						<animation property="color" to="${accent}FF" duration="0"/>
+					</storyboard>
+					<storyboard event="deactivate">
+						<animation property="color" to="${accent}00" duration="0"/>
+					</storyboard>
+				</image>
+				<text name="list-row-title">
+					<text>{game:fullName}</text>
+					<pos>0.02 0</pos>
+					<size>0.96 1</size>
+					<fontPath>${fontTitle}</fontPath>
+					<fontSize>0.05</fontSize>
+					<color>${subText}</color>
+					<alignment>center</alignment>
+					<verticalAlignment>center</verticalAlignment>
+					<multiLine>false</multiLine>
+					<autoScroll>none</autoScroll>
+					<autoScrollDelay>1500</autoScrollDelay>
+					<autoScrollSpeed>50</autoScrollSpeed>
+					<storyboard event="activate">
+						<animation property="color" to="${accentText}" duration="0"/>
+						<animation property="autoScroll" to="horizontal" duration="0"/>
+					</storyboard>
+					<storyboard event="deactivate">
+						<animation property="color" to="${subText}" duration="0"/>
+						<animation property="autoScroll" to="none" duration="0"/>
+					</storyboard>
+				</text>
+			</itemTemplate>
+		</textlist>
+		<text name="md_developer">
+			<fontPath>${fontInfo}</fontPath>
+			<pos>0.5 0.86</pos>
+			<origin>0.5 0</origin>
+			<size>0.46 0.03</size>
+			<color>${subText}</color>
+			<fontSize>0.028</fontSize>
+			<alignment>center</alignment>
+			<zIndex>45</zIndex>
+		</text>
+		<datetime name="md_releasedate">
+			<fontPath>${fontInfo}</fontPath>
+			<pos>0.5 0.90</pos>
+			<origin>0.5 0</origin>
+			<size>0.46 0.03</size>
+			<format>%Y</format>
+			<color>${dimText}</color>
+			<fontSize>0.028</fontSize>
+			<alignment>center</alignment>
+			<zIndex>45</zIndex>
+		</datetime>
+	</customView>
+</theme>
