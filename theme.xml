@@ -42,4 +42,5 @@
 	<include subset="gamerows" name="3 rows" displayName="Game list: 3 rows">./_inc/layout/gamelist-rows-3.xml</include>
 	<include subset="gamerows" name="4 rows" displayName="Game list: 4 rows">./_inc/layout/gamelist-rows-4.xml</include>
 	<include subset="gamerows" name="5 rows" displayName="Game list: 5 rows">./_inc/layout/gamelist-rows-5.xml</include>
+	<include>./_inc/layout/gamelist-list.xml</include>
 </theme>
