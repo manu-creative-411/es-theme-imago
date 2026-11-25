@@ -33,7 +33,7 @@ Color set / Help icons / Branding / Console logo region / **Banner** (off [defau
 `detailed`; `basic` and the custom **Icons** view are in the same menu (Game list view style).
 
 ## Icon views (system view and the "Icons" game view)
-- **Banner** (optional, at most 2 rows of icons below it): console art (`_inc/system_bg`) as the background, always; the logo goes on a tinted plate:
+- **Banner** (optional, at most 2 rows of icons below it): console art (`_inc/system_bg`) as the background (in the game view: the selected game main image, cropped, when it has one); the logo goes on a tinted plate:
   the console logo in the system view, the game logo (`md_marquee`) in the game view, falling back to the console logo.
   The bottom corners are rounded (the art is drawn taller, top edge off screen, `roundCorners` = `heroRad`). Height = `bannerPct` % of the screen **height** (30-50). `bannerK` in `geometry.xml` switches the basis to the screen width (`${screen.ratio}`,
   which at 16:9 means 53-89 % of the height: only usable with 4:3 or similar).

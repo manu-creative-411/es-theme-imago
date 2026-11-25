@@ -3,12 +3,22 @@
 	<formatVersion>7</formatVersion>
 	<!-- Game icon view ("Icons"): banner (console art + game or console logo) / cartel / info row / icon grid. -->
 	<customView name="Icons" inherits="grid">
+		<image name="e_hero_game" extra="true" if="${bOn} == 1">
+			<path>{game:image}</path>
+			<pos>0.5 ${heroC}</pos>
+			<origin>0.5 0.5</origin>
+			<minSize>1 ${heroH}</minSize>
+			<roundCorners>${heroRad}</roundCorners>
+			<visible>exists({game:image})</visible>
+			<zIndex>29</zIndex>
+		</image>
 		<image name="e_hero" extra="true" if="${bOn} == 1">
 			<path>${themePath}/_inc/system_bg/${system.theme}.jpg</path>
 			<pos>0.5 ${heroC}</pos>
 			<origin>0.5 0.5</origin>
 			<minSize>1 ${heroH}</minSize>
 			<roundCorners>${heroRad}</roundCorners>
+			<visible>!exists({game:image})</visible>
 			<zIndex>29</zIndex>
 		</image>
 		<rectangle name="e_hero_dim" extra="true" if="${bOn} == 1">
