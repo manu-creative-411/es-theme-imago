@@ -75,7 +75,7 @@ and the built-in battery indicator hidden (same approach as es-theme-iconic). Ic
   follows the cursor about two rows late, and it hides 1.5 s after the last move.
 - `rectangle` and `ninepatch` ignore `origin`: give explicit top-left positions .
 - A variable whose value contains `${` is evaluated as a math expression (`${tile}E6` would become a number): colours with alpha are written inline.
-- `detailed`: console logo centred over the game image, image on its own card (same shadow as the others); gaps between cards are >= 0.035 so shadows do not stack and look darker.
+- `detailed`: console logo centred over the game image, image on its own card (same shadow as the others); the left column (logo + 3 cards) spans exactly the height of the list card (0.13-0.93); gaps between cards are >= 0.03 so shadows do not stack.
 - In `detailed` ES draws every metadata label/field the theme does not define: `gamelist-common.xml` hides them all and each view re-enables its own.
 - Entries without game data (the `. .` parent folder) skip the item template and use the built-in selector.
 
@@ -148,3 +148,5 @@ AFTER `common.xml`. Xbox, PlayStation and SNES map the *physical position* of Ba
 (`iconColor` FFFFFFFF, not tinted); the generic sets keep the theme tint (`${subText}`). Font and size of the help bar stay in `common.xml`.
 
 **Licence:** the package mixes licences (own work, CC BY-SA 4.0 from Wikimedia Commons, CC BY-NC-SA from Recalbox/Carbon/Iconic). Read `NOTICE.md`, `_inc/help/NOTICE.md` and `_inc/help/CREDITS-wikimedia.txt` before redistributing: the package is non-commercial because of its third-party parts.
+
+- Sums that reach ES as `0 + ...` must contain at least one `${}`: a variable whose value has no `${` is NOT evaluated, so `0 + 0.5 + (0)` stays a literal string and the position falls back to 0. Use numbers directly instead.

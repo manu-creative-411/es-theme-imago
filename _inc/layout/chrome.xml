@@ -12,8 +12,8 @@
 		</text>
 		<!-- Native controller indicator: without imagePath ES draws a plain grey square per pad at the top-left. Icons are tinted, bottom bar. -->
 		<controllerActivity name="controllerActivity">
-			<pos>0.50 0.957</pos>
-			<size>0.17 0.030</size>
+			<pos>0.795 0.955</pos>
+			<size>0.18 0.034</size>
 			<itemSpacing>0.004</itemSpacing>
 			<horizontalAlignment>right</horizontalAlignment>
 			<color>${subText}</color>
@@ -60,13 +60,13 @@
 			<reverse>true</reverse>
 			<clock name="e_status_clock" extra="true">
 				<color>${text}</color>
-				<fontSize>0.022</fontSize>
+				<fontSize>0.032</fontSize>
 				<lineSpacing>1</lineSpacing>
 				<fontPath>${fontMedium}</fontPath>
 			</clock>
 			<batteryText name="e_status_battery_text" extra="true">
 				<color>${subText}</color>
-				<fontSize>0.022</fontSize>
+				<fontSize>0.032</fontSize>
 				<lineSpacing>1</lineSpacing>
 				<fontPath>${fontInfo}</fontPath>
 			</batteryText>
