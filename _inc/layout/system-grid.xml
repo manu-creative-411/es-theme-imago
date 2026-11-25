@@ -42,6 +42,10 @@
 			<fontSize>0.034</fontSize>
 			<forceUppercase>true</forceUppercase>
 		</text>
+		<!-- The built-in game-count bar would cover the grid -->
+		<text name="systemInfo">
+			<visible>false</visible>
+		</text>
 		<!-- Banner -->
 		<image name="e_hero" extra="true" if="${bOn} == 1">
 			<path>${themePath}/_inc/system_bg/${system.theme}.jpg</path>
@@ -59,31 +63,6 @@
 			<roundCorners>${heroRad}</roundCorners>
 			<zIndex>29.5</zIndex>
 		</rectangle>
-		<ninepatch name="e_plate_sh" extra="true" if="${bOn} == 1 &amp;&amp; (firstfile(${themePath} + '/_inc/system_logos/' + ${system.theme} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '-' + ${logoRegion} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/jp.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-jp.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/us.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-us.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/eu.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-eu.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoRegion} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-' + ${logoRegion} + '.svg') != '')">
-			<path>${themePath}/assets/ui/shadow.png</path>
-			<pos>${e_plateShX} ${e_plateShY}</pos>
-			<size>${e_plateShW} ${e_plateShH}</size>
-			<cornerSize>40 40</cornerSize>
-			<color>${shadowColor}</color>
-			<zIndex>31</zIndex>
-		</ninepatch>
-		<rectangle name="e_plate" extra="true" if="${bOn} == 1 &amp;&amp; (firstfile(${themePath} + '/_inc/system_logos/' + ${system.theme} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '-' + ${logoRegion} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/jp.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-jp.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/us.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-us.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/eu.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-eu.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoRegion} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-' + ${logoRegion} + '.svg') != '')">
-			<pos>${plateX} ${plateY}</pos>
-			<size>${plateW} ${plateH}</size>
-			<color>${panelTop}</color>
-			<borderColor>${panelEdge}</borderColor>
-			<borderSize>1</borderSize>
-			<roundCorners>${cardRadius}</roundCorners>
-			<zIndex>32</zIndex>
-		</rectangle>
-		<image name="e_plate_gl" extra="true" if="${bOn} == 1 &amp;&amp; (firstfile(${themePath} + '/_inc/system_logos/' + ${system.theme} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '-' + ${logoRegion} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/jp.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-jp.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/us.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-us.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/eu.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-eu.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoRegion} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-' + ${logoRegion} + '.svg') != '')">
-			<path>${themePath}/assets/ui/sheen.png</path>
-			<pos>${plateX} ${plateY}</pos>
-			<size>${plateW} ${plateH}</size>
-			<color>${panelBot}</color>
-			<roundCorners>${cardRadius}</roundCorners>
-			<zIndex>33</zIndex>
-		</image>
 		<image name="e_syslogo" extra="true" if="${bOn} == 1">
 			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
 			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>

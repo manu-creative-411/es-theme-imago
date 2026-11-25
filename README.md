@@ -37,8 +37,8 @@ Color set / Help icons / Branding / Console logo region / **Banner** (off [defau
   the console logo in the system view, the game logo (`md_marquee`) in the game view, falling back to the console logo.
   The bottom corners are rounded (the art is drawn taller, top edge off screen, `roundCorners` = `heroRad`). Height = `bannerPct` % of the screen **height** (30-50). `bannerK` in `geometry.xml` switches the basis to the screen width (`${screen.ratio}`,
   which at 16:9 means 53-89 % of the height: only usable with 4:3 or similar).
-- **Without banner**: a *cartel* (name card) sits at the top-left, level with the status capsule. With the banner on it is centred in the banner, where the logo plate would be. System view: console name + manufacturer . year.
-  Game view: game name + developer + year. With the banner on, the cartel disappears when there is a logo to show and comes back when there is none
+- **Without banner**: a *cartel* (name card) sits at the top-left, level with the status capsule. With the banner on it is centred in the banner, in the logo's place. System view: console name + manufacturer . year.
+  Game view: game name + developer + year. With the banner on, the cartel is the only thing drawn there when there is no logo, and does not appear when there is one
   (system view: no console logo; game view: neither game logo nor console logo).
 - Up to 4 rows without banner (default 3), 2 with it. Row count -> tile height (capped at 34 % of the screen height); columns = floor(width / tile height),
   so the cells fill the whole width and the icon is as big as the row allows. All of it is computed in `geometry.xml` (variables evaluate in order).
@@ -47,6 +47,8 @@ Color set / Help icons / Branding / Console logo region / **Banner** (off [defau
   `min/max/clamp` and `a ? b : c` exist. Round/floor are written with comparisons here.
 - (old note) ES `MathExpr` has no round/min: they are written with comparisons. `<visible>` is dynamic only when it contains a binding (`{game:name}`);
   static conditions use the `if` attribute (works on views, includes and elements).
+
+## Game count: the built-in `systemInfo` bar is hidden in the icon system view (it covered the grid).
 
 ## Status capsule
 `chrome.xml`: the native clock / battery+wifi indicators belong to the `screen` view (hidden there, as iconic does); a stackpanel with `clock`, `batteryText`, `batteryIcon` and `networkIcon` inside a rounded card, top right. The built-in clock is moved off screen
@@ -67,7 +69,7 @@ and the built-in battery indicator hidden (same approach as es-theme-iconic). Ic
 - Rows: item template with a flat rounded pill + hairline for the selected row and hairline separators; `roundCorners` of a rectangle is in PIXELS.
 - Scrollbar: 0.45 % wide, `${thumb}`, drawn in the right padding of the card. ES quirk (not fixable from a theme): with an item template the thumb
   follows the cursor about two rows late, and it hides 1.5 s after the last move.
-- `rectangle` and `ninepatch` ignore `origin`: give explicit top-left positions (`plateX`...).
+- `rectangle` and `ninepatch` ignore `origin`: give explicit top-left positions .
 - A variable whose value contains `${` is evaluated as a math expression (`${tile}E6` would become a number): colours with alpha are written inline.
 - In `detailed` ES draws every metadata label/field the theme does not define: `gamelist-common.xml` hides them all and each view re-enables its own.
 - Entries without game data (the `. .` parent folder) skip the item template and use the built-in selector.

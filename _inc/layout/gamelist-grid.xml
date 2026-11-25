@@ -19,34 +19,6 @@
 			<roundCorners>${heroRad}</roundCorners>
 			<zIndex>29.5</zIndex>
 		</rectangle>
-		<ninepatch name="e_plate_sh" extra="true" if="${bOn} == 1">
-			<path>${themePath}/assets/ui/shadow.png</path>
-			<pos>${e_plateShX} ${e_plateShY}</pos>
-			<size>${e_plateShW} ${e_plateShH}</size>
-			<cornerSize>40 40</cornerSize>
-			<color>${shadowColor}</color>
-			<visible>{game:name} != '' &amp;&amp; (exists({game:marquee}) || (firstfile('${themePath}/_inc/system_logos/${system.theme}.svg', '${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg', '${themePath}/_inc/system_logos/${system.theme}/jp.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-jp.svg', '${themePath}/_inc/system_logos/${system.theme}/us.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-us.svg', '${themePath}/_inc/system_logos/${system.theme}/eu.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-eu.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-${logoRegion}.svg') != ''))</visible>
-			<zIndex>31</zIndex>
-		</ninepatch>
-		<rectangle name="e_plate" extra="true" if="${bOn} == 1">
-			<pos>${plateX} ${plateY}</pos>
-			<size>${plateW} ${plateH}</size>
-			<color>${panelTop}</color>
-			<borderColor>${panelEdge}</borderColor>
-			<borderSize>1</borderSize>
-			<roundCorners>${cardRadius}</roundCorners>
-			<visible>{game:name} != '' &amp;&amp; (exists({game:marquee}) || (firstfile('${themePath}/_inc/system_logos/${system.theme}.svg', '${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg', '${themePath}/_inc/system_logos/${system.theme}/jp.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-jp.svg', '${themePath}/_inc/system_logos/${system.theme}/us.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-us.svg', '${themePath}/_inc/system_logos/${system.theme}/eu.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-eu.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-${logoRegion}.svg') != ''))</visible>
-			<zIndex>32</zIndex>
-		</rectangle>
-		<image name="e_plate_gl" extra="true" if="${bOn} == 1">
-			<path>${themePath}/assets/ui/sheen.png</path>
-			<pos>${plateX} ${plateY}</pos>
-			<size>${plateW} ${plateH}</size>
-			<color>${panelBot}</color>
-			<roundCorners>${cardRadius}</roundCorners>
-			<visible>{game:name} != '' &amp;&amp; (exists({game:marquee}) || (firstfile('${themePath}/_inc/system_logos/${system.theme}.svg', '${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg', '${themePath}/_inc/system_logos/${system.theme}/jp.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-jp.svg', '${themePath}/_inc/system_logos/${system.theme}/us.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-us.svg', '${themePath}/_inc/system_logos/${system.theme}/eu.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-eu.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-${logoRegion}.svg') != ''))</visible>
-			<zIndex>33</zIndex>
-		</image>
 		<image name="md_marquee">
 			<visible>${bVis}</visible>
 			<pos>0.5 ${bannerC}</pos>

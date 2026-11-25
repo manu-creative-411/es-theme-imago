@@ -31,7 +31,7 @@
 		<mY>0.010</mY>
 		<tMax>0.34</tMax>   <!-- tallest tile (screen height fraction): fewer rows never inflate the icons beyond this -->
 		<tAspect>1.0</tAspect> <!-- tile width / height; the column count is rounded so the tiles fill the width -->
-		<!-- Banner: console art full width, logo plate in the middle -->
+		<!-- Banner: console art full width, logo (or the cartel when there is none) in the middle -->
 		<plateW>0.40</plateW>
 		<plateH>${bannerH} * 0.58</plateH>
 		<plateY>(${bannerH} - ${plateH}) / 2</plateY>
@@ -106,18 +106,10 @@
 		<e_desc_cardShY>0 + 0.72 - ${shMy}</e_desc_cardShY>
 		<e_desc_cardShW>0 + 0.51 + 2 * ${shMx}</e_desc_cardShW>
 		<e_desc_cardShH>0 + 0.21 + 2 * ${shMy}</e_desc_cardShH>
-		<e_plateShX>0 + ${plateX} - ${shMx}</e_plateShX>
-		<e_plateShY>0 + ${plateY} - ${shMy}</e_plateShY>
-		<e_plateShW>0 + ${plateW} + 2 * ${shMx}</e_plateShW>
-		<e_plateShH>0 + ${plateH} + 2 * ${shMy}</e_plateShH>
 		<cartelShX>0 + ${ctX} - ${shMx}</cartelShX>
 		<cartelShY>0 + ${ctY} - ${shMy}</cartelShY>
 		<cartelShW>0 + ${ctW} + 2 * ${shMx}</cartelShW>
 		<cartelShH>0 + ${ctH} + 2 * ${shMy}</cartelShH>
-		<e_plateShX>0 + ${plateX} - ${shMx}</e_plateShX>
-		<e_plateShY>0 + ${plateY} - ${shMy}</e_plateShY>
-		<e_plateShW>0 + ${plateW} + 2 * ${shMx}</e_plateShW>
-		<e_plateShH>0 + ${plateH} + 2 * ${shMy}</e_plateShH>
 		<cartelgShX>0 + ${ctX} - ${shMx}</cartelgShX>
 		<cartelgShY>0 + ${ctY} - ${shMy}</cartelgShY>
 		<cartelgShW>0 + ${ctW} + 2 * ${shMx}</cartelgShW>
