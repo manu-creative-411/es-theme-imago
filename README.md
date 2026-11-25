@@ -48,7 +48,8 @@ Color set / Help icons / Branding / Console logo region / **Banner** (off [defau
 - (old note) ES `MathExpr` has no round/min: they are written with comparisons. `<visible>` is dynamic only when it contains a binding (`{game:name}`);
   static conditions use the `if` attribute (works on views, includes and elements).
 
-## Game count: the built-in `systemInfo` bar is hidden in the icon system view (it covered the grid).
+## Game count: ES drives the `systemInfo` text (not a per-system extra, so it cannot follow the cartel). In the icon system view it sits in the footer, right-aligned on the help bar's baseline.
+`system.releaseYear` is the localized word "Unknown" when the year is missing: test it with `> 0`, never with `!= ''`.
 
 ## Status capsule
 `chrome.xml`: the native clock / battery+wifi indicators belong to the `screen` view (hidden there, as iconic does); a stackpanel with `clock`, `batteryText`, `batteryIcon` and `networkIcon` inside a rounded card, top right. The built-in clock is moved off screen

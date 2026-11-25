@@ -42,9 +42,18 @@
 			<fontSize>0.034</fontSize>
 			<forceUppercase>true</forceUppercase>
 		</text>
-		<!-- The built-in game-count bar would cover the grid -->
+		<!-- Game count (ES fills this text): footer band, right-aligned on the same baseline as the help bar, margin = capsule margin.
+		     It is not a per-system extra, so it cannot follow the cartel; the footer is free in every layout. -->
 		<text name="systemInfo">
-			<visible>false</visible>
+			<pos>0.975 0.955</pos>
+			<origin>1 0</origin>
+			<size>0.3 0.035</size>
+			<fontPath>${fontUI}</fontPath>
+			<fontSize>0.026</fontSize>
+			<color>${subText}</color>
+			<backgroundColor>00000000</backgroundColor>
+			<alignment>right</alignment>
+			<zIndex>45</zIndex>
 		</text>
 		<!-- Banner -->
 		<image name="e_hero" extra="true" if="${bOn} == 1">
@@ -117,7 +126,7 @@
 			<multiLine>false</multiLine>
 			<zIndex>45</zIndex>
 		</text>
-		<text name="e_sys_sub" extra="true" if="(${bOn} == 0 || (firstfile(${themePath} + '/_inc/system_logos/' + ${system.theme} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '-' + ${logoRegion} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/jp.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-jp.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/us.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-us.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/eu.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-eu.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoRegion} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-' + ${logoRegion} + '.svg') == '')) &amp;&amp; ${system.manufacturer} != '' &amp;&amp; ${system.releaseYear} != ''">
+		<text name="e_sys_sub" extra="true" if="(${bOn} == 0 || (firstfile(${themePath} + '/_inc/system_logos/' + ${system.theme} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '-' + ${logoRegion} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/jp.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-jp.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/us.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-us.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/eu.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-eu.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoRegion} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-' + ${logoRegion} + '.svg') == '')) &amp;&amp; ${system.manufacturer} != '' &amp;&amp; ${system.releaseYear} &gt; 0">
 			<text>${system.manufacturer} · ${system.releaseYear}</text>
 			<fontPath>${fontInfo}</fontPath>
 			<pos>${ctXi} ${ctSy}</pos>
@@ -128,7 +137,7 @@
 			<multiLine>false</multiLine>
 			<zIndex>45</zIndex>
 		</text>
-		<text name="e_sys_sub_m" extra="true" if="(${bOn} == 0 || (firstfile(${themePath} + '/_inc/system_logos/' + ${system.theme} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '-' + ${logoRegion} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/jp.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-jp.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/us.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-us.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/eu.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-eu.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoRegion} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-' + ${logoRegion} + '.svg') == '')) &amp;&amp; ${system.manufacturer} != '' &amp;&amp; ${system.releaseYear} == ''">
+		<text name="e_sys_sub_m" extra="true" if="(${bOn} == 0 || (firstfile(${themePath} + '/_inc/system_logos/' + ${system.theme} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '-' + ${logoRegion} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/jp.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-jp.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/us.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-us.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/eu.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-eu.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoRegion} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-' + ${logoRegion} + '.svg') == '')) &amp;&amp; ${system.manufacturer} != '' &amp;&amp; ${system.releaseYear} &lt;= 0">
 			<text>${system.manufacturer}</text>
 			<fontPath>${fontInfo}</fontPath>
 			<pos>${ctXi} ${ctSy}</pos>
@@ -139,7 +148,7 @@
 			<multiLine>false</multiLine>
 			<zIndex>45</zIndex>
 		</text>
-		<text name="e_sys_sub_y" extra="true" if="(${bOn} == 0 || (firstfile(${themePath} + '/_inc/system_logos/' + ${system.theme} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '-' + ${logoRegion} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/jp.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-jp.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/us.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-us.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/eu.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-eu.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoRegion} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-' + ${logoRegion} + '.svg') == '')) &amp;&amp; ${system.manufacturer} == '' &amp;&amp; ${system.releaseYear} != ''">
+		<text name="e_sys_sub_y" extra="true" if="(${bOn} == 0 || (firstfile(${themePath} + '/_inc/system_logos/' + ${system.theme} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '-' + ${logoRegion} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/jp.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-jp.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/us.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-us.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/eu.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-eu.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoRegion} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-' + ${logoRegion} + '.svg') == '')) &amp;&amp; ${system.manufacturer} == '' &amp;&amp; ${system.releaseYear} &gt; 0">
 			<text>${system.releaseYear}</text>
 			<fontPath>${fontInfo}</fontPath>
 			<pos>${ctXi} ${ctSy}</pos>
