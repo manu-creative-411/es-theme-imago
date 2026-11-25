@@ -5,8 +5,10 @@
 	     sysRows / gameRows and the screen ratio. Variables evaluate in order, so keep it ordered. -->
 	<variables>
 		<!-- Basis of the banner height: 1 = % of the screen HEIGHT (default; 30-50 % of the width would be 53-89 % of the height at 16:9),
-		     ${screen.ratio} = % of the screen WIDTH. -->
+		     ${scrRatio} = % of the screen WIDTH. -->
 		<bannerK>1</bannerK>
+		<!-- ES defines screen.ratio as a NAME ("16:9"), so the numeric ratio is computed here -->
+		<scrRatio>${screen.width} / ${screen.height}</scrRatio>
 		<bannerH>${bannerPct} / 100 * ${bannerK}</bannerH>
 		<!-- Shadow margin of assets/ui/shadow.png (px) as screen fractions -->
 		<shMx>24 / ${screen.width}</shMx>
@@ -44,7 +46,7 @@
 		<sCell>${sCellRaw} - (${sCellRaw} &gt; ${tMax}) * (${sCellRaw} - ${tMax})</sCell>
 		<sGridH>${sRows} * ${sCell} + (${sRows} - 1) * ${mY} + ${gPadV}</sGridH>
 		<sGridY>${sZoneY} + (${sZoneH} - ${sGridH}) / 2</sGridY>
-		<sColsF>(0.972 + ${mX}) / (${sCell} * ${tAspect} / ${screen.ratio} + ${mX})</sColsF>
+		<sColsF>(0.972 + ${mX}) / (${sCell} * ${tAspect} / ${scrRatio} + ${mX})</sColsF>
 		<sCols>3 + (${sColsF} &gt;= 4) + (${sColsF} &gt;= 5) + (${sColsF} &gt;= 6) + (${sColsF} &gt;= 7) + (${sColsF} &gt;= 8) + (${sColsF} &gt;= 9) + (${sColsF} &gt;= 10) + (${sColsF} &gt;= 11) + (${sColsF} &gt;= 12) + (${sColsF} &gt;= 13) + (${sColsF} &gt;= 14)</sCols> <!-- floor(ColsF), clamped to 3..14: tiles at least as wide as tall, so the icon is as big as the row allows -->
 		<!-- Game icon view -->
 		<gRows>${gameRows} - ${bOn} * (${gameRows} &gt; 2) * (${gameRows} - 2)</gRows> <!-- banner: at most 2 rows -->
@@ -54,55 +56,57 @@
 		<gCell>${gCellRaw} - (${gCellRaw} &gt; ${tMax}) * (${gCellRaw} - ${tMax})</gCell>
 		<gGridH>${gRows} * ${gCell} + (${gRows} - 1) * ${mY} + ${gPadV}</gGridH>
 		<gGridY>${gZoneY} + (${gZoneH} - ${gGridH}) / 2</gGridY>
-		<gColsF>(0.972 + ${mX}) / (${gCell} * ${tAspect} / ${screen.ratio} + ${mX})</gColsF>
+		<gColsF>(0.972 + ${mX}) / (${gCell} * ${tAspect} / ${scrRatio} + ${mX})</gColsF>
 		<gCols>3 + (${gColsF} &gt;= 4) + (${gColsF} &gt;= 5) + (${gColsF} &gt;= 6) + (${gColsF} &gt;= 7) + (${gColsF} &gt;= 8) + (${gColsF} &gt;= 9) + (${gColsF} &gt;= 10) + (${gColsF} &gt;= 11) + (${gColsF} &gt;= 12) + (${gColsF} &gt;= 13) + (${gColsF} &gt;= 14)</gCols> <!-- floor(ColsF), clamped to 3..14: tiles at least as wide as tall, so the icon is as big as the row allows -->
 		<!-- Derived by the layouts (cards, cartel): -->
-		<ctXi>${ctX} + ${ctPad}</ctXi>
-		<ctTy>${ctY} + 0.008</ctTy>
+		<ctXi>0 + ${ctX} + ${ctPad}</ctXi>
+		<ctTy>0 + ${ctY} + 0.008</ctTy>
 		<ctTw>${ctW} - 2 * ${ctPad}</ctTw>
 		<ctTh>0.050</ctTh>
 		<ctTfs>0.040</ctTfs>
-		<ctSy>${ctY} + 0.058</ctSy>
+		<ctSy>0 + ${ctY} + 0.058</ctSy>
 		<ctSh>0.024</ctSh>
 		<ctSfs>0.021</ctSfs>
 		<ctSwHalf>(${ctW} - 2 * ${ctPad}) * 0.72</ctSwHalf>
 		<ctYearW>(${ctW} - 2 * ${ctPad}) * 0.26</ctYearW>
-		<ctYearX>${ctX} + ${ctW} - ${ctPad} - ${ctYearW}</ctYearX>
+		<ctYearX>0 + ${ctX} + ${ctW} - ${ctPad} - ${ctYearW}</ctYearX>
 		<capR>${screen.height} * ${capH} / 2</capR>
-		<capInX>${capX} + 0.012</capInX>
+		<capInX>0 + ${capX} + 0.012</capInX>
 		<capInW>${capW} - 0.024</capInW>
-		<capShX>${capX} - ${shMx}</capShX>
+		<capStackH>0.032</capStackH>
+		<capStackY>0 + ${capY} + (${capH} - ${capStackH}) / 2</capStackY>
+		<capShX>0 + ${capX} - ${shMx}</capShX>
 		<capShY>${capY} - ${shMy}</capShY>
-		<capShW>${capW} + 2 * ${shMx}</capShW>
-		<capShH>${capH} + 2 * ${shMy}</capShH>
-		<brandX>${capX} - 0.012</brandX>
-		<e_list_panelShX>${basicPanelX} - ${shMx}</e_list_panelShX>
-		<e_list_panelShY>${listPanelY} - ${shMy}</e_list_panelShY>
-		<e_list_panelShW>${listPanelW} + 2 * ${shMx}</e_list_panelShW>
-		<e_list_panelShH>${basicPanelH} + 2 * ${shMy}</e_list_panelShH>
+		<capShW>0 + ${capW} + 2 * ${shMx}</capShW>
+		<capShH>0 + ${capH} + 2 * ${shMy}</capShH>
+		<brandX>0 + ${capX} - 0.012</brandX>
+		<e_list_panelShX>0 + ${basicPanelX} - ${shMx}</e_list_panelShX>
+		<e_list_panelShY>0 + ${listPanelY} - ${shMy}</e_list_panelShY>
+		<e_list_panelShW>0 + ${listPanelW} + 2 * ${shMx}</e_list_panelShW>
+		<e_list_panelShH>0 + ${basicPanelH} + 2 * ${shMy}</e_list_panelShH>
 		<listDetShX>${listPanelX} - ${shMx}</listDetShX>
 		<listDetShY>${listPanelY} - ${shMy}</listDetShY>
 		<listDetShW>${listPanelW} + 2 * ${shMx}</listDetShW>
 		<listDetShH>${listPanelH} + 2 * ${shMy}</listDetShH>
-		<e_info_cardShX>0.025 - ${shMx}</e_info_cardShX>
-		<e_info_cardShY>0.585 - ${shMy}</e_info_cardShY>
-		<e_info_cardShW>0.51 + 2 * ${shMx}</e_info_cardShW>
-		<e_info_cardShH>0.115 + 2 * ${shMy}</e_info_cardShH>
-		<e_desc_cardShX>0.025 - ${shMx}</e_desc_cardShX>
-		<e_desc_cardShY>0.72 - ${shMy}</e_desc_cardShY>
-		<e_desc_cardShW>0.51 + 2 * ${shMx}</e_desc_cardShW>
-		<e_desc_cardShH>0.21 + 2 * ${shMy}</e_desc_cardShH>
+		<e_info_cardShX>0 + 0.025 - ${shMx}</e_info_cardShX>
+		<e_info_cardShY>0 + 0.585 - ${shMy}</e_info_cardShY>
+		<e_info_cardShW>0 + 0.51 + 2 * ${shMx}</e_info_cardShW>
+		<e_info_cardShH>0 + 0.115 + 2 * ${shMy}</e_info_cardShH>
+		<e_desc_cardShX>0 + 0.025 - ${shMx}</e_desc_cardShX>
+		<e_desc_cardShY>0 + 0.72 - ${shMy}</e_desc_cardShY>
+		<e_desc_cardShW>0 + 0.51 + 2 * ${shMx}</e_desc_cardShW>
+		<e_desc_cardShH>0 + 0.21 + 2 * ${shMy}</e_desc_cardShH>
 		<listBasShX>${basicPanelX} - ${shMx}</listBasShX>
 		<listBasShY>${listPanelY} - ${shMy}</listBasShY>
 		<listBasShW>${listPanelW} + 2 * ${shMx}</listBasShW>
 		<listBasShH>${basicPanelH} + 2 * ${shMy}</listBasShH>
-		<cartelShX>${ctX} - ${shMx}</cartelShX>
-		<cartelShY>${ctY} - ${shMy}</cartelShY>
-		<cartelShW>${ctW} + 2 * ${shMx}</cartelShW>
-		<cartelShH>${ctH} + 2 * ${shMy}</cartelShH>
-		<cartelgShX>${ctX} - ${shMx}</cartelgShX>
-		<cartelgShY>${ctY} - ${shMy}</cartelgShY>
-		<cartelgShW>${ctW} + 2 * ${shMx}</cartelgShW>
-		<cartelgShH>${ctH} + 2 * ${shMy}</cartelgShH>
+		<cartelShX>0 + ${ctX} - ${shMx}</cartelShX>
+		<cartelShY>0 + ${ctY} - ${shMy}</cartelShY>
+		<cartelShW>0 + ${ctW} + 2 * ${shMx}</cartelShW>
+		<cartelShH>0 + ${ctH} + 2 * ${shMy}</cartelShH>
+		<cartelgShX>0 + ${ctX} - ${shMx}</cartelgShX>
+		<cartelgShY>0 + ${ctY} - ${shMy}</cartelgShY>
+		<cartelgShW>0 + ${ctW} + 2 * ${shMx}</cartelgShW>
+		<cartelgShH>0 + ${ctH} + 2 * ${shMy}</cartelgShH>
 	</variables>
 </theme>

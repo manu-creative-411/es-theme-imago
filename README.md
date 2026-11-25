@@ -29,7 +29,7 @@ assets/branding/                 retrobat.svg, batocera.svg, retrobox.svg (PLACE
 ```
 
 ## Options (UI Settings > Theme Configuration)
-Color set (6) / Help icons (9) / Branding (3) / Console logo region / **Banner** (off [default], on) / **Banner height** (30-50 %, default 40) /
+Color set / Help icons / Branding / Console logo region / **Banner** (off [default], on) / **Banner height** (30-50 %, default 40) /
 **System view** (icons 1-4 rows [default 3], carousel) / **Game icons** (1-4 rows [default 3]) / List rows (auto, 7-17). Default game view:
 **Imago Detailed**; pick **Imago** (icons) or **Imago Basic** in UI Settings > Game list view style.
 
@@ -43,11 +43,14 @@ Color set (6) / Help icons (9) / Branding (3) / Console logo region / **Banner**
   (system view: no console logo; game view: neither game logo nor console logo).
 - Up to 4 rows without banner (default 3), 2 with it. Row count -> tile height (capped at 34 % of the screen height); columns = floor(width / tile height),
   so the cells fill the whole width and the icon is as big as the row allows. All of it is computed in `geometry.xml` (variables evaluate in order).
-- ES `MathExpr` has no round/min: they are written with comparisons. `<visible>` is dynamic only when it contains a binding (`{game:name}`);
+- ES `MathExpr` notes: plain variables are strings, so a sum must start with a number (`0 + ${x} + ...`) or ES concatenates; `screen.ratio` is a NAME
+  ("16:9"), use `${screen.width} / ${screen.height}`; `${}` inside quotes is NOT expanded in `if` (use `${a} + '/x'`) but is in `<visible>`;
+  `min/max/clamp` and `a ? b : c` exist. Round/floor are written with comparisons here.
+- (old note) ES `MathExpr` has no round/min: they are written with comparisons. `<visible>` is dynamic only when it contains a binding (`{game:name}`);
   static conditions use the `if` attribute (works on views, includes and elements).
 
 ## Status capsule
-`chrome.xml`: stackpanel with `clock`, `batteryText`, `batteryIcon` and `networkIcon` inside a rounded card, top right. The built-in clock is moved off screen
+`chrome.xml`: the native clock / battery+wifi indicators belong to the `screen` view (hidden there, as iconic does); a stackpanel with `clock`, `batteryText`, `batteryIcon` and `networkIcon` inside a rounded card, top right. The built-in clock is moved off screen
 and the built-in battery indicator hidden (same approach as es-theme-iconic). Icons are iconic's (`assets/icons/battery-*.svg`, `network-icon-*.svg`).
 
 ## Artwork lookup

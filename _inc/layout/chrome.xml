@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <theme>
 	<formatVersion>7</formatVersion>
-	<!-- Top-right capsule (network, battery, clock) as in Cocoon, with the iconic icons. The built-in clock goes off screen and the
-	     built-in battery indicator is hidden (same trick as es-theme-iconic). The brand logo sits to the left of the capsule. -->
+	<!-- Native indicators (clock, battery + wifi) belong to the "screen" view, not to the system / game views: the clock goes
+	     off screen and the battery indicator is hidden (same as es-theme-iconic), and the capsule below replaces them. -->
+	<view name="screen">
+		<batteryIndicator name="batteryIndicator">
+			<visible>false</visible>
+		</batteryIndicator>
+		<text name="clock">
+			<pos>1 1</pos>
+		</text>
+	</view>
+	<!-- Top-right capsule (network, battery, clock) as in Cocoon, with the iconic icons; brand logo on its left. -->
 	<view name="system, basic, detailed, grid">
 		<image name="e_brand" extra="true">
 			<path>${brandLogo}</path>
@@ -12,12 +21,6 @@
 			<horizontalAlignment>right</horizontalAlignment>
 			<zIndex>60</zIndex>
 		</image>
-		<text name="clock">
-			<pos>1 1</pos>
-		</text>
-		<batteryIndicator name="batteryIndicator">
-			<visible>false</visible>
-		</batteryIndicator>
 		<ninepatch name="e_cap_sh" extra="true">
 			<path>${themePath}/assets/ui/shadow.png</path>
 			<pos>${capShX} ${capShY}</pos>
@@ -36,8 +39,8 @@
 			<zIndex>97</zIndex>
 		</rectangle>
 		<stackpanel name="e_status" extra="true">
-			<pos>${capInX} ${capY}</pos>
-			<size>${capInW} ${capH}</size>
+			<pos>${capInX} ${capStackY}</pos>
+			<size>${capInW} ${capStackH}</size>
 			<separator>0.010</separator>
 			<zIndex>100</zIndex>
 			<orientation>horizontal</orientation>
