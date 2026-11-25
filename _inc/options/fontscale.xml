@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+	<formatVersion>7</formatVersion>
+	<!-- Font scale ("Theme Font Scale" in the UI settings), same logic as es-theme-iconic.
+	     ES multiplies every fontSize by this factor but nothing else, so the game list compensates it (see list.xml).
+	     ${settings.FontScale} only exists once the setting has been changed: resolving it into a variable first
+	     falls back silently to an empty value. Empty ("Auto") or out of range: ES derives the factor from the screen size. -->
+	<variables>
+		<esFontScale>${settings.FontScale}</esFontScale>
+	</variables>
+	<variables if="${esFontScale} &lt;= 0 || ${esFontScale} &gt;= 4">
+		<esFontScale>1</esFontScale>
+		<esFontScale if="${screen.width} &lt; 720 || ${screen.height} &lt; 720">1.31</esFontScale>
+		<esFontScale if="${screen.width} &lt; 320 || ${screen.height} &lt; 320">1.5</esFontScale>
+	</variables>
+</theme>

@@ -19,6 +19,15 @@
 	<include subset="banner" name="on" displayName="On (1-2 rows)">./_inc/options/banner-on.xml</include>
 	<include subset="banner" name="off" displayName="Off">./_inc/options/banner-off.xml</include>
 	<include>./_inc/options/fonts.xml</include>
+	<include>./_inc/options/fontscale.xml</include>
+	<include subset="listrows" name="auto" displayName="Auto (font scale)">./_inc/options/listrows-auto.xml</include>
+	<include subset="listrows" name="7" displayName="7 rows">./_inc/options/listrows-7.xml</include>
+	<include subset="listrows" name="9" displayName="9 rows">./_inc/options/listrows-9.xml</include>
+	<include subset="listrows" name="11" displayName="11 rows">./_inc/options/listrows-11.xml</include>
+	<include subset="listrows" name="13" displayName="13 rows">./_inc/options/listrows-13.xml</include>
+	<include subset="listrows" name="15" displayName="15 rows">./_inc/options/listrows-15.xml</include>
+	<include subset="listrows" name="17" displayName="17 rows">./_inc/options/listrows-17.xml</include>
+	<include>./_inc/options/list.xml</include>
 	<include>./_inc/options/tiles.xml</include>
 	<include>./_inc/layout/common.xml</include>
 	<include subset="helpicons" name="default" displayName="Default (Batocera)">./_inc/help/default.xml</include>
@@ -43,6 +52,7 @@
 	<include subset="gamerows" name="4 rows" displayName="4 rows">./_inc/layout/gamelist-rows-4.xml</include>
 	<include subset="gamerows" name="5 rows" displayName="5 rows">./_inc/layout/gamelist-rows-5.xml</include>
 	<include>./_inc/layout/gamelist-common.xml</include>
-	<include>./_inc/layout/gamelist-basic.xml</include>
+	<!-- detailed BEFORE basic: "Imago Basic" inherits "detailed" as parsed so far -->
 	<include>./_inc/layout/gamelist-detailed.xml</include>
+	<include>./_inc/layout/gamelist-basic.xml</include>
 </theme>

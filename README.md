@@ -13,10 +13,14 @@ _inc/layout/common.xml           background, brand, clock, help, tiles, console 
 _inc/layout/system-grid-rows-N.xml  system view: icon grid, N rows (1..5); tile size = sC<N>/sH<N> in _inc/options/banner-*.xml
 _inc/layout/system-carousel.xml  system view: single-row carousel (fallback option)
 _inc/layout/gamelist-rows-N.xml  game list, N rows (1..5), with the photo+marquee banner (1-2 rows)
-_inc/layout/gamelist-common.xml  base of the Basic/Detailed views: background, brand, clock, console logo, help
-_inc/layout/gamelist-basic.xml   custom view "Imago Basic": list in a centred panel + developer/year under it
-_inc/layout/gamelist-detailed.xml  custom view "Imago Detailed": game info on the left, list on the right
-assets/list/                     list panels from es-theme-iconic (7 rows, dark/light); "centered-*" = shifted 490 px for Imago Basic
+_inc/layout/gamelist-common.xml  basic + detailed views: background, brand, clock, console logo, help, list panel + Cocoon-style
+                                 game list (item template, rounded accent pill), every built-in metadata field hidden by default
+_inc/layout/gamelist-detailed.xml  detailed view + "Imago Detailed": list on the right; image, developer/publisher/year/rating
+                                 card and description card on the left (nothing else)
+_inc/layout/gamelist-basic.xml   "Imago Basic": centred list + developer/year under it (inherits detailed: include it AFTER detailed)
+_inc/options/fontscale.xml       esFontScale (ES "Theme Font Scale", same logic as es-theme-iconic)
+_inc/options/listrows-*.xml      "List rows" option (auto from the font scale, or 7-17)
+_inc/options/list.xml            list geometry, row font size / corner radius, card captions (en + es)
 _inc/system_icons/               <system>.svg         square icon of each system (system view tiles)
 _inc/system_bg/                  <system>.png|svg|jpg Carbon console art (system view; fallback for games without image)
 _inc/system_logos/               console logo, ordered <path> chain (see README.txt there)
@@ -26,7 +30,7 @@ assets/branding/                 retrobat.svg, batocera.svg, retrobox.svg (PLACE
 
 ## Options (UI Settings > Theme Configuration)
 Color set (6) / Help icons (9) / Branding (3) / Console logo region (Europe [default], USA, Japan) / Banner (on, off) / System view (grid 1-5 rows, carousel) /
-Game list (1-5 rows). Then pick the **Imago**, **Imago Basic** or **Imago Detailed** gamelist view (UI Settings > Game List > view style).
+Game list (1-5 rows) / List rows (auto, 7-17; Basic and Detailed views). Then pick the **Imago**, **Imago Basic** or **Imago Detailed** gamelist view (UI Settings > Game List > view style).
 
 ## Banner
 Only exists with 1 or 2 rows (system view and game list). On: bottom-anchored grid, info strip above it, banner above the strip with a gap.
@@ -42,6 +46,15 @@ the geometry as variables (gY1..gY5, ...) and visibility flags (bVis...) that th
   No generated folders. NOTE: `firstfile()` only works inside expressions (`<visible>`), never as a `<path>` value.
 - `python3 tools/build_assets.py` only copies system_bg/collections, creates icon aliases and the wallpaper crops.
 
+## List views (Basic / Detailed)
+- Look: Cocoon + es-theme-iconic. Panels and the selector are `<rectangle>` with `roundCorners` (no baked PNG), so any odd row count works.
+- `roundCorners` of a rectangle is in PIXELS: radii are computed from `${screen.height}` in `list.xml`.
+- A variable whose value contains `${` is evaluated as a math expression (`${tile}E6` would become a number): colours with
+  alpha are written inline in the elements, not as variables.
+- In `detailed` ES draws every metadata label/field the theme does not define at a default position: `gamelist-common.xml`
+  hides all of them and each view re-enables what it uses (`<visible>true</visible>`).
+- Entries without game data (the `. .` parent folder) skip the item template and use the built-in square selector.
+
 ## Known limits / to verify
 - System grid: in Batocera ES the system-view grid is `<imagegrid name="imagegrid">` (confirmed in es-theme-tiled, systemview/grid.xml;
   `systemgrid` and `systemcarousel` do NOT work: the latter logs "mismatched theme type ... expected carousel").
@@ -51,7 +64,6 @@ the geometry as variables (gY1..gY5, ...) and visibility flags (bVis...) that th
   (36px @1080p) are bg-coloured masks (corner-bl/br.png).
 - Console logo: `assets/systems/<system.theme>.svg`, top-left over the photo; the header text is hidden.
 - Background is a single flat colour (`bg` in each colorset). Brand logo moved to the top-right.
-- "developer - year" is built from three elements (developer, "-", year); a missing developer leaves a dangling dash.
 - md_image / md_marquee inside a custom view inheriting `grid`, `displayName` on subsets and the 1-4 row geometry
   must be checked on a real Batocera/RetroBat build (F5 reloads the theme; use `--windowed`).
 - No fonts are bundled (default ES font). Add a TTF and a `<fontPath>` if wanted.

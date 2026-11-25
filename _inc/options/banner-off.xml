@@ -3,36 +3,36 @@
 	<formatVersion>7</formatVersion>
 	<!-- Banner OFF (only used by the 1- and 2-row layouts). Geometry of every row count, as variables. -->
 	<variables>
-		<gY1>0.280</gY1>
-		<gH1>0.440</gH1>
-		<gC1>4</gC1>
+		<gY1>0.265</gY1>
+		<gH1>0.470</gH1>
+		<gC1>3.9</gC1>
 		<gM1>0.006 0.010</gM1>
-		<gT1>0.235</gT1>
-		<gU1>0.239</gU1>
-		<gY2>0.200</gY2>
-		<gH2>0.600</gH2>
-		<gC2>6</gC2>
-		<gM2>0.006 0.010</gM2>
-		<gT2>0.155</gT2>
-		<gU2>0.159</gU2>
-		<gY3>0.177</gY3>
-		<gH3>0.700</gH3>
-		<gC3>8</gC3>
+		<gT1>0.220</gT1>
+		<gU1>0.224</gU1>
+		<gY2>0.180</gY2>
+		<gH2>0.640</gH2>
+		<gC2>5.6</gC2>
+		<gM2>0.006 0.004</gM2>
+		<gT2>0.135</gT2>
+		<gU2>0.139</gU2>
+		<gY3>0.170</gY3>
+		<gH3>0.720</gH3>
+		<gC3>7.46</gC3>
 		<gM3>0.010 0.006</gM3>
-		<gT3>0.132</gT3>
-		<gU3>0.136</gU3>
-		<gY4>0.177</gY4>
-		<gH4>0.760</gH4>
-		<gC4>9</gC4>
+		<gT3>0.125</gT3>
+		<gU3>0.129</gU3>
+		<gY4>0.170</gY4>
+		<gH4>0.790</gH4>
+		<gC4>8.6</gC4>
 		<gM4>0.010 0.006</gM4>
-		<gT4>0.132</gT4>
-		<gU4>0.136</gU4>
-		<gY5>0.177</gY5>
-		<gH5>0.780</gH5>
-		<gC5>12</gC5>
+		<gT4>0.125</gT4>
+		<gU4>0.129</gU4>
+		<gY5>0.170</gY5>
+		<gH5>0.790</gH5>
+		<gC5>11.25</gC5>
 		<gM5>0.010 0.006</gM5>
-		<gT5>0.132</gT5>
-		<gU5>0.136</gU5>
+		<gT5>0.125</gT5>
+		<gU5>0.129</gU5>
 		<bH1>0.506</bH1>
 		<bC1>0.253</bC1>
 		<bR1>0.494</bR1>
@@ -52,16 +52,16 @@
 		<bVis>false</bVis>
 		<bHeroVis>false</bHeroVis>
 		<bNameVis>false</bNameVis>
-			<!-- Iconos de sistema: +10% (columnas /1.1; alto x1.1 donde cabe) -->
+			<!-- System icons: ~+20% over the original grid (fewer columns, taller rows where they fit) -->
 		<sC1>3.6364</sC1>
-		<sH1>0.44</sH1>
-		<sC2>5.4545</sC2>
-		<sH2>0.66</sH2>
-		<sC3>7.2727</sC3>
-		<sH3>0.77</sH3>
-		<sC4>8.1818</sC4>
-		<sH4>0.76</sH4>
-		<sC5>10.9091</sC5>
-		<sH5>0.78</sH5>
+		<sH1>0.47</sH1>
+		<sC2>5.1</sC2>
+		<sH2>0.70</sH2>
+		<sC3>6.76</sC3>
+		<sH3>0.79</sH3>
+		<sC4>8.0</sC4>
+		<sH4>0.79</sH4>
+		<sC5>10.4</sC5>
+		<sH5>0.79</sH5>
 </variables>
 </theme>

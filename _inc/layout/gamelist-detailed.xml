@@ -1,144 +1,161 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <theme>
 	<formatVersion>7</formatVersion>
-	<!-- Vista "Imago Detailed": info del juego a la izquierda (imagen, nombre, metadata, descripción) y lista a la derecha,
-	     con el panel de es-theme-iconic. El panel tiene 7 separadores de fila: la lista debe mantener 7 filas, y = 0.09, alto = 0.7519. -->
-	<variables>
-		<detailListX>0.575</detailListX>
-	</variables>
-	<customView name="Imago Detailed" inherits="detailed">
-		<image name="list-panel" extra="true">
-			<path>${themePath}/assets/list/gamelist-panel-${logoColorScheme}.png</path>
-			<pos>0 0</pos>
-			<size>1 1</size>
-			<zIndex>20</zIndex>
-		</image>
+	<!-- Detailed view (also "Imago Detailed"): list panel on the right, game info on the left.
+	     Info shown: image, developer, publisher, year, rating, description. Nothing else (the rest stays hidden,
+	     see gamelist-common.xml). Geometry variables in _inc/options/list.xml.
+
+	     0.025                       0.535  0.555                     0.975
+	     +=============================+    +=========================+  0.13
+	     |           md_image          |    |                         |
+	     |                             |    |        game list        |
+	     +=============================+    |      (rounded pill      |  0.56
+	     | DEVELOPER PUBLISHER YEAR RAT|    |       on selection)     |  0.585
+	     +=============================+    |                         |  0.70
+	     |        md_description       |    |                         |  0.72
+	     +=============================+    +=========================+  0.93 -->
+	<view name="detailed">
+		<rectangle name="e_list_panel">
+			<pos>${listPanelX} ${listPanelY}</pos>
+			<size>${listPanelW} ${listPanelH}</size>
+		</rectangle>
+		<textlist name="gamelist">
+			<pos>${listX} ${listY}</pos>
+			<size>${listW} ${listH}</size>
+		</textlist>
+
+		<!-- Image: md_image (screenshot); the console art is the fallback -->
 		<image name="md_image">
-			<pos>0.04 0.09</pos>
-			<origin>0 0</origin>
-			<maxSize>0.46 0.40</maxSize>
+			<visible>true</visible>
+			<pos>0.28 0.345</pos>
+			<origin>0.5 0.5</origin>
+			<maxSize>0.51 0.43</maxSize>
+			<default>${themePath}/_inc/system_bg/${system.theme}.jpg</default>
+			<roundCorners>0.025</roundCorners>
+			<linearSmooth>true</linearSmooth>
 			<zIndex>30</zIndex>
 		</image>
-		<text name="md_name">
-			<fontPath>${fontTitle}</fontPath>
-			<pos>0.04 0.52</pos>
-			<origin>0 0</origin>
-			<size>0.46 0.05</size>
-			<color>${text}</color>
-			<fontSize>0.042</fontSize>
+
+		<!-- Info card: developer | publisher | year | rating -->
+		<rectangle name="e_info_card">
+			<pos>0.025 0.585</pos>
+			<size>0.51 0.115</size>
+			<color>${tile}E6</color>
+			<roundCorners>${cardRadius}</roundCorners>
+			<zIndex>20</zIndex>
+		</rectangle>
+		<text name="e_cap_developer" extra="true">
+			<text>${i18nDeveloper}</text>
+			<pos>0.045 0.600</pos>
+			<size>0.13 0.028</size>
+			<fontPath>${fontSemiBold}</fontPath>
+			<fontSize>0.018</fontSize>
+			<color>${dimText}</color>
+			<alignment>left</alignment>
+			<zIndex>45</zIndex>
+		</text>
+		<text name="e_cap_publisher" extra="true">
+			<text>${i18nPublisher}</text>
+			<pos>0.190 0.600</pos>
+			<size>0.17 0.028</size>
+			<fontPath>${fontSemiBold}</fontPath>
+			<fontSize>0.018</fontSize>
+			<color>${dimText}</color>
+			<alignment>left</alignment>
+			<zIndex>45</zIndex>
+		</text>
+		<text name="e_cap_year" extra="true">
+			<text>${i18nYear}</text>
+			<pos>0.375 0.600</pos>
+			<size>0.05 0.028</size>
+			<fontPath>${fontSemiBold}</fontPath>
+			<fontSize>0.018</fontSize>
+			<color>${dimText}</color>
+			<alignment>left</alignment>
+			<zIndex>45</zIndex>
+		</text>
+		<text name="e_cap_rating" extra="true">
+			<text>${i18nRating}</text>
+			<pos>0.440 0.600</pos>
+			<size>0.09 0.028</size>
+			<fontPath>${fontSemiBold}</fontPath>
+			<fontSize>0.018</fontSize>
+			<color>${dimText}</color>
 			<alignment>left</alignment>
 			<zIndex>45</zIndex>
 		</text>
 		<text name="md_developer">
-			<fontPath>${fontInfo}</fontPath>
-			<pos>0.04 0.59</pos>
-			<origin>0 0</origin>
-			<size>0.46 0.03</size>
-			<color>${text}</color>
+			<visible>true</visible>
+			<pos>0.045 0.632</pos>
+			<size>0.13 0.040</size>
+			<fontPath>${fontMedium}</fontPath>
 			<fontSize>0.026</fontSize>
+			<color>${text}</color>
 			<alignment>left</alignment>
+			<autoScroll>horizontal</autoScroll>
+			<autoScrollDelay>1500</autoScrollDelay>
+			<autoScrollSpeed>50</autoScrollSpeed>
+			<singleLineScroll>true</singleLineScroll>
 			<zIndex>45</zIndex>
 		</text>
 		<text name="md_publisher">
-			<fontPath>${fontInfo}</fontPath>
-			<pos>0.04 0.63</pos>
-			<origin>0 0</origin>
-			<size>0.46 0.03</size>
-			<color>${subText}</color>
+			<visible>true</visible>
+			<pos>0.190 0.632</pos>
+			<size>0.17 0.040</size>
+			<fontPath>${fontMedium}</fontPath>
 			<fontSize>0.026</fontSize>
+			<color>${text}</color>
 			<alignment>left</alignment>
+			<autoScroll>horizontal</autoScroll>
+			<autoScrollDelay>1500</autoScrollDelay>
+			<autoScrollSpeed>50</autoScrollSpeed>
+			<singleLineScroll>true</singleLineScroll>
 			<zIndex>45</zIndex>
 		</text>
 		<datetime name="md_releasedate">
-			<fontPath>${fontInfo}</fontPath>
-			<pos>0.04 0.67</pos>
-			<origin>0 0</origin>
-			<size>0.46 0.03</size>
+			<visible>true</visible>
+			<pos>0.375 0.632</pos>
+			<size>0.05 0.040</size>
 			<format>%Y</format>
-			<color>${subText}</color>
+			<fontPath>${fontMedium}</fontPath>
 			<fontSize>0.026</fontSize>
+			<color>${text}</color>
 			<alignment>left</alignment>
 			<zIndex>45</zIndex>
 		</datetime>
-		<text name="md_genre">
-			<fontPath>${fontInfo}</fontPath>
-			<pos>0.04 0.71</pos>
-			<origin>0 0</origin>
-			<size>0.46 0.03</size>
-			<color>${subText}</color>
-			<fontSize>0.026</fontSize>
-			<alignment>left</alignment>
+		<rating name="md_rating">
+			<visible>true</visible>
+			<pos>0.440 0.638</pos>
+			<size>0 0.028</size>
+			<filledPath>${themePath}/assets/icons/star.svg</filledPath>
+			<unfilledPath>${themePath}/assets/icons/star.svg</unfilledPath>
+			<color>${text}</color>
+			<unfilledColor>${dimText}66</unfilledColor>
 			<zIndex>45</zIndex>
-		</text>
-		<text name="md_players">
-			<fontPath>${fontInfo}</fontPath>
-			<pos>0.04 0.75</pos>
-			<origin>0 0</origin>
-			<size>0.46 0.03</size>
-			<color>${subText}</color>
-			<fontSize>0.026</fontSize>
-			<alignment>left</alignment>
-			<zIndex>45</zIndex>
-		</text>
+		</rating>
+
+		<!-- Description card -->
+		<rectangle name="e_desc_card">
+			<pos>0.025 0.72</pos>
+			<size>0.51 0.21</size>
+			<color>${tile}E6</color>
+			<roundCorners>${cardRadius}</roundCorners>
+			<zIndex>20</zIndex>
+		</rectangle>
 		<text name="md_description">
+			<visible>true</visible>
+			<pos>0.045 0.737</pos>
+			<size>0.47 0.176</size>
 			<fontPath>${fontInfo}</fontPath>
-			<pos>0.04 0.80</pos>
-			<origin>0 0</origin>
-			<size>0.46 0.12</size>
-			<color>${dimText}</color>
-			<fontSize>0.023</fontSize>
+			<fontSize>0.024</fontSize>
+			<lineSpacing>1.3</lineSpacing>
+			<color>${subText}</color>
 			<alignment>left</alignment>
 			<zIndex>45</zIndex>
 		</text>
-		<textlist name="gamelist">
-			<fontPath>${fontTitle}</fontPath>
-			<selectorColor>00000000</selectorColor>
-			<selectedColor>${accentText}</selectedColor>
-			<primaryColor>${subText}</primaryColor>
-			<secondaryColor>${dimText}</secondaryColor>
-			<horizontalMargin>0.008333333333333</horizontalMargin>
-			<zIndex>40</zIndex>
-			<pos>${detailListX} 0.09</pos>
-			<size>0.362 0.7519</size>
-			<fontSize>0.065</fontSize>
-			<lines>7</lines>
-			<alignment>left</alignment>
-			<itemTemplate>
-				<image name="list-row-selector">
-					<path>${themePath}/assets/ui/round.png</path>
-					<pos>0 0</pos>
-					<size>1 1</size>
-					<color>${accent}00</color>
-					<storyboard event="activate">
-						<animation property="color" to="${accent}FF" duration="0"/>
-					</storyboard>
-					<storyboard event="deactivate">
-						<animation property="color" to="${accent}00" duration="0"/>
-					</storyboard>
-				</image>
-				<text name="list-row-title">
-					<text>{game:fullName}</text>
-					<pos>0.023 0</pos>
-					<size>0.954 1</size>
-					<fontPath>${fontTitle}</fontPath>
-					<fontSize>0.065</fontSize>
-					<color>${subText}</color>
-					<alignment>left</alignment>
-					<verticalAlignment>center</verticalAlignment>
-					<multiLine>false</multiLine>
-					<autoScroll>none</autoScroll>
-					<autoScrollDelay>1500</autoScrollDelay>
-					<autoScrollSpeed>50</autoScrollSpeed>
-					<storyboard event="activate">
-						<animation property="color" to="${accentText}" duration="0"/>
-						<animation property="autoScroll" to="horizontal" duration="0"/>
-					</storyboard>
-					<storyboard event="deactivate">
-						<animation property="color" to="${subText}" duration="0"/>
-						<animation property="autoScroll" to="none" duration="0"/>
-					</storyboard>
-				</text>
-			</itemTemplate>
-		</textlist>
+	</view>
+
+	<!-- Selectable view style; same layout as the built-in detailed view. -->
+	<customView name="Imago Detailed" inherits="detailed">
 	</customView>
 </theme>

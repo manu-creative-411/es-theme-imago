@@ -1,89 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <theme>
 	<formatVersion>7</formatVersion>
-	<!-- Vista "Imago Basic": lista en un panel centrado (panel de iconic desplazado al centro) y, bajo el panel,
-	     desarrolladora y año del juego seleccionado. Hereda de "detailed" (la vista "basic" de ES no admite metadata).
-	     El panel tiene 7 separadores de fila: la lista debe mantener 7 filas, y = 0.09, alto = 0.7519. -->
-	<variables>
-		<basicListX>0.31979</basicListX> <!-- 0.575 (lista de iconic a la derecha) - 490/1920 (desplazamiento del panel) -->
-	</variables>
+	<!-- Basic view: the centred list of gamelist-common.xml as is (the built-in basic view cannot show metadata).
+
+	     "Imago Basic": same centred list plus developer and year of the selected game below the panel.
+	     It inherits "detailed" (only a detailed-based view can show metadata), so it must undo the detailed
+	     layout: list/panel back to the centre and the info card, description, image and rating hidden.
+	     This file must be included AFTER gamelist-detailed.xml (inheritance copies "detailed" as parsed so far). -->
 	<customView name="Imago Basic" inherits="detailed">
-		<image name="list-panel" extra="true">
-			<path>${themePath}/assets/list/gamelist-panel-centered-${logoColorScheme}.png</path>
-			<pos>0 0</pos>
-			<size>1 1</size>
-			<zIndex>20</zIndex>
-		</image>
+		<rectangle name="e_list_panel">
+			<pos>${basicPanelX} ${listPanelY}</pos>
+			<size>${listPanelW} ${basicPanelH}</size>
+		</rectangle>
 		<textlist name="gamelist">
-			<fontPath>${fontTitle}</fontPath>
-			<selectorColor>00000000</selectorColor>
-			<selectedColor>${accentText}</selectedColor>
-			<primaryColor>${subText}</primaryColor>
-			<secondaryColor>${dimText}</secondaryColor>
-			<horizontalMargin>0.008333333333333</horizontalMargin>
-			<zIndex>40</zIndex>
-			<pos>${basicListX} 0.09</pos>
-			<size>0.362 0.7519</size>
-			<fontSize>0.065</fontSize>
-			<lines>7</lines>
-			<alignment>center</alignment>
-			<itemTemplate>
-				<image name="list-row-selector">
-					<path>${themePath}/assets/ui/round.png</path>
-					<pos>0 0</pos>
-					<size>1 1</size>
-					<color>${accent}00</color>
-					<storyboard event="activate">
-						<animation property="color" to="${accent}FF" duration="0"/>
-					</storyboard>
-					<storyboard event="deactivate">
-						<animation property="color" to="${accent}00" duration="0"/>
-					</storyboard>
-				</image>
-				<text name="list-row-title">
-					<text>{game:fullName}</text>
-					<pos>0.023 0</pos>
-					<size>0.954 1</size>
-					<fontPath>${fontTitle}</fontPath>
-					<fontSize>0.065</fontSize>
-					<color>${subText}</color>
-					<alignment>center</alignment>
-					<verticalAlignment>center</verticalAlignment>
-					<multiLine>false</multiLine>
-					<autoScroll>none</autoScroll>
-					<autoScrollDelay>1500</autoScrollDelay>
-					<autoScrollSpeed>50</autoScrollSpeed>
-					<storyboard event="activate">
-						<animation property="color" to="${accentText}" duration="0"/>
-						<animation property="autoScroll" to="horizontal" duration="0"/>
-					</storyboard>
-					<storyboard event="deactivate">
-						<animation property="color" to="${subText}" duration="0"/>
-						<animation property="autoScroll" to="none" duration="0"/>
-					</storyboard>
-				</text>
-			</itemTemplate>
+			<pos>${basicListX} ${listY}</pos>
+			<size>${listW} ${basicListH}</size>
 		</textlist>
+		<rectangle name="e_info_card, e_desc_card">
+			<visible>false</visible>
+		</rectangle>
+		<text name="e_cap_developer, e_cap_publisher, e_cap_year, e_cap_rating">
+			<visible>false</visible>
+		</text>
+		<image name="md_image">
+			<visible>false</visible>
+		</image>
+		<text name="md_publisher, md_description">
+			<visible>false</visible>
+		</text>
+		<rating name="md_rating">
+			<visible>false</visible>
+		</rating>
 		<text name="md_developer">
-			<fontPath>${fontInfo}</fontPath>
-			<pos>0.5 0.893</pos>
+			<pos>0.5 0.875</pos>
 			<origin>0.5 0</origin>
-			<size>0.46 0.03</size>
-			<color>${subText}</color>
+			<size>0.42 0.035</size>
+			<fontPath>${fontMedium}</fontPath>
 			<fontSize>0.026</fontSize>
+			<color>${text}</color>
 			<alignment>center</alignment>
-			<zIndex>45</zIndex>
 		</text>
 		<datetime name="md_releasedate">
-			<fontPath>${fontInfo}</fontPath>
-			<pos>0.5 0.923</pos>
+			<pos>0.5 0.910</pos>
 			<origin>0.5 0</origin>
-			<size>0.46 0.03</size>
-			<format>%Y</format>
+			<size>0.42 0.030</size>
+			<fontPath>${fontInfo}</fontPath>
+			<fontSize>0.024</fontSize>
 			<color>${dimText}</color>
-			<fontSize>0.026</fontSize>
 			<alignment>center</alignment>
-			<zIndex>45</zIndex>
 		</datetime>
 	</customView>
 </theme>

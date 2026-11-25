@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+	<formatVersion>7</formatVersion>
+	<!-- List rows: fixed, 15. -->
+	<variables>
+		<listRows>15</listRows>
+	</variables>
+</theme>

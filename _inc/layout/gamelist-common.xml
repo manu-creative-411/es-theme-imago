@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <theme>
 	<formatVersion>7</formatVersion>
-	<!-- Elementos comunes de las vistas Imago Basic e Imago Detailed: fondo, marca, reloj, logo de consola y ayuda (copiados de common.xml). -->
+	<!-- Shared by the basic and detailed views (and the Imago Basic / Imago Detailed custom views that inherit detailed):
+	     background, brand, clock, help, console logo, the list panel and the Cocoon-style game list.
+	     Default geometry = Basic (centred list); gamelist-detailed.xml moves the list to the right. -->
 	<view name="basic, detailed">
 		<image name="e_bg" extra="true">
 			<path>${themePath}/assets/ui/white.png</path>
@@ -67,5 +69,93 @@
 			<fontPath>${fontTitle}</fontPath>
 			<visible>false</visible>
 		</text>
+		<!-- ===== Game list (Cocoon / es-theme-iconic style) =====
+		     Rounded panel + rows drawn by an item template: rounded accent pill on the selected row, title
+		     shortened with "..." when unselected and scrolling (marquee) when selected. Entries without game data
+		     (the ". ." parent folder) have no template and use the built-in rendering with the same colours. -->
+		<rectangle name="e_list_panel">
+			<pos>${basicPanelX} ${listPanelY}</pos>
+			<size>${listPanelW} ${basicPanelH}</size>
+			<color>${tile}E6</color>
+			<roundCorners>${cardRadius}</roundCorners>
+			<zIndex>20</zIndex>
+		</rectangle>
+		<textlist name="gamelist">
+			<pos>${basicListX} ${listY}</pos>
+			<size>${listW} ${basicListH}</size>
+			<lines>${listRows}</lines>
+			<fontPath>${fontMedium}</fontPath>
+			<fontSize>${listFontSize}</fontSize>
+			<alignment>left</alignment>
+			<horizontalMargin>0.016</horizontalMargin>
+			<selectorColor>${accent}FF</selectorColor>
+			<selectedColor>${accentText}</selectedColor>
+			<primaryColor>${subText}</primaryColor>
+			<secondaryColor>${dimText}</secondaryColor>
+			<scrollbarColor>${subText}66</scrollbarColor>
+			<scrollbarSize>0.003</scrollbarSize>
+			<scrollbarCorner>0.5</scrollbarCorner>
+			<scrollbarAlignment>outer right</scrollbarAlignment>
+			<zIndex>40</zIndex>
+			<itemTemplate>
+				<!-- Rectangles ignore "opacity": the pill is hidden with a fully transparent colour instead. -->
+				<rectangle name="list-row-selector">
+					<pos>0 0.06</pos>
+					<size>1 0.88</size>
+					<color>${accent}00</color>
+					<roundCorners>${listRadius}</roundCorners>
+					<storyboard event="activate">
+						<animation property="color" to="${accent}FF" duration="0"/>
+					</storyboard>
+					<storyboard event="deactivate">
+						<animation property="color" to="${accent}00" duration="0"/>
+					</storyboard>
+				</rectangle>
+				<text name="list-row-title">
+					<text>{game:fullName}</text>
+					<pos>0.04 0</pos>
+					<size>0.92 1</size>
+					<fontPath>${fontMedium}</fontPath>
+					<fontSize>${listFontSize}</fontSize>
+					<color>${subText}</color>
+					<alignment>left</alignment>
+					<verticalAlignment>center</verticalAlignment>
+					<multiLine>false</multiLine>
+					<autoScroll>none</autoScroll>
+					<autoScrollDelay>1500</autoScrollDelay>
+					<autoScrollSpeed>50</autoScrollSpeed>
+					<storyboard event="activate">
+						<animation property="color" to="${accentText}" duration="0"/>
+						<animation property="autoScroll" to="horizontal" duration="0"/>
+					</storyboard>
+					<storyboard event="deactivate">
+						<animation property="color" to="${subText}" duration="0"/>
+						<animation property="autoScroll" to="none" duration="0"/>
+					</storyboard>
+				</text>
+			</itemTemplate>
+		</textlist>
+
+		<!-- ===== Built-in metadata: everything hidden by default =====
+		     In "detailed" (and any custom view inheriting it) ES draws the labels and fields the theme does not define
+		     at their default positions. Each view turns back on only what it uses. -->
+		<text name="md_lbl_rating, md_lbl_releasedate, md_lbl_developer, md_lbl_publisher, md_lbl_genre, md_lbl_players, md_lbl_lastplayed, md_lbl_playcount, md_lbl_gametime, md_lbl_favorite">
+			<visible>false</visible>
+		</text>
+		<text name="md_name, md_developer, md_publisher, md_genre, md_players, md_playcount, md_gametime, md_favorite, md_description">
+			<visible>false</visible>
+		</text>
+		<datetime name="md_releasedate, md_lastplayed">
+			<visible>false</visible>
+		</datetime>
+		<rating name="md_rating">
+			<visible>false</visible>
+		</rating>
+		<image name="md_image">
+			<visible>false</visible>
+		</image>
+		<video name="md_video">
+			<visible>false</visible>
+		</video>
 	</view>
 </theme>

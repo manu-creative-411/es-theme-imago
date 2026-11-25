@@ -5,34 +5,34 @@
 	<variables>
 		<gY1>0.580</gY1>
 		<gH1>0.380</gH1>
-		<gC1>6</gC1>
+		<gC1>5.55</gC1>
 		<gM1>0.006 0.010</gM1>
 		<gT1>0.535</gT1>
 		<gU1>0.539</gU1>
-		<gY2>0.460</gY2>
-		<gH2>0.500</gH2>
+		<gY2>0.445</gY2>
+		<gH2>0.515</gH2>
 		<gC2>7</gC2>
-		<gM2>0.006 0.010</gM2>
-		<gT2>0.415</gT2>
-		<gU2>0.419</gU2>
-		<gY3>0.177</gY3>
-		<gH3>0.700</gH3>
-		<gC3>8</gC3>
+		<gM2>0.006 0.004</gM2>
+		<gT2>0.400</gT2>
+		<gU2>0.404</gU2>
+		<gY3>0.170</gY3>
+		<gH3>0.720</gH3>
+		<gC3>7.46</gC3>
 		<gM3>0.010 0.006</gM3>
-		<gT3>0.132</gT3>
-		<gU3>0.136</gU3>
-		<gY4>0.177</gY4>
-		<gH4>0.760</gH4>
-		<gC4>9</gC4>
+		<gT3>0.125</gT3>
+		<gU3>0.129</gU3>
+		<gY4>0.170</gY4>
+		<gH4>0.790</gH4>
+		<gC4>8.6</gC4>
 		<gM4>0.010 0.006</gM4>
-		<gT4>0.132</gT4>
-		<gU4>0.136</gU4>
-		<gY5>0.177</gY5>
-		<gH5>0.780</gH5>
-		<gC5>12</gC5>
+		<gT4>0.125</gT4>
+		<gU4>0.129</gU4>
+		<gY5>0.170</gY5>
+		<gH5>0.790</gH5>
+		<gC5>11.25</gC5>
 		<gM5>0.010 0.006</gM5>
-		<gT5>0.132</gT5>
-		<gU5>0.136</gU5>
+		<gT5>0.125</gT5>
+		<gU5>0.129</gU5>
 		<bH1>0.506</bH1>
 		<bC1>0.253</bC1>
 		<bR1>0.494</bR1>
@@ -52,16 +52,16 @@
 		<bVis>true</bVis>
 		<bHeroVis>!exists({game:image})</bHeroVis>
 		<bNameVis>!exists({game:marquee})</bNameVis>
-			<!-- Iconos de sistema: +10% (columnas /1.1; alto x1.1 donde cabe) -->
-		<sC1>5.4545</sC1>
+			<!-- System icons: ~+20% over the original grid (fewer columns, taller rows where they fit) -->
+		<sC1>5.04</sC1>
 		<sH1>0.38</sH1>
 		<sC2>6.3636</sC2>
-		<sH2>0.5</sH2>
-		<sC3>7.2727</sC3>
-		<sH3>0.77</sH3>
-		<sC4>8.1818</sC4>
-		<sH4>0.76</sH4>
-		<sC5>10.9091</sC5>
-		<sH5>0.78</sH5>
+		<sH2>0.515</sH2>
+		<sC3>6.76</sC3>
+		<sH3>0.79</sH3>
+		<sC4>8.0</sC4>
+		<sH4>0.79</sH4>
+		<sC5>10.4</sC5>
+		<sH5>0.79</sH5>
 </variables>
 </theme>

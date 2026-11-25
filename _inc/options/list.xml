@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+	<formatVersion>7</formatVersion>
+	<!-- Game list (Imago Basic / Imago Detailed). Must be included after fontscale.xml and the "List rows" option.
+	     The panels and the selector are drawn with <rectangle> (no baked images), so any row count works. -->
+	<variables>
+		<!-- Detailed: list panel on the right, game info on the left -->
+		<listPanelX>0.555</listPanelX>
+		<listPanelY>0.13</listPanelY>
+		<listPanelW>0.42</listPanelW>
+		<listPanelH>0.80</listPanelH>
+		<listX>0.565</listX>
+		<listY>0.145</listY>
+		<listW>0.40</listW>
+		<listH>0.77</listH>
+		<!-- Basic: same panel, centred and shorter (developer / year below it) -->
+		<basicPanelX>0.29</basicPanelX>
+		<basicPanelH>0.73</basicPanelH>
+		<basicListX>0.30</basicListX>
+		<basicListH>0.70</basicListH>
+		<!-- Row geometry. Derived from the shortest list (Basic) so the text fits both views.
+		     The font size compensates the ES font scale: the text always fills about half of its row. -->
+		<listRowH>${basicListH} / ${listRows}</listRowH>
+		<listFontSize>${listRowH} * 0.5 / ${esFontScale}</listFontSize>
+		<!-- Rounded corners. <rectangle> takes them in PIXELS, hence ${screen.height}. -->
+		<listRadius>${screen.height} * ${listRowH} * 0.30</listRadius>
+		<cardRadius>${screen.height} * 0.022</cardRadius>
+		<!-- Panel / card fill = ${tile}E6, written inline in the layouts: a variable holding "${" is evaluated as an
+		     expression, and "262631E6" would become a number. -->
+	</variables>
+
+	<!-- Captions of the game info card. English is the fallback; other languages override it. -->
+	<variables>
+		<i18nDeveloper>DEVELOPER</i18nDeveloper>
+		<i18nPublisher>PUBLISHER</i18nPublisher>
+		<i18nYear>YEAR</i18nYear>
+		<i18nRating>RATING</i18nRating>
+	</variables>
+	<variables lang="es">
+		<i18nDeveloper>DESARROLLADORA</i18nDeveloper>
+		<i18nPublisher>EDITORA</i18nPublisher>
+		<i18nYear>AÑO</i18nYear>
+		<i18nRating>VALORACIÓN</i18nRating>
+	</variables>
+</theme>
