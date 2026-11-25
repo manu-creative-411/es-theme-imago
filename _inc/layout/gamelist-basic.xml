@@ -2,16 +2,21 @@
 <theme>
 	<formatVersion>7</formatVersion>
 	<!-- Basic view: the centred list of gamelist-common.xml as is (the built-in basic view cannot show metadata).
-
-	     "Imago Basic": same centred list plus developer and year of the selected game below the panel.
-	     It inherits "detailed" (only a detailed-based view can show metadata), so it must undo the detailed
-	     layout: list/panel back to the centre and the info card, description, image and rating hidden.
-	     This file must be included AFTER gamelist-detailed.xml (inheritance copies "detailed" as parsed so far). -->
+	     "Imago Basic": same list plus developer and year of the selected game below the card. It inherits "detailed"
+	     (only a detailed-based view can show metadata), so it must undo the detailed layout. Include AFTER gamelist-detailed.xml. -->
 	<customView name="Imago Basic" inherits="detailed">
+		<ninepatch name="e_list_panel_sh" extra="true">
+			<pos>${listBasShX} ${listBasShY}</pos>
+			<size>${listBasShW} ${listBasShH}</size>
+		</ninepatch>
 		<rectangle name="e_list_panel">
 			<pos>${basicPanelX} ${listPanelY}</pos>
 			<size>${listPanelW} ${basicPanelH}</size>
 		</rectangle>
+		<image name="e_list_panel_gl" extra="true">
+			<pos>${basicPanelX} ${listPanelY}</pos>
+			<size>${listPanelW} ${basicPanelH}</size>
+		</image>
 		<textlist name="gamelist">
 			<pos>${basicListX} ${listY}</pos>
 			<size>${listW} ${basicListH}</size>
@@ -19,6 +24,12 @@
 		<rectangle name="e_info_card, e_desc_card">
 			<visible>false</visible>
 		</rectangle>
+		<ninepatch name="e_info_card_sh, e_desc_card_sh">
+			<visible>false</visible>
+		</ninepatch>
+		<image name="e_info_card_gl, e_desc_card_gl">
+			<visible>false</visible>
+		</image>
 		<text name="e_cap_developer, e_cap_publisher, e_cap_year, e_cap_rating">
 			<visible>false</visible>
 		</text>

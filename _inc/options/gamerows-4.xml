@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+	<formatVersion>7</formatVersion>
+	<!-- Game icon view: 4 row(s) (with the banner: at most 2). -->
+	<variables>
+		<gameRows>4</gameRows>
+	</variables>
+</theme>

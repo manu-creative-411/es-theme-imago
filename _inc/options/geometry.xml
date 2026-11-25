@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+	<formatVersion>7</formatVersion>
+	<!-- Geometry of the icon views (system + game). Generated; every value derives from: bOn (banner 0/1), bannerPct, bannerK,
+	     sysRows / gameRows and the screen ratio. Variables evaluate in order, so keep it ordered. -->
+	<variables>
+		<!-- Basis of the banner height: 1 = % of the screen HEIGHT (default; 30-50 % of the width would be 53-89 % of the height at 16:9),
+		     ${screen.ratio} = % of the screen WIDTH. -->
+		<bannerK>1</bannerK>
+		<bannerH>${bannerPct} / 100 * ${bannerK}</bannerH>
+		<!-- Shadow margin of assets/ui/shadow.png (px) as screen fractions -->
+		<shMx>24 / ${screen.width}</shMx>
+		<shMy>24 / ${screen.height}</shMy>
+		<!-- Top-right capsule (network, battery, clock) and the cartel (name card), same height band -->
+		<capW>0.15</capW>
+		<capH>0.05</capH>
+		<capY>0.03</capY>
+		<capX>0.975 - ${capW}</capX>
+		<ctX>0.025</ctX>
+		<ctY>0.022</ctY>
+		<ctW>0.46</ctW>
+		<ctH>0.088</ctH>
+		<ctPad>0.018</ctPad>
+		<!-- Icon zone: from the cartel (or the banner) down to the help bar -->
+		<zoneBottom>0.945</zoneBottom>
+		<zoneNoBanner>0.125</zoneNoBanner>
+		<gPadV>0.04</gPadV>
+		<mX>0.006</mX>
+		<mY>0.010</mY>
+		<tMax>0.34</tMax>   <!-- tallest tile (screen height fraction): fewer rows never inflate the icons beyond this -->
+		<tAspect>1.0</tAspect> <!-- tile width / height; the column count is rounded so the tiles fill the width -->
+		<!-- Banner: console art full width, logo plate in the middle -->
+		<plateW>0.40</plateW>
+		<plateH>${bannerH} * 0.58</plateH>
+		<plateY>(${bannerH} - ${plateH}) / 2</plateY>
+		<bannerC>${bannerH} / 2</bannerC>
+		<logoMaxW>0.34</logoMaxW>
+		<logoMaxH>${plateH} * 0.74</logoMaxH>
+		<!-- System icon view -->
+		<sRows>${sysRows} - ${bOn} * (${sysRows} &gt; 2) * (${sysRows} - 2)</sRows> <!-- banner: at most 2 rows -->
+		<sZoneY>${bOn} * (0 + ${bannerH} + 0.015) + (1 - ${bOn}) * ${zoneNoBanner}</sZoneY>
+		<sZoneH>${zoneBottom} - ${sZoneY}</sZoneH>
+		<sCellRaw>(${sZoneH} - ${gPadV} - (${sRows} - 1) * ${mY}) / ${sRows}</sCellRaw>
+		<sCell>${sCellRaw} - (${sCellRaw} &gt; ${tMax}) * (${sCellRaw} - ${tMax})</sCell>
+		<sGridH>${sRows} * ${sCell} + (${sRows} - 1) * ${mY} + ${gPadV}</sGridH>
+		<sGridY>${sZoneY} + (${sZoneH} - ${sGridH}) / 2</sGridY>
+		<sColsF>(0.972 + ${mX}) / (${sCell} * ${tAspect} / ${screen.ratio} + ${mX})</sColsF>
+		<sCols>3 + (${sColsF} &gt;= 4) + (${sColsF} &gt;= 5) + (${sColsF} &gt;= 6) + (${sColsF} &gt;= 7) + (${sColsF} &gt;= 8) + (${sColsF} &gt;= 9) + (${sColsF} &gt;= 10) + (${sColsF} &gt;= 11) + (${sColsF} &gt;= 12) + (${sColsF} &gt;= 13) + (${sColsF} &gt;= 14)</sCols> <!-- floor(ColsF), clamped to 3..14: tiles at least as wide as tall, so the icon is as big as the row allows -->
+		<!-- Game icon view -->
+		<gRows>${gameRows} - ${bOn} * (${gameRows} &gt; 2) * (${gameRows} - 2)</gRows> <!-- banner: at most 2 rows -->
+		<gZoneY>${bOn} * (0 + ${bannerH} + 0.015) + (1 - ${bOn}) * ${zoneNoBanner}</gZoneY>
+		<gZoneH>${zoneBottom} - ${gZoneY}</gZoneH>
+		<gCellRaw>(${gZoneH} - ${gPadV} - (${gRows} - 1) * ${mY}) / ${gRows}</gCellRaw>
+		<gCell>${gCellRaw} - (${gCellRaw} &gt; ${tMax}) * (${gCellRaw} - ${tMax})</gCell>
+		<gGridH>${gRows} * ${gCell} + (${gRows} - 1) * ${mY} + ${gPadV}</gGridH>
+		<gGridY>${gZoneY} + (${gZoneH} - ${gGridH}) / 2</gGridY>
+		<gColsF>(0.972 + ${mX}) / (${gCell} * ${tAspect} / ${screen.ratio} + ${mX})</gColsF>
+		<gCols>3 + (${gColsF} &gt;= 4) + (${gColsF} &gt;= 5) + (${gColsF} &gt;= 6) + (${gColsF} &gt;= 7) + (${gColsF} &gt;= 8) + (${gColsF} &gt;= 9) + (${gColsF} &gt;= 10) + (${gColsF} &gt;= 11) + (${gColsF} &gt;= 12) + (${gColsF} &gt;= 13) + (${gColsF} &gt;= 14)</gCols> <!-- floor(ColsF), clamped to 3..14: tiles at least as wide as tall, so the icon is as big as the row allows -->
+		<!-- Derived by the layouts (cards, cartel): -->
+		<ctXi>${ctX} + ${ctPad}</ctXi>
+		<ctTy>${ctY} + 0.008</ctTy>
+		<ctTw>${ctW} - 2 * ${ctPad}</ctTw>
+		<ctTh>0.050</ctTh>
+		<ctTfs>0.040</ctTfs>
+		<ctSy>${ctY} + 0.058</ctSy>
+		<ctSh>0.024</ctSh>
+		<ctSfs>0.021</ctSfs>
+		<ctSwHalf>(${ctW} - 2 * ${ctPad}) * 0.72</ctSwHalf>
+		<ctYearW>(${ctW} - 2 * ${ctPad}) * 0.26</ctYearW>
+		<ctYearX>${ctX} + ${ctW} - ${ctPad} - ${ctYearW}</ctYearX>
+		<capR>${screen.height} * ${capH} / 2</capR>
+		<capInX>${capX} + 0.012</capInX>
+		<capInW>${capW} - 0.024</capInW>
+		<capShX>${capX} - ${shMx}</capShX>
+		<capShY>${capY} - ${shMy}</capShY>
+		<capShW>${capW} + 2 * ${shMx}</capShW>
+		<capShH>${capH} + 2 * ${shMy}</capShH>
+		<brandX>${capX} - 0.012</brandX>
+		<e_list_panelShX>${basicPanelX} - ${shMx}</e_list_panelShX>
+		<e_list_panelShY>${listPanelY} - ${shMy}</e_list_panelShY>
+		<e_list_panelShW>${listPanelW} + 2 * ${shMx}</e_list_panelShW>
+		<e_list_panelShH>${basicPanelH} + 2 * ${shMy}</e_list_panelShH>
+		<listDetShX>${listPanelX} - ${shMx}</listDetShX>
+		<listDetShY>${listPanelY} - ${shMy}</listDetShY>
+		<listDetShW>${listPanelW} + 2 * ${shMx}</listDetShW>
+		<listDetShH>${listPanelH} + 2 * ${shMy}</listDetShH>
+		<e_info_cardShX>0.025 - ${shMx}</e_info_cardShX>
+		<e_info_cardShY>0.585 - ${shMy}</e_info_cardShY>
+		<e_info_cardShW>0.51 + 2 * ${shMx}</e_info_cardShW>
+		<e_info_cardShH>0.115 + 2 * ${shMy}</e_info_cardShH>
+		<e_desc_cardShX>0.025 - ${shMx}</e_desc_cardShX>
+		<e_desc_cardShY>0.72 - ${shMy}</e_desc_cardShY>
+		<e_desc_cardShW>0.51 + 2 * ${shMx}</e_desc_cardShW>
+		<e_desc_cardShH>0.21 + 2 * ${shMy}</e_desc_cardShH>
+		<listBasShX>${basicPanelX} - ${shMx}</listBasShX>
+		<listBasShY>${listPanelY} - ${shMy}</listBasShY>
+		<listBasShW>${listPanelW} + 2 * ${shMx}</listBasShW>
+		<listBasShH>${basicPanelH} + 2 * ${shMy}</listBasShH>
+		<cartelShX>${ctX} - ${shMx}</cartelShX>
+		<cartelShY>${ctY} - ${shMy}</cartelShY>
+		<cartelShW>${ctW} + 2 * ${shMx}</cartelShW>
+		<cartelShH>${ctH} + 2 * ${shMy}</cartelShH>
+		<cartelgShX>${ctX} - ${shMx}</cartelgShX>
+		<cartelgShY>${ctY} - ${shMy}</cartelgShY>
+		<cartelgShW>${ctW} + 2 * ${shMx}</cartelgShW>
+		<cartelgShH>${ctH} + 2 * ${shMy}</cartelgShH>
+	</variables>
+</theme>

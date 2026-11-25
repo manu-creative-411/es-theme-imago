@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+	<formatVersion>7</formatVersion>
+	<!-- System view: icon grid, 2 row(s) (with the banner: at most 2). -->
+	<variables>
+		<sysCarousel>false</sysCarousel>
+		<sysRows>2</sysRows>
+	</variables>
+</theme>

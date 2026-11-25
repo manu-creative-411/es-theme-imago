@@ -23,6 +23,7 @@
 		<listRowH>${basicListH} / ${listRows}</listRowH>
 		<listFontSize>${listRowH} * 0.5 / ${esFontScale}</listFontSize>
 		<!-- Rounded corners. <rectangle> takes them in PIXELS, hence ${screen.height}. -->
+		<listSepH>1 / (${screen.height} * ${listRowH})</listSepH>
 		<listRadius>${screen.height} * ${listRowH} * 0.30</listRadius>
 		<cardRadius>${screen.height} * 0.022</cardRadius>
 		<!-- Panel / card fill = ${tile}E6, written inline in the layouts: a variable holding "${" is evaluated as an

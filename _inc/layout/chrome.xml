@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+	<formatVersion>7</formatVersion>
+	<!-- Top-right capsule (network, battery, clock) as in Cocoon, with the iconic icons. The built-in clock goes off screen and the
+	     built-in battery indicator is hidden (same trick as es-theme-iconic). The brand logo sits to the left of the capsule. -->
+	<view name="system, basic, detailed, grid">
+		<image name="e_brand" extra="true">
+			<path>${brandLogo}</path>
+			<pos>${brandX} ${capY}</pos>
+			<origin>1 0</origin>
+			<maxSize>0.14 ${capH}</maxSize>
+			<horizontalAlignment>right</horizontalAlignment>
+			<zIndex>60</zIndex>
+		</image>
+		<text name="clock">
+			<pos>1 1</pos>
+		</text>
+		<batteryIndicator name="batteryIndicator">
+			<visible>false</visible>
+		</batteryIndicator>
+		<ninepatch name="e_cap_sh" extra="true">
+			<path>${themePath}/assets/ui/shadow.png</path>
+			<pos>${capShX} ${capShY}</pos>
+			<size>${capShW} ${capShH}</size>
+			<cornerSize>40 40</cornerSize>
+			<color>${shadowColor}</color>
+			<zIndex>96</zIndex>
+		</ninepatch>
+		<rectangle name="e_cap" extra="true">
+			<pos>${capX} ${capY}</pos>
+			<size>${capW} ${capH}</size>
+			<color>${panelBot}F2</color>
+			<borderColor>${panelEdge}</borderColor>
+			<borderSize>1</borderSize>
+			<roundCorners>${capR}</roundCorners>
+			<zIndex>97</zIndex>
+		</rectangle>
+		<stackpanel name="e_status" extra="true">
+			<pos>${capInX} ${capY}</pos>
+			<size>${capInW} ${capH}</size>
+			<separator>0.010</separator>
+			<zIndex>100</zIndex>
+			<orientation>horizontal</orientation>
+			<reverse>true</reverse>
+			<clock name="e_status_clock" extra="true">
+				<color>${text}</color>
+				<fontSize>0.022</fontSize>
+				<lineSpacing>1</lineSpacing>
+				<fontPath>${fontMedium}</fontPath>
+			</clock>
+			<batteryText name="e_status_battery_text" extra="true">
+				<color>${subText}</color>
+				<fontSize>0.022</fontSize>
+				<lineSpacing>1</lineSpacing>
+				<fontPath>${fontInfo}</fontPath>
+			</batteryText>
+			<batteryIcon name="e_status_battery_icon" extra="true">
+				<maxSize>1 1</maxSize>
+				<color>${text}</color>
+				<full>${themePath}/assets/icons/battery-icon-100.svg</full>
+				<at75>${themePath}/assets/icons/battery-icon-75.svg</at75>
+				<at50>${themePath}/assets/icons/battery-icon-50.svg</at50>
+				<at25>${themePath}/assets/icons/battery-icon-25.svg</at25>
+				<empty>${themePath}/assets/icons/battery-icon-0.svg</empty>
+				<incharge>${themePath}/assets/icons/battery-icon-charging.svg</incharge>
+			</batteryIcon>
+			<networkIcon name="e_status_network_icon" extra="true">
+				<maxSize>1 1</maxSize>
+				<color>${text}</color>
+				<networkIcon>${themePath}/assets/icons/network-icon-on.svg</networkIcon>
+				<planemodeIcon>${themePath}/assets/icons/network-icon-off.svg</planemodeIcon>
+			</networkIcon>
+		</stackpanel>
+	</view>
+</theme>

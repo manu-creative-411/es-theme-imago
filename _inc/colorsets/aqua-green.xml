@@ -17,5 +17,15 @@
 		<wallpaperB2>${themePath}/assets/wallpapers/none.png</wallpaperB2> <!-- recorte bajo el banner, 2 filas -->
 		<neon>FF2E9A</neon>         <!-- color del selector neon (contorno + resplandor) -->
 		<logoColorScheme>dark</logoColorScheme> <!-- dark|light: picks <system>/<scheme>[-<region>].svg in _inc/system_logos -->
+		<!-- Texture (iconic-style): shadow + vertical gradient body + hairline edge, selected row, separators, scrollbar. Derived from tile / accent / text. -->
+		<panelTop>1E988C</panelTop>             <!-- card body, top of the vertical gradient -->
+		<panelBot>097B70</panelBot>             <!-- card body, bottom -->
+		<panelEdge>FFFFFF2A</panelEdge>          <!-- 1 px hairline around cards -->
+		<shadowColor>000000F0</shadowColor>    <!-- tint of assets/ui/shadow.png (the PNG is black) -->
+		<rowSel>07645B</rowSel>                 <!-- selected list row (flat), text on it = text -->
+		<rowSelEdge>FFFFFF3C</rowSelEdge>
+		<rowSep>FFFFFF1E</rowSep>                 <!-- hairline between list rows -->
+		<thumb>FFFFFFC0</thumb>                 <!-- scrollbar thumb -->
+		<!-- /Texture -->
 	</variables>
 </theme>

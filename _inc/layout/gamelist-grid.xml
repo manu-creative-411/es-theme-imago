@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+	<formatVersion>7</formatVersion>
+	<!-- Game icon view ("Imago"): banner (console art + game or console logo) / cartel / icon grid. -->
+	<customView name="Imago" inherits="grid">
+		<image name="e_hero" extra="true" if="${bOn} == 1">
+			<path>${themePath}/_inc/system_bg/${system.theme}.jpg</path>
+			<pos>0.5 ${bannerC}</pos>
+			<origin>0.5 0.5</origin>
+			<minSize>1 ${bannerH}</minSize>
+			<clipRect>0 0 1 ${bannerH}</clipRect>
+			<zIndex>29</zIndex>
+		</image>
+		<rectangle name="e_hero_dim" extra="true" if="${bOn} == 1">
+			<pos>0 0</pos>
+			<size>1 ${bannerH}</size>
+			<color>${shadowColor}30</color>
+			<zIndex>29.5</zIndex>
+		</rectangle>
+		<rectangle name="e_plate" extra="true" if="${bOn} == 1">
+			<pos>0.5 ${bannerC}</pos>
+			<origin>0.5 0.5</origin>
+			<size>${plateW} ${plateH}</size>
+			<color>${panelBot}D8</color>
+			<borderColor>${panelEdge}</borderColor>
+			<borderSize>1</borderSize>
+			<roundCorners>${cardRadius}</roundCorners>
+			<visible>{game:name} != '' &amp;&amp; (exists({game:marquee}) || (firstfile('${themePath}/_inc/system_logos/${system.theme}.svg', '${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg', '${themePath}/_inc/system_logos/${system.theme}/jp.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-jp.svg', '${themePath}/_inc/system_logos/${system.theme}/us.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-us.svg', '${themePath}/_inc/system_logos/${system.theme}/eu.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-eu.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-${logoRegion}.svg') != ''))</visible>
+			<zIndex>33</zIndex>
+		</rectangle>
+		<image name="md_marquee">
+			<visible>${bVis}</visible>
+			<pos>0.5 ${bannerC}</pos>
+			<origin>0.5 0.5</origin>
+			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
+			<zIndex>35</zIndex>
+		</image>
+		<image name="e_syslogo" extra="true" if="${bOn} == 1">
+			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-jp.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-us.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-eu.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-${logoRegion}.svg</path>
+			<visible>{game:name} != '' &amp;&amp; !exists({game:marquee})</visible>
+			<pos>0.5 ${bannerC}</pos>
+			<origin>0.5 0.5</origin>
+			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
+			<zIndex>35</zIndex>
+		</image>
+		<!-- Cartel: no banner, or banner with neither a game logo nor a console logo -->
+		<ninepatch name="cartelg_sh" extra="true">
+			<path>${themePath}/assets/ui/shadow.png</path>
+			<pos>${cartelgShX} ${cartelgShY}</pos>
+			<size>${cartelgShW} ${cartelgShH}</size>
+			<cornerSize>40 40</cornerSize>
+			<color>${shadowColor}</color>
+			<visible>{game:name} != '' &amp;&amp; (${bOn} == 0 || (!exists({game:marquee}) &amp;&amp; (firstfile('${themePath}/_inc/system_logos/${system.theme}.svg', '${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg', '${themePath}/_inc/system_logos/${system.theme}/jp.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-jp.svg', '${themePath}/_inc/system_logos/${system.theme}/us.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-us.svg', '${themePath}/_inc/system_logos/${system.theme}/eu.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-eu.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-${logoRegion}.svg') == '')))</visible>
+			<zIndex>18</zIndex>
+		</ninepatch>
+		<rectangle name="cartelg" extra="true">
+			<pos>${ctX} ${ctY}</pos>
+			<size>${ctW} ${ctH}</size>
+			<color>${panelTop}</color>
+			<borderColor>${panelEdge}</borderColor>
+			<borderSize>1</borderSize>
+			<roundCorners>${cardRadius}</roundCorners>
+			<visible>{game:name} != '' &amp;&amp; (${bOn} == 0 || (!exists({game:marquee}) &amp;&amp; (firstfile('${themePath}/_inc/system_logos/${system.theme}.svg', '${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg', '${themePath}/_inc/system_logos/${system.theme}/jp.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-jp.svg', '${themePath}/_inc/system_logos/${system.theme}/us.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-us.svg', '${themePath}/_inc/system_logos/${system.theme}/eu.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-eu.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-${logoRegion}.svg') == '')))</visible>
+			<zIndex>19</zIndex>
+		</rectangle>
+		<image name="cartelg_gl" extra="true">
+			<path>${themePath}/assets/ui/sheen.png</path>
+			<pos>${ctX} ${ctY}</pos>
+			<size>${ctW} ${ctH}</size>
+			<color>${panelBot}</color>
+			<roundCorners>${cardRadius}</roundCorners>
+			<visible>{game:name} != '' &amp;&amp; (${bOn} == 0 || (!exists({game:marquee}) &amp;&amp; (firstfile('${themePath}/_inc/system_logos/${system.theme}.svg', '${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg', '${themePath}/_inc/system_logos/${system.theme}/jp.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-jp.svg', '${themePath}/_inc/system_logos/${system.theme}/us.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-us.svg', '${themePath}/_inc/system_logos/${system.theme}/eu.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-eu.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-${logoRegion}.svg') == '')))</visible>
+			<zIndex>20</zIndex>
+		</image>
+		<text name="md_name">
+			<fontPath>${fontTitle}</fontPath>
+			<pos>${ctXi} ${ctTy}</pos>
+			<size>${ctTw} ${ctTh}</size>
+			<color>${text}</color>
+			<fontSize>${ctTfs}</fontSize>
+			<alignment>left</alignment>
+			<visible>{game:name} != '' &amp;&amp; (${bOn} == 0 || (!exists({game:marquee}) &amp;&amp; (firstfile('${themePath}/_inc/system_logos/${system.theme}.svg', '${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg', '${themePath}/_inc/system_logos/${system.theme}/jp.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-jp.svg', '${themePath}/_inc/system_logos/${system.theme}/us.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-us.svg', '${themePath}/_inc/system_logos/${system.theme}/eu.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-eu.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-${logoRegion}.svg') == '')))</visible>
+			<zIndex>45</zIndex>
+		</text>
+		<text name="md_developer">
+			<fontPath>${fontInfo}</fontPath>
+			<pos>${ctXi} ${ctSy}</pos>
+			<size>${ctSwHalf} ${ctSh}</size>
+			<color>${subText}</color>
+			<fontSize>${ctSfs}</fontSize>
+			<alignment>left</alignment>
+			<visible>{game:name} != '' &amp;&amp; (${bOn} == 0 || (!exists({game:marquee}) &amp;&amp; (firstfile('${themePath}/_inc/system_logos/${system.theme}.svg', '${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg', '${themePath}/_inc/system_logos/${system.theme}/jp.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-jp.svg', '${themePath}/_inc/system_logos/${system.theme}/us.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-us.svg', '${themePath}/_inc/system_logos/${system.theme}/eu.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-eu.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-${logoRegion}.svg') == '')))</visible>
+			<zIndex>45</zIndex>
+		</text>
+		<datetime name="md_releasedate">
+			<pos>${ctYearX} ${ctSy}</pos>
+			<size>${ctYearW} ${ctSh}</size>
+			<format>%Y</format>
+			<fontPath>${fontInfo}</fontPath>
+			<fontSize>${ctSfs}</fontSize>
+			<color>${dimText}</color>
+			<alignment>right</alignment>
+			<visible>{game:name} != '' &amp;&amp; (${bOn} == 0 || (!exists({game:marquee}) &amp;&amp; (firstfile('${themePath}/_inc/system_logos/${system.theme}.svg', '${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg', '${themePath}/_inc/system_logos/${system.theme}/jp.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-jp.svg', '${themePath}/_inc/system_logos/${system.theme}/us.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-us.svg', '${themePath}/_inc/system_logos/${system.theme}/eu.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-eu.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-${logoRegion}.svg') == '')))</visible>
+			<zIndex>45</zIndex>
+		</datetime>
+		<imagegrid name="gamegrid">
+			<pos>0 ${gGridY}</pos>
+			<size>1 ${gGridH}</size>
+			<padding>${gPad}</padding>
+			<autoLayout>${gCols} ${gRows}</autoLayout>
+			<margin>${mX} ${mY}</margin>
+			<imageSource>thumbnail</imageSource>
+			<autoLayoutSelectedZoom>${tZoom}</autoLayoutSelectedZoom>
+			<scrollDirection>horizontal</scrollDirection>
+			<centerSelection>false</centerSelection>
+			<scrollLoop>false</scrollLoop>
+			<animateSelection>true</animateSelection>
+			<zIndex>40</zIndex>
+		</imagegrid>
+	</customView>
+</theme>

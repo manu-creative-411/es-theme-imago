@@ -2,7 +2,7 @@
 <theme>
 	<formatVersion>7</formatVersion>
 	<!-- System view fallback: single-row carousel of icons. No banner. -->
-	<view name="system">
+	<view name="system" if="${sysCarousel} == 1">
 		<carousel name="systemcarousel">
 			<type>horizontal</type>
 			<pos>0 0.5</pos>

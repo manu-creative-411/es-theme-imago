@@ -8,15 +8,15 @@ Format version 7 (batocera-emulationstation).
 theme.xml                        entry point; declares the options (subsets)
 _inc/colorsets/*.xml             6 palettes (variables: bg, tile, accent, text, subText, dimText, box, tone, scheme)
 _inc/branding/*.xml              brand logo selection (variables only)
-_inc/options/                    option variable files (logoRegion, banner geometry, wallpaper, tiles)
-_inc/layout/common.xml           background, brand, clock, help, tiles, console logo (top-left), menu
-_inc/layout/system-grid-rows-N.xml  system view: icon grid, N rows (1..5); tile size = sC<N>/sH<N> in _inc/options/banner-*.xml
-_inc/layout/system-carousel.xml  system view: single-row carousel (fallback option)
-_inc/layout/gamelist-rows-N.xml  game list, N rows (1..5), with the photo+marquee banner (1-2 rows)
-_inc/layout/gamelist-common.xml  basic + detailed views: background, brand, clock, console logo, help, list panel + Cocoon-style
-                                 game list (item template, rounded accent pill), every built-in metadata field hidden by default
-_inc/layout/gamelist-detailed.xml  detailed view + "Imago Detailed": list on the right; image, developer/publisher/year/rating
-                                 card and description card on the left (nothing else)
+_inc/options/                    option variable files (banner on/off + height, rows, logo region, wallpaper, tiles, list, geometry)
+_inc/options/geometry.xml        every icon-view coordinate derived from bOn / bannerPct / rows (ordered variables: edit with care)
+_inc/layout/common.xml           background, help bar, game tiles, menu
+_inc/layout/chrome.xml           top-right status capsule (network, battery, clock; iconic icons) + brand logo on its left
+_inc/layout/system-grid.xml      system view: optional banner + cartel + icon grid (parametric)
+_inc/layout/system-carousel.xml  system view: single-row carousel (guarded by `if="${sysCarousel} == 1"`)
+_inc/layout/gamelist-grid.xml    "Imago" icon view of the game list: banner (console art + game/console logo) / cartel / icon grid
+_inc/layout/gamelist-common.xml  basic + detailed: background, console logo, list card (shadow + body + sheen), iconic-style rows, hidden metadata
+_inc/layout/gamelist-detailed.xml  detailed view + "Imago Detailed" (default): list on the right; image, info card and description card on the left
 _inc/layout/gamelist-basic.xml   "Imago Basic": centred list + developer/year under it (inherits detailed: include it AFTER detailed)
 _inc/options/fontscale.xml       esFontScale (ES "Theme Font Scale", same logic as es-theme-iconic)
 _inc/options/listrows-*.xml      "List rows" option (auto from the font scale, or 7-17)
@@ -24,19 +24,31 @@ _inc/options/list.xml            list geometry, row font size / corner radius, c
 _inc/system_icons/               <system>.svg         square icon of each system (system view tiles)
 _inc/system_bg/                  <system>.png|svg|jpg Carbon console art (system view; fallback for games without image)
 _inc/system_logos/               console logo, ordered <path> chain (see README.txt there)
-assets/ui/                       white.png, round.png, corner-bl/br.png, box-<set>-h12|h15|h17.svg
+assets/ui/                       white.png, round.png, shadow.png (card shadow nine-patch), sheen.png (card gloss), neon.png, box-<set>-*.svg
 assets/branding/                 retrobat.svg, batocera.svg, retrobox.svg (PLACEHOLDERS)
 ```
 
 ## Options (UI Settings > Theme Configuration)
-Color set (6) / Help icons (9) / Branding (3) / Console logo region (Europe [default], USA, Japan) / Banner (on, off) / System view (grid 1-5 rows, carousel) /
-Game list (1-5 rows) / List rows (auto, 7-17; Basic and Detailed views). Then pick the **Imago**, **Imago Basic** or **Imago Detailed** gamelist view (UI Settings > Game List > view style).
+Color set (6) / Help icons (9) / Branding (3) / Console logo region / **Banner** (off [default], on) / **Banner height** (30-50 %, default 40) /
+**System view** (icons 1-4 rows [default 3], carousel) / **Game icons** (1-4 rows [default 3]) / List rows (auto, 7-17). Default game view:
+**Imago Detailed**; pick **Imago** (icons) or **Imago Basic** in UI Settings > Game list view style.
 
-## Banner
-Only exists with 1 or 2 rows (system view and game list). On: bottom-anchored grid, info strip above it, banner above the strip with a gap.
-Off, or 3-5 rows: info strip + grid, the grid vertically centred, slightly wider column spacing.
-Implementation: no ifSubset (it did not filter in Batocera ES). Each option is an include-level subset; the Banner option files define
-the geometry as variables (gY1..gY5, ...) and visibility flags (bVis...) that the layouts read.
+## Icon views (system view and the "Imago" game view)
+- **Banner** (optional, at most 2 rows of icons below it): console art (`_inc/system_bg`) as the background, always; the logo goes on a tinted plate:
+  the console logo in the system view, the game logo (`md_marquee`) in the game view, falling back to the console logo.
+  Height = `bannerPct` % of the screen **height** (30-50). `bannerK` in `geometry.xml` switches the basis to the screen width (`${screen.ratio}`,
+  which at 16:9 means 53-89 % of the height: only usable with 4:3 or similar).
+- **Without banner**: a *cartel* (name card) sits at the top-left, level with the status capsule. System view: console name + manufacturer . year.
+  Game view: game name + developer + year. With the banner on, the cartel disappears when there is a logo to show and comes back when there is none
+  (system view: no console logo; game view: neither game logo nor console logo).
+- Up to 4 rows without banner (default 3), 2 with it. Row count -> tile height (capped at 34 % of the screen height); columns = floor(width / tile height),
+  so the cells fill the whole width and the icon is as big as the row allows. All of it is computed in `geometry.xml` (variables evaluate in order).
+- ES `MathExpr` has no round/min: they are written with comparisons. `<visible>` is dynamic only when it contains a binding (`{game:name}`);
+  static conditions use the `if` attribute (works on views, includes and elements).
+
+## Status capsule
+`chrome.xml`: stackpanel with `clock`, `batteryText`, `batteryIcon` and `networkIcon` inside a rounded card, top right. The built-in clock is moved off screen
+and the built-in battery indicator hidden (same approach as es-theme-iconic). Icons are iconic's (`assets/icons/battery-*.svg`, `network-icon-*.svg`).
 
 ## Artwork lookup
 - icon: _inc/system_icons/<system.theme>.svg
@@ -47,25 +59,23 @@ the geometry as variables (gY1..gY5, ...) and visibility flags (bVis...) that th
 - `python3 tools/build_assets.py` only copies system_bg/collections, creates icon aliases and the wallpaper crops.
 
 ## List views (Basic / Detailed)
-- Look: Cocoon + es-theme-iconic. Panels and the selector are `<rectangle>` with `roundCorners` (no baked PNG), so any odd row count works.
-- `roundCorners` of a rectangle is in PIXELS: radii are computed from `${screen.height}` in `list.xml`.
-- A variable whose value contains `${` is evaluated as a math expression (`${tile}E6` would become a number): colours with
-  alpha are written inline in the elements, not as variables.
-- In `detailed` ES draws every metadata label/field the theme does not define at a default position: `gamelist-common.xml`
-  hides all of them and each view re-enables what it uses (`<visible>true</visible>`).
-- Entries without game data (the `. .` parent folder) skip the item template and use the built-in square selector.
+- Look: Cocoon + es-theme-iconic. Cards (list, info, description, cartel, plate) = soft shadow (`shadow.png` nine-patch, 24 px margin) + flat body
+  tinted by the colour set (`panelTop`, 1 px `panelEdge`) + vertical gloss (`sheen.png`, tinted `panelBot`). Every colour set defines the texture
+  variables (`panelTop/Bot/Edge`, `shadowColor`, `rowSel/rowSelEdge`, `rowSep`, `thumb`). `python3 tools/make_shadow.py` regenerates the shadow.
+- Rows: item template with a flat rounded pill + hairline for the selected row and hairline separators; `roundCorners` of a rectangle is in PIXELS.
+- Scrollbar: 0.45 % wide, `${thumb}`, drawn in the right padding of the card. ES quirk (not fixable from a theme): with an item template the thumb
+  follows the cursor about two rows late, and it hides 1.5 s after the last move.
+- A variable whose value contains `${` is evaluated as a math expression (`${tile}E6` would become a number): colours with alpha are written inline.
+- In `detailed` ES draws every metadata label/field the theme does not define: `gamelist-common.xml` hides them all and each view re-enables its own.
+- Entries without game data (the `. .` parent folder) skip the item template and use the built-in selector.
 
 ## Known limits / to verify
 - System grid: in Batocera ES the system-view grid is `<imagegrid name="imagegrid">` (confirmed in es-theme-tiled, systemview/grid.xml;
   `systemgrid` and `systemcarousel` do NOT work: the latter logs "mismatched theme type ... expected carousel").
   Still unverified: tile image source (assumed `<image name="logo">`), `autoLayout`/`scrollDirection` support in this view.
   Carousel stays as fallback.
-- Photo crop: `md_image` uses minSize 1x0.5 centred; overflow below 50% is covered by `e_overflow`; the bottom corners
-  (36px @1080p) are bg-coloured masks (corner-bl/br.png).
-- Console logo: `assets/systems/<system.theme>.svg`, top-left over the photo; the header text is hidden.
-- Background is a single flat colour (`bg` in each colorset). Brand logo moved to the top-right.
-- md_image / md_marquee inside a custom view inheriting `grid`, `displayName` on subsets and the 1-4 row geometry
-  must be checked on a real Batocera/RetroBat build (F5 reloads the theme; use `--windowed`).
+- Nothing here could be run in a real ES: check F5 reload on a Batocera build (`firstfile()` inside `if`/`<visible>`, `clipRect` of the banner,
+  ninepatch `cornerSize` in px, `exists({game:marquee})`, `imagegrid` column count as an integer).
 - No fonts are bundled (default ES font). Add a TTF and a `<fontPath>` if wanted.
 - Logos in assets/branding are placeholders; use the official artwork you are allowed to use.
 
@@ -74,8 +84,7 @@ Renaming the theme = renaming the folder; all paths use `${themePath}` or are re
 ## Wallpapers (assets/wallpapers/)
 - `<name>.svg` 16:9 (p. ej. 1280x720) = fondo a pantalla completa, capa `e_wallpaper` (z 1, sobre el color plano `bg`). **Debe estar aplanado** (sin `<use>`, `<clipPath>`, filtros ni capas ocultas: NanoSVG no los soporta). Si lo exportas de Inkscape: `python3 tools/flatten_svg.py original.svg assets/wallpapers/<nombre>.svg`.
 - Cada colorset elige el suyo en `_inc/colorsets/*.xml` (`wallpaper`, `wallpaperB1`, `wallpaperB2`). Hoy: Black -> `dark.svg`; el resto -> `none.png` (transparente).
-- `<name>-b1.svg` / `-b2.svg` los genera `python3 tools/build_assets.py`: recorte de la zona bajo el banner (1 y 2 filas) para que el fondo sea continuo
-  bajo la foto de consola (capa `e_overflow_wp`, z 31.5). Si cambias `bH1/bH2` en `banner-on.xml`, actualiza `BH` en el script.
+- `-b1`/`-b2` crops are no longer used (the banner is clipped with `clipRect`, nothing is drawn under it).
 - Opcion de tema `Wallpaper: on/off` (off = usa `none.png`).
 - Para anadir otro: copia `assets/wallpapers/<name>.svg`, ejecuta el script y apunta las 3 variables del colorset a `<name>.svg`, `<name>-b1.svg`, `<name>-b2.svg`.
 
@@ -97,8 +106,7 @@ Renaming the theme = renaming the folder; all paths use `${themePath}` or are re
   `BAND` debe ser igual a `tPad` (px entre la imagen y el borde del tile = `backgroundCornerSize`).
 - `tiles.xml`: `tPad` (20), `tZoom` (1.06, zoom del seleccionado) y `gPad` (holgura izq/arriba/dcha/abajo del grid, relativa a la pantalla).
   Si el zoom o el neon se cortan en los bordes del grid, sube `gPad`; si quieres iconos mas grandes, baja `tPad` (y regenera el PNG con el mismo BAND).
-- El grid ocupa el 100 % del ancho (`pos 0`, `size 1`) y, en vertical, `gPad` extra arriba y abajo (la zona util es la de antes). Geometria en `banner-on/off.xml`
-  (`gY/gH/gC/gM`). Con banner: 1 fila = 6 columnas, 2 filas = 7.
+- El grid ocupa el 100 % del ancho (`pos 0`, `size 1`) y, en vertical, `gPad` extra arriba y abajo (la zona util es la de antes). Geometria: `geometry.xml`.
 
 ## Fonts (assets/fonts/, _inc/options/fonts.xml)
 Poppins, all 18 files. Elements never hard-code a file: they use a **role variable** from `_inc/options/fonts.xml`, so a weight can be changed in one place.

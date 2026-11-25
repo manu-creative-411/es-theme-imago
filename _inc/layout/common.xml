@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <theme>
 	<formatVersion>7</formatVersion>
-	<!-- Shared look for every view: flat background, branding (top-right), help bar, tiles, menu. -->
+	<!-- Shared look: flat background, help bar, game tiles, menu. Branding + status capsule: chrome.xml. -->
 	<view name="system, grid">
 		<image name="e_bg" extra="true">
 			<path>${themePath}/assets/ui/white.png</path>
@@ -16,22 +16,6 @@
 			<size>1 1</size>
 			<zIndex>1</zIndex>
 		</image>
-		<image name="e_brand" extra="true">
-			<path>${brandLogo}</path>
-			<pos>0.915 0.03</pos>
-			<origin>1 0</origin>
-			<maxSize>0.14 0.06</maxSize>
-			<horizontalAlignment>right</horizontalAlignment>
-			<zIndex>60</zIndex>
-		</image>
-		<text name="clock">
-			<fontPath>${fontUI}</fontPath>
-			<pos>0.98 0.03</pos>
-			<origin>1 0</origin>
-			<color>${subText}</color>
-			<fontSize>0.028</fontSize>
-			<alignment>right</alignment>
-		</text>
 		<helpsystem name="help">
 			<fontPath>${fontUI}</fontPath>
 			<fontSize>0.026</fontSize>
@@ -43,28 +27,9 @@
 
 	<!-- Tiles (game icons). Neon selector = assets/ui/neon.png (nine-patch, tinted with ${neon}); see _inc/options/tiles.xml. -->
 	<view name="grid">
-		<!-- Console logo, top-left. Several <path>: from LOWEST to HIGHEST priority, the last one that exists wins (same logic as es-theme-iconic).
-		     Order: <sys>.svg < <sys>-<region>.svg < <sys>/jp < jp-scheme < us < us-scheme < eu < eu-scheme < <scheme> < <region> < <scheme>-<region>.svg -->
+		<!-- The console logo of the icon views lives in the banner / cartel (gamelist-grid.xml); the built-in one is hidden. -->
 		<image name="logo">
 			<visible>false</visible>
-		</image>
-		<image name="e_logo" extra="true">
-			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-${logoRegion}.svg</path>
-			<pos>0.025 0.035</pos>
-			<origin>0 0</origin>
-			<maxSize>0.16 0.08</maxSize>
-			<horizontalAlignment>left</horizontalAlignment>
-			<zIndex>50</zIndex>
 		</image>
 		<text name="logoText">
 			<fontPath>${fontTitle}</fontPath>

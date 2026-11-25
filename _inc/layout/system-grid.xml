@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+	<formatVersion>7</formatVersion>
+	<!-- System view, icon grid. Banner (optional) + cartel + icon grid, all derived in geometry.xml. -->
+	<view name="system" if="${sysCarousel} == 0">
+		<imagegrid name="imagegrid">
+			<pos>0 ${sGridY}</pos>
+			<size>1 ${sGridH}</size>
+			<padding>${gPad}</padding>
+			<autoLayout>${sCols} ${sRows}</autoLayout>
+			<margin>${mX} ${mY}</margin>
+			<autoLayoutSelectedZoom>${tZoom}</autoLayoutSelectedZoom>
+			<scrollDirection>horizontal</scrollDirection>
+			<centerSelection>false</centerSelection>
+			<scrollLoop>false</scrollLoop>
+			<animateSelection>true</animateSelection>
+			<zIndex>40</zIndex>
+		</imagegrid>
+		<gridtile name="default">
+			<backgroundImage>${themePath}/assets/ui/neon.png</backgroundImage>
+			<backgroundCornerSize>${tPad} ${tPad}</backgroundCornerSize>
+			<backgroundColor>00000000</backgroundColor>
+			<selectionMode>image</selectionMode>
+			<imageSizeMode>maxSize</imageSizeMode>
+			<padding>${tPad} ${tPad}</padding>
+		</gridtile>
+		<gridtile name="selected">
+			<backgroundImage>${themePath}/assets/ui/neon.png</backgroundImage>
+			<backgroundCornerSize>${tPad} ${tPad}</backgroundCornerSize>
+			<backgroundColor>${neon}</backgroundColor>
+			<selectionMode>image</selectionMode>
+			<imageSizeMode>maxSize</imageSizeMode>
+			<padding>${tPad} ${tPad}</padding>
+		</gridtile>
+		<!-- Tile content: system icon, text fallback -->
+		<image name="logo">
+			<path>${themePath}/_inc/system_icons/${system.theme}.svg</path>
+		</image>
+		<text name="logoText">
+			<fontPath>${fontTitle}</fontPath>
+			<color>${text}</color>
+			<fontSize>0.034</fontSize>
+			<forceUppercase>true</forceUppercase>
+		</text>
+		<!-- Banner -->
+		<image name="e_hero" extra="true" if="${bOn} == 1">
+			<path>${themePath}/_inc/system_bg/${system.theme}.jpg</path>
+			<pos>0.5 ${bannerC}</pos>
+			<origin>0.5 0.5</origin>
+			<minSize>1 ${bannerH}</minSize>
+			<clipRect>0 0 1 ${bannerH}</clipRect>
+			<zIndex>29</zIndex>
+		</image>
+		<rectangle name="e_hero_dim" extra="true" if="${bOn} == 1">
+			<pos>0 0</pos>
+			<size>1 ${bannerH}</size>
+			<color>${shadowColor}30</color>
+			<zIndex>29.5</zIndex>
+		</rectangle>
+		<rectangle name="e_plate" extra="true" if="${bOn} == 1 &amp;&amp; (firstfile('${themePath}/_inc/system_logos/${system.theme}.svg', '${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg', '${themePath}/_inc/system_logos/${system.theme}/jp.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-jp.svg', '${themePath}/_inc/system_logos/${system.theme}/us.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-us.svg', '${themePath}/_inc/system_logos/${system.theme}/eu.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-eu.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-${logoRegion}.svg') != '')">
+			<pos>0.5 ${bannerC}</pos>
+			<origin>0.5 0.5</origin>
+			<size>${plateW} ${plateH}</size>
+			<color>${panelBot}D8</color>
+			<borderColor>${panelEdge}</borderColor>
+			<borderSize>1</borderSize>
+			<roundCorners>${cardRadius}</roundCorners>
+			<zIndex>33</zIndex>
+		</rectangle>
+		<image name="e_syslogo" extra="true" if="${bOn} == 1">
+			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-jp.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-us.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-eu.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-${logoRegion}.svg</path>
+			<pos>0.5 ${bannerC}</pos>
+			<origin>0.5 0.5</origin>
+			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
+			<zIndex>35</zIndex>
+		</image>
+		<!-- Cartel: no banner, or banner without a console logo. Name + subtitle (maker, year) -->
+		<ninepatch name="cartel_sh" extra="true" if="${bOn} == 0 || (firstfile('${themePath}/_inc/system_logos/${system.theme}.svg', '${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg', '${themePath}/_inc/system_logos/${system.theme}/jp.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-jp.svg', '${themePath}/_inc/system_logos/${system.theme}/us.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-us.svg', '${themePath}/_inc/system_logos/${system.theme}/eu.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-eu.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-${logoRegion}.svg') == '')">
+			<path>${themePath}/assets/ui/shadow.png</path>
+			<pos>${cartelShX} ${cartelShY}</pos>
+			<size>${cartelShW} ${cartelShH}</size>
+			<cornerSize>40 40</cornerSize>
+			<color>${shadowColor}</color>
+			<zIndex>18</zIndex>
+		</ninepatch>
+		<rectangle name="cartel" extra="true" if="${bOn} == 0 || (firstfile('${themePath}/_inc/system_logos/${system.theme}.svg', '${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg', '${themePath}/_inc/system_logos/${system.theme}/jp.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-jp.svg', '${themePath}/_inc/system_logos/${system.theme}/us.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-us.svg', '${themePath}/_inc/system_logos/${system.theme}/eu.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-eu.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-${logoRegion}.svg') == '')">
+			<pos>${ctX} ${ctY}</pos>
+			<size>${ctW} ${ctH}</size>
+			<color>${panelTop}</color>
+			<borderColor>${panelEdge}</borderColor>
+			<borderSize>1</borderSize>
+			<roundCorners>${cardRadius}</roundCorners>
+			<zIndex>19</zIndex>
+		</rectangle>
+		<image name="cartel_gl" extra="true" if="${bOn} == 0 || (firstfile('${themePath}/_inc/system_logos/${system.theme}.svg', '${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg', '${themePath}/_inc/system_logos/${system.theme}/jp.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-jp.svg', '${themePath}/_inc/system_logos/${system.theme}/us.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-us.svg', '${themePath}/_inc/system_logos/${system.theme}/eu.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-eu.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-${logoRegion}.svg') == '')">
+			<path>${themePath}/assets/ui/sheen.png</path>
+			<pos>${ctX} ${ctY}</pos>
+			<size>${ctW} ${ctH}</size>
+			<color>${panelBot}</color>
+			<roundCorners>${cardRadius}</roundCorners>
+			<zIndex>20</zIndex>
+		</image>
+		<text name="e_sys_name" extra="true" if="${bOn} == 0 || (firstfile('${themePath}/_inc/system_logos/${system.theme}.svg', '${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg', '${themePath}/_inc/system_logos/${system.theme}/jp.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-jp.svg', '${themePath}/_inc/system_logos/${system.theme}/us.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-us.svg', '${themePath}/_inc/system_logos/${system.theme}/eu.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-eu.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-${logoRegion}.svg') == '')">
+			<text>${system.fullName}</text>
+			<fontPath>${fontTitle}</fontPath>
+			<pos>${ctXi} ${ctTy}</pos>
+			<size>${ctTw} ${ctTh}</size>
+			<color>${text}</color>
+			<fontSize>${ctTfs}</fontSize>
+			<alignment>left</alignment>
+			<zIndex>45</zIndex>
+		</text>
+		<text name="e_sys_sub" extra="true" if="(${bOn} == 0 || (firstfile('${themePath}/_inc/system_logos/${system.theme}.svg', '${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg', '${themePath}/_inc/system_logos/${system.theme}/jp.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-jp.svg', '${themePath}/_inc/system_logos/${system.theme}/us.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-us.svg', '${themePath}/_inc/system_logos/${system.theme}/eu.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-eu.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-${logoRegion}.svg') == '')) &amp;&amp; '${system.manufacturer}' != '' &amp;&amp; '${system.releaseYear}' != ''">
+			<text>${system.manufacturer} · ${system.releaseYear}</text>
+			<fontPath>${fontInfo}</fontPath>
+			<pos>${ctXi} ${ctSy}</pos>
+			<size>${ctTw} ${ctSh}</size>
+			<color>${subText}</color>
+			<fontSize>${ctSfs}</fontSize>
+			<alignment>left</alignment>
+			<zIndex>45</zIndex>
+		</text>
+		<text name="e_sys_sub_m" extra="true" if="(${bOn} == 0 || (firstfile('${themePath}/_inc/system_logos/${system.theme}.svg', '${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg', '${themePath}/_inc/system_logos/${system.theme}/jp.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-jp.svg', '${themePath}/_inc/system_logos/${system.theme}/us.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-us.svg', '${themePath}/_inc/system_logos/${system.theme}/eu.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-eu.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-${logoRegion}.svg') == '')) &amp;&amp; '${system.manufacturer}' != '' &amp;&amp; '${system.releaseYear}' == ''">
+			<text>${system.manufacturer}</text>
+			<fontPath>${fontInfo}</fontPath>
+			<pos>${ctXi} ${ctSy}</pos>
+			<size>${ctTw} ${ctSh}</size>
+			<color>${subText}</color>
+			<fontSize>${ctSfs}</fontSize>
+			<alignment>left</alignment>
+			<zIndex>45</zIndex>
+		</text>
+		<text name="e_sys_sub_y" extra="true" if="(${bOn} == 0 || (firstfile('${themePath}/_inc/system_logos/${system.theme}.svg', '${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg', '${themePath}/_inc/system_logos/${system.theme}/jp.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-jp.svg', '${themePath}/_inc/system_logos/${system.theme}/us.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-us.svg', '${themePath}/_inc/system_logos/${system.theme}/eu.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-eu.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-${logoRegion}.svg') == '')) &amp;&amp; '${system.manufacturer}' == '' &amp;&amp; '${system.releaseYear}' != ''">
+			<text>${system.releaseYear}</text>
+			<fontPath>${fontInfo}</fontPath>
+			<pos>${ctXi} ${ctSy}</pos>
+			<size>${ctTw} ${ctSh}</size>
+			<color>${subText}</color>
+			<fontSize>${ctSfs}</fontSize>
+			<alignment>left</alignment>
+			<zIndex>45</zIndex>
+		</text>
+	</view>
+</theme>

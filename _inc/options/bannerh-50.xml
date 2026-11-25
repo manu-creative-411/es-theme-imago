@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+	<formatVersion>7</formatVersion>
+	<!-- Banner height: 50% (see bannerBasis in geometry.xml). -->
+	<variables>
+		<bannerPct>50</bannerPct>
+	</variables>
+</theme>
