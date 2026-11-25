@@ -37,9 +37,12 @@ Color set / Help icons / Branding / Console logo region / **Banner** (off [defau
   the console logo in the system view, the game logo (`md_marquee`) in the game view, falling back to the console logo.
   The bottom corners are rounded (the art is drawn taller, top edge off screen, `roundCorners` = `heroRad`). Height = `bannerPct` % of the screen **height** (30-50). `bannerK` in `geometry.xml` switches the basis to the screen width (`${screen.ratio}`,
   which at 16:9 means 53-89 % of the height: only usable with 4:3 or similar).
-- **Without banner**: a *cartel* (name card) sits at the top-left, level with the status capsule. With the banner on it is centred in the banner, in the logo's place. System view: console name + manufacturer . year.
-  Game view: game name + developer + year. With the banner on, the cartel is the only thing drawn there when there is no logo, and does not appear when there is one
-  (system view: no console logo; game view: neither game logo nor console logo).
+- **Cartel** (name plate, console name only): without banner it sits at the top-left, level with the status capsule; with the banner it is centred in the banner,
+  but only when there is no logo to show (system view: no console logo; game view: neither game logo nor console logo). It depends on the LOGO only, never on the console art.
+- **Info row** above the grid (always, with or without banner): system view = manufacturer . year at the left end, game count (`systemInfo`) at the right end;
+  game view = game name at the left, developer and year at the right. `rowY` / `rowH` in `geometry.xml`; the grid zone starts under it.
+- **Logo drop shadow**: ES has no per-image shadow, so each logo (banner logos, console logo of the list views) gets four black translucent copies stacked below it
+  with small offsets (`lsDx`, `lsDy`; `logo_shadow` in the generator). A softer look needs more copies; the stock `:/shaders/shadow.glsl` shader was not used because it cannot be tested here.
 - Up to 4 rows without banner (default 3), 2 with it. Row count -> tile height (capped at 34 % of the screen height); columns = floor(width / tile height),
   so the cells fill the whole width and the icon is as big as the row allows. All of it is computed in `geometry.xml` (variables evaluate in order).
 - ES `MathExpr` notes: plain variables are strings, so a sum must start with a number (`0 + ${x} + ...`) or ES concatenates; `screen.ratio` is a NAME
@@ -48,7 +51,7 @@ Color set / Help icons / Branding / Console logo region / **Banner** (off [defau
 - (old note) ES `MathExpr` has no round/min: they are written with comparisons. `<visible>` is dynamic only when it contains a binding (`{game:name}`);
   static conditions use the `if` attribute (works on views, includes and elements).
 
-## Game count: ES drives the `systemInfo` text (not a per-system extra, so it cannot follow the cartel). In the icon system view it sits in the footer, right-aligned on the help bar's baseline.
+## Game count: ES drives the `systemInfo` text (not a per-system extra). In the icon system view it is the right end of the info row.
 `system.releaseYear` is the localized word "Unknown" when the year is missing: test it with `> 0`, never with `!= ''`.
 
 ## Status capsule
@@ -72,6 +75,7 @@ and the built-in battery indicator hidden (same approach as es-theme-iconic). Ic
   follows the cursor about two rows late, and it hides 1.5 s after the last move.
 - `rectangle` and `ninepatch` ignore `origin`: give explicit top-left positions .
 - A variable whose value contains `${` is evaluated as a math expression (`${tile}E6` would become a number): colours with alpha are written inline.
+- `detailed`: console logo centred over the game image, image on its own card (same shadow as the others); gaps between cards are >= 0.035 so shadows do not stack and look darker.
 - In `detailed` ES draws every metadata label/field the theme does not define: `gamelist-common.xml` hides them all and each view re-enables its own.
 - Entries without game data (the `. .` parent folder) skip the item template and use the built-in selector.
 
@@ -135,7 +139,7 @@ keep its license text if you redistribute the theme.
 The 14 menu icons come from es-theme-iconic (white SVG, 24x24; ES tints them with the menu text colour, so they work on dark and light colour sets),
 wired in the `menu` view of `_inc/layout/common.xml` (`menuIcons` + `menuTextEdit`). `menu-icon-controller.svg` and `gamepad.svg` are the custom controller icon
 (glyph scaled to 22/24 of the box so it matches the others). Use that same icon for anything related to controllers/gamepads
-(`gamepad.svg` is not used by a layout yet: it is reserved for a controller-activity indicator).
+(`gamepad.svg`, `gun.svg`, `wheel.svg` are the native controller indicator: without `imagePath` ES draws a plain grey square per pad at the top-left; the `screen` view places it in the footer.)
 
 ## Help icons (_inc/help/, option "Help icons")
 Same option and logic as es-theme-recalboxy (subset `helpicons`): Default (Batocera) / Xbox / PlayStation / SNES / Generic 4, 6 and 8 buttons / SNES alt / Xbox One / Arcade.

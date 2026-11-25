@@ -17,7 +17,7 @@ Limit of the rule: it only applies to files that are really the author's own. A 
 ## 2. Help icons - `_inc/help/`
 Mixed sources (own work, Wikimedia Commons CC BY-SA 4.0, Recalbox CC BY-NC-SA). See `_inc/help/NOTICE.md`.
 
-## 3. Menu icons, status icons and text-input images - `assets/icons/menu-icon-*.svg`, `menu-textinput*.png`, `battery-icon-*.svg`, `network-icon-*.svg`
+## 3. Menu icons, status icons and text-input images - `assets/icons/menu-icon-*.svg`, `menu-textinput*.png`, `battery-icon-*.svg`, `network-icon-*.svg`, `gun.svg`, `wheel.svg`
 Taken from **es-theme-iconic** (author's fork https://github.com/manu-creative-411/es-theme-iconic), forked from **Delgan/iconic-es** (https://github.com/Delgan/iconic-es),
 a port of **Siddy212/iconic-es-de** (https://github.com/Siddy212/iconic-es-de).
 - Delgan/iconic-es: repository `LICENSE` is **CC0-1.0**; its README names the artists whose artwork the theme uses.

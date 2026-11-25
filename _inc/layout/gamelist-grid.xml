@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <theme>
 	<formatVersion>7</formatVersion>
-	<!-- Game icon view ("Icons"): banner (console art + game or console logo) / cartel / icon grid. -->
+	<!-- Game icon view ("Icons"): banner (console art + game or console logo) / cartel / info row / icon grid. -->
 	<customView name="Icons" inherits="grid">
 		<image name="e_hero" extra="true" if="${bOn} == 1">
 			<path>${themePath}/_inc/system_bg/${system.theme}.jpg</path>
@@ -19,12 +19,124 @@
 			<roundCorners>${heroRad}</roundCorners>
 			<zIndex>29.5</zIndex>
 		</rectangle>
+		<image name="md_marquee_sh0" extra="true">
+			<path>{game:marquee}</path>
+			<pos>${lsMq0X} ${lsMq0Y}</pos>
+			<origin>0.5 0.5</origin>
+			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
+			<color>00000040</color>
+			<visible>${bVis}</visible>
+			<zIndex>34</zIndex>
+		</image>
+		<image name="md_marquee_sh1" extra="true">
+			<path>{game:marquee}</path>
+			<pos>${lsMq1X} ${lsMq1Y}</pos>
+			<origin>0.5 0.5</origin>
+			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
+			<color>00000022</color>
+			<visible>${bVis}</visible>
+			<zIndex>34</zIndex>
+		</image>
+		<image name="md_marquee_sh2" extra="true">
+			<path>{game:marquee}</path>
+			<pos>${lsMq2X} ${lsMq2Y}</pos>
+			<origin>0.5 0.5</origin>
+			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
+			<color>00000022</color>
+			<visible>${bVis}</visible>
+			<zIndex>34</zIndex>
+		</image>
+		<image name="md_marquee_sh3" extra="true">
+			<path>{game:marquee}</path>
+			<pos>${lsMq3X} ${lsMq3Y}</pos>
+			<origin>0.5 0.5</origin>
+			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
+			<color>0000001C</color>
+			<visible>${bVis}</visible>
+			<zIndex>34</zIndex>
+		</image>
 		<image name="md_marquee">
 			<visible>${bVis}</visible>
 			<pos>0.5 ${bannerC}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
 			<zIndex>35</zIndex>
+		</image>
+		<image name="e_syslogo_sh0" extra="true" if="${bOn} == 1">
+			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-jp.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-us.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-eu.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-${logoRegion}.svg</path>
+			<pos>${lsGame0X} ${lsGame0Y}</pos>
+			<origin>0.5 0.5</origin>
+			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
+			<color>00000040</color>
+			<visible>{game:name} != '' &amp;&amp; !exists({game:marquee})</visible>
+			<zIndex>34</zIndex>
+		</image>
+		<image name="e_syslogo_sh1" extra="true" if="${bOn} == 1">
+			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-jp.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-us.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-eu.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-${logoRegion}.svg</path>
+			<pos>${lsGame1X} ${lsGame1Y}</pos>
+			<origin>0.5 0.5</origin>
+			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
+			<color>00000022</color>
+			<visible>{game:name} != '' &amp;&amp; !exists({game:marquee})</visible>
+			<zIndex>34</zIndex>
+		</image>
+		<image name="e_syslogo_sh2" extra="true" if="${bOn} == 1">
+			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-jp.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-us.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-eu.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-${logoRegion}.svg</path>
+			<pos>${lsGame2X} ${lsGame2Y}</pos>
+			<origin>0.5 0.5</origin>
+			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
+			<color>00000022</color>
+			<visible>{game:name} != '' &amp;&amp; !exists({game:marquee})</visible>
+			<zIndex>34</zIndex>
+		</image>
+		<image name="e_syslogo_sh3" extra="true" if="${bOn} == 1">
+			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-jp.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-us.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-eu.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-${logoRegion}.svg</path>
+			<pos>${lsGame3X} ${lsGame3Y}</pos>
+			<origin>0.5 0.5</origin>
+			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
+			<color>0000001C</color>
+			<visible>{game:name} != '' &amp;&amp; !exists({game:marquee})</visible>
+			<zIndex>34</zIndex>
 		</image>
 		<image name="e_syslogo" extra="true" if="${bOn} == 1">
 			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
@@ -44,7 +156,7 @@
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
 			<zIndex>35</zIndex>
 		</image>
-		<!-- Cartel: no banner, or banner with neither a game logo nor a console logo -->
+		<!-- Cartel (console name only): no banner, or banner with neither a game logo nor a console logo -->
 		<ninepatch name="cartelg_sh" extra="true">
 			<path>${themePath}/assets/ui/shadow.png</path>
 			<pos>${cartelgShX} ${cartelgShY}</pos>
@@ -73,7 +185,8 @@
 			<visible>{game:name} != '' &amp;&amp; (${bOn} == 0 || (!exists({game:marquee}) &amp;&amp; (firstfile('${themePath}/_inc/system_logos/${system.theme}.svg', '${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg', '${themePath}/_inc/system_logos/${system.theme}/jp.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-jp.svg', '${themePath}/_inc/system_logos/${system.theme}/us.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-us.svg', '${themePath}/_inc/system_logos/${system.theme}/eu.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-eu.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-${logoRegion}.svg') == '')))</visible>
 			<zIndex>20</zIndex>
 		</image>
-		<text name="md_name">
+		<text name="e_sys_name" extra="true">
+			<text>${system.fullName}</text>
 			<fontPath>${fontTitle}</fontPath>
 			<pos>${ctXi} ${ctTy}</pos>
 			<size>${ctTw} ${ctTh}</size>
@@ -84,26 +197,41 @@
 			<visible>{game:name} != '' &amp;&amp; (${bOn} == 0 || (!exists({game:marquee}) &amp;&amp; (firstfile('${themePath}/_inc/system_logos/${system.theme}.svg', '${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg', '${themePath}/_inc/system_logos/${system.theme}/jp.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-jp.svg', '${themePath}/_inc/system_logos/${system.theme}/us.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-us.svg', '${themePath}/_inc/system_logos/${system.theme}/eu.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-eu.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-${logoRegion}.svg') == '')))</visible>
 			<zIndex>45</zIndex>
 		</text>
+		<!-- Info row: selected game name (left); developer and year (right) -->
+		<text name="md_name">
+			<fontPath>${fontMedium}</fontPath>
+			<pos>0.025 ${rowY}</pos>
+			<size>0.56 ${rowH}</size>
+			<color>${text}</color>
+			<fontSize>0.026</fontSize>
+			<alignment>left</alignment>
+			<autoScroll>horizontal</autoScroll>
+			<autoScrollDelay>1500</autoScrollDelay>
+			<autoScrollSpeed>50</autoScrollSpeed>
+			<singleLineScroll>true</singleLineScroll>
+			<visible>{game:name} != ''</visible>
+			<zIndex>45</zIndex>
+		</text>
 		<text name="md_developer">
 			<fontPath>${fontInfo}</fontPath>
-			<pos>${ctXi} ${ctSy}</pos>
-			<size>${ctSwHalf} ${ctSh}</size>
+			<pos>${rowDevX} ${rowY}</pos>
+			<size>0.30 ${rowH}</size>
 			<color>${subText}</color>
-			<fontSize>${ctSfs}</fontSize>
-			<alignment>left</alignment>
+			<fontSize>0.026</fontSize>
+			<alignment>right</alignment>
 			<multiLine>false</multiLine>
-			<visible>{game:name} != '' &amp;&amp; (${bOn} == 0 || (!exists({game:marquee}) &amp;&amp; (firstfile('${themePath}/_inc/system_logos/${system.theme}.svg', '${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg', '${themePath}/_inc/system_logos/${system.theme}/jp.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-jp.svg', '${themePath}/_inc/system_logos/${system.theme}/us.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-us.svg', '${themePath}/_inc/system_logos/${system.theme}/eu.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-eu.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-${logoRegion}.svg') == '')))</visible>
+			<visible>{game:name} != ''</visible>
 			<zIndex>45</zIndex>
 		</text>
 		<datetime name="md_releasedate">
-			<pos>${ctYearX} ${ctSy}</pos>
-			<size>${ctYearW} ${ctSh}</size>
+			<pos>${rowYearX} ${rowY}</pos>
+			<size>0.06 ${rowH}</size>
 			<format>%Y</format>
 			<fontPath>${fontInfo}</fontPath>
-			<fontSize>${ctSfs}</fontSize>
+			<fontSize>0.026</fontSize>
 			<color>${dimText}</color>
 			<alignment>right</alignment>
-			<visible>{game:name} != '' &amp;&amp; (${bOn} == 0 || (!exists({game:marquee}) &amp;&amp; (firstfile('${themePath}/_inc/system_logos/${system.theme}.svg', '${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg', '${themePath}/_inc/system_logos/${system.theme}/jp.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-jp.svg', '${themePath}/_inc/system_logos/${system.theme}/us.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-us.svg', '${themePath}/_inc/system_logos/${system.theme}/eu.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-eu.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-${logoRegion}.svg') == '')))</visible>
+			<visible>{game:name} != ''</visible>
 			<zIndex>45</zIndex>
 		</datetime>
 		<imagegrid name="gamegrid">

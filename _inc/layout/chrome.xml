@@ -10,6 +10,19 @@
 		<text name="clock">
 			<pos>1 1</pos>
 		</text>
+		<!-- Native controller indicator: without imagePath ES draws a plain grey square per pad at the top-left. Icons are tinted, bottom bar. -->
+		<controllerActivity name="controllerActivity">
+			<pos>0.50 0.957</pos>
+			<size>0.17 0.030</size>
+			<itemSpacing>0.004</itemSpacing>
+			<horizontalAlignment>right</horizontalAlignment>
+			<color>${subText}</color>
+			<imagePath>${themePath}/assets/icons/gamepad.svg</imagePath>
+			<gunPath>${themePath}/assets/icons/gun.svg</gunPath>
+			<wheelPath>${themePath}/assets/icons/wheel.svg</wheelPath>
+			<activityColor>${text}</activityColor>
+			<hotkeyColor>${neon}</hotkeyColor>
+		</controllerActivity>
 	</view>
 	<!-- Top-right capsule (network, battery, clock) as in Cocoon, with the iconic icons; brand logo on its left. -->
 	<view name="system, basic, detailed, grid">

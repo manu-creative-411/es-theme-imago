@@ -20,12 +20,11 @@
 		<capX>0.975 - ${capW}</capX>
 		<ctTopX>0.025</ctTopX>
 		<ctTopY>0.016</ctTopY>
-		<ctW>0.52</ctW>
-		<ctH>0.104</ctH>
+		<ctW>0.46</ctW>
+		<ctH>0.078</ctH>
 		<ctPad>0.022</ctPad>
 		<!-- Icon zone: from the cartel (or the banner) down to the help bar -->
 		<zoneBottom>0.945</zoneBottom>
-		<zoneNoBanner>0.14</zoneNoBanner>
 		<gPadV>0.04</gPadV>
 		<mX>0.006</mX>
 		<mY>0.010</mY>
@@ -45,12 +44,18 @@
 		<ctX>${bOn} * (1 - ${ctW}) / 2 + (1 - ${bOn}) * ${ctTopX}</ctX>
 		<ctY>${bOn} * (${bannerH} - ${ctH}) / 2 + (1 - ${bOn}) * ${ctTopY}</ctY>
 		<plateX>(1 - ${plateW}) / 2</plateX>
+		<!-- Info row above the grid (maker + year left, game count right): under the banner, or under the cartel without it -->
+		<rowH>0.034</rowH>
+		<rowY>0 + ${bOn} * (${bannerH} + 0.014) + (1 - ${bOn}) * 0.110</rowY>
+		<!-- Logo drop shadow (stacked offset silhouettes, px as screen fractions) -->
+		<lsDx>3 / ${screen.width}</lsDx>
+		<lsDy>4 / ${screen.height}</lsDy>
 		<bannerC>${bannerH} / 2</bannerC>
 		<logoMaxW>0.34</logoMaxW>
 		<logoMaxH>${plateH} * 0.74</logoMaxH>
 		<!-- System icon view -->
 		<sRows>${sysRows} - ${bOn} * (${sysRows} &gt; 2) * (${sysRows} - 2)</sRows> <!-- banner: at most 2 rows -->
-		<sZoneY>${bOn} * (0 + ${bannerH} + 0.015) + (1 - ${bOn}) * ${zoneNoBanner}</sZoneY>
+		<sZoneY>0 + ${rowY} + ${rowH} + 0.008</sZoneY>
 		<sZoneH>${zoneBottom} - ${sZoneY}</sZoneH>
 		<sCellRaw>(${sZoneH} - ${gPadV} - (${sRows} - 1) * ${mY}) / ${sRows}</sCellRaw>
 		<sCell>${sCellRaw} - (${sCellRaw} &gt; ${tMax}) * (${sCellRaw} - ${tMax})</sCell>
@@ -60,7 +65,7 @@
 		<sCols>3 + (${sColsF} &gt;= 4) + (${sColsF} &gt;= 5) + (${sColsF} &gt;= 6) + (${sColsF} &gt;= 7) + (${sColsF} &gt;= 8) + (${sColsF} &gt;= 9) + (${sColsF} &gt;= 10) + (${sColsF} &gt;= 11) + (${sColsF} &gt;= 12) + (${sColsF} &gt;= 13) + (${sColsF} &gt;= 14)</sCols> <!-- floor(ColsF), clamped to 3..14: tiles at least as wide as tall, so the icon is as big as the row allows -->
 		<!-- Game icon view -->
 		<gRows>${gameRows} - ${bOn} * (${gameRows} &gt; 2) * (${gameRows} - 2)</gRows> <!-- banner: at most 2 rows -->
-		<gZoneY>${bOn} * (0 + ${bannerH} + 0.015) + (1 - ${bOn}) * ${zoneNoBanner}</gZoneY>
+		<gZoneY>0 + ${rowY} + ${rowH} + 0.008</gZoneY>
 		<gZoneH>${zoneBottom} - ${gZoneY}</gZoneH>
 		<gCellRaw>(${gZoneH} - ${gPadV} - (${gRows} - 1) * ${mY}) / ${gRows}</gCellRaw>
 		<gCell>${gCellRaw} - (${gCellRaw} &gt; ${tMax}) * (${gCellRaw} - ${tMax})</gCell>
@@ -70,16 +75,12 @@
 		<gCols>3 + (${gColsF} &gt;= 4) + (${gColsF} &gt;= 5) + (${gColsF} &gt;= 6) + (${gColsF} &gt;= 7) + (${gColsF} &gt;= 8) + (${gColsF} &gt;= 9) + (${gColsF} &gt;= 10) + (${gColsF} &gt;= 11) + (${gColsF} &gt;= 12) + (${gColsF} &gt;= 13) + (${gColsF} &gt;= 14)</gCols> <!-- floor(ColsF), clamped to 3..14: tiles at least as wide as tall, so the icon is as big as the row allows -->
 		<!-- Derived by the layouts (cards, cartel): -->
 		<ctXi>0 + ${ctX} + ${ctPad}</ctXi>
-		<ctTy>0 + ${ctY} + 0.010</ctTy>
 		<ctTw>${ctW} - 2 * ${ctPad}</ctTw>
 		<ctTh>0.058</ctTh>
+		<ctTy>0 + ${ctY} + (${ctH} - ${ctTh}) / 2</ctTy>
 		<ctTfs>0.048</ctTfs>
-		<ctSy>0 + ${ctY} + 0.070</ctSy>
-		<ctSh>0.028</ctSh>
-		<ctSfs>0.025</ctSfs>
-		<ctSwHalf>(${ctW} - 2 * ${ctPad}) * 0.72</ctSwHalf>
-		<ctYearW>(${ctW} - 2 * ${ctPad}) * 0.26</ctYearW>
-		<ctYearX>0 + ${ctX} + ${ctW} - ${ctPad} - ${ctYearW}</ctYearX>
+		<rowYearX>0.975 - 0.06</rowYearX>
+		<rowDevX>0.975 - 0.06 - 0.30</rowDevX>
 		<capR>${screen.height} * ${capH} / 2</capR>
 		<capInX>0 + ${capX} + 0.012</capInX>
 		<capInW>${capW} - 0.024</capInW>
@@ -90,6 +91,14 @@
 		<capShW>0 + ${capW} + 2 * ${shMx}</capShW>
 		<capShH>0 + ${capH} + 2 * ${shMy}</capShH>
 		<brandX>0 + ${capX} - 0.012</brandX>
+		<lsLogo0X>0 + 0.025 + (0)</lsLogo0X>
+		<lsLogo0Y>0 + 0.035 + (${lsDy})</lsLogo0Y>
+		<lsLogo1X>0 + 0.025 + (0 - ${lsDx})</lsLogo1X>
+		<lsLogo1Y>0 + 0.035 + (${lsDy} * 1.7)</lsLogo1Y>
+		<lsLogo2X>0 + 0.025 + (${lsDx})</lsLogo2X>
+		<lsLogo2Y>0 + 0.035 + (${lsDy} * 1.7)</lsLogo2Y>
+		<lsLogo3X>0 + 0.025 + (0)</lsLogo3X>
+		<lsLogo3Y>0 + 0.035 + (${lsDy} * 2.6)</lsLogo3Y>
 		<e_list_panelShX>0 + ${basicPanelX} - ${shMx}</e_list_panelShX>
 		<e_list_panelShY>0 + ${listPanelY} - ${shMy}</e_list_panelShY>
 		<e_list_panelShW>0 + ${listPanelW} + 2 * ${shMx}</e_list_panelShW>
@@ -98,18 +107,54 @@
 		<listDetShY>${listPanelY} - ${shMy}</listDetShY>
 		<listDetShW>${listPanelW} + 2 * ${shMx}</listDetShW>
 		<listDetShH>${listPanelH} + 2 * ${shMy}</listDetShH>
+		<lsLogoD0X>0 + 0.28 + (0)</lsLogoD0X>
+		<lsLogoD0Y>0 + 0.095 + (${lsDy})</lsLogoD0Y>
+		<lsLogoD1X>0 + 0.28 + (0 - ${lsDx})</lsLogoD1X>
+		<lsLogoD1Y>0 + 0.095 + (${lsDy} * 1.7)</lsLogoD1Y>
+		<lsLogoD2X>0 + 0.28 + (${lsDx})</lsLogoD2X>
+		<lsLogoD2Y>0 + 0.095 + (${lsDy} * 1.7)</lsLogoD2Y>
+		<lsLogoD3X>0 + 0.28 + (0)</lsLogoD3X>
+		<lsLogoD3Y>0 + 0.095 + (${lsDy} * 2.6)</lsLogoD3Y>
+		<e_img_cardShX>0 + 0.025 - ${shMx}</e_img_cardShX>
+		<e_img_cardShY>0 + 0.175 - ${shMy}</e_img_cardShY>
+		<e_img_cardShW>0 + 0.51 + 2 * ${shMx}</e_img_cardShW>
+		<e_img_cardShH>0 + 0.33 + 2 * ${shMy}</e_img_cardShH>
 		<e_info_cardShX>0 + 0.025 - ${shMx}</e_info_cardShX>
-		<e_info_cardShY>0 + 0.585 - ${shMy}</e_info_cardShY>
+		<e_info_cardShY>0 + 0.54 - ${shMy}</e_info_cardShY>
 		<e_info_cardShW>0 + 0.51 + 2 * ${shMx}</e_info_cardShW>
 		<e_info_cardShH>0 + 0.115 + 2 * ${shMy}</e_info_cardShH>
 		<e_desc_cardShX>0 + 0.025 - ${shMx}</e_desc_cardShX>
-		<e_desc_cardShY>0 + 0.72 - ${shMy}</e_desc_cardShY>
+		<e_desc_cardShY>0 + 0.69 - ${shMy}</e_desc_cardShY>
 		<e_desc_cardShW>0 + 0.51 + 2 * ${shMx}</e_desc_cardShW>
 		<e_desc_cardShH>0 + 0.21 + 2 * ${shMy}</e_desc_cardShH>
+		<lsSys0X>0 + 0.5 + (0)</lsSys0X>
+		<lsSys0Y>0 + ${bannerC} + (${lsDy})</lsSys0Y>
+		<lsSys1X>0 + 0.5 + (0 - ${lsDx})</lsSys1X>
+		<lsSys1Y>0 + ${bannerC} + (${lsDy} * 1.7)</lsSys1Y>
+		<lsSys2X>0 + 0.5 + (${lsDx})</lsSys2X>
+		<lsSys2Y>0 + ${bannerC} + (${lsDy} * 1.7)</lsSys2Y>
+		<lsSys3X>0 + 0.5 + (0)</lsSys3X>
+		<lsSys3Y>0 + ${bannerC} + (${lsDy} * 2.6)</lsSys3Y>
 		<cartelShX>0 + ${ctX} - ${shMx}</cartelShX>
 		<cartelShY>0 + ${ctY} - ${shMy}</cartelShY>
 		<cartelShW>0 + ${ctW} + 2 * ${shMx}</cartelShW>
 		<cartelShH>0 + ${ctH} + 2 * ${shMy}</cartelShH>
+		<lsMq0X>0 + 0.5 + (0)</lsMq0X>
+		<lsMq0Y>0 + ${bannerC} + (${lsDy})</lsMq0Y>
+		<lsMq1X>0 + 0.5 + (0 - ${lsDx})</lsMq1X>
+		<lsMq1Y>0 + ${bannerC} + (${lsDy} * 1.7)</lsMq1Y>
+		<lsMq2X>0 + 0.5 + (${lsDx})</lsMq2X>
+		<lsMq2Y>0 + ${bannerC} + (${lsDy} * 1.7)</lsMq2Y>
+		<lsMq3X>0 + 0.5 + (0)</lsMq3X>
+		<lsMq3Y>0 + ${bannerC} + (${lsDy} * 2.6)</lsMq3Y>
+		<lsGame0X>0 + 0.5 + (0)</lsGame0X>
+		<lsGame0Y>0 + ${bannerC} + (${lsDy})</lsGame0Y>
+		<lsGame1X>0 + 0.5 + (0 - ${lsDx})</lsGame1X>
+		<lsGame1Y>0 + ${bannerC} + (${lsDy} * 1.7)</lsGame1Y>
+		<lsGame2X>0 + 0.5 + (${lsDx})</lsGame2X>
+		<lsGame2Y>0 + ${bannerC} + (${lsDy} * 1.7)</lsGame2Y>
+		<lsGame3X>0 + 0.5 + (0)</lsGame3X>
+		<lsGame3Y>0 + ${bannerC} + (${lsDy} * 2.6)</lsGame3Y>
 		<cartelgShX>0 + ${ctX} - ${shMx}</cartelgShX>
 		<cartelgShY>0 + ${ctY} - ${shMy}</cartelgShY>
 		<cartelgShW>0 + ${ctW} + 2 * ${shMx}</cartelgShW>
