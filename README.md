@@ -41,8 +41,8 @@ Color set / Help icons / Branding / Console logo region / **Banner** (off [defau
   but only when there is no logo to show (system view: no console logo; game view: neither game logo nor console logo). It depends on the LOGO only, never on the console art.
 - **Info row** above the grid (always, with or without banner): system view = manufacturer . year at the left end, game count (`systemInfo`) at the right end;
   game view = game name at the left, developer and year at the right. `rowY` / `rowH` in `geometry.xml`; the grid zone starts under it.
-- **Logo drop shadow**: ES has no per-image shadow, so each logo (banner logos, console logo of the list views) gets four black translucent copies stacked below it
-  with small offsets (`lsDx`, `lsDy`; `logo_shadow` in the generator). A softer look needs more copies; the stock `:/shaders/shadow.glsl` shader was not used because it cannot be tested here.
+- **Logo drop shadow**: ES has no per-image shadow, so each logo (banner logos, console logo of the list views) gets thirteen black translucent copies of it
+  with zero net offset: one centre copy, a ring of 8 and 4 outer points (3 px steps `lsDx`, `lsDy`) = a soft blur right under the logo (`logo_shadow` in the generator). The stock `:/shaders/shadow.glsl` shader was not used because it cannot be tested here.
 - Up to 4 rows without banner (default 3), 2 with it. Row count -> tile height (capped at 34 % of the screen height); columns = floor(width / tile height),
   so the cells fill the whole width and the icon is as big as the row allows. All of it is computed in `geometry.xml` (variables evaluate in order).
 - ES `MathExpr` notes: plain variables are strings, so a sum must start with a number (`0 + ${x} + ...`) or ES concatenates; `screen.ratio` is a NAME

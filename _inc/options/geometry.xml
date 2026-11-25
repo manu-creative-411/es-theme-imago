@@ -47,9 +47,9 @@
 		<!-- Info row above the grid (maker + year left, game count right): under the banner, or under the cartel without it -->
 		<rowH>0.034</rowH>
 		<rowY>0 + ${bOn} * (${bannerH} + 0.014) + (1 - ${bOn}) * 0.120</rowY>
-		<!-- Logo drop shadow (stacked offset silhouettes, px as screen fractions) -->
+		<!-- Logo drop shadow (blur steps in px as screen fractions) -->
 		<lsDx>3 / ${screen.width}</lsDx>
-		<lsDy>4 / ${screen.height}</lsDy>
+		<lsDy>3 / ${screen.height}</lsDy>
 		<bannerC>${bannerH} / 2</bannerC>
 		<logoMaxW>0.34</logoMaxW>
 		<logoMaxH>${plateH} * 0.74</logoMaxH>
@@ -92,13 +92,31 @@
 		<capShH>0 + ${capH} + 2 * ${shMy}</capShH>
 		<brandX>0 + ${capX} - 0.012</brandX>
 		<lsLogo0X>0 + 0.025 + (${lsDx} * 0)</lsLogo0X>
-		<lsLogo0Y>0 + 0.035 + (${lsDy})</lsLogo0Y>
+		<lsLogo0Y>0 + 0.035 + (${lsDy} * 0)</lsLogo0Y>
 		<lsLogo1X>0 + 0.025 + (0 - ${lsDx})</lsLogo1X>
-		<lsLogo1Y>0 + 0.035 + (${lsDy} * 1.7)</lsLogo1Y>
-		<lsLogo2X>0 + 0.025 + (${lsDx})</lsLogo2X>
-		<lsLogo2Y>0 + 0.035 + (${lsDy} * 1.7)</lsLogo2Y>
-		<lsLogo3X>0 + 0.025 + (${lsDx} * 0)</lsLogo3X>
-		<lsLogo3Y>0 + 0.035 + (${lsDy} * 2.6)</lsLogo3Y>
+		<lsLogo1Y>0 + 0.035 + (0 - ${lsDy})</lsLogo1Y>
+		<lsLogo2X>0 + 0.025 + (0 - ${lsDx})</lsLogo2X>
+		<lsLogo2Y>0 + 0.035 + (${lsDy} * 0)</lsLogo2Y>
+		<lsLogo3X>0 + 0.025 + (0 - ${lsDx})</lsLogo3X>
+		<lsLogo3Y>0 + 0.035 + (${lsDy})</lsLogo3Y>
+		<lsLogo4X>0 + 0.025 + (${lsDx} * 0)</lsLogo4X>
+		<lsLogo4Y>0 + 0.035 + (0 - ${lsDy})</lsLogo4Y>
+		<lsLogo5X>0 + 0.025 + (${lsDx} * 0)</lsLogo5X>
+		<lsLogo5Y>0 + 0.035 + (${lsDy})</lsLogo5Y>
+		<lsLogo6X>0 + 0.025 + (${lsDx})</lsLogo6X>
+		<lsLogo6Y>0 + 0.035 + (0 - ${lsDy})</lsLogo6Y>
+		<lsLogo7X>0 + 0.025 + (${lsDx})</lsLogo7X>
+		<lsLogo7Y>0 + 0.035 + (${lsDy} * 0)</lsLogo7Y>
+		<lsLogo8X>0 + 0.025 + (${lsDx})</lsLogo8X>
+		<lsLogo8Y>0 + 0.035 + (${lsDy})</lsLogo8Y>
+		<lsLogo9X>0 + 0.025 + (0 - ${lsDx} * 2)</lsLogo9X>
+		<lsLogo9Y>0 + 0.035 + (${lsDy} * 0)</lsLogo9Y>
+		<lsLogo10X>0 + 0.025 + (${lsDx} * 2)</lsLogo10X>
+		<lsLogo10Y>0 + 0.035 + (${lsDy} * 0)</lsLogo10Y>
+		<lsLogo11X>0 + 0.025 + (${lsDx} * 0)</lsLogo11X>
+		<lsLogo11Y>0 + 0.035 + (0 - ${lsDy} * 2)</lsLogo11Y>
+		<lsLogo12X>0 + 0.025 + (${lsDx} * 0)</lsLogo12X>
+		<lsLogo12Y>0 + 0.035 + (${lsDy} * 2)</lsLogo12Y>
 		<e_list_panelShX>0 + ${basicPanelX} - ${shMx}</e_list_panelShX>
 		<e_list_panelShY>0 + ${listPanelY} - ${shMy}</e_list_panelShY>
 		<e_list_panelShW>0 + ${listPanelW} + 2 * ${shMx}</e_list_panelShW>
@@ -108,13 +126,31 @@
 		<listDetShW>0 + ${listPanelW} + 2 * ${shMx}</listDetShW>
 		<listDetShH>0 + ${listPanelH} + 2 * ${shMy}</listDetShH>
 		<lsLogoD0X>0 + 0.28 + (${lsDx} * 0)</lsLogoD0X>
-		<lsLogoD0Y>0 + 0.175 + (${lsDy})</lsLogoD0Y>
+		<lsLogoD0Y>0 + 0.14 + (${lsDy} * 0)</lsLogoD0Y>
 		<lsLogoD1X>0 + 0.28 + (0 - ${lsDx})</lsLogoD1X>
-		<lsLogoD1Y>0 + 0.175 + (${lsDy} * 1.7)</lsLogoD1Y>
-		<lsLogoD2X>0 + 0.28 + (${lsDx})</lsLogoD2X>
-		<lsLogoD2Y>0 + 0.175 + (${lsDy} * 1.7)</lsLogoD2Y>
-		<lsLogoD3X>0 + 0.28 + (${lsDx} * 0)</lsLogoD3X>
-		<lsLogoD3Y>0 + 0.175 + (${lsDy} * 2.6)</lsLogoD3Y>
+		<lsLogoD1Y>0 + 0.14 + (0 - ${lsDy})</lsLogoD1Y>
+		<lsLogoD2X>0 + 0.28 + (0 - ${lsDx})</lsLogoD2X>
+		<lsLogoD2Y>0 + 0.14 + (${lsDy} * 0)</lsLogoD2Y>
+		<lsLogoD3X>0 + 0.28 + (0 - ${lsDx})</lsLogoD3X>
+		<lsLogoD3Y>0 + 0.14 + (${lsDy})</lsLogoD3Y>
+		<lsLogoD4X>0 + 0.28 + (${lsDx} * 0)</lsLogoD4X>
+		<lsLogoD4Y>0 + 0.14 + (0 - ${lsDy})</lsLogoD4Y>
+		<lsLogoD5X>0 + 0.28 + (${lsDx} * 0)</lsLogoD5X>
+		<lsLogoD5Y>0 + 0.14 + (${lsDy})</lsLogoD5Y>
+		<lsLogoD6X>0 + 0.28 + (${lsDx})</lsLogoD6X>
+		<lsLogoD6Y>0 + 0.14 + (0 - ${lsDy})</lsLogoD6Y>
+		<lsLogoD7X>0 + 0.28 + (${lsDx})</lsLogoD7X>
+		<lsLogoD7Y>0 + 0.14 + (${lsDy} * 0)</lsLogoD7Y>
+		<lsLogoD8X>0 + 0.28 + (${lsDx})</lsLogoD8X>
+		<lsLogoD8Y>0 + 0.14 + (${lsDy})</lsLogoD8Y>
+		<lsLogoD9X>0 + 0.28 + (0 - ${lsDx} * 2)</lsLogoD9X>
+		<lsLogoD9Y>0 + 0.14 + (${lsDy} * 0)</lsLogoD9Y>
+		<lsLogoD10X>0 + 0.28 + (${lsDx} * 2)</lsLogoD10X>
+		<lsLogoD10Y>0 + 0.14 + (${lsDy} * 0)</lsLogoD10Y>
+		<lsLogoD11X>0 + 0.28 + (${lsDx} * 0)</lsLogoD11X>
+		<lsLogoD11Y>0 + 0.14 + (0 - ${lsDy} * 2)</lsLogoD11Y>
+		<lsLogoD12X>0 + 0.28 + (${lsDx} * 0)</lsLogoD12X>
+		<lsLogoD12Y>0 + 0.14 + (${lsDy} * 2)</lsLogoD12Y>
 		<e_img_cardShX>0 + 0.025 - ${shMx}</e_img_cardShX>
 		<e_img_cardShY>0 + 0.25 - ${shMy}</e_img_cardShY>
 		<e_img_cardShW>0 + 0.51 + 2 * ${shMx}</e_img_cardShW>
@@ -128,33 +164,87 @@
 		<e_desc_cardShW>0 + 0.51 + 2 * ${shMx}</e_desc_cardShW>
 		<e_desc_cardShH>0 + 0.20 + 2 * ${shMy}</e_desc_cardShH>
 		<lsSys0X>0 + 0.5 + (${lsDx} * 0)</lsSys0X>
-		<lsSys0Y>0 + ${bannerC} + (${lsDy})</lsSys0Y>
+		<lsSys0Y>0 + ${bannerC} + (${lsDy} * 0)</lsSys0Y>
 		<lsSys1X>0 + 0.5 + (0 - ${lsDx})</lsSys1X>
-		<lsSys1Y>0 + ${bannerC} + (${lsDy} * 1.7)</lsSys1Y>
-		<lsSys2X>0 + 0.5 + (${lsDx})</lsSys2X>
-		<lsSys2Y>0 + ${bannerC} + (${lsDy} * 1.7)</lsSys2Y>
-		<lsSys3X>0 + 0.5 + (${lsDx} * 0)</lsSys3X>
-		<lsSys3Y>0 + ${bannerC} + (${lsDy} * 2.6)</lsSys3Y>
+		<lsSys1Y>0 + ${bannerC} + (0 - ${lsDy})</lsSys1Y>
+		<lsSys2X>0 + 0.5 + (0 - ${lsDx})</lsSys2X>
+		<lsSys2Y>0 + ${bannerC} + (${lsDy} * 0)</lsSys2Y>
+		<lsSys3X>0 + 0.5 + (0 - ${lsDx})</lsSys3X>
+		<lsSys3Y>0 + ${bannerC} + (${lsDy})</lsSys3Y>
+		<lsSys4X>0 + 0.5 + (${lsDx} * 0)</lsSys4X>
+		<lsSys4Y>0 + ${bannerC} + (0 - ${lsDy})</lsSys4Y>
+		<lsSys5X>0 + 0.5 + (${lsDx} * 0)</lsSys5X>
+		<lsSys5Y>0 + ${bannerC} + (${lsDy})</lsSys5Y>
+		<lsSys6X>0 + 0.5 + (${lsDx})</lsSys6X>
+		<lsSys6Y>0 + ${bannerC} + (0 - ${lsDy})</lsSys6Y>
+		<lsSys7X>0 + 0.5 + (${lsDx})</lsSys7X>
+		<lsSys7Y>0 + ${bannerC} + (${lsDy} * 0)</lsSys7Y>
+		<lsSys8X>0 + 0.5 + (${lsDx})</lsSys8X>
+		<lsSys8Y>0 + ${bannerC} + (${lsDy})</lsSys8Y>
+		<lsSys9X>0 + 0.5 + (0 - ${lsDx} * 2)</lsSys9X>
+		<lsSys9Y>0 + ${bannerC} + (${lsDy} * 0)</lsSys9Y>
+		<lsSys10X>0 + 0.5 + (${lsDx} * 2)</lsSys10X>
+		<lsSys10Y>0 + ${bannerC} + (${lsDy} * 0)</lsSys10Y>
+		<lsSys11X>0 + 0.5 + (${lsDx} * 0)</lsSys11X>
+		<lsSys11Y>0 + ${bannerC} + (0 - ${lsDy} * 2)</lsSys11Y>
+		<lsSys12X>0 + 0.5 + (${lsDx} * 0)</lsSys12X>
+		<lsSys12Y>0 + ${bannerC} + (${lsDy} * 2)</lsSys12Y>
 		<cartelShX>0 + ${ctX} - ${shMx}</cartelShX>
 		<cartelShY>0 + ${ctY} - ${shMy}</cartelShY>
 		<cartelShW>0 + ${ctW} + 2 * ${shMx}</cartelShW>
 		<cartelShH>0 + ${ctH} + 2 * ${shMy}</cartelShH>
 		<lsMq0X>0 + 0.5 + (${lsDx} * 0)</lsMq0X>
-		<lsMq0Y>0 + ${bannerC} + (${lsDy})</lsMq0Y>
+		<lsMq0Y>0 + ${bannerC} + (${lsDy} * 0)</lsMq0Y>
 		<lsMq1X>0 + 0.5 + (0 - ${lsDx})</lsMq1X>
-		<lsMq1Y>0 + ${bannerC} + (${lsDy} * 1.7)</lsMq1Y>
-		<lsMq2X>0 + 0.5 + (${lsDx})</lsMq2X>
-		<lsMq2Y>0 + ${bannerC} + (${lsDy} * 1.7)</lsMq2Y>
-		<lsMq3X>0 + 0.5 + (${lsDx} * 0)</lsMq3X>
-		<lsMq3Y>0 + ${bannerC} + (${lsDy} * 2.6)</lsMq3Y>
+		<lsMq1Y>0 + ${bannerC} + (0 - ${lsDy})</lsMq1Y>
+		<lsMq2X>0 + 0.5 + (0 - ${lsDx})</lsMq2X>
+		<lsMq2Y>0 + ${bannerC} + (${lsDy} * 0)</lsMq2Y>
+		<lsMq3X>0 + 0.5 + (0 - ${lsDx})</lsMq3X>
+		<lsMq3Y>0 + ${bannerC} + (${lsDy})</lsMq3Y>
+		<lsMq4X>0 + 0.5 + (${lsDx} * 0)</lsMq4X>
+		<lsMq4Y>0 + ${bannerC} + (0 - ${lsDy})</lsMq4Y>
+		<lsMq5X>0 + 0.5 + (${lsDx} * 0)</lsMq5X>
+		<lsMq5Y>0 + ${bannerC} + (${lsDy})</lsMq5Y>
+		<lsMq6X>0 + 0.5 + (${lsDx})</lsMq6X>
+		<lsMq6Y>0 + ${bannerC} + (0 - ${lsDy})</lsMq6Y>
+		<lsMq7X>0 + 0.5 + (${lsDx})</lsMq7X>
+		<lsMq7Y>0 + ${bannerC} + (${lsDy} * 0)</lsMq7Y>
+		<lsMq8X>0 + 0.5 + (${lsDx})</lsMq8X>
+		<lsMq8Y>0 + ${bannerC} + (${lsDy})</lsMq8Y>
+		<lsMq9X>0 + 0.5 + (0 - ${lsDx} * 2)</lsMq9X>
+		<lsMq9Y>0 + ${bannerC} + (${lsDy} * 0)</lsMq9Y>
+		<lsMq10X>0 + 0.5 + (${lsDx} * 2)</lsMq10X>
+		<lsMq10Y>0 + ${bannerC} + (${lsDy} * 0)</lsMq10Y>
+		<lsMq11X>0 + 0.5 + (${lsDx} * 0)</lsMq11X>
+		<lsMq11Y>0 + ${bannerC} + (0 - ${lsDy} * 2)</lsMq11Y>
+		<lsMq12X>0 + 0.5 + (${lsDx} * 0)</lsMq12X>
+		<lsMq12Y>0 + ${bannerC} + (${lsDy} * 2)</lsMq12Y>
 		<lsGame0X>0 + 0.5 + (${lsDx} * 0)</lsGame0X>
-		<lsGame0Y>0 + ${bannerC} + (${lsDy})</lsGame0Y>
+		<lsGame0Y>0 + ${bannerC} + (${lsDy} * 0)</lsGame0Y>
 		<lsGame1X>0 + 0.5 + (0 - ${lsDx})</lsGame1X>
-		<lsGame1Y>0 + ${bannerC} + (${lsDy} * 1.7)</lsGame1Y>
-		<lsGame2X>0 + 0.5 + (${lsDx})</lsGame2X>
-		<lsGame2Y>0 + ${bannerC} + (${lsDy} * 1.7)</lsGame2Y>
-		<lsGame3X>0 + 0.5 + (${lsDx} * 0)</lsGame3X>
-		<lsGame3Y>0 + ${bannerC} + (${lsDy} * 2.6)</lsGame3Y>
+		<lsGame1Y>0 + ${bannerC} + (0 - ${lsDy})</lsGame1Y>
+		<lsGame2X>0 + 0.5 + (0 - ${lsDx})</lsGame2X>
+		<lsGame2Y>0 + ${bannerC} + (${lsDy} * 0)</lsGame2Y>
+		<lsGame3X>0 + 0.5 + (0 - ${lsDx})</lsGame3X>
+		<lsGame3Y>0 + ${bannerC} + (${lsDy})</lsGame3Y>
+		<lsGame4X>0 + 0.5 + (${lsDx} * 0)</lsGame4X>
+		<lsGame4Y>0 + ${bannerC} + (0 - ${lsDy})</lsGame4Y>
+		<lsGame5X>0 + 0.5 + (${lsDx} * 0)</lsGame5X>
+		<lsGame5Y>0 + ${bannerC} + (${lsDy})</lsGame5Y>
+		<lsGame6X>0 + 0.5 + (${lsDx})</lsGame6X>
+		<lsGame6Y>0 + ${bannerC} + (0 - ${lsDy})</lsGame6Y>
+		<lsGame7X>0 + 0.5 + (${lsDx})</lsGame7X>
+		<lsGame7Y>0 + ${bannerC} + (${lsDy} * 0)</lsGame7Y>
+		<lsGame8X>0 + 0.5 + (${lsDx})</lsGame8X>
+		<lsGame8Y>0 + ${bannerC} + (${lsDy})</lsGame8Y>
+		<lsGame9X>0 + 0.5 + (0 - ${lsDx} * 2)</lsGame9X>
+		<lsGame9Y>0 + ${bannerC} + (${lsDy} * 0)</lsGame9Y>
+		<lsGame10X>0 + 0.5 + (${lsDx} * 2)</lsGame10X>
+		<lsGame10Y>0 + ${bannerC} + (${lsDy} * 0)</lsGame10Y>
+		<lsGame11X>0 + 0.5 + (${lsDx} * 0)</lsGame11X>
+		<lsGame11Y>0 + ${bannerC} + (0 - ${lsDy} * 2)</lsGame11Y>
+		<lsGame12X>0 + 0.5 + (${lsDx} * 0)</lsGame12X>
+		<lsGame12Y>0 + ${bannerC} + (${lsDy} * 2)</lsGame12Y>
 		<cartelgShX>0 + ${ctX} - ${shMx}</cartelgShX>
 		<cartelgShY>0 + ${ctY} - ${shMy}</cartelgShY>
 		<cartelgShW>0 + ${ctW} + 2 * ${shMx}</cartelgShW>

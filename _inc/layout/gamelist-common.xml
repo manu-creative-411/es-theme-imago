@@ -44,7 +44,7 @@
 			<origin>0 0</origin>
 			<maxSize>0.16 0.08</maxSize>
 			<horizontalAlignment>left</horizontalAlignment>
-			<color>00000040</color>
+			<color>00000026</color>
 			<zIndex>49</zIndex>
 		</image>
 		<image name="e_logo_sh1" extra="true">
@@ -63,7 +63,7 @@
 			<origin>0 0</origin>
 			<maxSize>0.16 0.08</maxSize>
 			<horizontalAlignment>left</horizontalAlignment>
-			<color>00000022</color>
+			<color>00000012</color>
 			<zIndex>49</zIndex>
 		</image>
 		<image name="e_logo_sh2" extra="true">
@@ -82,7 +82,7 @@
 			<origin>0 0</origin>
 			<maxSize>0.16 0.08</maxSize>
 			<horizontalAlignment>left</horizontalAlignment>
-			<color>00000022</color>
+			<color>00000012</color>
 			<zIndex>49</zIndex>
 		</image>
 		<image name="e_logo_sh3" extra="true">
@@ -101,7 +101,178 @@
 			<origin>0 0</origin>
 			<maxSize>0.16 0.08</maxSize>
 			<horizontalAlignment>left</horizontalAlignment>
-			<color>0000001C</color>
+			<color>00000012</color>
+			<zIndex>49</zIndex>
+		</image>
+		<image name="e_logo_sh4" extra="true">
+			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-jp.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-us.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-eu.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-${logoRegion}.svg</path>
+			<pos>${lsLogo4X} ${lsLogo4Y}</pos>
+			<origin>0 0</origin>
+			<maxSize>0.16 0.08</maxSize>
+			<horizontalAlignment>left</horizontalAlignment>
+			<color>00000012</color>
+			<zIndex>49</zIndex>
+		</image>
+		<image name="e_logo_sh5" extra="true">
+			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-jp.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-us.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-eu.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-${logoRegion}.svg</path>
+			<pos>${lsLogo5X} ${lsLogo5Y}</pos>
+			<origin>0 0</origin>
+			<maxSize>0.16 0.08</maxSize>
+			<horizontalAlignment>left</horizontalAlignment>
+			<color>00000012</color>
+			<zIndex>49</zIndex>
+		</image>
+		<image name="e_logo_sh6" extra="true">
+			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-jp.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-us.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-eu.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-${logoRegion}.svg</path>
+			<pos>${lsLogo6X} ${lsLogo6Y}</pos>
+			<origin>0 0</origin>
+			<maxSize>0.16 0.08</maxSize>
+			<horizontalAlignment>left</horizontalAlignment>
+			<color>00000012</color>
+			<zIndex>49</zIndex>
+		</image>
+		<image name="e_logo_sh7" extra="true">
+			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-jp.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-us.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-eu.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-${logoRegion}.svg</path>
+			<pos>${lsLogo7X} ${lsLogo7Y}</pos>
+			<origin>0 0</origin>
+			<maxSize>0.16 0.08</maxSize>
+			<horizontalAlignment>left</horizontalAlignment>
+			<color>00000012</color>
+			<zIndex>49</zIndex>
+		</image>
+		<image name="e_logo_sh8" extra="true">
+			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-jp.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-us.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-eu.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-${logoRegion}.svg</path>
+			<pos>${lsLogo8X} ${lsLogo8Y}</pos>
+			<origin>0 0</origin>
+			<maxSize>0.16 0.08</maxSize>
+			<horizontalAlignment>left</horizontalAlignment>
+			<color>00000012</color>
+			<zIndex>49</zIndex>
+		</image>
+		<image name="e_logo_sh9" extra="true">
+			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-jp.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-us.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-eu.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-${logoRegion}.svg</path>
+			<pos>${lsLogo9X} ${lsLogo9Y}</pos>
+			<origin>0 0</origin>
+			<maxSize>0.16 0.08</maxSize>
+			<horizontalAlignment>left</horizontalAlignment>
+			<color>0000000A</color>
+			<zIndex>49</zIndex>
+		</image>
+		<image name="e_logo_sh10" extra="true">
+			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-jp.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-us.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-eu.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-${logoRegion}.svg</path>
+			<pos>${lsLogo10X} ${lsLogo10Y}</pos>
+			<origin>0 0</origin>
+			<maxSize>0.16 0.08</maxSize>
+			<horizontalAlignment>left</horizontalAlignment>
+			<color>0000000A</color>
+			<zIndex>49</zIndex>
+		</image>
+		<image name="e_logo_sh11" extra="true">
+			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-jp.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-us.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-eu.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-${logoRegion}.svg</path>
+			<pos>${lsLogo11X} ${lsLogo11Y}</pos>
+			<origin>0 0</origin>
+			<maxSize>0.16 0.08</maxSize>
+			<horizontalAlignment>left</horizontalAlignment>
+			<color>0000000A</color>
+			<zIndex>49</zIndex>
+		</image>
+		<image name="e_logo_sh12" extra="true">
+			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-jp.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-us.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-eu.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
+			<path>${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-${logoRegion}.svg</path>
+			<pos>${lsLogo12X} ${lsLogo12Y}</pos>
+			<origin>0 0</origin>
+			<maxSize>0.16 0.08</maxSize>
+			<horizontalAlignment>left</horizontalAlignment>
+			<color>0000000A</color>
 			<zIndex>49</zIndex>
 		</image>
 		<image name="e_logo" extra="true">

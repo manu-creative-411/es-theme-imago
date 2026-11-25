@@ -25,31 +25,85 @@
 		<image name="e_logo_sh0" extra="true">
 			<pos>${lsLogoD0X} ${lsLogoD0Y}</pos>
 			<origin>0.5 0.5</origin>
-			<maxSize>0.34 0.085</maxSize>
+			<maxSize>0.36 0.17</maxSize>
 			<horizontalAlignment>center</horizontalAlignment>
 		</image>
 		<image name="e_logo_sh1" extra="true">
 			<pos>${lsLogoD1X} ${lsLogoD1Y}</pos>
 			<origin>0.5 0.5</origin>
-			<maxSize>0.34 0.085</maxSize>
+			<maxSize>0.36 0.17</maxSize>
 			<horizontalAlignment>center</horizontalAlignment>
 		</image>
 		<image name="e_logo_sh2" extra="true">
 			<pos>${lsLogoD2X} ${lsLogoD2Y}</pos>
 			<origin>0.5 0.5</origin>
-			<maxSize>0.34 0.085</maxSize>
+			<maxSize>0.36 0.17</maxSize>
 			<horizontalAlignment>center</horizontalAlignment>
 		</image>
 		<image name="e_logo_sh3" extra="true">
 			<pos>${lsLogoD3X} ${lsLogoD3Y}</pos>
 			<origin>0.5 0.5</origin>
-			<maxSize>0.34 0.085</maxSize>
+			<maxSize>0.36 0.17</maxSize>
+			<horizontalAlignment>center</horizontalAlignment>
+		</image>
+		<image name="e_logo_sh4" extra="true">
+			<pos>${lsLogoD4X} ${lsLogoD4Y}</pos>
+			<origin>0.5 0.5</origin>
+			<maxSize>0.36 0.17</maxSize>
+			<horizontalAlignment>center</horizontalAlignment>
+		</image>
+		<image name="e_logo_sh5" extra="true">
+			<pos>${lsLogoD5X} ${lsLogoD5Y}</pos>
+			<origin>0.5 0.5</origin>
+			<maxSize>0.36 0.17</maxSize>
+			<horizontalAlignment>center</horizontalAlignment>
+		</image>
+		<image name="e_logo_sh6" extra="true">
+			<pos>${lsLogoD6X} ${lsLogoD6Y}</pos>
+			<origin>0.5 0.5</origin>
+			<maxSize>0.36 0.17</maxSize>
+			<horizontalAlignment>center</horizontalAlignment>
+		</image>
+		<image name="e_logo_sh7" extra="true">
+			<pos>${lsLogoD7X} ${lsLogoD7Y}</pos>
+			<origin>0.5 0.5</origin>
+			<maxSize>0.36 0.17</maxSize>
+			<horizontalAlignment>center</horizontalAlignment>
+		</image>
+		<image name="e_logo_sh8" extra="true">
+			<pos>${lsLogoD8X} ${lsLogoD8Y}</pos>
+			<origin>0.5 0.5</origin>
+			<maxSize>0.36 0.17</maxSize>
+			<horizontalAlignment>center</horizontalAlignment>
+		</image>
+		<image name="e_logo_sh9" extra="true">
+			<pos>${lsLogoD9X} ${lsLogoD9Y}</pos>
+			<origin>0.5 0.5</origin>
+			<maxSize>0.36 0.17</maxSize>
+			<horizontalAlignment>center</horizontalAlignment>
+		</image>
+		<image name="e_logo_sh10" extra="true">
+			<pos>${lsLogoD10X} ${lsLogoD10Y}</pos>
+			<origin>0.5 0.5</origin>
+			<maxSize>0.36 0.17</maxSize>
+			<horizontalAlignment>center</horizontalAlignment>
+		</image>
+		<image name="e_logo_sh11" extra="true">
+			<pos>${lsLogoD11X} ${lsLogoD11Y}</pos>
+			<origin>0.5 0.5</origin>
+			<maxSize>0.36 0.17</maxSize>
+			<horizontalAlignment>center</horizontalAlignment>
+		</image>
+		<image name="e_logo_sh12" extra="true">
+			<pos>${lsLogoD12X} ${lsLogoD12Y}</pos>
+			<origin>0.5 0.5</origin>
+			<maxSize>0.36 0.17</maxSize>
 			<horizontalAlignment>center</horizontalAlignment>
 		</image>
 		<image name="e_logo" extra="true">
-			<pos>0.28 0.175</pos>
+			<pos>0.28 0.14</pos>
 			<origin>0.5 0.5</origin>
-			<maxSize>0.34 0.085</maxSize>
+			<maxSize>0.36 0.17</maxSize>
 			<horizontalAlignment>center</horizontalAlignment>
 		</image>
 		<ninepatch name="e_img_card_sh" extra="true">
@@ -231,15 +285,17 @@
 			<zIndex>20</zIndex>
 		</image>
 		<text name="md_description">
-			<fontPath>${fontInfo}</fontPath>
+			<visible>true</visible>
 			<pos>0.045 0.745</pos>
 			<size>0.47 0.176</size>
-			<color>${subText}</color>
+			<fontPath>${fontInfo}</fontPath>
 			<fontSize>0.024</fontSize>
+			<color>${subText}</color>
 			<alignment>left</alignment>
-			<multiLine>false</multiLine>
-			<visible>true</visible>
 			<lineSpacing>1.3</lineSpacing>
+			<autoScroll>vertical</autoScroll>
+			<autoScrollDelay>2500</autoScrollDelay>
+			<autoScrollSpeed>25</autoScrollSpeed>
 			<zIndex>45</zIndex>
 		</text>
 	</view>
