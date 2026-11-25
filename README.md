@@ -75,7 +75,7 @@ and the built-in battery indicator hidden (same approach as es-theme-iconic). Ic
   follows the cursor about two rows late, and it hides 1.5 s after the last move.
 - `rectangle` and `ninepatch` ignore `origin`: give explicit top-left positions .
 - A variable whose value contains `${` is evaluated as a math expression (`${tile}E6` would become a number): colours with alpha are written inline.
-- `detailed`: console logo centred over the game image, image on its own card (same shadow as the others); the left column (logo + 3 cards) spans exactly the height of the list card (0.13-0.93); gaps between cards are >= 0.03 so shadows do not stack.
+- `detailed`: console logo centred over the game image, image on its own card (same shadow as the others); the left column (logo, image card + info card side by side, description card) spans exactly the height of the list card (0.13-0.93); gaps between cards are >= 0.03 so shadows do not stack.
 - In `detailed` ES draws every metadata label/field the theme does not define: `gamelist-common.xml` hides them all and each view re-enables its own.
 - Entries without game data (the `. .` parent folder) skip the item template and use the built-in selector.
 

@@ -153,12 +153,12 @@
 		<lsLogoD12Y>0 + 0.14 + (${lsDy} * 2)</lsLogoD12Y>
 		<e_img_cardShX>0 + 0.025 - ${shMx}</e_img_cardShX>
 		<e_img_cardShY>0 + 0.25 - ${shMy}</e_img_cardShY>
-		<e_img_cardShW>0 + 0.51 + 2 * ${shMx}</e_img_cardShW>
-		<e_img_cardShH>0 + 0.295 + 2 * ${shMy}</e_img_cardShH>
-		<e_info_cardShX>0 + 0.025 - ${shMx}</e_info_cardShX>
-		<e_info_cardShY>0 + 0.58 - ${shMy}</e_info_cardShY>
-		<e_info_cardShW>0 + 0.51 + 2 * ${shMx}</e_info_cardShW>
-		<e_info_cardShH>0 + 0.115 + 2 * ${shMy}</e_info_cardShH>
+		<e_img_cardShW>0 + 0.31 + 2 * ${shMx}</e_img_cardShW>
+		<e_img_cardShH>0 + 0.44 + 2 * ${shMy}</e_img_cardShH>
+		<e_info_cardShX>0 + 0.36 - ${shMx}</e_info_cardShX>
+		<e_info_cardShY>0 + 0.25 - ${shMy}</e_info_cardShY>
+		<e_info_cardShW>0 + 0.175 + 2 * ${shMx}</e_info_cardShW>
+		<e_info_cardShH>0 + 0.44 + 2 * ${shMy}</e_info_cardShH>
 		<e_desc_cardShX>0 + 0.025 - ${shMx}</e_desc_cardShX>
 		<e_desc_cardShY>0 + 0.73 - ${shMy}</e_desc_cardShY>
 		<e_desc_cardShW>0 + 0.51 + 2 * ${shMx}</e_desc_cardShW>
