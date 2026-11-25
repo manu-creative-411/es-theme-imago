@@ -5,5 +5,6 @@
 	<variables>
 		<bOn>0</bOn>
 		<bVis>false</bVis>
+			<ctAlign>left</ctAlign>
 	</variables>
 </theme>

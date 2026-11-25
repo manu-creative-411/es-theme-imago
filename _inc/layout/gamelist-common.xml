@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <theme>
 	<formatVersion>7</formatVersion>
-	<!-- Shared by basic / detailed (and the Imago Basic / Imago Detailed custom views): background elements, console logo,
-	     the list card and the Cocoon / iconic-style game list. Default geometry = Basic; gamelist-detailed.xml moves it. -->
+	<!-- Shared by the built-in basic and detailed views: background elements, console logo,
+	     the list card and the Cocoon / iconic-style game list. Default geometry = basic (centred); gamelist-detailed.xml moves it. -->
 	<view name="basic, detailed">
 		<image name="e_bg" extra="true">
 			<path>${themePath}/assets/ui/white.png</path>

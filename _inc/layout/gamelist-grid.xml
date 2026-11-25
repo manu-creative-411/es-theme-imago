@@ -1,33 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <theme>
 	<formatVersion>7</formatVersion>
-	<!-- Game icon view ("Imago"): banner (console art + game or console logo) / cartel / icon grid. -->
-	<customView name="Imago" inherits="grid">
+	<!-- Game icon view ("Icons"): banner (console art + game or console logo) / cartel / icon grid. -->
+	<customView name="Icons" inherits="grid">
 		<image name="e_hero" extra="true" if="${bOn} == 1">
 			<path>${themePath}/_inc/system_bg/${system.theme}.jpg</path>
-			<pos>0.5 ${bannerC}</pos>
+			<pos>0.5 ${heroC}</pos>
 			<origin>0.5 0.5</origin>
-			<minSize>1 ${bannerH}</minSize>
-			<clipRect>0 0 1 ${bannerH}</clipRect>
+			<minSize>1 ${heroH}</minSize>
+			<roundCorners>${heroRad}</roundCorners>
 			<zIndex>29</zIndex>
 		</image>
 		<rectangle name="e_hero_dim" extra="true" if="${bOn} == 1">
-			<pos>0 0</pos>
-			<size>1 ${bannerH}</size>
-			<color>${shadowColor}30</color>
+			<pos>0 ${heroTop}</pos>
+			<size>1 ${heroH}</size>
+			<color>00000040</color>
+			<borderSize>0</borderSize>
+			<roundCorners>${heroRad}</roundCorners>
 			<zIndex>29.5</zIndex>
 		</rectangle>
+		<ninepatch name="e_plate_sh" extra="true" if="${bOn} == 1">
+			<path>${themePath}/assets/ui/shadow.png</path>
+			<pos>${e_plateShX} ${e_plateShY}</pos>
+			<size>${e_plateShW} ${e_plateShH}</size>
+			<cornerSize>40 40</cornerSize>
+			<color>${shadowColor}</color>
+			<visible>{game:name} != '' &amp;&amp; (exists({game:marquee}) || (firstfile('${themePath}/_inc/system_logos/${system.theme}.svg', '${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg', '${themePath}/_inc/system_logos/${system.theme}/jp.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-jp.svg', '${themePath}/_inc/system_logos/${system.theme}/us.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-us.svg', '${themePath}/_inc/system_logos/${system.theme}/eu.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-eu.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-${logoRegion}.svg') != ''))</visible>
+			<zIndex>31</zIndex>
+		</ninepatch>
 		<rectangle name="e_plate" extra="true" if="${bOn} == 1">
-			<pos>0.5 ${bannerC}</pos>
-			<origin>0.5 0.5</origin>
+			<pos>${plateX} ${plateY}</pos>
 			<size>${plateW} ${plateH}</size>
-			<color>${panelBot}D8</color>
+			<color>${panelTop}</color>
 			<borderColor>${panelEdge}</borderColor>
 			<borderSize>1</borderSize>
 			<roundCorners>${cardRadius}</roundCorners>
 			<visible>{game:name} != '' &amp;&amp; (exists({game:marquee}) || (firstfile('${themePath}/_inc/system_logos/${system.theme}.svg', '${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg', '${themePath}/_inc/system_logos/${system.theme}/jp.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-jp.svg', '${themePath}/_inc/system_logos/${system.theme}/us.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-us.svg', '${themePath}/_inc/system_logos/${system.theme}/eu.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-eu.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-${logoRegion}.svg') != ''))</visible>
-			<zIndex>33</zIndex>
+			<zIndex>32</zIndex>
 		</rectangle>
+		<image name="e_plate_gl" extra="true" if="${bOn} == 1">
+			<path>${themePath}/assets/ui/sheen.png</path>
+			<pos>${plateX} ${plateY}</pos>
+			<size>${plateW} ${plateH}</size>
+			<color>${panelBot}</color>
+			<roundCorners>${cardRadius}</roundCorners>
+			<visible>{game:name} != '' &amp;&amp; (exists({game:marquee}) || (firstfile('${themePath}/_inc/system_logos/${system.theme}.svg', '${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg', '${themePath}/_inc/system_logos/${system.theme}/jp.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-jp.svg', '${themePath}/_inc/system_logos/${system.theme}/us.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-us.svg', '${themePath}/_inc/system_logos/${system.theme}/eu.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-eu.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-${logoRegion}.svg') != ''))</visible>
+			<zIndex>33</zIndex>
+		</image>
 		<image name="md_marquee">
 			<visible>${bVis}</visible>
 			<pos>0.5 ${bannerC}</pos>
@@ -88,7 +107,8 @@
 			<size>${ctTw} ${ctTh}</size>
 			<color>${text}</color>
 			<fontSize>${ctTfs}</fontSize>
-			<alignment>left</alignment>
+			<alignment>${ctAlign}</alignment>
+			<multiLine>false</multiLine>
 			<visible>{game:name} != '' &amp;&amp; (${bOn} == 0 || (!exists({game:marquee}) &amp;&amp; (firstfile('${themePath}/_inc/system_logos/${system.theme}.svg', '${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg', '${themePath}/_inc/system_logos/${system.theme}/jp.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-jp.svg', '${themePath}/_inc/system_logos/${system.theme}/us.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-us.svg', '${themePath}/_inc/system_logos/${system.theme}/eu.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-eu.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-${logoRegion}.svg') == '')))</visible>
 			<zIndex>45</zIndex>
 		</text>
@@ -99,6 +119,7 @@
 			<color>${subText}</color>
 			<fontSize>${ctSfs}</fontSize>
 			<alignment>left</alignment>
+			<multiLine>false</multiLine>
 			<visible>{game:name} != '' &amp;&amp; (${bOn} == 0 || (!exists({game:marquee}) &amp;&amp; (firstfile('${themePath}/_inc/system_logos/${system.theme}.svg', '${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg', '${themePath}/_inc/system_logos/${system.theme}/jp.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-jp.svg', '${themePath}/_inc/system_logos/${system.theme}/us.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-us.svg', '${themePath}/_inc/system_logos/${system.theme}/eu.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-eu.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg', '${themePath}/_inc/system_logos/${system.theme}/${logoColorScheme}-${logoRegion}.svg') == '')))</visible>
 			<zIndex>45</zIndex>
 		</text>

@@ -14,18 +14,18 @@
 		<shMx>24 / ${screen.width}</shMx>
 		<shMy>24 / ${screen.height}</shMy>
 		<!-- Top-right capsule (network, battery, clock) and the cartel (name card), same height band -->
-		<capW>0.15</capW>
-		<capH>0.05</capH>
-		<capY>0.03</capY>
+		<capW>0.16</capW>
+		<capH>0.062</capH>
+		<capY>0.0375</capY>
 		<capX>0.975 - ${capW}</capX>
-		<ctX>0.025</ctX>
-		<ctY>0.022</ctY>
-		<ctW>0.46</ctW>
-		<ctH>0.088</ctH>
-		<ctPad>0.018</ctPad>
+		<ctTopX>0.025</ctTopX>
+		<ctTopY>0.016</ctTopY>
+		<ctW>0.52</ctW>
+		<ctH>0.104</ctH>
+		<ctPad>0.022</ctPad>
 		<!-- Icon zone: from the cartel (or the banner) down to the help bar -->
 		<zoneBottom>0.945</zoneBottom>
-		<zoneNoBanner>0.125</zoneNoBanner>
+		<zoneNoBanner>0.14</zoneNoBanner>
 		<gPadV>0.04</gPadV>
 		<mX>0.006</mX>
 		<mY>0.010</mY>
@@ -35,6 +35,16 @@
 		<plateW>0.40</plateW>
 		<plateH>${bannerH} * 0.58</plateH>
 		<plateY>(${bannerH} - ${plateH}) / 2</plateY>
+		<!-- Banner bottom curve: the art is drawn taller than the banner, its top edge off screen, and rounded (px) -->
+		<heroF>0.033</heroF>
+		<heroRad>${screen.height} * ${heroF}</heroRad>
+		<heroH>${bannerH} + ${heroF}</heroH>
+		<heroTop>0 - ${heroF}</heroTop>
+		<heroC>(${bannerH} - ${heroF}) / 2</heroC>
+		<!-- Cartel: top-left without banner; centred in the banner (where the logo goes) with it -->
+		<ctX>${bOn} * (1 - ${ctW}) / 2 + (1 - ${bOn}) * ${ctTopX}</ctX>
+		<ctY>${bOn} * (${bannerH} - ${ctH}) / 2 + (1 - ${bOn}) * ${ctTopY}</ctY>
+		<plateX>(1 - ${plateW}) / 2</plateX>
 		<bannerC>${bannerH} / 2</bannerC>
 		<logoMaxW>0.34</logoMaxW>
 		<logoMaxH>${plateH} * 0.74</logoMaxH>
@@ -60,20 +70,20 @@
 		<gCols>3 + (${gColsF} &gt;= 4) + (${gColsF} &gt;= 5) + (${gColsF} &gt;= 6) + (${gColsF} &gt;= 7) + (${gColsF} &gt;= 8) + (${gColsF} &gt;= 9) + (${gColsF} &gt;= 10) + (${gColsF} &gt;= 11) + (${gColsF} &gt;= 12) + (${gColsF} &gt;= 13) + (${gColsF} &gt;= 14)</gCols> <!-- floor(ColsF), clamped to 3..14: tiles at least as wide as tall, so the icon is as big as the row allows -->
 		<!-- Derived by the layouts (cards, cartel): -->
 		<ctXi>0 + ${ctX} + ${ctPad}</ctXi>
-		<ctTy>0 + ${ctY} + 0.008</ctTy>
+		<ctTy>0 + ${ctY} + 0.010</ctTy>
 		<ctTw>${ctW} - 2 * ${ctPad}</ctTw>
-		<ctTh>0.050</ctTh>
-		<ctTfs>0.040</ctTfs>
-		<ctSy>0 + ${ctY} + 0.058</ctSy>
-		<ctSh>0.024</ctSh>
-		<ctSfs>0.021</ctSfs>
+		<ctTh>0.058</ctTh>
+		<ctTfs>0.048</ctTfs>
+		<ctSy>0 + ${ctY} + 0.070</ctSy>
+		<ctSh>0.028</ctSh>
+		<ctSfs>0.025</ctSfs>
 		<ctSwHalf>(${ctW} - 2 * ${ctPad}) * 0.72</ctSwHalf>
 		<ctYearW>(${ctW} - 2 * ${ctPad}) * 0.26</ctYearW>
 		<ctYearX>0 + ${ctX} + ${ctW} - ${ctPad} - ${ctYearW}</ctYearX>
 		<capR>${screen.height} * ${capH} / 2</capR>
 		<capInX>0 + ${capX} + 0.012</capInX>
 		<capInW>${capW} - 0.024</capInW>
-		<capStackH>0.032</capStackH>
+		<capStackH>0.036</capStackH>
 		<capStackY>0 + ${capY} + (${capH} - ${capStackH}) / 2</capStackY>
 		<capShX>0 + ${capX} - ${shMx}</capShX>
 		<capShY>${capY} - ${shMy}</capShY>
@@ -96,14 +106,18 @@
 		<e_desc_cardShY>0 + 0.72 - ${shMy}</e_desc_cardShY>
 		<e_desc_cardShW>0 + 0.51 + 2 * ${shMx}</e_desc_cardShW>
 		<e_desc_cardShH>0 + 0.21 + 2 * ${shMy}</e_desc_cardShH>
-		<listBasShX>${basicPanelX} - ${shMx}</listBasShX>
-		<listBasShY>${listPanelY} - ${shMy}</listBasShY>
-		<listBasShW>${listPanelW} + 2 * ${shMx}</listBasShW>
-		<listBasShH>${basicPanelH} + 2 * ${shMy}</listBasShH>
+		<e_plateShX>0 + ${plateX} - ${shMx}</e_plateShX>
+		<e_plateShY>0 + ${plateY} - ${shMy}</e_plateShY>
+		<e_plateShW>0 + ${plateW} + 2 * ${shMx}</e_plateShW>
+		<e_plateShH>0 + ${plateH} + 2 * ${shMy}</e_plateShH>
 		<cartelShX>0 + ${ctX} - ${shMx}</cartelShX>
 		<cartelShY>0 + ${ctY} - ${shMy}</cartelShY>
 		<cartelShW>0 + ${ctW} + 2 * ${shMx}</cartelShW>
 		<cartelShH>0 + ${ctH} + 2 * ${shMy}</cartelShH>
+		<e_plateShX>0 + ${plateX} - ${shMx}</e_plateShX>
+		<e_plateShY>0 + ${plateY} - ${shMy}</e_plateShY>
+		<e_plateShW>0 + ${plateW} + 2 * ${shMx}</e_plateShW>
+		<e_plateShH>0 + ${plateH} + 2 * ${shMy}</e_plateShH>
 		<cartelgShX>0 + ${ctX} - ${shMx}</cartelgShX>
 		<cartelgShY>0 + ${ctY} - ${shMy}</cartelgShY>
 		<cartelgShW>0 + ${ctW} + 2 * ${shMx}</cartelgShW>

@@ -14,10 +14,9 @@ _inc/layout/common.xml           background, help bar, game tiles, menu
 _inc/layout/chrome.xml           top-right status capsule (network, battery, clock; iconic icons) + brand logo on its left
 _inc/layout/system-grid.xml      system view: optional banner + cartel + icon grid (parametric)
 _inc/layout/system-carousel.xml  system view: single-row carousel (guarded by `if="${sysCarousel} == 1"`)
-_inc/layout/gamelist-grid.xml    "Imago" icon view of the game list: banner (console art + game/console logo) / cartel / icon grid
-_inc/layout/gamelist-common.xml  basic + detailed: background, console logo, list card (shadow + body + sheen), iconic-style rows, hidden metadata
-_inc/layout/gamelist-detailed.xml  detailed view + "Imago Detailed" (default): list on the right; image, info card and description card on the left
-_inc/layout/gamelist-basic.xml   "Imago Basic": centred list + developer/year under it (inherits detailed: include it AFTER detailed)
+_inc/layout/gamelist-grid.xml    "Icons" view of the game list: banner (console art + game/console logo) / cartel / icon grid
+_inc/layout/gamelist-common.xml  built-in `basic` (centred list) + `detailed`: background, console logo, list card (shadow + body + sheen), iconic-style rows, hidden metadata
+_inc/layout/gamelist-detailed.xml  built-in `detailed` view (default): list on the right; image, info card and description card on the left
 _inc/options/fontscale.xml       esFontScale (ES "Theme Font Scale", same logic as es-theme-iconic)
 _inc/options/listrows-*.xml      "List rows" option (auto from the font scale, or 7-17)
 _inc/options/list.xml            list geometry, row font size / corner radius, card captions (en + es)
@@ -31,14 +30,14 @@ assets/branding/                 retrobat.svg, batocera.svg, retrobox.svg (PLACE
 ## Options (UI Settings > Theme Configuration)
 Color set / Help icons / Branding / Console logo region / **Banner** (off [default], on) / **Banner height** (30-50 %, default 40) /
 **System view** (icons 1-4 rows [default 3], carousel) / **Game icons** (1-4 rows [default 3]) / List rows (auto, 7-17). Default game view:
-**Imago Detailed**; pick **Imago** (icons) or **Imago Basic** in UI Settings > Game list view style.
+`detailed`; `basic` and the custom **Icons** view are in the same menu (Game list view style).
 
-## Icon views (system view and the "Imago" game view)
+## Icon views (system view and the "Icons" game view)
 - **Banner** (optional, at most 2 rows of icons below it): console art (`_inc/system_bg`) as the background, always; the logo goes on a tinted plate:
   the console logo in the system view, the game logo (`md_marquee`) in the game view, falling back to the console logo.
-  Height = `bannerPct` % of the screen **height** (30-50). `bannerK` in `geometry.xml` switches the basis to the screen width (`${screen.ratio}`,
+  The bottom corners are rounded (the art is drawn taller, top edge off screen, `roundCorners` = `heroRad`). Height = `bannerPct` % of the screen **height** (30-50). `bannerK` in `geometry.xml` switches the basis to the screen width (`${screen.ratio}`,
   which at 16:9 means 53-89 % of the height: only usable with 4:3 or similar).
-- **Without banner**: a *cartel* (name card) sits at the top-left, level with the status capsule. System view: console name + manufacturer . year.
+- **Without banner**: a *cartel* (name card) sits at the top-left, level with the status capsule. With the banner on it is centred in the banner, where the logo plate would be. System view: console name + manufacturer . year.
   Game view: game name + developer + year. With the banner on, the cartel disappears when there is a logo to show and comes back when there is none
   (system view: no console logo; game view: neither game logo nor console logo).
 - Up to 4 rows without banner (default 3), 2 with it. Row count -> tile height (capped at 34 % of the screen height); columns = floor(width / tile height),
@@ -68,6 +67,7 @@ and the built-in battery indicator hidden (same approach as es-theme-iconic). Ic
 - Rows: item template with a flat rounded pill + hairline for the selected row and hairline separators; `roundCorners` of a rectangle is in PIXELS.
 - Scrollbar: 0.45 % wide, `${thumb}`, drawn in the right padding of the card. ES quirk (not fixable from a theme): with an item template the thumb
   follows the cursor about two rows late, and it hides 1.5 s after the last move.
+- `rectangle` and `ninepatch` ignore `origin`: give explicit top-left positions (`plateX`...).
 - A variable whose value contains `${` is evaluated as a math expression (`${tile}E6` would become a number): colours with alpha are written inline.
 - In `detailed` ES draws every metadata label/field the theme does not define: `gamelist-common.xml` hides them all and each view re-enables its own.
 - Entries without game data (the `. .` parent folder) skip the item template and use the built-in selector.

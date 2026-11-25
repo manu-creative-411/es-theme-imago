@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<theme defaultView="Imago Detailed">
+<theme defaultView="detailed">
 	<formatVersion>7</formatVersion>
 	<!-- Order matters: variables (colour set, branding) must be loaded before the layouts that use them. -->
 	<include subset="colorset" subSetDisplayName="Color set" name="Black" displayName="Black">./_inc/colorsets/black.xml</include>
@@ -59,8 +59,6 @@
 	<include>./_inc/layout/system-grid.xml</include>
 	<include>./_inc/layout/system-carousel.xml</include>
 	<include>./_inc/layout/gamelist-common.xml</include>
-	<!-- detailed BEFORE basic: "Imago Basic" inherits "detailed" as parsed so far -->
 	<include>./_inc/layout/gamelist-detailed.xml</include>
-	<include>./_inc/layout/gamelist-basic.xml</include>
 	<include>./_inc/layout/gamelist-grid.xml</include>
 </theme>
