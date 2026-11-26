@@ -462,7 +462,7 @@
 		<text name="e_sys_name_nb" extra="true" if="${bOn} == 0">
 			<text>${system.fullName}</text>
 			<fontPath>${fontTitle}</fontPath>
-			<pos>0.025 ${ctTy}</pos>
+			<pos>0.025 0.034</pos>
 			<size>0.55 ${ctTh}</size>
 			<color>${text}</color>
 			<fontSize>${ctTfs}</fontSize>
