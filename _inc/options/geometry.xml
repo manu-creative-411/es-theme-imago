@@ -85,6 +85,8 @@
 		<capInX>0 + ${capX} + 0.018</capInX>
 		<capInW>${capW} - 0.036</capInW>
 		<capStackH>0.044</capStackH>
+		<icoNetW>0.0167 / ${capInW}</icoNetW>
+		<icoBatW>0.011 / ${capInW}</icoBatW>
 		<capStackY>0 + ${capY} + (${capH} - ${capStackH}) / 2</capStackY>
 		<capShX>0 + ${capX} - ${shMx}</capShX>
 		<capShY>${capY} - ${shMy}</capShY>
