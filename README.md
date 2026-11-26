@@ -100,7 +100,7 @@ Renaming the theme = renaming the folder; all paths use `${themePath}` or are re
 
 ## Iconos de sistema (_inc/system_icons/)
 - `_folder.svg` es la carpeta generica que se usa cuando un sistema no tiene icono propio (el tema pone primero `_folder.svg` y despues `<system>.svg`; ES se queda con el ultimo `<path>` que existe).
-- Los colores de todas las carpetas son pastel: `python3 tools/make_folder_icons.py [--mix 0.30] [--sat 1.05]` mezcla con blanco los degradados de carpeta (marca cada uno con `data-pastel`, es idempotente) y regenera `_folder.svg` desde `_template.svg`. Para volver a elegir un color nuevo desde la plantilla, ejecutalo despues de editar un icono.
+- Los colores de todas las carpetas son pastel: `python3 tools/make_folder_icons.py [--mix 0.30] [--sat 1.05]` mezcla con blanco los degradados de carpeta (guarda los colores originales en `data-orig`, asi que se puede volver a ejecutar con otros valores cuando quieras) y regenera `_folder.svg` desde `_template.svg`.
 - Se editan directamente estos SVG (Inkscape). Sin capas multiply ni modos de mezcla (ES/NanoSVG no los soporta): la carpeta son dos formas
   (pestana + cuerpo) con degradado ya tintado, y encima los glifos.
 - Plantillas: `_template.svg` (carpeta con pestana) y `_template_app.svg` (carpeta de apps). Cada una trae **13 grupos de color** (capas de Inkscape,

@@ -2,7 +2,8 @@
 """Pastel folder colours for the system icons + the generic fallback folder.
 
 1. Every gradient that paints a folder (ids linearGradient16/18 + "_tint" or "-<combo>") gets its stops blended towards white and slightly
-   desaturated (the glyph gradients are left alone). The gradient is flagged with data-pastel="1", so running the script again is harmless.
+   desaturated (the glyph gradients are left alone). The original colours are kept in a data-orig attribute, so the script can be run again
+   with other --mix / --sat values at any time.
 2. _inc/system_icons/_folder.svg (generic folder used when a system has no icon of its own) is built from _template.svg:
    one colour combo kept visible, the others removed.
 
@@ -30,13 +31,18 @@ def pastel(hex6, mix, sat):
 
 
 def pastelize(text, mix, sat):
-    """Return the SVG text with every not-yet-processed folder gradient made pastel."""
+    """Return the SVG text with every folder gradient recomputed from its original colours (kept in data-orig)."""
     def fix(match):
         block = match.group(0)
-        if 'data-pastel="1"' in block:
-            return block
-        block = STOP.sub(lambda m: "stop-color:#" + pastel(m.group(1), mix, sat), block)
-        return block.replace("<linearGradient", '<linearGradient data-pastel="1"', 1)
+        saved = re.search(r'data-orig="([0-9a-fA-F,]+)"', block)
+        if saved:
+            block = block.replace(saved.group(0), "").replace("<linearGradient  ", "<linearGradient ")
+            originals = saved.group(1).split(",")
+        else:
+            originals = STOP.findall(block)
+        colours = iter(originals)
+        block = STOP.sub(lambda m: "stop-color:#" + pastel(next(colours), mix, sat), block)
+        return block.replace("<linearGradient", '<linearGradient data-orig="' + ",".join(originals) + '"', 1)
     return GRADIENT.sub(fix, text)
 
 
