@@ -14,7 +14,7 @@
 		<shMx>24 / ${screen.width}</shMx>
 		<shMy>24 / ${screen.height}</shMy>
 		<!-- Top-right capsule (network, battery, clock) and the cartel (name card), same height band -->
-		<capW>0.22</capW>
+		<capW>0.19</capW>
 		<capH>0.074</capH>
 		<capY>0.026</capY>
 		<capX>0.975 - ${capW}</capX>
@@ -82,9 +82,9 @@
 		<rowYearX>0.915</rowYearX>
 		<rowDevX>0.615</rowDevX>
 		<capR>${screen.height} * ${capH} / 2</capR>
-		<capInX>0 + ${capX} + 0.012</capInX>
-		<capInW>${capW} - 0.024</capInW>
-		<capStackH>0.050</capStackH>
+		<capInX>0 + ${capX} + 0.018</capInX>
+		<capInW>${capW} - 0.036</capInW>
+		<capStackH>0.044</capStackH>
 		<capStackY>0 + ${capY} + (${capH} - ${capStackH}) / 2</capStackY>
 		<capShX>0 + ${capX} - ${shMx}</capShX>
 		<capShY>${capY} - ${shMy}</capShY>

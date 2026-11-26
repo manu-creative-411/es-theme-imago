@@ -37,8 +37,8 @@ Color set / Help icons / Branding / Console logo region / **Banner** (off [defau
   the console logo in the system view, the game logo (`md_marquee`) in the game view, falling back to the console logo.
   The bottom corners are rounded (the art is drawn taller, top edge off screen, `roundCorners` = `heroRad`). Height = `bannerPct` % of the screen **height** (30-50). `bannerK` in `geometry.xml` switches the basis to the screen width (`${screen.ratio}`,
   which at 16:9 means 53-89 % of the height: only usable with 4:3 or similar).
-- **Cartel** (name plate, console name only): without banner it sits at the top-left, level with the status capsule; with the banner it is centred in the banner,
-  but only when there is no logo to show (system view: no console logo; game view: neither game logo nor console logo). It depends on the LOGO only, never on the console art.
+- **Console name**: without banner it is plain text at the top-left (no plate), left-aligned with the info row below it. With the banner it goes on a centred
+  *cartel* (name plate), but only when there is no logo to show (system view: no console logo; game view: neither game logo nor console logo). It depends on the LOGO only, never on the console art.
 - **Info row** above the grid (always, with or without banner): system view = manufacturer . year at the left end, game count (`systemInfo`) at the right end;
   game view = game name at the left, developer and year at the right. `rowY` / `rowH` in `geometry.xml`; the grid zone starts under it.
 - **Logo drop shadow**: ES has no per-image shadow, so each logo (banner logos, console logo of the list views) gets thirteen black translucent copies of it

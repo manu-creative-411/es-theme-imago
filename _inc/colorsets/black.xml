@@ -9,7 +9,7 @@
 		<accentText>111118</accentText> <!-- text drawn on top of the accent colour -->
 		<text>F2F2F7</text>         <!-- primary text -->
 		<subText>A0A0AD</subText>   <!-- secondary text (subtitle, help bar) -->
-		<box>000000</box>           <!-- rounded info box -->
+		<box>2A2A32</box>           <!-- rounded info box -->
 			<boxFile>box-black</boxFile> <!-- assets/ui/box-<set>-h??.svg, default info box -->
 		<dimText>6C6C7A</dimText>   <!-- tertiary text (year column) -->
 		<wallpaper>${themePath}/assets/wallpapers/dark.svg</wallpaper> <!-- assets/wallpapers/: fondo a pantalla completa (none.png = sin fondo) -->

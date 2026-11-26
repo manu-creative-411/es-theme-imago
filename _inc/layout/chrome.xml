@@ -54,24 +54,24 @@
 		<stackpanel name="e_status" extra="true">
 			<pos>${capInX} ${capStackY}</pos>
 			<size>${capInW} ${capStackH}</size>
-			<separator>0.010</separator>
+			<separator>0.016</separator>
 			<zIndex>100</zIndex>
 			<orientation>horizontal</orientation>
 			<reverse>true</reverse>
 			<clock name="e_status_clock" extra="true">
 				<color>${text}</color>
-				<fontSize>0.032</fontSize>
+				<fontSize>0.030</fontSize>
 				<lineSpacing>1</lineSpacing>
 				<fontPath>${fontMedium}</fontPath>
 			</clock>
 			<batteryText name="e_status_battery_text" extra="true">
 				<color>${subText}</color>
-				<fontSize>0.032</fontSize>
+				<fontSize>0.030</fontSize>
 				<lineSpacing>1</lineSpacing>
 				<fontPath>${fontInfo}</fontPath>
 			</batteryText>
 			<batteryIcon name="e_status_battery_icon" extra="true">
-				<maxSize>1 1</maxSize>
+				<maxSize>0.011 1</maxSize>
 				<color>${text}</color>
 				<full>${themePath}/assets/icons/battery-icon-100.svg</full>
 				<at75>${themePath}/assets/icons/battery-icon-75.svg</at75>
@@ -81,7 +81,7 @@
 				<incharge>${themePath}/assets/icons/battery-icon-charging.svg</incharge>
 			</batteryIcon>
 			<networkIcon name="e_status_network_icon" extra="true">
-				<maxSize>1 1</maxSize>
+				<maxSize>0.0167 1</maxSize>
 				<color>${text}</color>
 				<networkIcon>${themePath}/assets/icons/network-icon-on.svg</networkIcon>
 				<planemodeIcon>${themePath}/assets/icons/network-icon-off.svg</planemodeIcon>

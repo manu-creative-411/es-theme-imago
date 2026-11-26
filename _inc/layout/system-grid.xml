@@ -34,6 +34,7 @@
 		</gridtile>
 		<!-- Tile content: system icon, text fallback -->
 		<image name="logo">
+			<path>${themePath}/_inc/system_icons/_folder.svg</path>
 			<path>${themePath}/_inc/system_icons/${system.theme}.svg</path>
 		</image>
 		<text name="logoText">
@@ -323,7 +324,7 @@
 			<zIndex>35</zIndex>
 		</image>
 		<!-- Cartel (console name only): no banner, or banner without a console logo -->
-		<ninepatch name="cartel_sh" extra="true" if="${bOn} == 0 || (firstfile(${themePath} + '/_inc/system_logos/' + ${system.theme} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '-' + ${logoRegion} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/jp.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-jp.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/us.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-us.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/eu.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-eu.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoRegion} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-' + ${logoRegion} + '.svg') == '')">
+		<ninepatch name="cartel_sh" extra="true" if="${bOn} == 1 &amp;&amp; (firstfile(${themePath} + '/_inc/system_logos/' + ${system.theme} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '-' + ${logoRegion} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/jp.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-jp.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/us.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-us.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/eu.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-eu.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoRegion} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-' + ${logoRegion} + '.svg') == '')">
 			<path>${themePath}/assets/ui/shadow.png</path>
 			<pos>${cartelShX} ${cartelShY}</pos>
 			<size>${cartelShW} ${cartelShH}</size>
@@ -331,7 +332,7 @@
 			<color>${shadowColor}</color>
 			<zIndex>18</zIndex>
 		</ninepatch>
-		<rectangle name="cartel" extra="true" if="${bOn} == 0 || (firstfile(${themePath} + '/_inc/system_logos/' + ${system.theme} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '-' + ${logoRegion} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/jp.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-jp.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/us.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-us.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/eu.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-eu.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoRegion} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-' + ${logoRegion} + '.svg') == '')">
+		<rectangle name="cartel" extra="true" if="${bOn} == 1 &amp;&amp; (firstfile(${themePath} + '/_inc/system_logos/' + ${system.theme} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '-' + ${logoRegion} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/jp.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-jp.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/us.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-us.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/eu.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-eu.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoRegion} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-' + ${logoRegion} + '.svg') == '')">
 			<pos>${ctX} ${ctY}</pos>
 			<size>${ctW} ${ctH}</size>
 			<color>${panelTop}</color>
@@ -340,7 +341,7 @@
 			<roundCorners>${cardRadius}</roundCorners>
 			<zIndex>19</zIndex>
 		</rectangle>
-		<image name="cartel_gl" extra="true" if="${bOn} == 0 || (firstfile(${themePath} + '/_inc/system_logos/' + ${system.theme} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '-' + ${logoRegion} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/jp.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-jp.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/us.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-us.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/eu.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-eu.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoRegion} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-' + ${logoRegion} + '.svg') == '')">
+		<image name="cartel_gl" extra="true" if="${bOn} == 1 &amp;&amp; (firstfile(${themePath} + '/_inc/system_logos/' + ${system.theme} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '-' + ${logoRegion} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/jp.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-jp.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/us.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-us.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/eu.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-eu.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoRegion} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-' + ${logoRegion} + '.svg') == '')">
 			<path>${themePath}/assets/ui/sheen.png</path>
 			<pos>${ctX} ${ctY}</pos>
 			<size>${ctW} ${ctH}</size>
@@ -348,14 +349,25 @@
 			<roundCorners>${cardRadius}</roundCorners>
 			<zIndex>20</zIndex>
 		</image>
-		<text name="e_sys_name" extra="true" if="${bOn} == 0 || (firstfile(${themePath} + '/_inc/system_logos/' + ${system.theme} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '-' + ${logoRegion} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/jp.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-jp.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/us.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-us.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/eu.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-eu.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoRegion} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-' + ${logoRegion} + '.svg') == '')">
+		<text name="e_sys_name" extra="true" if="${bOn} == 1 &amp;&amp; (firstfile(${themePath} + '/_inc/system_logos/' + ${system.theme} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '-' + ${logoRegion} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/jp.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-jp.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/us.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-us.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/eu.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-eu.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoRegion} + '.svg', ${themePath} + '/_inc/system_logos/' + ${system.theme} + '/' + ${logoColorScheme} + '-' + ${logoRegion} + '.svg') == '')">
 			<text>${system.fullName}</text>
 			<fontPath>${fontTitle}</fontPath>
 			<pos>${ctXi} ${ctTy}</pos>
 			<size>${ctTw} ${ctTh}</size>
 			<color>${text}</color>
 			<fontSize>${ctTfs}</fontSize>
-			<alignment>${ctAlign}</alignment>
+			<alignment>center</alignment>
+			<multiLine>false</multiLine>
+			<zIndex>45</zIndex>
+		</text>
+		<text name="e_sys_name_nb" extra="true" if="${bOn} == 0">
+			<text>${system.fullName}</text>
+			<fontPath>${fontTitle}</fontPath>
+			<pos>0.025 ${ctTy}</pos>
+			<size>0.55 ${ctTh}</size>
+			<color>${text}</color>
+			<fontSize>${ctTfs}</fontSize>
+			<alignment>left</alignment>
 			<multiLine>false</multiLine>
 			<zIndex>45</zIndex>
 		</text>
