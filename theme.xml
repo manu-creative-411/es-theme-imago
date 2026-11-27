@@ -2,60 +2,61 @@
 <theme defaultView="detailed">
 	<formatVersion>7</formatVersion>
 	<!-- Order matters: variables (colour set, branding) must be loaded before the layouts that use them. -->
-	<include subset="colorset" subSetDisplayName="Color set" name="Black" displayName="Black">./_inc/colorsets/black.xml</include>
-	<include subset="colorset" subSetDisplayName="Color set" name="Light gray" displayName="Light gray">./_inc/colorsets/light-gray.xml</include>
-	<include subset="colorset" subSetDisplayName="Color set" name="Vivid red" displayName="Vivid red">./_inc/colorsets/vivid-red.xml</include>
-	<include subset="colorset" subSetDisplayName="Color set" name="Deep blue" displayName="Deep blue">./_inc/colorsets/deep-blue.xml</include>
-	<include subset="colorset" subSetDisplayName="Color set" name="Aqua green" displayName="Aqua green">./_inc/colorsets/aqua-green.xml</include>
-	<include subset="colorset" subSetDisplayName="Color set" name="GameCube purple" displayName="GameCube purple">./_inc/colorsets/gamecube-purple.xml</include>
-	<include subset="wallpaper" subSetDisplayName="Wallpaper" name="on" displayName="On (default)">./_inc/options/wallpaper-on.xml</include>
-	<include subset="wallpaper" subSetDisplayName="Wallpaper" name="off" displayName="Off">./_inc/options/wallpaper-off.xml</include>
-	<include subset="branding" subSetDisplayName="Branding" name="Retrobox" displayName="Retrobox">./_inc/branding/retrobox.xml</include>
-	<include subset="branding" subSetDisplayName="Branding" name="RetroBat" displayName="RetroBat">./_inc/branding/retrobat.xml</include>
-	<include subset="branding" subSetDisplayName="Branding" name="Batocera" displayName="Batocera">./_inc/branding/batocera.xml</include>
-	<include subset="logoregion" subSetDisplayName="Console logo region" name="eu" displayName="Europe (default)">./_inc/options/logoregion-eu.xml</include>
-	<include subset="logoregion" subSetDisplayName="Console logo region" name="us" displayName="USA">./_inc/options/logoregion-us.xml</include>
-	<include subset="logoregion" subSetDisplayName="Console logo region" name="jp" displayName="Japan">./_inc/options/logoregion-jp.xml</include>
-	<include subset="banner" subSetDisplayName="Banner" name="off" displayName="Off (default)">./_inc/options/banner-off.xml</include>
-	<include subset="banner" subSetDisplayName="Banner" name="on" displayName="On">./_inc/options/banner-on.xml</include>
-	<include subset="bannerheight" subSetDisplayName="Banner height" name="40" displayName="40% (default)">./_inc/options/bannerh-40.xml</include>
-	<include subset="bannerheight" subSetDisplayName="Banner height" name="30" displayName="30%">./_inc/options/bannerh-30.xml</include>
-	<include subset="bannerheight" subSetDisplayName="Banner height" name="35" displayName="35%">./_inc/options/bannerh-35.xml</include>
-	<include subset="bannerheight" subSetDisplayName="Banner height" name="45" displayName="45%">./_inc/options/bannerh-45.xml</include>
-	<include subset="bannerheight" subSetDisplayName="Banner height" name="50" displayName="50%">./_inc/options/bannerh-50.xml</include>
-	<include subset="systemview" subSetDisplayName="System view" name="grid3" displayName="3 rows (default)">./_inc/options/sysview-grid-3.xml</include>
-	<include subset="systemview" subSetDisplayName="System view" name="grid1" displayName="1 row">./_inc/options/sysview-grid-1.xml</include>
-	<include subset="systemview" subSetDisplayName="System view" name="grid2" displayName="2 rows">./_inc/options/sysview-grid-2.xml</include>
-	<include subset="systemview" subSetDisplayName="System view" name="grid4" displayName="4 rows">./_inc/options/sysview-grid-4.xml</include>
-	<include subset="systemview" subSetDisplayName="System view" name="carousel" displayName="Carousel">./_inc/options/sysview-carousel.xml</include>
-	<include subset="gamerows" subSetDisplayName="Game icon rows" name="3" displayName="3 rows (default)">./_inc/options/gamerows-3.xml</include>
-	<include subset="gamerows" subSetDisplayName="Game icon rows" name="1" displayName="1 row">./_inc/options/gamerows-1.xml</include>
-	<include subset="gamerows" subSetDisplayName="Game icon rows" name="2" displayName="2 rows">./_inc/options/gamerows-2.xml</include>
-	<include subset="gamerows" subSetDisplayName="Game icon rows" name="4" displayName="4 rows">./_inc/options/gamerows-4.xml</include>
+	<include>./_inc/i18n/labels.xml</include> <!-- translated option labels: must come before the subsets that use them -->
+	<include subset="colorset" subSetDisplayName="${t_colorset}" name="Black" displayName="${o_black}">./_inc/colorsets/black.xml</include>
+	<include subset="colorset" subSetDisplayName="${t_colorset}" name="Light gray" displayName="${o_lightgray}">./_inc/colorsets/light-gray.xml</include>
+	<include subset="colorset" subSetDisplayName="${t_colorset}" name="Vivid red" displayName="${o_vividred}">./_inc/colorsets/vivid-red.xml</include>
+	<include subset="colorset" subSetDisplayName="${t_colorset}" name="Deep blue" displayName="${o_deepblue}">./_inc/colorsets/deep-blue.xml</include>
+	<include subset="colorset" subSetDisplayName="${t_colorset}" name="Aqua green" displayName="${o_aquagreen}">./_inc/colorsets/aqua-green.xml</include>
+	<include subset="colorset" subSetDisplayName="${t_colorset}" name="GameCube purple" displayName="${o_gamecube}">./_inc/colorsets/gamecube-purple.xml</include>
+	<include subset="wallpaper" subSetDisplayName="${t_wallpaper}" name="on" displayName="${o_on} ${o_default}">./_inc/options/wallpaper-on.xml</include>
+	<include subset="wallpaper" subSetDisplayName="${t_wallpaper}" name="off" displayName="${o_off}">./_inc/options/wallpaper-off.xml</include>
+	<include subset="branding" subSetDisplayName="${t_branding}" name="Retrobox" displayName="Retrobox">./_inc/branding/retrobox.xml</include>
+	<include subset="branding" subSetDisplayName="${t_branding}" name="RetroBat" displayName="RetroBat">./_inc/branding/retrobat.xml</include>
+	<include subset="branding" subSetDisplayName="${t_branding}" name="Batocera" displayName="Batocera">./_inc/branding/batocera.xml</include>
+	<include subset="logoregion" subSetDisplayName="${t_logoregion}" name="eu" displayName="${o_europe} ${o_default}">./_inc/options/logoregion-eu.xml</include>
+	<include subset="logoregion" subSetDisplayName="${t_logoregion}" name="us" displayName="${o_usa}">./_inc/options/logoregion-us.xml</include>
+	<include subset="logoregion" subSetDisplayName="${t_logoregion}" name="jp" displayName="${o_japan}">./_inc/options/logoregion-jp.xml</include>
+	<include subset="banner" subSetDisplayName="${t_banner}" name="off" displayName="${o_off} ${o_default}">./_inc/options/banner-off.xml</include>
+	<include subset="banner" subSetDisplayName="${t_banner}" name="on" displayName="${o_on}">./_inc/options/banner-on.xml</include>
+	<include subset="bannerheight" subSetDisplayName="${t_bannerheight}" name="40" displayName="40% ${o_default}">./_inc/options/bannerh-40.xml</include>
+	<include subset="bannerheight" subSetDisplayName="${t_bannerheight}" name="30" displayName="30%">./_inc/options/bannerh-30.xml</include>
+	<include subset="bannerheight" subSetDisplayName="${t_bannerheight}" name="35" displayName="35%">./_inc/options/bannerh-35.xml</include>
+	<include subset="bannerheight" subSetDisplayName="${t_bannerheight}" name="45" displayName="45%">./_inc/options/bannerh-45.xml</include>
+	<include subset="bannerheight" subSetDisplayName="${t_bannerheight}" name="50" displayName="50%">./_inc/options/bannerh-50.xml</include>
+	<include subset="systemview" subSetDisplayName="${t_systemview}" name="grid3" displayName="${o_rows3} ${o_default}">./_inc/options/sysview-grid-3.xml</include>
+	<include subset="systemview" subSetDisplayName="${t_systemview}" name="grid1" displayName="${o_rows1}">./_inc/options/sysview-grid-1.xml</include>
+	<include subset="systemview" subSetDisplayName="${t_systemview}" name="grid2" displayName="${o_rows2}">./_inc/options/sysview-grid-2.xml</include>
+	<include subset="systemview" subSetDisplayName="${t_systemview}" name="grid4" displayName="${o_rows4}">./_inc/options/sysview-grid-4.xml</include>
+	<include subset="systemview" subSetDisplayName="${t_systemview}" name="carousel" displayName="${o_carousel}">./_inc/options/sysview-carousel.xml</include>
+	<include subset="gamerows" subSetDisplayName="${t_gamerows}" name="3" displayName="${o_rows3} ${o_default}">./_inc/options/gamerows-3.xml</include>
+	<include subset="gamerows" subSetDisplayName="${t_gamerows}" name="1" displayName="${o_rows1}">./_inc/options/gamerows-1.xml</include>
+	<include subset="gamerows" subSetDisplayName="${t_gamerows}" name="2" displayName="${o_rows2}">./_inc/options/gamerows-2.xml</include>
+	<include subset="gamerows" subSetDisplayName="${t_gamerows}" name="4" displayName="${o_rows4}">./_inc/options/gamerows-4.xml</include>
 	<include>./_inc/options/fonts.xml</include>
 	<include>./_inc/options/fontscale.xml</include>
-	<include subset="listrows" subSetDisplayName="List rows" name="auto" displayName="Auto (font scale)">./_inc/options/listrows-auto.xml</include>
-	<include subset="listrows" subSetDisplayName="List rows" name="7" displayName="7 rows">./_inc/options/listrows-7.xml</include>
-	<include subset="listrows" subSetDisplayName="List rows" name="9" displayName="9 rows">./_inc/options/listrows-9.xml</include>
-	<include subset="listrows" subSetDisplayName="List rows" name="11" displayName="11 rows">./_inc/options/listrows-11.xml</include>
-	<include subset="listrows" subSetDisplayName="List rows" name="13" displayName="13 rows">./_inc/options/listrows-13.xml</include>
-	<include subset="listrows" subSetDisplayName="List rows" name="15" displayName="15 rows">./_inc/options/listrows-15.xml</include>
-	<include subset="listrows" subSetDisplayName="List rows" name="17" displayName="17 rows">./_inc/options/listrows-17.xml</include>
+	<include subset="listrows" subSetDisplayName="${t_listrows}" name="auto" displayName="${o_auto}">./_inc/options/listrows-auto.xml</include>
+	<include subset="listrows" subSetDisplayName="${t_listrows}" name="7" displayName="${o_lrows7}">./_inc/options/listrows-7.xml</include>
+	<include subset="listrows" subSetDisplayName="${t_listrows}" name="9" displayName="${o_lrows9}">./_inc/options/listrows-9.xml</include>
+	<include subset="listrows" subSetDisplayName="${t_listrows}" name="11" displayName="${o_lrows11}">./_inc/options/listrows-11.xml</include>
+	<include subset="listrows" subSetDisplayName="${t_listrows}" name="13" displayName="${o_lrows13}">./_inc/options/listrows-13.xml</include>
+	<include subset="listrows" subSetDisplayName="${t_listrows}" name="15" displayName="${o_lrows15}">./_inc/options/listrows-15.xml</include>
+	<include subset="listrows" subSetDisplayName="${t_listrows}" name="17" displayName="${o_lrows17}">./_inc/options/listrows-17.xml</include>
 	<include>./_inc/options/list.xml</include>
 	<include>./_inc/options/tiles.xml</include>
 	<include>./_inc/options/geometry.xml</include>
 	<include>./_inc/layout/common.xml</include>
 	<include>./_inc/layout/chrome.xml</include>
-	<include subset="helpicons" subSetDisplayName="Help icons" name="default" displayName="Default (Batocera)">./_inc/help/default.xml</include>
-	<include subset="helpicons" subSetDisplayName="Help icons" name="xbox" displayName="Xbox">./_inc/help/xbox.xml</include>
-	<include subset="helpicons" subSetDisplayName="Help icons" name="playstation" displayName="PlayStation">./_inc/help/playstation.xml</include>
-	<include subset="helpicons" subSetDisplayName="Help icons" name="snes" displayName="SNES">./_inc/help/snes.xml</include>
-	<include subset="helpicons" subSetDisplayName="Help icons" name="buttons" displayName="Generic 4 buttons">./_inc/help/buttons.xml</include>
-	<include subset="helpicons" subSetDisplayName="Help icons" name="6buttons" displayName="Generic 6 buttons">./_inc/help/6buttons.xml</include>
-	<include subset="helpicons" subSetDisplayName="Help icons" name="8buttons" displayName="Generic 8 buttons">./_inc/help/8buttons.xml</include>
-	<include subset="helpicons" subSetDisplayName="Help icons" name="snesalt" displayName="SNES alt">./_inc/help/snesalt.xml</include>
-	<include subset="helpicons" subSetDisplayName="Help icons" name="xboxone" displayName="Xbox One">./_inc/help/xboxone.xml</include>
-	<include subset="helpicons" subSetDisplayName="Help icons" name="arcade" displayName="Arcade">./_inc/help/arcade.xml</include>
+	<include subset="helpicons" subSetDisplayName="${t_helpicons}" name="default" displayName="${o_helpdefault}">./_inc/help/default.xml</include>
+	<include subset="helpicons" subSetDisplayName="${t_helpicons}" name="xbox" displayName="Xbox">./_inc/help/xbox.xml</include>
+	<include subset="helpicons" subSetDisplayName="${t_helpicons}" name="playstation" displayName="PlayStation">./_inc/help/playstation.xml</include>
+	<include subset="helpicons" subSetDisplayName="${t_helpicons}" name="snes" displayName="SNES">./_inc/help/snes.xml</include>
+	<include subset="helpicons" subSetDisplayName="${t_helpicons}" name="buttons" displayName="${o_buttons4}">./_inc/help/buttons.xml</include>
+	<include subset="helpicons" subSetDisplayName="${t_helpicons}" name="6buttons" displayName="${o_buttons6}">./_inc/help/6buttons.xml</include>
+	<include subset="helpicons" subSetDisplayName="${t_helpicons}" name="8buttons" displayName="${o_buttons8}">./_inc/help/8buttons.xml</include>
+	<include subset="helpicons" subSetDisplayName="${t_helpicons}" name="snesalt" displayName="${o_snesalt}">./_inc/help/snesalt.xml</include>
+	<include subset="helpicons" subSetDisplayName="${t_helpicons}" name="xboxone" displayName="Xbox One">./_inc/help/xboxone.xml</include>
+	<include subset="helpicons" subSetDisplayName="${t_helpicons}" name="arcade" displayName="Arcade">./_inc/help/arcade.xml</include>
 	<include>./_inc/layout/system-grid.xml</include>
 	<include>./_inc/layout/system-carousel.xml</include>
 	<include>./_inc/layout/gamelist-common.xml</include>

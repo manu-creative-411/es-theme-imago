@@ -23,6 +23,7 @@ _inc/options/list.xml            list geometry, row font size / corner radius, c
 _inc/system_icons/               <system>.svg         square icon of each system (system view tiles)
 _inc/system_bg/                  <system>.png|svg|jpg Carbon console art (system view; fallback for games without image)
 _inc/system_logos/               console logo, ordered <path> chain (see README.txt there)
+_inc/i18n/labels.xml             translated option labels (per-language <variables lang="xx">)
 assets/ui/                       white.png, round.png, shadow.png (card shadow nine-patch), sheen.png (card gloss), neon-<set>.png + neon-row-<set>.png (selection frames), box-<set>-*.svg
 assets/branding/                 retrobat.svg, batocera.svg, retrobox.svg (PLACEHOLDERS)
 ```
@@ -161,6 +162,13 @@ AFTER `common.xml`. Xbox, PlayStation and SNES map the *physical position* of Ba
 
 ## Scroll hint in the horizontal grids
 The system and game icon grids show `Cols` full columns and a part (`gPeek`, 45 %) of the next tile at the right edge. ES clips the tiles to the whole grid rectangle, padding included, so the right padding (`sPadR` / `gPadR`, computed in `geometry.xml`) is exactly the room of that tile. `Cols` is the number of FULL columns, so ES scrolls one column when the cursor passes the last full one. Untested in a real ES.
+
+## Translated option labels
+The names ES shows in the theme configuration menu (option groups such as "Color set" and their values) follow the ES language (`system.language`, e.g. `es_ES` -> `es`). Languages: English (fallback), Spanish, Portuguese, Galician, Catalan, Basque, French, Italian, German, Ukrainian, Russian, Polish and Greek.
+- `_inc/i18n/labels.xml` holds one `<variables>` block per language (`lang="xx"`); the English block has no `lang` and loads first, so any missing value falls back to English. `theme.xml` includes it before the subsets and uses `${t_...}` (group titles) and `${o_...}` (option names) in `subSetDisplayName` / `displayName`.
+- The `name` attributes (the stored settings) are never translated, so changing language does not reset the chosen options.
+- To add a language: copy a `<variables lang="..">` block and translate the values; to add a label: add the variable to every block and reference it from `theme.xml`.
+- Poppins has no Cyrillic or Greek glyphs: Ukrainian, Russian and Greek text relies on ES's fallback font. Untested in a real ES.
 
 ## Selection halo everywhere
 - The selection marker is a crisp rounded-rectangle frame: 1 px white outline, then a band that runs from the colour set's `neon` (outside) to `neon2` (inside) and fades into white at its inner edge. No glow, no veil.
