@@ -25,9 +25,9 @@
 		<ctPad>0.022</ctPad>
 		<!-- Icon zone: from the cartel (or the banner) down to the help bar -->
 		<zoneBottom>0.945</zoneBottom>
-		<gPadV>0.04</gPadV>
+		<gPadV>0.012</gPadV>
 		<mX>0.006</mX>
-		<mY>0.010</mY>
+		<mY>0.004</mY>
 		<tMax>0.34</tMax>   <!-- tallest tile (screen height fraction): fewer rows never inflate the icons beyond this -->
 		<tAspect>1.0</tAspect> <!-- tile width / height; the column count is rounded so the tiles fill the width -->
 		<!-- Banner: console art full width, logo (or the cartel when there is none) in the middle -->

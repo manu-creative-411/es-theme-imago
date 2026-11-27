@@ -101,7 +101,7 @@ Renaming the theme = renaming the folder; all paths use `${themePath}` or are re
 ## Iconos de sistema (_inc/system_icons/)
 - `_folder.svg` es la carpeta generica que se usa cuando un sistema no tiene icono propio (el tema pone primero `_folder.svg` y despues `<system>.svg`; ES se queda con el ultimo `<path>` que existe).
 - Pastel folders: `python3 tools/make_folder_icons.py [--mix 0.18] [--sat 1.05]` blends the folder gradients with white (the original colours are kept in `data-orig`, so it can be run again with other values) and rebuilds `_folder.svg` from `_template.svg`.
-- Folder drop shadow (offset 0,0, blurred, under the whole folder): `python3 tools/make_folder_shadow.py [--radius 5] [--strength 0.04] [--pad 6]`. NanoSVG has no filters, so it is baked as stacked black strokes; the icons' viewBox is widened by `--pad` (the folder looks ~8 % smaller) and `_folder.svg` already has room. The neon selector hugs the image bounds, so its frame sits a little away from the folder. Idempotent; `--strength 0` removes it.
+- Folder drop shadow (offset 0,0, blurred, under the whole folder): `python3 tools/make_folder_shadow.py [--radius 3.5] [--strength 0.05] [--pad 4]`. NanoSVG has no filters, so it is baked as stacked black strokes; the icons' viewBox is widened by `--pad` (the folder looks ~6 % smaller) and `_folder.svg` already has room. The neon selector hugs the image bounds, so its frame sits a little away from the folder. Idempotent; `--strength 0` removes it.
 - Order after editing icons or `_template.svg`: `make_folder_icons.py`, then `make_folder_shadow.py`.
 - The icons are edited directly (Inkscape): no multiply layers or blend modes (ES/NanoSVG does not support them). A folder is two shapes (tab + body) with a tinted gradient, and the glyph on top.
 - Templates: `_template.svg` (folder with tab) and `_template_app.svg` (app tile). `_template.svg` has **13 colour groups** (Inkscape layers) named in English; only one is visible, the others are `display:none`.
@@ -117,7 +117,7 @@ Renaming the theme = renaming the folder; all paths use `${themePath}` or are re
   solo la imagen (`selectionMode=image`), tenido con `${neon}` (variable de cada color set). Si tu ES ignora `selectionMode`, el neon rodeara el tile entero.
 - `neon.png` es un nine-patch (nucleo + resplandor solo hacia fuera). Se regenera con `python3 tools/make_neon.py [BAND] [STROKE]`;
   `BAND` debe ser igual a `tPad` (px entre la imagen y el borde del tile = `backgroundCornerSize`).
-- `tiles.xml`: `tPad` (20), `tZoom` (1.06, zoom del seleccionado) y `gPad` (holgura izq/arriba/dcha/abajo del grid, relativa a la pantalla).
+- `tiles.xml`: `tPad` (14), `tZoom` (1.06, zoom del seleccionado) y `gPad` (holgura izq/arriba/dcha/abajo del grid, relativa a la pantalla).
   Si el zoom o el neon se cortan en los bordes del grid, sube `gPad`; si quieres iconos mas grandes, baja `tPad` (y regenera el PNG con el mismo BAND).
 - El grid ocupa el 100 % del ancho (`pos 0`, `size 1`) y, en vertical, `gPad` extra arriba y abajo (la zona util es la de antes). Geometria: `geometry.xml`.
 

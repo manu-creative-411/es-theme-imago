@@ -8,7 +8,7 @@ falloff. The group (id="folder-shadow") goes before the folder. The icons' folde
 Idempotent: the previous shadow is replaced and the viewBox is recomputed, so --radius / --strength can be tuned. Run it LAST, after
 make_folder_icons.py (which rebuilds _folder.svg).
 
-Usage: python3 tools/make_folder_shadow.py [--radius 5] [--strength 0.04] [--pad 6]      (--strength 0 removes the shadow)
+Usage: python3 tools/make_folder_shadow.py [--radius 3.5] [--strength 0.05] [--pad 4]      (--strength 0 removes the shadow)
 """
 import argparse
 import glob
@@ -85,9 +85,9 @@ def process(path, radius, strength, pad):
 def main():
     """Patch every icon."""
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    parser.add_argument("--radius", type=float, default=5, help="blur radius in folder units")
-    parser.add_argument("--strength", type=float, default=0.04, help="opacity of each layer (0 = remove)")
-    parser.add_argument("--pad", type=float, default=6, help="viewBox margin added to the icons, in viewBox units")
+    parser.add_argument("--radius", type=float, default=3.5, help="blur radius in folder units")
+    parser.add_argument("--strength", type=float, default=0.05, help="opacity of each layer (0 = remove)")
+    parser.add_argument("--pad", type=float, default=4, help="viewBox margin added to the icons, in viewBox units")
     args = parser.parse_args()
     for path in sorted(glob.glob(os.path.join(ICONS, "*.svg"))):
         if not os.path.basename(path).startswith("_template"):
