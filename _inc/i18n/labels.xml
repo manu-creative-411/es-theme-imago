@@ -9,7 +9,7 @@
 		<t_colorset>Color set</t_colorset>
 		<t_wallpaper>Wallpaper</t_wallpaper>
 		<t_branding>Branding</t_branding>
-		<t_logoregion>Console logo region</t_logoregion>
+		<t_logoregion>Region</t_logoregion>
 		<t_banner>Banner</t_banner>
 		<t_bannerheight>Banner height</t_bannerheight>
 		<t_systemview>System view</t_systemview>
@@ -51,7 +51,7 @@
 		<t_colorset>Conjunto de colores</t_colorset>
 		<t_wallpaper>Fondo de pantalla</t_wallpaper>
 		<t_branding>Marca</t_branding>
-		<t_logoregion>Región del logo de la consola</t_logoregion>
+		<t_logoregion>Región</t_logoregion>
 		<t_banner>Banner</t_banner>
 		<t_bannerheight>Altura del banner</t_bannerheight>
 		<t_systemview>Vista de sistemas</t_systemview>
@@ -93,7 +93,7 @@
 		<t_colorset>Conjunto de cores</t_colorset>
 		<t_wallpaper>Papel de parede</t_wallpaper>
 		<t_branding>Marca</t_branding>
-		<t_logoregion>Região do logotipo do console</t_logoregion>
+		<t_logoregion>Região</t_logoregion>
 		<t_banner>Banner</t_banner>
 		<t_bannerheight>Altura do banner</t_bannerheight>
 		<t_systemview>Visualização de sistemas</t_systemview>
@@ -135,7 +135,7 @@
 		<t_colorset>Conxunto de cores</t_colorset>
 		<t_wallpaper>Fondo de pantalla</t_wallpaper>
 		<t_branding>Marca</t_branding>
-		<t_logoregion>Rexión do logotipo da consola</t_logoregion>
+		<t_logoregion>Rexión</t_logoregion>
 		<t_banner>Banner</t_banner>
 		<t_bannerheight>Altura do banner</t_bannerheight>
 		<t_systemview>Vista de sistemas</t_systemview>
@@ -177,7 +177,7 @@
 		<t_colorset>Joc de colors</t_colorset>
 		<t_wallpaper>Fons de pantalla</t_wallpaper>
 		<t_branding>Marca</t_branding>
-		<t_logoregion>Regió del logotip de la consola</t_logoregion>
+		<t_logoregion>Regió</t_logoregion>
 		<t_banner>Bàner</t_banner>
 		<t_bannerheight>Alçada del bàner</t_bannerheight>
 		<t_systemview>Vista de sistemes</t_systemview>
@@ -219,7 +219,7 @@
 		<t_colorset>Kolore-multzoa</t_colorset>
 		<t_wallpaper>Horma-papera</t_wallpaper>
 		<t_branding>Marka</t_branding>
-		<t_logoregion>Kontsolaren logoaren eskualdea</t_logoregion>
+		<t_logoregion>Eskualdea</t_logoregion>
 		<t_banner>Bannerra</t_banner>
 		<t_bannerheight>Bannerraren altuera</t_bannerheight>
 		<t_systemview>Sistemen ikuspegia</t_systemview>
@@ -261,7 +261,7 @@
 		<t_colorset>Jeu de couleurs</t_colorset>
 		<t_wallpaper>Fond d'écran</t_wallpaper>
 		<t_branding>Marque</t_branding>
-		<t_logoregion>Région du logo de la console</t_logoregion>
+		<t_logoregion>Région</t_logoregion>
 		<t_banner>Bannière</t_banner>
 		<t_bannerheight>Hauteur de la bannière</t_bannerheight>
 		<t_systemview>Vue des systèmes</t_systemview>
@@ -303,7 +303,7 @@
 		<t_colorset>Set di colori</t_colorset>
 		<t_wallpaper>Sfondo</t_wallpaper>
 		<t_branding>Marchio</t_branding>
-		<t_logoregion>Regione del logo della console</t_logoregion>
+		<t_logoregion>Regione</t_logoregion>
 		<t_banner>Banner</t_banner>
 		<t_bannerheight>Altezza del banner</t_bannerheight>
 		<t_systemview>Vista dei sistemi</t_systemview>
@@ -345,7 +345,7 @@
 		<t_colorset>Farbschema</t_colorset>
 		<t_wallpaper>Hintergrundbild</t_wallpaper>
 		<t_branding>Marke</t_branding>
-		<t_logoregion>Region des Konsolenlogos</t_logoregion>
+		<t_logoregion>Region</t_logoregion>
 		<t_banner>Banner</t_banner>
 		<t_bannerheight>Bannerhöhe</t_bannerheight>
 		<t_systemview>Systemansicht</t_systemview>
@@ -387,7 +387,7 @@
 		<t_colorset>Набір кольорів</t_colorset>
 		<t_wallpaper>Шпалери</t_wallpaper>
 		<t_branding>Брендинг</t_branding>
-		<t_logoregion>Регіон логотипа консолі</t_logoregion>
+		<t_logoregion>Регіон</t_logoregion>
 		<t_banner>Банер</t_banner>
 		<t_bannerheight>Висота банера</t_bannerheight>
 		<t_systemview>Вигляд систем</t_systemview>
@@ -429,7 +429,7 @@
 		<t_colorset>Цветовая схема</t_colorset>
 		<t_wallpaper>Обои</t_wallpaper>
 		<t_branding>Брендинг</t_branding>
-		<t_logoregion>Регион логотипа консоли</t_logoregion>
+		<t_logoregion>Регион</t_logoregion>
 		<t_banner>Баннер</t_banner>
 		<t_bannerheight>Высота баннера</t_bannerheight>
 		<t_systemview>Вид систем</t_systemview>
@@ -471,7 +471,7 @@
 		<t_colorset>Zestaw kolorów</t_colorset>
 		<t_wallpaper>Tapeta</t_wallpaper>
 		<t_branding>Marka</t_branding>
-		<t_logoregion>Region logo konsoli</t_logoregion>
+		<t_logoregion>Region</t_logoregion>
 		<t_banner>Baner</t_banner>
 		<t_bannerheight>Wysokość banera</t_bannerheight>
 		<t_systemview>Widok systemów</t_systemview>
@@ -513,7 +513,7 @@
 		<t_colorset>Σύνολο χρωμάτων</t_colorset>
 		<t_wallpaper>Ταπετσαρία</t_wallpaper>
 		<t_branding>Ταυτότητα</t_branding>
-		<t_logoregion>Περιοχή λογοτύπου κονσόλας</t_logoregion>
+		<t_logoregion>Περιοχή</t_logoregion>
 		<t_banner>Μπάνερ</t_banner>
 		<t_bannerheight>Ύψος μπάνερ</t_bannerheight>
 		<t_systemview>Προβολή συστημάτων</t_systemview>

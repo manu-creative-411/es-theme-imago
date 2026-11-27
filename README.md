@@ -29,7 +29,7 @@ assets/branding/                 retrobat.svg, batocera.svg, retrobox.svg (PLACE
 ```
 
 ## Options (UI Settings > Theme Configuration)
-Color set / **System icon set** / Help icons / Branding / Console logo region / **Banner** (off [default], on) / **Banner height** (30-50 %, default 40) /
+Color set / **System icon set** / Help icons / Branding / Region (console logo region) / **Banner** (off [default], on) / **Banner height** (30-50 %, default 40) /
 **System view** (icons 1-4 rows [default 3], carousel) / **Game icons** (1-4 rows [default 3]) / List rows (auto, 7-17). Default game view:
 `detailed`; `basic` and the custom **Icons** view are in the same menu (Game list view style).
 
@@ -63,7 +63,7 @@ and the built-in battery indicator hidden (same approach as es-theme-iconic). Ic
 - icon: _inc/system_icons/<system.theme>.svg
 - console art: _inc/system_bg/<system.theme>.jpg
 - console logo: ordered list of `<path>` in the layouts (last existing file wins), same logic as es-theme-iconic. Variables `logoRegion`
-  (eu/us/jp, option "Console logo region") and `logoColorScheme` (dark/light, set per colour set; used by the list views). The banners (system view and game icon view) always use the `dark` variants, in every colour set, since the shadow keeps them legible. Full order in `_inc/system_logos/README.txt`.
+  (eu/us/jp, option "Region") and `logoColorScheme` (dark/light, set per colour set; used by the list views). The banners (system view and game icon view) always use the `dark` variants, in every colour set, since the shadow keeps them legible. Full order in `_inc/system_logos/README.txt`.
   No generated folders. NOTE: `firstfile()` only works inside expressions (`<visible>`), never as a `<path>` value.
 - `python3 tools/build_assets.py` only copies system_bg/collections, creates icon aliases and the wallpaper crops.
 
