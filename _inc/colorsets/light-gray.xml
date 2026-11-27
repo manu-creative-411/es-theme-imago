@@ -18,7 +18,7 @@
 		<neon>2EE6C0</neon>         <!-- color del selector neon (contorno + resplandor) -->
 		<neon2>12C4FF</neon2>        <!-- second colour of the selection frame gradient (baked by tools/make_neon.py) -->
 		<menuBg>F8F8F8</menuBg> <!-- menu background: the list views' card colour (average of panelTop and panelBot); text on the selected bar uses it too -->
-		<menuAccent>0A7660</menuAccent> <!-- menu: selected-item bar, group titles, subtitles and footers; a shade of the set colour with contrast >= 5 against <box> (the menu background and the selected item's text) -->
+		<menuAccent>1B3A8C</menuAccent> <!-- menu: selected-item bar, group titles, subtitles and footers; a shade of the set colour with contrast >= 5 against <box> (the menu background and the selected item's text) -->
 		<neonSet>light-gray</neonSet> <!-- suffix of assets/ui/neon-<set>.png and neon-row-<set>.png (see tools/make_neon.py) -->
 		<logoColorScheme>light</logoColorScheme> <!-- dark|light: picks <system>/<scheme>[-<region>].svg in _inc/system_logos -->
 		<lsSmooth>0</lsSmooth> <!-- 1: smooth 0,0 shadow under the console logo of the detailed view -->
