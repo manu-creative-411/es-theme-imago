@@ -92,7 +92,7 @@
 		<rowDevX>0.615</rowDevX>
 		<capR>${screen.height} * ${capH} / 2</capR>
 		<capInW>0.2041 / ${scrRatio} + 0.044</capInW>
-		<capInX>0 + ${capX} + (${capW} - ${capInW}) / 2</capInX>
+		<capInX>0 + ${capX} + (${capW} - ${capInW}) / 2 - 0.004</capInX>
 		<capStackH>0.044</capStackH>
 		<capStackY>0 + ${capY} + (${capH} - ${capStackH}) / 2</capStackY>
 		<capShX>0 + ${capX} - ${shMx}</capShX>

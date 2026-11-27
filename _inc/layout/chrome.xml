@@ -45,7 +45,7 @@
 		<rectangle name="e_cap" extra="true">
 			<pos>${capX} ${capY}</pos>
 			<size>${capW} ${capH}</size>
-			<color>${panelBot}F2</color>
+			<color>${menuBg}F2</color>
 			<borderColor>${panelEdge}</borderColor>
 			<borderSize>1</borderSize>
 			<roundCorners>${capR}</roundCorners>
