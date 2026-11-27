@@ -57,6 +57,14 @@
 			<zIndex>45</zIndex>
 		</text>
 		<!-- Banner -->
+		<ninepatch name="e_hero_sh" extra="true" if="${bOn} == 1">
+			<path>${themePath}/assets/ui/shadow.png</path>
+			<pos>${heroShX} ${heroShY}</pos>
+			<size>${heroShW} ${heroShH}</size>
+			<cornerSize>40 40</cornerSize>
+			<color>00000080</color>
+			<zIndex>28</zIndex>
+		</ninepatch>
 		<image name="e_hero" extra="true" if="${bOn} == 1">
 			<path>${themePath}/_inc/system_bg/${system.theme}.jpg</path>
 			<pos>0.5 ${heroC}</pos>

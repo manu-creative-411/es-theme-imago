@@ -176,10 +176,16 @@ The names ES shows in the theme configuration menu (option groups such as "Color
 - To add a language: copy a `<variables lang="..">` block and translate the values; to add a label: add the variable to every block and reference it from `theme.xml`.
 - Poppins has no Cyrillic or Greek glyphs: Ukrainian, Russian and Greek text relies on ES's fallback font. Untested in a real ES.
 
+## Colour sets
+Black, Light gray, Vivid red, Deep blue, Aqua green, GameCube purple, **Orange**, **Pink** and **Yellow** (`_inc/colorsets/<set>.xml`; wallpapers by `tools/make_wallpapers.py`, selection frames by `tools/make_neon.py`, info boxes `assets/ui/box-<set>-h??.svg`). Pink and Yellow have their wallpaper slightly dimmed (`dim` in `SETS` of `make_wallpapers.py`) so the icons and text stand out; Yellow is a light set (dark text, `logoColorScheme` light, light loading screen). Adding a set: copy a colorset XML, add it to `theme.xml`, `splash.xml`, `SETS` in `make_wallpapers.py`, the box SVGs and the colour name in `_inc/i18n/labels.xml`, then run `tools/make_wallpapers.py` and `tools/make_neon.py`.
+
+## Banner shadow
+The banner (console art) casts a soft shadow with zero offset (`e_hero_sh`: `assets/ui/shadow.png` nine-patch, `00000080`, a bit lighter than the card shadows); the top and sides are off screen, so it shows under the rounded bottom edge. Untested in a real ES.
+
 ## Selection halo everywhere
 - The selection marker is a crisp rounded-rectangle frame: 1 px white outline, then a band that runs from the colour set's `neon` (outside) to `neon2` (inside) and fades into white at its inner edge. No glow, no veil.
 - Icon tiles (system and game grids): `assets/ui/neon-<set>.png` (nine-patch, band 14 px = `tPad`, gradient band 10 px), 1 px from the image. List rows (basic and detailed): `assets/ui/neon-row-<set>.png` (band 12 px, gradient band 6 px) covers the whole selected row (`list-row-neon` in the row template); the old filled pill is gone.
 - Colours are baked into the PNGs (white stays white), so layouts tint with `FFFFFFFF`; each colour set names its pair with `<neonSet>`. Regenerate all with `python3 tools/make_neon.py` (reads `<neon>` and `<neon2>` from `_inc/colorsets/*.xml`).
 - Menus: ES only offers flat colours there (no image), so no frame is possible. Instead each colour set has `<menuAccent>`, a shade of its colour with contrast >= 5 against the menu background `<box>`: it is the selected-item bar, the group titles, the subtitles/footers and the separators (at 33 %), and the selected item's text uses the menu background colour.
-- Frame colours per set (neon -> neon2): Black purple `9B6BFF` -> indigo `3F36F0`, Light gray aquamarine `2EE6C0` -> cyan `12C4FF`, Deep blue `7DF9FF` -> `4D8DFF`, GameCube purple `5CF2FF` -> `7A6BFF`, Vivid red `FFF04D` -> `FF9A3D`, Aqua green `FF2E9A` -> `C03DFF`.
+- Frame colours per set (neon -> neon2): Black purple `9B6BFF` -> indigo `3F36F0`, Light gray aquamarine `2EE6C0` -> cyan `12C4FF`, Deep blue `7DF9FF` -> `4D8DFF`, GameCube purple `5CF2FF` -> `7A6BFF`, Vivid red `FFF04D` -> `FF9A3D`, Aqua green `FF2E9A` -> `C03DFF`, Orange `8CF4FF` -> `4DA3FF`, Pink `8CFFE6` -> `4DD0FF`, Yellow `7A4DFF` -> `3D5AFE`.
 - Untested in a real ES: the row frame relies on colour storyboards of a `ninepatch` inside the list item template.

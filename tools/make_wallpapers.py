@@ -21,6 +21,9 @@ SETS = {  # set -> (bg, white blend for the squares, black blend for the fade, d
     "deep-blue": ("0A56D6", 0.30, 0.45, 0.35),
     "gamecube-purple": ("6F4DE0", 0.30, 0.45, 0.42),
     "aqua-green": ("14C9B0", 0.30, 0.45, 0.0),
+    "orange": ("F26B0F", 0.30, 0.45, 0.0),
+    "pink": ("F0599B", 0.30, 0.40, 0.14),
+    "yellow": ("F5C518", 0.65, 0.10, 0.08),
 }
 BASE = re.compile(r'fill:#[0-9a-fA-F]{6}(;fill-opacity:1;stroke-width:20;paint-order:stroke fill markers" width="1920")')
 SQUARE = re.compile(r"fill:#[0-9a-fA-F]{6}(;fill-opacity:1;stroke:none;stroke-width:7\.28019)")

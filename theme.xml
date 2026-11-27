@@ -9,6 +9,9 @@
 	<include subset="colorset" subSetDisplayName="${t_colorset}" name="Deep blue" displayName="${o_deepblue}">./_inc/colorsets/deep-blue.xml</include>
 	<include subset="colorset" subSetDisplayName="${t_colorset}" name="Aqua green" displayName="${o_aquagreen}">./_inc/colorsets/aqua-green.xml</include>
 	<include subset="colorset" subSetDisplayName="${t_colorset}" name="GameCube purple" displayName="${o_gamecube}">./_inc/colorsets/gamecube-purple.xml</include>
+	<include subset="colorset" subSetDisplayName="${t_colorset}" name="Orange" displayName="${o_orange}">./_inc/colorsets/orange.xml</include>
+	<include subset="colorset" subSetDisplayName="${t_colorset}" name="Pink" displayName="${o_pink}">./_inc/colorsets/pink.xml</include>
+	<include subset="colorset" subSetDisplayName="${t_colorset}" name="Yellow" displayName="${o_yellow}">./_inc/colorsets/yellow.xml</include>
 	<include subset="wallpaper" subSetDisplayName="${t_wallpaper}" name="on" displayName="${o_on} ${o_default}">./_inc/options/wallpaper-on.xml</include>
 	<include subset="wallpaper" subSetDisplayName="${t_wallpaper}" name="off" displayName="${o_off}">./_inc/options/wallpaper-off.xml</include>
 	<include subset="branding" subSetDisplayName="${t_branding}" name="Retrobox" displayName="Retrobox">./_inc/branding/retrobox.xml</include>

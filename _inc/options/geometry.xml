@@ -29,7 +29,7 @@
 		<mX>0.002</mX>
 		<mY>0.004</mY>
 		<tMax>0.34</tMax>   <!-- tallest tile (screen height fraction): fewer rows never inflate the icons beyond this -->
-		<tAspect>1.10</tAspect> <!-- tile width / height; tiles are never narrower than this -->
+		<tAspect>1.04</tAspect> <!-- tile width / height; tiles are never narrower than this -->
 		<gPeek>0.45</gPeek> <!-- part of the next tile (0..1 of its width) left visible at the right edge: the scroll hint -->
 		<!-- Banner: console art full width, logo (or the cartel when there is none) in the middle -->
 		<plateW>0.40</plateW>
@@ -168,6 +168,10 @@
 		<e_desc_cardShY>0 + 0.73 - ${shMy}</e_desc_cardShY>
 		<e_desc_cardShW>0 + 0.51 + 2 * ${shMx}</e_desc_cardShW>
 		<e_desc_cardShH>0 + 0.20 + 2 * ${shMy}</e_desc_cardShH>
+		<heroShX>0 - ${shMx}</heroShX>
+		<heroShY>0 + ${heroTop} - ${shMy}</heroShY>
+		<heroShW>1 + 2 * ${shMx}</heroShW>
+		<heroShH>0 + ${heroH} + 2 * ${shMy}</heroShH>
 		<lsSys0X>0 + 0.5 + (${lsDx} * 0)</lsSys0X>
 		<lsSys0Y>0 + ${bannerC} + (${lsDy} * 0)</lsSys0Y>
 		<lsSys1X>0 + 0.5 + (${lsDx} * 1)</lsSys1X>
@@ -222,6 +226,10 @@
 		<cartelShY>0 + ${ctY} - ${shMy}</cartelShY>
 		<cartelShW>0 + ${ctW} + 2 * ${shMx}</cartelShW>
 		<cartelShH>0 + ${ctH} + 2 * ${shMy}</cartelShH>
+		<heroShX>0 - ${shMx}</heroShX>
+		<heroShY>0 + ${heroTop} - ${shMy}</heroShY>
+		<heroShW>1 + 2 * ${shMx}</heroShW>
+		<heroShH>0 + ${heroH} + 2 * ${shMy}</heroShH>
 		<lsMq0X>0 + 0.5 + (${lsDx} * 0)</lsMq0X>
 		<lsMq0Y>0 + ${bannerC} + (${lsDy} * 0)</lsMq0Y>
 		<lsMq1X>0 + 0.5 + (${lsDx} * 1)</lsMq1X>

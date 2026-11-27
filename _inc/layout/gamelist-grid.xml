@@ -3,6 +3,14 @@
 	<formatVersion>7</formatVersion>
 	<!-- Game icon view ("Icons"): banner (console art + game or console logo) / cartel / info row / icon grid. -->
 	<customView name="Icons" inherits="grid">
+		<ninepatch name="e_hero_sh" extra="true" if="${bOn} == 1">
+			<path>${themePath}/assets/ui/shadow.png</path>
+			<pos>${heroShX} ${heroShY}</pos>
+			<size>${heroShW} ${heroShH}</size>
+			<cornerSize>40 40</cornerSize>
+			<color>00000080</color>
+			<zIndex>28</zIndex>
+		</ninepatch>
 		<image name="e_hero_game" extra="true" if="${bOn} == 1">
 			<path>{game:image}</path>
 			<pos>0.5 ${heroC}</pos>

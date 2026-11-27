@@ -26,6 +26,9 @@
 		<o_deepblue>Deep blue</o_deepblue>
 		<o_aquagreen>Aqua green</o_aquagreen>
 		<o_gamecube>GameCube purple</o_gamecube>
+		<o_orange>Orange</o_orange>
+		<o_pink>Pink</o_pink>
+		<o_yellow>Yellow</o_yellow>
 		<o_europe>Europe</o_europe>
 		<o_usa>USA</o_usa>
 		<o_japan>Japan</o_japan>
@@ -68,6 +71,9 @@
 		<o_deepblue>Azul profundo</o_deepblue>
 		<o_aquagreen>Verde aguamarina</o_aquagreen>
 		<o_gamecube>Púrpura GameCube</o_gamecube>
+		<o_orange>Naranja</o_orange>
+		<o_pink>Rosa</o_pink>
+		<o_yellow>Amarillo</o_yellow>
 		<o_europe>Europa</o_europe>
 		<o_usa>EE. UU.</o_usa>
 		<o_japan>Japón</o_japan>
@@ -110,6 +116,9 @@
 		<o_deepblue>Azul profundo</o_deepblue>
 		<o_aquagreen>Verde-água</o_aquagreen>
 		<o_gamecube>Roxo GameCube</o_gamecube>
+		<o_orange>Laranja</o_orange>
+		<o_pink>Rosa</o_pink>
+		<o_yellow>Amarelo</o_yellow>
 		<o_europe>Europa</o_europe>
 		<o_usa>EUA</o_usa>
 		<o_japan>Japão</o_japan>
@@ -152,6 +161,9 @@
 		<o_deepblue>Azul profundo</o_deepblue>
 		<o_aquagreen>Verde auga</o_aquagreen>
 		<o_gamecube>Púrpura GameCube</o_gamecube>
+		<o_orange>Laranxa</o_orange>
+		<o_pink>Rosa</o_pink>
+		<o_yellow>Amarelo</o_yellow>
 		<o_europe>Europa</o_europe>
 		<o_usa>EUA</o_usa>
 		<o_japan>Xapón</o_japan>
@@ -194,6 +206,9 @@
 		<o_deepblue>Blau profund</o_deepblue>
 		<o_aquagreen>Verd aigua</o_aquagreen>
 		<o_gamecube>Porpra GameCube</o_gamecube>
+		<o_orange>Taronja</o_orange>
+		<o_pink>Rosa</o_pink>
+		<o_yellow>Groc</o_yellow>
 		<o_europe>Europa</o_europe>
 		<o_usa>EUA</o_usa>
 		<o_japan>Japó</o_japan>
@@ -236,6 +251,9 @@
 		<o_deepblue>Urdin sakona</o_deepblue>
 		<o_aquagreen>Ur-berdea</o_aquagreen>
 		<o_gamecube>GameCube more iluna</o_gamecube>
+		<o_orange>Laranja</o_orange>
+		<o_pink>Arrosa</o_pink>
+		<o_yellow>Horia</o_yellow>
 		<o_europe>Europa</o_europe>
 		<o_usa>AEB</o_usa>
 		<o_japan>Japonia</o_japan>
@@ -278,6 +296,9 @@
 		<o_deepblue>Bleu profond</o_deepblue>
 		<o_aquagreen>Vert d'eau</o_aquagreen>
 		<o_gamecube>Violet GameCube</o_gamecube>
+		<o_orange>Orange</o_orange>
+		<o_pink>Rose</o_pink>
+		<o_yellow>Jaune</o_yellow>
 		<o_europe>Europe</o_europe>
 		<o_usa>États-Unis</o_usa>
 		<o_japan>Japon</o_japan>
@@ -320,6 +341,9 @@
 		<o_deepblue>Blu profondo</o_deepblue>
 		<o_aquagreen>Verde acqua</o_aquagreen>
 		<o_gamecube>Viola GameCube</o_gamecube>
+		<o_orange>Arancione</o_orange>
+		<o_pink>Rosa</o_pink>
+		<o_yellow>Giallo</o_yellow>
 		<o_europe>Europa</o_europe>
 		<o_usa>USA</o_usa>
 		<o_japan>Giappone</o_japan>
@@ -362,6 +386,9 @@
 		<o_deepblue>Tiefblau</o_deepblue>
 		<o_aquagreen>Aquagrün</o_aquagreen>
 		<o_gamecube>GameCube-Lila</o_gamecube>
+		<o_orange>Orange</o_orange>
+		<o_pink>Rosa</o_pink>
+		<o_yellow>Gelb</o_yellow>
 		<o_europe>Europa</o_europe>
 		<o_usa>USA</o_usa>
 		<o_japan>Japan</o_japan>
@@ -404,6 +431,9 @@
 		<o_deepblue>Глибокий синій</o_deepblue>
 		<o_aquagreen>Аквазелений</o_aquagreen>
 		<o_gamecube>Пурпуровий GameCube</o_gamecube>
+		<o_orange>Помаранчевий</o_orange>
+		<o_pink>Рожевий</o_pink>
+		<o_yellow>Жовтий</o_yellow>
 		<o_europe>Європа</o_europe>
 		<o_usa>США</o_usa>
 		<o_japan>Японія</o_japan>
@@ -446,6 +476,9 @@
 		<o_deepblue>Глубокий синий</o_deepblue>
 		<o_aquagreen>Цвет морской волны</o_aquagreen>
 		<o_gamecube>Пурпурный GameCube</o_gamecube>
+		<o_orange>Оранжевый</o_orange>
+		<o_pink>Розовый</o_pink>
+		<o_yellow>Жёлтый</o_yellow>
 		<o_europe>Европа</o_europe>
 		<o_usa>США</o_usa>
 		<o_japan>Япония</o_japan>
@@ -488,6 +521,9 @@
 		<o_deepblue>Głęboki niebieski</o_deepblue>
 		<o_aquagreen>Zieleń akwamaryny</o_aquagreen>
 		<o_gamecube>Fiolet GameCube</o_gamecube>
+		<o_orange>Pomarańczowy</o_orange>
+		<o_pink>Różowy</o_pink>
+		<o_yellow>Żółty</o_yellow>
 		<o_europe>Europa</o_europe>
 		<o_usa>USA</o_usa>
 		<o_japan>Japonia</o_japan>
@@ -530,6 +566,9 @@
 		<o_deepblue>Βαθύ μπλε</o_deepblue>
 		<o_aquagreen>Γαλαζοπράσινο</o_aquagreen>
 		<o_gamecube>Μωβ GameCube</o_gamecube>
+		<o_orange>Πορτοκαλί</o_orange>
+		<o_pink>Ροζ</o_pink>
+		<o_yellow>Κίτρινο</o_yellow>
 		<o_europe>Ευρώπη</o_europe>
 		<o_usa>ΗΠΑ</o_usa>
 		<o_japan>Ιαπωνία</o_japan>

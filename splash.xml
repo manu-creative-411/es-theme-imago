@@ -15,8 +15,11 @@
 		<include name="Deep blue"/>
 		<include name="Aqua green"/>
 		<include name="GameCube purple"/>
+		<include name="Orange"/>
+		<include name="Pink"/>
+		<include name="Yellow"/>
 	</subset>
-	<!-- Defaults: dark scheme. Only "Light gray" is a light scheme. -->
+	<!-- Defaults: dark scheme. "Light gray" and "Yellow" are light schemes. -->
 	<variables>
 		<splashScheme>dark</splashScheme>
 		<splashOverlay>overlay-dark.png</splashOverlay>
@@ -24,6 +27,12 @@
 		<splashColor>E0E0E0</splashColor>
 	</variables>
 	<variables ifSubset="colorset:Light gray">
+		<splashScheme>light</splashScheme>
+		<splashOverlay>overlay-light.png</splashOverlay>
+		<splashBar>bottom-bar-light.png</splashBar>
+		<splashColor>444444</splashColor>
+	</variables>
+	<variables ifSubset="colorset:Yellow">
 		<splashScheme>light</splashScheme>
 		<splashOverlay>overlay-light.png</splashOverlay>
 		<splashBar>bottom-bar-light.png</splashBar>
