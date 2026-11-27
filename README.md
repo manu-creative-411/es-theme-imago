@@ -133,7 +133,7 @@ Poppins, all 18 files. Elements never hard-code a file: they use a **role variab
 | Role variable | Weight | Used by |
 |---|---|---|
 | `fontMenuItem` | Light | main menu selectable entries (`menutext`) |
-| `fontMenuGroup` | Medium | menu group names (`menugroup`, coloured with `${neon}`) |
+| `fontMenuGroup` | Medium | menu group names (`menugroup`, coloured with `${menuAccent}`) |
 | `fontMenuTitle` | Medium | menu title (`menutitle`) |
 | `fontMenuSmall` | Regular | menu small text and footer (`menutextsmall`, `menufooter`) |
 | `fontTitle` | Bold | console and game titles: info strip, name over the banner box, carousel title |
@@ -180,6 +180,6 @@ The names ES shows in the theme configuration menu (option groups such as "Color
 - The selection marker is a crisp rounded-rectangle frame: 1 px white outline, then a band that runs from the colour set's `neon` (outside) to `neon2` (inside) and fades into white at its inner edge. No glow, no veil.
 - Icon tiles (system and game grids): `assets/ui/neon-<set>.png` (nine-patch, band 14 px = `tPad`, gradient band 10 px), 1 px from the image. List rows (basic and detailed): `assets/ui/neon-row-<set>.png` (band 12 px, gradient band 6 px) covers the whole selected row (`list-row-neon` in the row template); the old filled pill is gone.
 - Colours are baked into the PNGs (white stays white), so layouts tint with `FFFFFFFF`; each colour set names its pair with `<neonSet>`. Regenerate all with `python3 tools/make_neon.py` (reads `<neon>` and `<neon2>` from `_inc/colorsets/*.xml`).
-- Menus: ES only offers a flat selector colour there (no image), so the bar is `${neon}` at 35 % opacity; no frame is possible.
+- Menus: ES only offers flat colours there (no image), so no frame is possible. Instead each colour set has `<menuAccent>`, a shade of its colour with contrast >= 5 against the menu background `<box>`: it is the selected-item bar, the group titles, the subtitles/footers and the separators (at 33 %), and the selected item's text uses the menu background colour.
 - Frame colours per set (neon -> neon2): Black purple `9B6BFF` -> indigo `3F36F0`, Light gray aquamarine `2EE6C0` -> cyan `12C4FF`, Deep blue `7DF9FF` -> `4D8DFF`, GameCube purple `5CF2FF` -> `7A6BFF`, Vivid red `FFF04D` -> `FF9A3D`, Aqua green `FF2E9A` -> `C03DFF`.
 - Untested in a real ES: the row frame relies on colour storyboards of a `ninepatch` inside the list item template.

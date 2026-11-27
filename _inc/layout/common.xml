@@ -61,9 +61,9 @@
 			<fontPath>${fontMenuItem}</fontPath>
 			<fontSize>0.027</fontSize>
 			<color>${text}</color>
-			<selectedColor>${text}</selectedColor>
-			<selectorColor>${neon}59</selectorColor>
-			<separatorColor>${subText}55</separatorColor>
+			<selectedColor>${box}</selectedColor> <!-- the menu background colour on the selected bar -->
+			<selectorColor>${menuAccent}</selectorColor>
+			<separatorColor>${menuAccent}55</separatorColor>
 		</menuText>
 		<menuText name="menutitle">
 			<fontPath>${fontMenuTitle}</fontPath>
@@ -73,19 +73,19 @@
 		<menuGroup name="menugroup">
 			<fontPath>${fontMenuGroup}</fontPath>
 			<fontSize>0.030</fontSize>
-			<color>${neon}</color>
-			<separatorColor>${subText}55</separatorColor>
+			<color>${menuAccent}</color>
+			<separatorColor>${menuAccent}55</separatorColor>
 			<backgroundColor>00000000</backgroundColor>
 		</menuGroup>
 		<menuText name="menufooter">
 			<fontPath>${fontMenuSmall}</fontPath>
 			<fontSize>0.021</fontSize>
-			<color>${subText}</color>
+			<color>${menuAccent}</color>
 		</menuText>
 		<menuTextSmall name="menutextsmall">
 			<fontPath>${fontMenuSmall}</fontPath>
 			<fontSize>0.022</fontSize>
-			<color>${subText}</color>
+			<color>${menuAccent}</color>
 		</menuTextSmall>
 		<menuTextEdit name="menutextedit">
 			<inactive>${themePath}/assets/icons/menu-textinput.png</inactive>
