@@ -5,7 +5,7 @@ Every folder in _inc/system_icons/*.svg is two shapes (back panel with the tab =
 black rectangle with a vertical gradient between them: transparent at the top, darkest along the top edge of the front panel. It lies inside
 the tab (no clipping in NanoSVG), so it stops at the flat part of the tab.
 It is idempotent (the previous shadow, marked tab-shade / tabShade, is replaced), so the strength can be changed at any time.
-Run it after editing icons or _template.svg, and before make_folder_icons.py (which builds _folder.svg from the template).
+Run it after editing icons or _template.svg, before make_folder_icons.py (which builds _folder.svg from the template) and make_folder_shadow.py.
 
 Usage: python3 tools/make_tab_shadow.py [--strength 0.30] [--height 6]      (--strength 0 removes the shadow)
 """
