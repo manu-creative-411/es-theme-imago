@@ -1,43 +1,19 @@
 <?xml version='1.0' encoding='utf-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" viewBox="0 0 135.46666 135.46667" version="1.1" id="svg1" xml:space="preserve" inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)" sodipodi:docname="_template.svg">
-  <sodipodi:namedview id="namedview1" pagecolor="#ffffff" bordercolor="#000000" borderopacity="0.25" inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0" inkscape:deskcolor="#d1d1d1" inkscape:document-units="px" showguides="true" inkscape:zoom="0.58101781" inkscape:cx="439.74556" inkscape:cy="443.18779" inkscape:window-width="1440" inkscape:window-height="776" inkscape:window-x="0" inkscape:window-y="31" inkscape:window-maximized="1" inkscape:current-layer="layer1">
-    <sodipodi:guide position="6.3499997,5.5662441" orientation="1,0" id="guide1" inkscape:locked="false" />
-    <sodipodi:guide position="17.322522,6.3499965" orientation="0,-1" id="guide2" inkscape:locked="false" />
-    <sodipodi:guide position="129.11666,65.143375" orientation="1,0" id="guide3" inkscape:locked="false" />
-    <sodipodi:guide position="30.691666,116.94584" orientation="0,-1" id="guide5" inkscape:locked="false" />
-    <sodipodi:guide position="39.153939,129.11667" orientation="0,-1" id="guide29" inkscape:locked="false" />
-    <sodipodi:guide position="67.733332,61.647946" orientation="1,0" id="guide30" inkscape:locked="false" />
-    <sodipodi:guide position="67.733332,119.45891" orientation="1,0" id="guide35" inkscape:locked="false" />
-    <sodipodi:guide position="6.3499997,112.18334" orientation="0,-1" id="guide44" inkscape:locked="false" />
-    <sodipodi:guide position="81.206361,116.94584" orientation="1,0" id="guide45" inkscape:locked="false" />
-  </sodipodi:namedview>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 135.46666 135.46666" version="1.1">
   <defs id="defs1">
-    <linearGradient id="linearGradient17" inkscape:collect="always">
-      <stop style="stop-color:#e5e5e5;stop-opacity:1;" offset="0" id="stop17" />
-      <stop style="stop-color:#a8a8a8;stop-opacity:1;" offset="1" id="stop18" />
+    <linearGradient id="folderBack" x1="55.033333" y1="6.3499999" x2="55.033333" y2="18.520824" gradientUnits="userSpaceOnUse">
+      <stop offset="0" style="stop-color:#41a5ee;stop-opacity:1" />
+      <stop offset="1" style="stop-color:#3b84bb;stop-opacity:1" />
     </linearGradient>
-    <linearGradient id="linearGradient15" inkscape:collect="always">
-      <stop style="stop-color:#e5e5e5;stop-opacity:1;" offset="0" id="stop15" />
-      <stop style="stop-color:#a8a8a8;stop-opacity:1;" offset="1" id="stop16" />
+    <linearGradient id="folderFront" x1="67.73333" y1="18.520832" x2="67.73333" y2="129.11667" gradientUnits="userSpaceOnUse">
+      <stop offset="0" style="stop-color:#41a5ee;stop-opacity:1" />
+      <stop offset="1" style="stop-color:#3b84bb;stop-opacity:1" />
     </linearGradient>
-    <linearGradient inkscape:collect="always" xlink:href="#linearGradient15" id="linearGradient16" x1="55.033333" y1="6.3499999" x2="55.033333" y2="18.520824" gradientUnits="userSpaceOnUse" />
-    <linearGradient inkscape:collect="always" xlink:href="#linearGradient17" id="linearGradient18" x1="67.73333" y1="18.520832" x2="67.73333" y2="129.11667" gradientUnits="userSpaceOnUse" />
-    <linearGradient data-orig="1c90e5,1469a8" x1="55.033333" y1="6.3499999" x2="55.033333" y2="18.520824" gradientUnits="userSpaceOnUse" id="linearGradient16-azure-blue">
-      <stop style="stop-color:#41a5ee;stop-opacity:1" offset="0" />
-      <stop style="stop-color:#3b84bb;stop-opacity:1" offset="1" />
-    </linearGradient>
-    <linearGradient data-orig="1c90e5,1469a8" x1="67.73333" y1="18.520832" x2="67.73333" y2="129.11667" gradientUnits="userSpaceOnUse" id="linearGradient18-azure-blue">
-      <stop style="stop-color:#41a5ee;stop-opacity:1" offset="0" />
-      <stop style="stop-color:#3b84bb;stop-opacity:1" offset="1" />
-    </linearGradient>
-    </defs>
-  <g inkscape:label="Capa 1" inkscape:groupmode="layer" id="layer1">
-    <g id="color-azure-blue" inkscape:label="Azure Blue" inkscape:groupmode="layer" style="display:inline">
-      <desc>Azure Blue #1fa0ff - used by: 3ds, app_j2me_loader, atari5200, dreamcast, mame, wiiu, windows</desc>
-      <g id="g50-azure-blue">
-        <path id="path46-azure-blue" style="display:inline;fill:url(#linearGradient16-azure-blue);stroke-width:11.9431;paint-order:stroke fill markers" d="M 23.283333,6.3499999 C 13.931311,6.3499993 6.3499993,13.931311 6.3499999,23.283333 v 88.899997 c -4.4e-6,9.35202 7.5813081,16.93334 16.9333331,16.93334 h 88.899997 c 9.35203,0 16.93334,-7.58131 16.93334,-16.93334 V 35.454166 c 0,-9.352025 -7.58132,-16.933337 -16.93334,-16.933333 H 81.206412 c -4.481648,-0.007 -8.777898,-1.79035 -11.947074,-4.959387 h -5.17e-4 L 67.006245,11.309904 C 64.232581,8.5501252 60.588767,6.836045 56.694213,6.4590372 56.143566,6.3864125 55.588748,6.3499885 55.033333,6.3499999 h -0.0088 z" sodipodi:nodetypes="sscssssscccccscs" />
-        <path id="path50-azure-blue" style="display:inline;fill:url(#linearGradient18-azure-blue);stroke-width:11.9431;paint-order:stroke fill markers" d="m 23.283333,18.520833 c -9.352022,-1e-6 -16.9333337,7.581311 -16.9333331,16.933333 v 76.729104 c -4.4e-6,9.35202 7.5813081,16.93334 16.9333331,16.93334 h 88.899997 c 9.35203,0 16.93334,-7.58131 16.93334,-16.93334 V 35.454166 c 0,-9.352025 -7.58132,-16.933337 -16.93334,-16.933333 z" sodipodi:nodetypes="ssssccscs" />
-      </g>
+  </defs>
+  <g id="layer1">
+    <g id="folder" transform="matrix(1.1034493,0,0,1.1034493,-7.0069641,-7.0069641)">
+      <path id="folder-back" d="M 23.283333,6.3499999 C 13.931311,6.3499993 6.3499993,13.931311 6.3499999,23.283333 v 88.899997 c -4.4e-6,9.35202 7.5813081,16.93334 16.9333331,16.93334 h 88.899997 c 9.35203,0 16.93334,-7.58131 16.93334,-16.93334 V 35.454166 c 0,-9.352025 -7.58132,-16.933337 -16.93334,-16.933333 H 81.206412 c -4.481648,-0.007 -8.777898,-1.79035 -11.947074,-4.959387 h -5.17e-4 L 67.006245,11.309904 C 64.232581,8.5501252 60.588767,6.836045 56.694213,6.4590372 56.143566,6.3864125 55.588748,6.3499885 55.033333,6.3499999 h -0.0088 z" style="display:inline;fill:url(#folderBack)" />
+      <path id="folder-front" d="m 23.283333,18.520833 c -9.352022,-1e-6 -16.9333337,7.581311 -16.9333331,16.933333 v 76.729104 c -4.4e-6,9.35202 7.5813081,16.93334 16.9333331,16.93334 h 88.899997 c 9.35203,0 16.93334,-7.58131 16.93334,-16.93334 V 35.454166 c 0,-9.352025 -7.58132,-16.933337 -16.93334,-16.933333 z" style="display:inline;fill:url(#folderFront)" />
     </g>
-    </g>
+  </g>
 </svg>

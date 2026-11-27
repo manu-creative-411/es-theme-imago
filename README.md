@@ -100,17 +100,13 @@ Renaming the theme = renaming the folder; all paths use `${themePath}` or are re
 
 ## Iconos de sistema (_inc/system_icons/)
 - `_folder.svg` es la carpeta generica que se usa cuando un sistema no tiene icono propio (el tema pone primero `_folder.svg` y despues `<system>.svg`; ES se queda con el ultimo `<path>` que existe).
-- Los colores de todas las carpetas son pastel: `python3 tools/make_folder_icons.py [--mix 0.30] [--sat 1.05]` mezcla con blanco los degradados de carpeta (guarda los colores originales en `data-orig`, asi que se puede volver a ejecutar con otros valores cuando quieras) y regenera `_folder.svg` desde `_template.svg`.
-- Pastel level currently used: `python3 tools/make_folder_icons.py --mix 0.18` (saturation left at the 1.05 default).
-- Se editan directamente estos SVG (Inkscape). Sin capas multiply ni modos de mezcla (ES/NanoSVG no los soporta): la carpeta son dos formas
-  (pestana + cuerpo) con degradado ya tintado, y encima los glifos.
-- Plantillas: `_template.svg` (carpeta con pestana) y `_template_app.svg` (carpeta de apps). Cada una trae **13 grupos de color** (capas de Inkscape,
-  una por combo) con su nombre en ingles; solo uno esta visible y los demas llevan `display:none`.
-  Para elegir color: panel Capas (Ctrl+Shift+L), muestra el combo que quieras y **borra los demas** antes de guardar el icono.
-  Cada grupo lleva en `desc` (Propiedades del objeto) los sistemas que ya usan ese color.
-  Combos: Vivid Red #ff3b3b, Vivid Orange #ff8a2b, Amber Yellow #ffc61a, Spring Green #22e066, Azure Blue #1fa0ff, Royal Blue #1f7bff,
-  Navy Blue #305591, Electric Violet #8347ff, Neon Magenta #d924ff, Slate Gray #6b7a88, Dusk Blue #47617a, Silver #d3dce6, Pure Magenta #ff00ff (marcador).
-- Degradado de cada combo: gris `#e5e5e5 -> #a8a8a8` multiplicado por el color base (arriba mas claro, abajo mas oscuro).
+- The icons in this folder are GENERATED: `python3 tools/make_system_icons.py [--mix 0.18] [--sat 1.05]`. Do not edit them by hand.
+  - `_inc/system_glyphs/<system>.svg`: the glyph only (white shapes), drawn in the 0 0 135.46666 135.46667 frame that the folder fills. To add a system, draw its glyph in that frame (Inkscape) and save it here.
+  - `_inc/system_glyphs/folders.xml`: the folder colour of every system (`<system name="snes" color="spring-green"/>`), the palette (original saturated top/bottom colours) and the colour of the generic folder. Not read by ES.
+  - The script draws the folder in that colour (pastel: blended with white by `--mix`, saturation scaled by `--sat`), puts the glyph on top and writes `_inc/system_icons/<system>.svg` and `_folder.svg` (generic folder, now the same size as the others).
+  - ES draws a grid tile from ONE image, so folder and glyph cannot be combined while the theme runs; that is why they are merged at generation time.
+  - `--shadow-pad N` bakes a soft 0,0 shadow and widens the viewBox, but it is off: the neon selector hugs the image bounds, so a padded icon gets its frame away from the folder.
+  - `app_j2me_loader.svg` is a hand-made icon (own shape and gradient); the script does not touch it. `_template_app.svg` is its template.
 
 ## Selector neon y tiles (assets/ui/neon.png, _inc/options/tiles.xml)
 - Los tiles ya no tienen placa: icono/caratula a todo el ancho o alto del tile (`imageSizeMode=maxSize`). El seleccionado lleva un contorno neon que rodea
