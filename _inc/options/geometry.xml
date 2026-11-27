@@ -125,32 +125,6 @@
 		<listDetShY>0 + ${listPanelY} - ${shMy}</listDetShY>
 		<listDetShW>0 + ${listPanelW} + 2 * ${shMx}</listDetShW>
 		<listDetShH>0 + ${listPanelH} + 2 * ${shMy}</listDetShH>
-		<lsLogoD0X>0 + 0.28 + (${lsDx} * 0)</lsLogoD0X>
-		<lsLogoD0Y>0 + 0.14 + (${lsDy} * 0)</lsLogoD0Y>
-		<lsLogoD1X>0 + 0.28 + (0 - ${lsDx})</lsLogoD1X>
-		<lsLogoD1Y>0 + 0.14 + (0 - ${lsDy})</lsLogoD1Y>
-		<lsLogoD2X>0 + 0.28 + (0 - ${lsDx})</lsLogoD2X>
-		<lsLogoD2Y>0 + 0.14 + (${lsDy} * 0)</lsLogoD2Y>
-		<lsLogoD3X>0 + 0.28 + (0 - ${lsDx})</lsLogoD3X>
-		<lsLogoD3Y>0 + 0.14 + (${lsDy})</lsLogoD3Y>
-		<lsLogoD4X>0 + 0.28 + (${lsDx} * 0)</lsLogoD4X>
-		<lsLogoD4Y>0 + 0.14 + (0 - ${lsDy})</lsLogoD4Y>
-		<lsLogoD5X>0 + 0.28 + (${lsDx} * 0)</lsLogoD5X>
-		<lsLogoD5Y>0 + 0.14 + (${lsDy})</lsLogoD5Y>
-		<lsLogoD6X>0 + 0.28 + (${lsDx})</lsLogoD6X>
-		<lsLogoD6Y>0 + 0.14 + (0 - ${lsDy})</lsLogoD6Y>
-		<lsLogoD7X>0 + 0.28 + (${lsDx})</lsLogoD7X>
-		<lsLogoD7Y>0 + 0.14 + (${lsDy} * 0)</lsLogoD7Y>
-		<lsLogoD8X>0 + 0.28 + (${lsDx})</lsLogoD8X>
-		<lsLogoD8Y>0 + 0.14 + (${lsDy})</lsLogoD8Y>
-		<lsLogoD9X>0 + 0.28 + (0 - ${lsDx} * 2)</lsLogoD9X>
-		<lsLogoD9Y>0 + 0.14 + (${lsDy} * 0)</lsLogoD9Y>
-		<lsLogoD10X>0 + 0.28 + (${lsDx} * 2)</lsLogoD10X>
-		<lsLogoD10Y>0 + 0.14 + (${lsDy} * 0)</lsLogoD10Y>
-		<lsLogoD11X>0 + 0.28 + (${lsDx} * 0)</lsLogoD11X>
-		<lsLogoD11Y>0 + 0.14 + (0 - ${lsDy} * 2)</lsLogoD11Y>
-		<lsLogoD12X>0 + 0.28 + (${lsDx} * 0)</lsLogoD12X>
-		<lsLogoD12Y>0 + 0.14 + (${lsDy} * 2)</lsLogoD12Y>
 		<e_img_cardShX>0 + 0.025 - ${shMx}</e_img_cardShX>
 		<e_img_cardShY>0 + 0.25 - ${shMy}</e_img_cardShY>
 		<e_img_cardShW>0 + 0.31 + 2 * ${shMx}</e_img_cardShW>
