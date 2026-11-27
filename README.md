@@ -100,13 +100,16 @@ Renaming the theme = renaming the folder; all paths use `${themePath}` or are re
 
 ## Iconos de sistema (_inc/system_icons/)
 - `_folder.svg` es la carpeta generica que se usa cuando un sistema no tiene icono propio (el tema pone primero `_folder.svg` y despues `<system>.svg`; ES se queda con el ultimo `<path>` que existe).
-- The icons in this folder are GENERATED: `python3 tools/make_system_icons.py [--mix 0.18] [--sat 1.05]`. Do not edit them by hand.
-  - `_inc/system_glyphs/<system>.svg`: the glyph only (white shapes), drawn in the 0 0 135.46666 135.46667 frame that the folder fills. To add a system, draw its glyph in that frame (Inkscape) and save it here.
-  - `_inc/system_glyphs/folders.xml`: the folder colour of every system (`<system name="snes" color="spring-green"/>`), the palette (original saturated top/bottom colours) and the colour of the generic folder. Not read by ES.
-  - The script draws the folder in that colour (pastel: blended with white by `--mix`, saturation scaled by `--sat`), puts the glyph on top and writes `_inc/system_icons/<system>.svg` and `_folder.svg` (generic folder, now the same size as the others).
-  - ES draws a grid tile from ONE image, so folder and glyph cannot be combined while the theme runs; that is why they are merged at generation time.
-  - `--shadow-pad N` bakes a soft 0,0 shadow and widens the viewBox, but it is off: the neon selector hugs the image bounds, so a padded icon gets its frame away from the folder.
-  - `app_j2me_loader.svg` is a hand-made icon (own shape and gradient); the script does not touch it. `_template_app.svg` is its template.
+- Pastel folders: `python3 tools/make_folder_icons.py [--mix 0.18] [--sat 1.05]` blends the folder gradients with white (the original colours are kept in `data-orig`, so it can be run again with other values) and rebuilds `_folder.svg` from `_template.svg`.
+- Folder shadow: `python3 tools/make_tab_shadow.py [--strength 0.30] [--height 6]` puts a soft shadow of the front panel on the tab, between the two folder shapes (inside the icon: size and neon selector are untouched; `--strength 0` removes it). Idempotent. Run it BEFORE `make_folder_icons.py`.
+- The icons are edited directly (Inkscape): no multiply layers or blend modes (ES/NanoSVG does not support them). A folder is two shapes (tab + body) with a tinted gradient, the tab shadow, and the glyph on top.
+- Templates: `_template.svg` (folder with tab) and `_template_app.svg` (app tile). `_template.svg` has **13 colour groups** (Inkscape layers) named in English; only one is visible, the others are `display:none`.
+  To choose a colour: Layers panel (Ctrl+Shift+L), show the combo you want and **delete the others** before saving the icon.
+  Each group lists in its `desc` (Object Properties) the systems that already use that colour.
+  Combos: Vivid Red #ff3b3b, Vivid Orange #ff8a2b, Amber Yellow #ffc61a, Spring Green #22e066, Azure Blue #1fa0ff, Royal Blue #1f7bff,
+  Navy Blue #305591, Electric Violet #8347ff, Neon Magenta #d924ff, Slate Gray #6b7a88, Dusk Blue #47617a, Silver #d3dce6, Pure Magenta #ff00ff (marker).
+- Gradient of each combo: grey `#e5e5e5 -> #a8a8a8` multiplied by the base colour (lighter on top, darker at the bottom).
+- `app_j2me_loader.svg` is a copy of the (amber yellow) `j2me.svg` folder.
 
 ## Selector neon y tiles (assets/ui/neon.png, _inc/options/tiles.xml)
 - Los tiles ya no tienen placa: icono/caratula a todo el ancho o alto del tile (`imageSizeMode=maxSize`). El seleccionado lleva un contorno neon que rodea
