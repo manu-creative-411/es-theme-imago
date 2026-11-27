@@ -60,7 +60,7 @@
 			<reverse>true</reverse>
 			<batteryText name="e_status_battery_text" extra="true">
 				<color>${subText}</color>
-				<fontSize>0.030</fontSize>
+				<fontSize>0.024</fontSize>
 				<lineSpacing>1</lineSpacing>
 				<fontPath>${fontStatus}</fontPath>
 			</batteryText>
@@ -82,7 +82,7 @@
 			</networkIcon>
 			<clock name="e_status_clock" extra="true">
 				<color>${text}</color>
-				<fontSize>0.030</fontSize>
+				<fontSize>0.024</fontSize>
 				<lineSpacing>1</lineSpacing>
 				<fontPath>${fontClock}</fontPath>
 			</clock>
