@@ -29,7 +29,7 @@
 		<mX>0.002</mX>
 		<mY>0.004</mY>
 		<tMax>0.34</tMax>   <!-- tallest tile (screen height fraction): fewer rows never inflate the icons beyond this -->
-		<tAspect>1.04</tAspect> <!-- tile width / height; tiles are never narrower than this -->
+		<tAspect>1.10</tAspect> <!-- tile width / height; tiles are never narrower than this -->
 		<gPeek>0.45</gPeek> <!-- part of the next tile (0..1 of its width) left visible at the right edge: the scroll hint -->
 		<!-- Banner: console art full width, logo (or the cartel when there is none) in the middle -->
 		<plateW>0.40</plateW>
