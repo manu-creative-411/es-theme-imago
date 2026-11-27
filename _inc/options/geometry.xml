@@ -49,8 +49,8 @@
 		<rowH>0.034</rowH>
 		<rowY>0 + ${bOn} * (${bannerH} + 0.014) + (1 - ${bOn}) * 0.120</rowY>
 		<!-- Logo drop shadow (blur steps in px as screen fractions) -->
-		<lsDx>4 / ${screen.width}</lsDx>
-		<lsDy>4 / ${screen.height}</lsDy>
+		<lsDx>${lsStep} / ${screen.width}</lsDx>
+		<lsDy>${lsStep} / ${screen.height}</lsDy>
 		<bannerC>${bannerH} / 2</bannerC>
 		<logoMaxW>0.34</logoMaxW>
 		<logoMaxH>${plateH} * 0.74</logoMaxH>

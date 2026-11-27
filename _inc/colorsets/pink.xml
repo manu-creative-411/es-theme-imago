@@ -20,7 +20,9 @@
 		<menuBg>A6386D</menuBg> <!-- menu background: the list views' card colour (average of panelTop and panelBot); text on the selected bar uses it too -->
 		<menuAccent>FDE6F0</menuAccent> <!-- menu: selected-item bar, group titles, subtitles and footers; a shade of the set colour with contrast >= 5 against <box> (the menu background and the selected item's text) -->
 		<neonSet>pink</neonSet> <!-- suffix of assets/ui/neon-<set>.png and neon-row-<set>.png (see tools/make_neon.py) -->
-		<logoColorScheme>light</logoColorScheme> <!-- dark|light: picks <system>/<scheme>[-<region>].svg in _inc/system_logos -->
+		<logoColorScheme>dark</logoColorScheme> <!-- dark|light: picks <system>/<scheme>[-<region>].svg in _inc/system_logos -->
+		<lsStep>6</lsStep> <!-- logo drop shadow (gamelist views): blur step in px, then alpha (hex) of the centre and the three rings -->
+		<lsA0>48</lsA0> <lsA1>34</lsA1> <lsA2>24</lsA2> <lsA3>16</lsA3>
 		<!-- Texture (iconic-style): shadow + vertical gradient body + hairline edge, selected row, separators, scrollbar. Derived from tile / accent / text. -->
 		<panelTop>B6447B</panelTop>             <!-- card body, top of the vertical gradient -->
 		<panelBot>972D5F</panelBot>             <!-- card body, bottom -->

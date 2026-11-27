@@ -44,7 +44,7 @@
 			<origin>0 0</origin>
 			<maxSize>0.16 0.08</maxSize>
 			<horizontalAlignment>left</horizontalAlignment>
-			<color>00000014</color>
+			<color>000000${lsA0}</color>
 			<zIndex>49</zIndex>
 		</image>
 		<image name="e_logo_sh1" extra="true">
@@ -63,7 +63,7 @@
 			<origin>0 0</origin>
 			<maxSize>0.16 0.08</maxSize>
 			<horizontalAlignment>left</horizontalAlignment>
-			<color>0000000E</color>
+			<color>000000${lsA1}</color>
 			<zIndex>49</zIndex>
 		</image>
 		<image name="e_logo_sh2" extra="true">
@@ -82,7 +82,7 @@
 			<origin>0 0</origin>
 			<maxSize>0.16 0.08</maxSize>
 			<horizontalAlignment>left</horizontalAlignment>
-			<color>0000000E</color>
+			<color>000000${lsA1}</color>
 			<zIndex>49</zIndex>
 		</image>
 		<image name="e_logo_sh3" extra="true">
@@ -101,7 +101,7 @@
 			<origin>0 0</origin>
 			<maxSize>0.16 0.08</maxSize>
 			<horizontalAlignment>left</horizontalAlignment>
-			<color>0000000E</color>
+			<color>000000${lsA1}</color>
 			<zIndex>49</zIndex>
 		</image>
 		<image name="e_logo_sh4" extra="true">
@@ -120,7 +120,7 @@
 			<origin>0 0</origin>
 			<maxSize>0.16 0.08</maxSize>
 			<horizontalAlignment>left</horizontalAlignment>
-			<color>0000000E</color>
+			<color>000000${lsA1}</color>
 			<zIndex>49</zIndex>
 		</image>
 		<image name="e_logo_sh5" extra="true">
@@ -139,7 +139,7 @@
 			<origin>0 0</origin>
 			<maxSize>0.16 0.08</maxSize>
 			<horizontalAlignment>left</horizontalAlignment>
-			<color>0000000E</color>
+			<color>000000${lsA1}</color>
 			<zIndex>49</zIndex>
 		</image>
 		<image name="e_logo_sh6" extra="true">
@@ -158,7 +158,7 @@
 			<origin>0 0</origin>
 			<maxSize>0.16 0.08</maxSize>
 			<horizontalAlignment>left</horizontalAlignment>
-			<color>0000000E</color>
+			<color>000000${lsA1}</color>
 			<zIndex>49</zIndex>
 		</image>
 		<image name="e_logo_sh7" extra="true">
@@ -177,7 +177,7 @@
 			<origin>0 0</origin>
 			<maxSize>0.16 0.08</maxSize>
 			<horizontalAlignment>left</horizontalAlignment>
-			<color>0000000E</color>
+			<color>000000${lsA1}</color>
 			<zIndex>49</zIndex>
 		</image>
 		<image name="e_logo_sh8" extra="true">
@@ -196,7 +196,7 @@
 			<origin>0 0</origin>
 			<maxSize>0.16 0.08</maxSize>
 			<horizontalAlignment>left</horizontalAlignment>
-			<color>0000000E</color>
+			<color>000000${lsA1}</color>
 			<zIndex>49</zIndex>
 		</image>
 		<image name="e_logo_sh9" extra="true">
@@ -215,7 +215,7 @@
 			<origin>0 0</origin>
 			<maxSize>0.16 0.08</maxSize>
 			<horizontalAlignment>left</horizontalAlignment>
-			<color>0000000A</color>
+			<color>000000${lsA2}</color>
 			<zIndex>49</zIndex>
 		</image>
 		<image name="e_logo_sh10" extra="true">
@@ -234,7 +234,7 @@
 			<origin>0 0</origin>
 			<maxSize>0.16 0.08</maxSize>
 			<horizontalAlignment>left</horizontalAlignment>
-			<color>0000000A</color>
+			<color>000000${lsA2}</color>
 			<zIndex>49</zIndex>
 		</image>
 		<image name="e_logo_sh11" extra="true">
@@ -253,7 +253,7 @@
 			<origin>0 0</origin>
 			<maxSize>0.16 0.08</maxSize>
 			<horizontalAlignment>left</horizontalAlignment>
-			<color>0000000A</color>
+			<color>000000${lsA2}</color>
 			<zIndex>49</zIndex>
 		</image>
 		<image name="e_logo_sh12" extra="true">
@@ -272,7 +272,7 @@
 			<origin>0 0</origin>
 			<maxSize>0.16 0.08</maxSize>
 			<horizontalAlignment>left</horizontalAlignment>
-			<color>0000000A</color>
+			<color>000000${lsA2}</color>
 			<zIndex>49</zIndex>
 		</image>
 		<image name="e_logo_sh13" extra="true">
@@ -291,7 +291,7 @@
 			<origin>0 0</origin>
 			<maxSize>0.16 0.08</maxSize>
 			<horizontalAlignment>left</horizontalAlignment>
-			<color>0000000A</color>
+			<color>000000${lsA2}</color>
 			<zIndex>49</zIndex>
 		</image>
 		<image name="e_logo_sh14" extra="true">
@@ -310,7 +310,7 @@
 			<origin>0 0</origin>
 			<maxSize>0.16 0.08</maxSize>
 			<horizontalAlignment>left</horizontalAlignment>
-			<color>0000000A</color>
+			<color>000000${lsA2}</color>
 			<zIndex>49</zIndex>
 		</image>
 		<image name="e_logo_sh15" extra="true">
@@ -329,7 +329,7 @@
 			<origin>0 0</origin>
 			<maxSize>0.16 0.08</maxSize>
 			<horizontalAlignment>left</horizontalAlignment>
-			<color>0000000A</color>
+			<color>000000${lsA2}</color>
 			<zIndex>49</zIndex>
 		</image>
 		<image name="e_logo_sh16" extra="true">
@@ -348,7 +348,7 @@
 			<origin>0 0</origin>
 			<maxSize>0.16 0.08</maxSize>
 			<horizontalAlignment>left</horizontalAlignment>
-			<color>0000000A</color>
+			<color>000000${lsA2}</color>
 			<zIndex>49</zIndex>
 		</image>
 		<image name="e_logo_sh17" extra="true">
@@ -367,7 +367,7 @@
 			<origin>0 0</origin>
 			<maxSize>0.16 0.08</maxSize>
 			<horizontalAlignment>left</horizontalAlignment>
-			<color>00000006</color>
+			<color>000000${lsA3}</color>
 			<zIndex>49</zIndex>
 		</image>
 		<image name="e_logo_sh18" extra="true">
@@ -386,7 +386,7 @@
 			<origin>0 0</origin>
 			<maxSize>0.16 0.08</maxSize>
 			<horizontalAlignment>left</horizontalAlignment>
-			<color>00000006</color>
+			<color>000000${lsA3}</color>
 			<zIndex>49</zIndex>
 		</image>
 		<image name="e_logo_sh19" extra="true">
@@ -405,7 +405,7 @@
 			<origin>0 0</origin>
 			<maxSize>0.16 0.08</maxSize>
 			<horizontalAlignment>left</horizontalAlignment>
-			<color>00000006</color>
+			<color>000000${lsA3}</color>
 			<zIndex>49</zIndex>
 		</image>
 		<image name="e_logo_sh20" extra="true">
@@ -424,7 +424,7 @@
 			<origin>0 0</origin>
 			<maxSize>0.16 0.08</maxSize>
 			<horizontalAlignment>left</horizontalAlignment>
-			<color>00000006</color>
+			<color>000000${lsA3}</color>
 			<zIndex>49</zIndex>
 		</image>
 		<image name="e_logo_sh21" extra="true">
@@ -443,7 +443,7 @@
 			<origin>0 0</origin>
 			<maxSize>0.16 0.08</maxSize>
 			<horizontalAlignment>left</horizontalAlignment>
-			<color>00000006</color>
+			<color>000000${lsA3}</color>
 			<zIndex>49</zIndex>
 		</image>
 		<image name="e_logo_sh22" extra="true">
@@ -462,7 +462,7 @@
 			<origin>0 0</origin>
 			<maxSize>0.16 0.08</maxSize>
 			<horizontalAlignment>left</horizontalAlignment>
-			<color>00000006</color>
+			<color>000000${lsA3}</color>
 			<zIndex>49</zIndex>
 		</image>
 		<image name="e_logo_sh23" extra="true">
@@ -481,7 +481,7 @@
 			<origin>0 0</origin>
 			<maxSize>0.16 0.08</maxSize>
 			<horizontalAlignment>left</horizontalAlignment>
-			<color>00000006</color>
+			<color>000000${lsA3}</color>
 			<zIndex>49</zIndex>
 		</image>
 		<image name="e_logo_sh24" extra="true">
@@ -500,7 +500,7 @@
 			<origin>0 0</origin>
 			<maxSize>0.16 0.08</maxSize>
 			<horizontalAlignment>left</horizontalAlignment>
-			<color>00000006</color>
+			<color>000000${lsA3}</color>
 			<zIndex>49</zIndex>
 		</image>
 		<image name="e_logo" extra="true">
