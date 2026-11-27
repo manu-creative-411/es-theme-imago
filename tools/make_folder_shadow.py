@@ -2,11 +2,11 @@
 """Soft drop shadow (offset 0,0) under the whole folder shape, baked into the system icons.
 
 ES draws a grid tile from one image without shaders and NanoSVG has no filters, so the blur is faked: the silhouette of the folder
-(back panel + front panel) is repeated as black shapes with a growing round stroke and a very low opacity, which stack into a smooth
+(the back panel, which is the whole outline with the tab) is repeated as black shapes with a growing round stroke and a very low opacity, which stack into a smooth
 falloff. The group (id="folder-shadow") goes before the folder. The icons' folders fill their whole viewBox, so the viewBox is widened by
 --pad units per side to make room (the folder looks that much smaller; _folder.svg already has a margin and is not widened).
 Idempotent: the previous shadow is replaced and the viewBox is recomputed, so --radius / --strength can be tuned. Run it LAST, after
-make_tab_shadow.py and make_folder_icons.py (which rebuilds _folder.svg).
+make_folder_icons.py (which rebuilds _folder.svg).
 
 Usage: python3 tools/make_folder_shadow.py [--radius 5] [--strength 0.04] [--pad 6]      (--strength 0 removes the shadow)
 """
@@ -29,12 +29,12 @@ def load(path):
 
 
 def find_folder(root):
-    """Return (parent, folder group, [d of the back panel, d of the front panel]) or None."""
+    """Return (parent, folder group, [d of the outline]) or None."""
     for parent in root.iter():
         for group in parent:
             if group.tag == f"{{{SVG}}}g" and group.get("id", "").startswith("g50"):
-                paths = [p.get("d") for p in group if p.tag == f"{{{SVG}}}path" and p.get("id", "").startswith(("path46", "path50"))]
-                if len(paths) == 2:
+                paths = [p.get("d") for p in group if p.tag == f"{{{SVG}}}path" and p.get("id", "").startswith("path46")]
+                if len(paths) == 1:
                     return parent, group, paths
     return None
 

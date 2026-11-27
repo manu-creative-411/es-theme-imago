@@ -101,10 +101,9 @@ Renaming the theme = renaming the folder; all paths use `${themePath}` or are re
 ## Iconos de sistema (_inc/system_icons/)
 - `_folder.svg` es la carpeta generica que se usa cuando un sistema no tiene icono propio (el tema pone primero `_folder.svg` y despues `<system>.svg`; ES se queda con el ultimo `<path>` que existe).
 - Pastel folders: `python3 tools/make_folder_icons.py [--mix 0.18] [--sat 1.05]` blends the folder gradients with white (the original colours are kept in `data-orig`, so it can be run again with other values) and rebuilds `_folder.svg` from `_template.svg`.
-- Tab shadow: `python3 tools/make_tab_shadow.py [--strength 0.30] [--height 6]` puts a soft shadow of the front panel on the tab, between the two folder shapes (`--strength 0` removes it). Idempotent.
 - Folder drop shadow (offset 0,0, blurred, under the whole folder): `python3 tools/make_folder_shadow.py [--radius 5] [--strength 0.04] [--pad 6]`. NanoSVG has no filters, so it is baked as stacked black strokes; the icons' viewBox is widened by `--pad` (the folder looks ~8 % smaller) and `_folder.svg` already has room. The neon selector hugs the image bounds, so its frame sits a little away from the folder. Idempotent; `--strength 0` removes it.
-- Order after editing icons or `_template.svg`: `make_tab_shadow.py`, then `make_folder_icons.py`, then `make_folder_shadow.py`.
-- The icons are edited directly (Inkscape): no multiply layers or blend modes (ES/NanoSVG does not support them). A folder is two shapes (tab + body) with a tinted gradient, the tab shadow, and the glyph on top.
+- Order after editing icons or `_template.svg`: `make_folder_icons.py`, then `make_folder_shadow.py`.
+- The icons are edited directly (Inkscape): no multiply layers or blend modes (ES/NanoSVG does not support them). A folder is two shapes (tab + body) with a tinted gradient, and the glyph on top.
 - Templates: `_template.svg` (folder with tab) and `_template_app.svg` (app tile). `_template.svg` has **13 colour groups** (Inkscape layers) named in English; only one is visible, the others are `display:none`.
   To choose a colour: Layers panel (Ctrl+Shift+L), show the combo you want and **delete the others** before saving the icon.
   Each group lists in its `desc` (Object Properties) the systems that already use that colour.
