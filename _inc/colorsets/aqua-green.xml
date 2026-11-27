@@ -23,7 +23,7 @@
 		<logoColorScheme>dark</logoColorScheme> <!-- dark|light: picks <system>/<scheme>[-<region>].svg in _inc/system_logos -->
 		<lsSmooth>0</lsSmooth> <!-- 1: smooth 0,0 shadow under the console logo of the detailed view -->
 		<lsStep>3</lsStep> <!-- its ring step in px, then alpha (hex) of the centre and the 4 rings -->
-		<lsA0>40</lsA0> <lsA1>2C</lsA1> <lsA2>1C</lsA2> <lsA3>10</lsA3> <lsA4>08</lsA4>
+		<lsA0>1C</lsA0> <lsA1>14</lsA1> <lsA2>0C</lsA2> <lsA3>07</lsA3> <lsA4>04</lsA4>
 		<!-- Texture (iconic-style): shadow + vertical gradient body + hairline edge, selected row, separators, scrollbar. Derived from tile / accent / text. -->
 		<panelTop>1E988C</panelTop>             <!-- card body, top of the vertical gradient -->
 		<panelBot>097B70</panelBot>             <!-- card body, bottom -->
