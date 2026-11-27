@@ -93,7 +93,7 @@ Renaming the theme = renaming the folder; all paths use `${themePath}` or are re
 
 ## Wallpapers (assets/wallpapers/)
 - `<name>.svg` 16:9 (p. ej. 1280x720) = fondo a pantalla completa, capa `e_wallpaper` (z 1, sobre el color plano `bg`). **Debe estar aplanado** (sin `<use>`, `<clipPath>`, filtros ni capas ocultas: NanoSVG no los soporta). Si lo exportas de Inkscape: `python3 tools/flatten_svg.py original.svg assets/wallpapers/<nombre>.svg`.
-- Cada colorset elige el suyo en `_inc/colorsets/*.xml` (`wallpaper`, `wallpaperB1`, `wallpaperB2`). Hoy: Black -> `dark.svg`; el resto -> `<colorset>.svg` (la misma rejilla de cuadrados que Black, recoloreada: base = `bg`, cuadrados = `bg` aclarado, vineta = `bg` oscurecido). Se regeneran con `python3 tools/make_wallpapers.py` (paletas en el diccionario `SETS` del script).
+- Cada colorset elige el suyo en `_inc/colorsets/*.xml` (`wallpaper`, `wallpaperB1`, `wallpaperB2`). Hoy: Black -> `dark.svg`; el resto -> `<colorset>.svg` (la misma rejilla de cuadrados que Black, recoloreada: base = `bg` oscurecido por `dim` (rojo, azul y morado van mas oscuros que el `bg` plano), cuadrados = base aclarada, vineta = base oscurecida). Se regeneran con `python3 tools/make_wallpapers.py` (paletas en el diccionario `SETS` del script).
 - `-b1`/`-b2` crops are no longer used (the banner is clipped with `clipRect`, nothing is drawn under it).
 - Opcion de tema `Wallpaper: on/off` (off = usa `none.png`).
 - Para anadir otro: copia `assets/wallpapers/<name>.svg`, ejecuta el script y apunta las 3 variables del colorset a `<name>.svg`, `<name>-b1.svg`, `<name>-b2.svg`.
@@ -101,6 +101,7 @@ Renaming the theme = renaming the folder; all paths use `${themePath}` or are re
 ## Iconos de sistema (_inc/system_icons/)
 - `_folder.svg` es la carpeta generica que se usa cuando un sistema no tiene icono propio (el tema pone primero `_folder.svg` y despues `<system>.svg`; ES se queda con el ultimo `<path>` que existe).
 - Los colores de todas las carpetas son pastel: `python3 tools/make_folder_icons.py [--mix 0.30] [--sat 1.05]` mezcla con blanco los degradados de carpeta (guarda los colores originales en `data-orig`, asi que se puede volver a ejecutar con otros valores cuando quieras) y regenera `_folder.svg` desde `_template.svg`.
+- Sombra difuminada (desplazamiento 0,0): `python3 tools/make_icon_shadow.py [--pad 10] [--radius 9] [--strength 0.05]`. ES no tiene shader en los tiles ni NanoSVG filtros, asi que la sombra esta horneada en cada SVG como capas de trazo negro redondeado con opacidad muy baja, y el viewBox se amplia `--pad` unidades por lado (las carpetas se ven ~13 % mas pequenas). Ejecutalo SIEMPRE despues de `make_folder_icons.py` (se puede repetir: reemplaza la sombra anterior).
 - Se editan directamente estos SVG (Inkscape). Sin capas multiply ni modos de mezcla (ES/NanoSVG no los soporta): la carpeta son dos formas
   (pestana + cuerpo) con degradado ya tintado, y encima los glifos.
 - Plantillas: `_template.svg` (carpeta con pestana) y `_template_app.svg` (carpeta de apps). Cada una trae **13 grupos de color** (capas de Inkscape,
@@ -152,3 +153,9 @@ AFTER `common.xml`. Xbox, PlayStation and SNES map the *physical position* of Ba
 **Licence:** the package mixes licences (own work, CC BY-SA 4.0 from Wikimedia Commons, CC BY-NC-SA from Recalbox/Carbon/Iconic). Read `NOTICE.md`, `_inc/help/NOTICE.md` and `_inc/help/CREDITS-wikimedia.txt` before redistributing: the package is non-commercial because of its third-party parts.
 
 - Sums that reach ES as `0 + ...` must contain at least one `${}`: a variable whose value has no `${` is NOT evaluated, so `0 + 0.5 + (0)` stays a literal string and the position falls back to 0. Use numbers directly instead.
+
+## Loading and game launch screens (`splash.xml`, `gamesplash.xml`, `assets/splash/`)
+- `splash.xml` is the loading screen. ES loads it without `theme.xml`, so it re-declares the `branding` and `colorset` subsets (keep the order in sync with `theme.xml`). Default branding: **Retrobox** (also RetroBat, Batocera). `assets/splash/<brand>[-dark|-light].png|svg` come from es-theme-iconic (CC0), without its `_default.png`; `Light gray` uses the light variants, the other colour sets the dark ones. Assets of brands not selectable yet (knulli, recalbox, emuelec) are kept for later.
+- `gamesplash.xml` is what ES shows while a game launches: plain black, the game image (replaced by a transparent PNG) and name (alpha 0) are hidden.
+- The launch *transition* ("GAME LAUNCH TRANSITION") is a user setting of ES, not a theme property: a theme cannot default it to `instant`. Set it once in the UI settings.
+- Untested in a real ES: nothing here has been run in EmulationStation (validated with xmllint and rendered previews only).

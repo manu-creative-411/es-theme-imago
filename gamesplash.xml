@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+	<formatVersion>7</formatVersion>
+	<!-- Game launch screen: plain black, nothing else. ES draws the game image and name here unless the theme
+	     overrides them, so the image is replaced by a fully transparent PNG and the label is made invisible. -->
+	<view name="splash">
+		<splash name="splash">
+			<backgroundColor>000000</backgroundColor>
+		</splash>
+		<image name="background">
+			<path>./assets/wallpapers/none.png</path>
+		</image>
+		<text name="label">
+			<pos>0 0</pos>
+			<size>0.01 0.01</size>
+			<fontSize>0.01</fontSize>
+			<color>00000000</color>
+		</text>
+	</view>
+</theme>

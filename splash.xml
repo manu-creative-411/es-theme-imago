@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+	<formatVersion>7</formatVersion>
+	<!-- Loading screen. ES loads this view on its own (without theme.xml), so the subsets it depends on
+	     are declared again here. Keep names and order in sync with theme.xml: the first include is the default. -->
+	<subset name="branding">
+		<include name="Retrobox"/>
+		<include name="RetroBat"/>
+		<include name="Batocera"/>
+	</subset>
+	<subset name="colorset">
+		<include name="Black"/>
+		<include name="Light gray"/>
+		<include name="Vivid red"/>
+		<include name="Deep blue"/>
+		<include name="Aqua green"/>
+		<include name="GameCube purple"/>
+	</subset>
+	<!-- Defaults: dark scheme. Only "Light gray" is a light scheme. -->
+	<variables>
+		<splashScheme>dark</splashScheme>
+		<splashOverlay>overlay-dark.png</splashOverlay>
+		<splashBar>bottom-bar-dark.png</splashBar>
+		<splashColor>E0E0E0</splashColor>
+	</variables>
+	<variables ifSubset="colorset:Light gray">
+		<splashScheme>light</splashScheme>
+		<splashOverlay>overlay-light.png</splashOverlay>
+		<splashBar>bottom-bar-light.png</splashBar>
+		<splashColor>444444</splashColor>
+	</variables>
+	<!-- Branding: assets/splash/<brand>-<dark|light>.png|svg, then <brand>.png|svg (from es-theme-iconic). -->
+	<variables ifSubset="branding:Retrobox">
+		<splashBrand>retrobox</splashBrand>
+	</variables>
+	<variables ifSubset="branding:Batocera">
+		<splashBrand>batocera</splashBrand>
+	</variables>
+	<variables ifSubset="branding:RetroBat">
+		<splashBrand>retrobat</splashBrand>
+	</variables>
+	<view name="splash">
+		<splash name="splash">
+			<backgroundColor>000000</backgroundColor>
+		</splash>
+		<image name="background">
+			<origin>0.5 0.5</origin>
+			<pos>0.5 0.5</pos>
+			<minSize>1 1</minSize>
+			<linearSmooth>true</linearSmooth>
+			<!-- ES keeps the LAST <path> that exists: lowest priority first. -->
+			<path>./assets/splash/${splashBrand}.png</path>
+			<path>./assets/splash/${splashBrand}.svg</path>
+			<path>./assets/splash/${splashBrand}-${splashScheme}.png</path>
+			<path>./assets/splash/${splashBrand}-${splashScheme}.svg</path>
+		</image>
+		<image name="overlay" extra="true">
+			<origin>0 0</origin>
+			<pos>0 0</pos>
+			<size>1 1</size>
+			<path>./assets/splash/fully-transparent-overlay.webp</path>
+			<zIndex>5</zIndex>
+		</image>
+		<image name="bottom-bar" extra="true">
+			<origin>0 0</origin>
+			<pos>0 0</pos>
+			<size>1 1</size>
+			<path>./assets/splash/${splashBar}</path>
+			<zIndex>6</zIndex>
+			<linearSmooth>true</linearSmooth>
+		</image>
+		<image name="progressbar">
+			<origin>0 0.5</origin>
+			<pos>0.3 0.95</pos>
+			<size>0.4 0.025</size>
+			<zIndex>10</zIndex>
+			<color>${splashColor}30</color>
+			<colorEnd>${splashColor}30</colorEnd>
+		</image>
+		<image name="progressbar:active">
+			<color>${splashColor}</color>
+			<colorEnd>${splashColor}</colorEnd>
+		</image>
+		<text name="label">
+			<origin>0.5 0.5</origin>
+			<pos>0.5 0.9</pos>
+			<zIndex>10</zIndex>
+			<alignment>center</alignment>
+			<fontPath>./assets/fonts/Poppins-SemiBold.otf</fontPath>
+			<fontSize>0.04</fontSize>
+			<color>${splashColor}</color>
+			<forceUppercase>true</forceUppercase>
+		</text>
+	</view>
+</theme>

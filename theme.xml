@@ -10,9 +10,9 @@
 	<include subset="colorset" subSetDisplayName="Color set" name="GameCube purple" displayName="GameCube purple">./_inc/colorsets/gamecube-purple.xml</include>
 	<include subset="wallpaper" subSetDisplayName="Wallpaper" name="on" displayName="On (default)">./_inc/options/wallpaper-on.xml</include>
 	<include subset="wallpaper" subSetDisplayName="Wallpaper" name="off" displayName="Off">./_inc/options/wallpaper-off.xml</include>
+	<include subset="branding" subSetDisplayName="Branding" name="Retrobox" displayName="Retrobox">./_inc/branding/retrobox.xml</include>
 	<include subset="branding" subSetDisplayName="Branding" name="RetroBat" displayName="RetroBat">./_inc/branding/retrobat.xml</include>
 	<include subset="branding" subSetDisplayName="Branding" name="Batocera" displayName="Batocera">./_inc/branding/batocera.xml</include>
-	<include subset="branding" subSetDisplayName="Branding" name="Retrobox" displayName="Retrobox">./_inc/branding/retrobox.xml</include>
 	<include subset="logoregion" subSetDisplayName="Console logo region" name="eu" displayName="Europe (default)">./_inc/options/logoregion-eu.xml</include>
 	<include subset="logoregion" subSetDisplayName="Console logo region" name="us" displayName="USA">./_inc/options/logoregion-us.xml</include>
 	<include subset="logoregion" subSetDisplayName="Console logo region" name="jp" displayName="Japan">./_inc/options/logoregion-jp.xml</include>

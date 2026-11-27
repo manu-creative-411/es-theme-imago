@@ -25,6 +25,9 @@ a port of **Siddy212/iconic-es-de** (https://github.com/Siddy212/iconic-es-de).
 - The authorship of the individual menu icons is not documented in those repositories. Until the authors confirm otherwise, treat them conservatively as **CC BY-NC-SA** (attribution, non-commercial).
 - `menu-icon-controller.svg` was replaced by the author's own controller icon (see section 1).
 
+### 3b. Loading screen artwork - `assets/splash/`
+Copied from **es-theme-iconic** (`_inc/splash`, `_inc/other`; CC0-1.0, except its `_default.png`, which is not used). The distribution logos (Retrobox, Batocera, RetroBat, Knulli, Recalbox, EmuELEC) are trademarks of their owners; the licence covers only the drawing, not the marks.
+
 ## 4. Console artwork - `_inc/system_bg`, `_inc/system_logos`
 Stated by the author to come from **es-theme-carbon** by fabricecaruso (https://github.com/fabricecaruso/es-theme-carbon), a fork of RetroPie/es-theme-carbon
 (theme "Carbon" by **Rookervik**, based on *simple* by Nils Bonenberger).
