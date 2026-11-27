@@ -164,8 +164,8 @@ AFTER `common.xml`. Xbox, PlayStation and SNES map the *physical position* of Ba
 The system and game icon grids show `Cols` full columns and a part (`gPeek`, 45 %) of the next tile at the right edge. ES clips the tiles to the whole grid rectangle, padding included, so the right padding (`sPadR` / `gPadR`, computed in `geometry.xml`) is exactly the room of that tile. `Cols` is the number of FULL columns, so ES scrolls one column when the cursor passes the last full one. Untested in a real ES.
 
 ## Selection halo everywhere
-- Icon tiles (system and game grids): `assets/ui/neon.png`, tinted with `${neon}`.
-- List rows (basic and detailed): `assets/ui/neon-row.png` (nine-patch, band 8 px) covers the whole selected row (`list-row-neon` in the row template), tinted with `${neon}`. Regenerate with `python3 tools/make_neon.py 8 2.0 neon-row.png`.
+- Icon tiles (system and game grids): `assets/ui/neon.png`, tinted with `${neon}`; the line sits 1 px from the image and the inside has a 16 % veil of the same colour (`python3 tools/make_neon.py 14 3.0 neon.png 0.16`; `BAND` must equal `tPad`).
+- List rows (basic and detailed): `assets/ui/neon-row.png` (nine-patch, band 12 px) covers the whole selected row (`list-row-neon` in the row template), tinted with `${neon}`. Regenerate with `python3 tools/make_neon.py 12 3.0 neon-row.png 0`.
 - Menus: ES only offers a flat selector colour there (no image), so the bar is `${neon}` at 35 % opacity; no halo is possible.
 - The halo colour is `neon` in each colour set (`_inc/colorsets/*.xml`): Black = purple `9B6BFF`, Light gray = aquamarine `2EE6C0`; the other sets keep their previous value. Only one colour per set is possible (the nine-patch is tinted uniformly).
 - Untested in a real ES: the row halo relies on colour storyboards of a `ninepatch` inside the list item template.
