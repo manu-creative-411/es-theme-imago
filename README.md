@@ -101,7 +101,7 @@ Renaming the theme = renaming the folder; all paths use `${themePath}` or are re
 
 ## Iconos de sistema (_inc/system_icons/)
 - `_folder.svg` es la carpeta generica que se usa cuando un sistema no tiene icono propio (el tema pone primero `_folder.svg` y despues `<system>.svg`; ES se queda con el ultimo `<path>` que existe).
-- Pastel folders: `python3 tools/make_folder_icons.py [--mix 0.18] [--sat 1.05]` blends the folder gradients with white (the original colours are kept in `data-orig`, so it can be run again with other values) and rebuilds `_folder.svg` from `_template.svg`.
+- Pastel folders: `python3 tools/make_folder_icons.py [--mix 0.12] [--sat 1.05]` blends the folder gradients with white (the original colours are kept in `data-orig`, so it can be run again with other values) and rebuilds `_folder.svg` from `_template.svg`.
 - Folder drop shadow (offset 0,0, blurred, under the whole folder): `python3 tools/make_folder_shadow.py [--radius 3.5] [--strength 0.05] [--pad 4]`. NanoSVG has no filters, so it is baked as stacked black strokes; the icons' viewBox is widened by `--pad` (the folder looks ~6 % smaller) and `_folder.svg` already has room. The neon selector hugs the image bounds, so its frame sits a little away from the folder. Idempotent; `--strength 0` removes it.
 - Order after editing icons or `_template.svg`: `make_folder_icons.py`, then `make_folder_shadow.py`.
 - The icons are edited directly (Inkscape): no multiply layers or blend modes (ES/NanoSVG does not support them). A folder is two shapes (tab + body) with a tinted gradient, and the glyph on top.
@@ -161,7 +161,7 @@ AFTER `common.xml`. Xbox, PlayStation and SNES map the *physical position* of Ba
 - Untested in a real ES: nothing here has been run in EmulationStation (validated with xmllint and rendered previews only).
 
 ## Scroll hint in the horizontal grids
-The system and game icon grids show `Cols` full columns and a part (`gPeek`, 45 %) of the next tile at the right edge. ES clips the tiles to the whole grid rectangle, padding included, so the right padding (`sPadR` / `gPadR`, computed in `geometry.xml`) is exactly the room of that tile. `Cols` is the number of FULL columns, so ES scrolls one column when the cursor passes the last full one. Untested in a real ES.
+The system and game icon grids show `Cols` full columns plus the next tile cut by the right edge (at least `gPeek`, 45 %, of its width; more when the width does not divide evenly, even a whole extra tile). Tiles are never wider than tall (`Tw = Tw0`), so columns sit as close as rows. ES clips the tiles to the whole grid rectangle, padding included, so the right padding (`sPadR` / `gPadR`, computed in `geometry.xml`) is all the room left over. `Cols` is the number of FULL columns, so ES scrolls one column when the cursor passes the last full one. Untested in a real ES.
 
 ## Translated option labels
 The names ES shows in the theme configuration menu (option groups such as "Color set" and their values) follow the ES language (`system.language`, e.g. `es_ES` -> `es`). Languages: English (fallback), Spanish, Portuguese, Galician, Catalan, Basque, French, Italian, German, Ukrainian, Russian, Polish and Greek.

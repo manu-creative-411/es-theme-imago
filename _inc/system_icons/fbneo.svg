@@ -66,12 +66,12 @@
       <stop offset="1" style="stop-color:#6cd1ff" id="stop4" />
     </linearGradient>
     <linearGradient data-orig="e57c27,a85b1c" x1="55.033333" y1="6.3499999" x2="55.033333" y2="18.520824" gradientUnits="userSpaceOnUse" id="linearGradient16_tint">
-      <stop style="stop-color:#ee934a;stop-opacity:1;" offset="0" />
-      <stop style="stop-color:#bb7842;stop-opacity:1;" offset="1" />
+      <stop style="stop-color:#ec8b3d;stop-opacity:1;" offset="0" />
+      <stop style="stop-color:#b66e34;stop-opacity:1;" offset="1" />
     </linearGradient>
     <linearGradient data-orig="e57c27,a85b1c" x1="67.73333" y1="18.520832" x2="67.73333" y2="129.11667" gradientUnits="userSpaceOnUse" id="linearGradient18_tint">
-      <stop style="stop-color:#ee934a;stop-opacity:1;" offset="0" />
-      <stop style="stop-color:#bb7842;stop-opacity:1;" offset="1" />
+      <stop style="stop-color:#ec8b3d;stop-opacity:1;" offset="0" />
+      <stop style="stop-color:#b66e34;stop-opacity:1;" offset="1" />
     </linearGradient>
   </defs>
   <g inkscape:label="Capa 1" inkscape:groupmode="layer" id="layer1">

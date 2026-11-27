@@ -7,7 +7,7 @@
 2. _inc/system_icons/_folder.svg (generic folder used when a system has no icon of its own) is built from _template.svg:
    one colour combo kept visible, the others removed.
 
-Usage: python3 tools/make_folder_icons.py [--mix 0.18] [--sat 1.05] [--combo azure-blue]
+Usage: python3 tools/make_folder_icons.py [--mix 0.12] [--sat 1.05] [--combo azure-blue]
 """
 import argparse
 import colorsys
@@ -71,7 +71,7 @@ def build_folder(combo):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    parser.add_argument("--mix", type=float, default=0.18, help="blend with white, 0..1")
+    parser.add_argument("--mix", type=float, default=0.12, help="blend with white, 0..1")
     parser.add_argument("--sat", type=float, default=1.05, help="saturation factor")
     parser.add_argument("--combo", default="azure-blue", help="colour combo of the generic folder")
     args = parser.parse_args()

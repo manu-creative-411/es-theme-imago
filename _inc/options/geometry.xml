@@ -65,8 +65,8 @@
 		<sTw0>${sCell} * ${tAspect} / ${scrRatio}</sTw0>
 		<sColsF>((1 - ${gPadX}) / ${sTw0} - ${gPeek}) / (1 + ${mX} / ${sTw0})</sColsF>
 		<sCols>3 + (${sColsF} &gt;= 4) + (${sColsF} &gt;= 5) + (${sColsF} &gt;= 6) + (${sColsF} &gt;= 7) + (${sColsF} &gt;= 8) + (${sColsF} &gt;= 9) + (${sColsF} &gt;= 10) + (${sColsF} &gt;= 11) + (${sColsF} &gt;= 12) + (${sColsF} &gt;= 13) + (${sColsF} &gt;= 14)</sCols> <!-- floor(ColsF), clamped to 3..14: FULL columns; the next tile peeks out at the right edge -->
-		<sTw>(1 - ${gPadX} - ${sCols} * ${mX}) / (${sCols} + ${gPeek})</sTw> <!-- tile width, screen fraction -->
-		<sPadR>1 - ${gPadX} - ${sCols} * ${sTw} - (${sCols} - 1) * ${mX}</sPadR> <!-- right padding = room of the peeking tile (ES clips the tiles to the grid, padding included) -->
+		<sTw>${sTw0}</sTw> <!-- tile width, screen fraction: the minimum one, so the columns sit as close as the rows -->
+		<sPadR>1 - ${gPadX} - ${sCols} * ${sTw} - (${sCols} - 1) * ${mX}</sPadR> <!-- right padding = all the room left: gPeek (min) to gPeek + 1 tile widths, the scroll hint (ES clips the tiles to the grid, padding included) -->
 		<!-- Game icon view -->
 		<gRows>${gameRows} - ${bOn} * (${gameRows} &gt; 2) * (${gameRows} - 2)</gRows> <!-- banner: at most 2 rows -->
 		<gZoneY>0 + ${rowY} + ${rowH} + 0.008</gZoneY>
@@ -78,8 +78,8 @@
 		<gTw0>${gCell} * ${tAspect} / ${scrRatio}</gTw0>
 		<gColsF>((1 - ${gPadX}) / ${gTw0} - ${gPeek}) / (1 + ${mX} / ${gTw0})</gColsF>
 		<gCols>3 + (${gColsF} &gt;= 4) + (${gColsF} &gt;= 5) + (${gColsF} &gt;= 6) + (${gColsF} &gt;= 7) + (${gColsF} &gt;= 8) + (${gColsF} &gt;= 9) + (${gColsF} &gt;= 10) + (${gColsF} &gt;= 11) + (${gColsF} &gt;= 12) + (${gColsF} &gt;= 13) + (${gColsF} &gt;= 14)</gCols> <!-- floor(ColsF), clamped to 3..14: FULL columns; the next tile peeks out at the right edge -->
-		<gTw>(1 - ${gPadX} - ${gCols} * ${mX}) / (${gCols} + ${gPeek})</gTw> <!-- tile width, screen fraction -->
-		<gPadR>1 - ${gPadX} - ${gCols} * ${gTw} - (${gCols} - 1) * ${mX}</gPadR> <!-- right padding = room of the peeking tile (ES clips the tiles to the grid, padding included) -->
+		<gTw>${gTw0}</gTw> <!-- tile width, screen fraction: the minimum one, so the columns sit as close as the rows -->
+		<gPadR>1 - ${gPadX} - ${gCols} * ${gTw} - (${gCols} - 1) * ${mX}</gPadR> <!-- right padding = all the room left: gPeek (min) to gPeek + 1 tile widths, the scroll hint (ES clips the tiles to the grid, padding included) -->
 		<!-- Derived by the layouts (cards, cartel): -->
 		<ctXi>0 + ${ctX} + ${ctPad}</ctXi>
 		<ctTw>${ctW} - 2 * ${ctPad}</ctTw>
