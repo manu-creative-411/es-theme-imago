@@ -58,17 +58,11 @@
 			<zIndex>100</zIndex>
 			<orientation>horizontal</orientation>
 			<reverse>true</reverse>
-			<clock name="e_status_clock" extra="true">
-				<color>${text}</color>
-				<fontSize>0.030</fontSize>
-				<lineSpacing>1</lineSpacing>
-				<fontPath>${fontMedium}</fontPath>
-			</clock>
 			<batteryText name="e_status_battery_text" extra="true">
 				<color>${subText}</color>
 				<fontSize>0.030</fontSize>
 				<lineSpacing>1</lineSpacing>
-				<fontPath>${fontInfo}</fontPath>
+				<fontPath>${fontStatus}</fontPath>
 			</batteryText>
 			<batteryIcon name="e_status_battery_icon" extra="true">
 				<maxSize>1 1</maxSize>
@@ -86,6 +80,12 @@
 				<networkIcon>${themePath}/assets/icons/network-icon-on.svg</networkIcon>
 				<planemodeIcon>${themePath}/assets/icons/network-icon-off.svg</planemodeIcon>
 			</networkIcon>
+			<clock name="e_status_clock" extra="true">
+				<color>${text}</color>
+				<fontSize>0.030</fontSize>
+				<lineSpacing>1</lineSpacing>
+				<fontPath>${fontClock}</fontPath>
+			</clock>
 		</stackpanel>
 	</view>
 </theme>

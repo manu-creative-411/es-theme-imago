@@ -48,6 +48,7 @@ All rights remain with them; the files are included only so the icons can be sel
 
 ## 5. Fonts - `assets/fonts/`
 **Poppins**, Copyright 2014-2017 Indian Type Foundry, SIL Open Font License 1.1 (https://openfontlicense.org). Notice and licence URL are embedded in the font files and repeated in `assets/fonts/FONT-LICENSE.txt`.
+**DM Mono** (Regular, Medium), Copyright 2020 The DM Mono Project Authors (https://github.com/googlefonts/dm-mono), SIL Open Font License 1.1; used for the clock and battery percentage (fixed-width digits). Unmodified.
 
 ## 6. Obligations of the third-party parts and how this package meets them
 | Part | Licence | Obligations | Done here |
@@ -56,6 +57,7 @@ All rights remain with them; the files are included only so the icons can be sel
 | Carbon console art (`system_bg`, `system_logos`) | CC BY-NC-SA 4.0 | same as above | credited in section 4; **if any Carbon file was altered (resized, recoloured, converted, renamed), write it here: ______** |
 | Xbox / PlayStation help icons | CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/) | credit author + licence link + source link; say if changed; adaptations under BY-SA | per-file credits in `_inc/help/CREDITS-wikimedia.txt`; shipped unmodified |
 | Iconic menu icons / text-input images | treated as CC BY-NC-SA (authorship undocumented) | credit + non-commercial | credited in section 3 |
+| DM Mono | SIL OFL 1.1 | same as Poppins (name "DM Mono" is not reserved, files unmodified) | `assets/fonts/FONT-LICENSE.txt` |
 | Poppins | SIL OFL 1.1 | keep copyright + licence with the fonts; do not sell the fonts alone; no modified version named "Poppins" | `assets/fonts/FONT-LICENSE.txt`; files unmodified |
 
 Because of the NonCommercial parts, the package as a whole must not be sold or monetised. The author's own files (section 1) are CC0 and impose nothing on anyone.

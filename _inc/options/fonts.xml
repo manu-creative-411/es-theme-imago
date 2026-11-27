@@ -11,6 +11,8 @@
 		<fontTitle>${themePath}/assets/fonts/Poppins-Bold.otf</fontTitle> <!-- Bold: console + game titles (info strip, banner box name) -->
 		<fontInfo>${themePath}/assets/fonts/Poppins-Regular.otf</fontInfo> <!-- Regular: secondary info: maker, developer, year, game count -->
 		<fontUI>${themePath}/assets/fonts/Poppins-Medium.otf</fontUI> <!-- Medium: clock and help bar -->
+		<fontClock>${themePath}/assets/fonts/DMMono-Medium.ttf</fontClock> <!-- DM Mono Medium: top-right clock (fixed-width digits, so it does not jiggle) -->
+		<fontStatus>${themePath}/assets/fonts/DMMono-Regular.ttf</fontStatus> <!-- DM Mono Regular: battery percentage -->
 		<!-- Raw weights (use these for new elements) -->
 		<fontThin>${themePath}/assets/fonts/Poppins-Thin.otf</fontThin>
 		<fontExtraLight>${themePath}/assets/fonts/Poppins-ExtraLight.otf</fontExtraLight>

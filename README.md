@@ -140,6 +140,7 @@ Poppins, all 18 files. Elements never hard-code a file: they use a **role variab
 | `fontInfo` | Regular | maker, developer, year, game count |
 | `fontUI` | Medium | clock, help bar |
 
+The clock and the battery percentage in the top-right capsule use **DM Mono** (`fontClock` Medium, `fontStatus` Regular; OFL, fixed-width digits so they do not jiggle); capsule order, left to right: clock, network, battery icon, battery %.
 Raw weights (`fontThin` ... `fontBlack`) are also defined for new elements. Poppins is much wider than the default ES font, so sizes were reduced
 (titles 0.030, info 0.024, help 0.026, banner box name 0.040 via `bFS1/bFS2` in `banner-on/off.xml`, menu 0.021-0.036). Poppins is released under the SIL Open Font License:
 keep its license text if you redistribute the theme.
