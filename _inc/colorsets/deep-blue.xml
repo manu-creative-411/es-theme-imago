@@ -15,9 +15,9 @@
 		<wallpaper>${themePath}/assets/wallpapers/deep-blue.svg</wallpaper> <!-- assets/wallpapers/: fondo a pantalla completa (none.png = sin fondo) -->
 		<wallpaperB1>${themePath}/assets/wallpapers/deep-blue-b1.svg</wallpaperB1> <!-- recorte bajo el banner, 1 fila -->
 		<wallpaperB2>${themePath}/assets/wallpapers/deep-blue-b2.svg</wallpaperB2> <!-- recorte bajo el banner, 2 filas -->
-		<neon>7DF9FF</neon>         <!-- color del selector neon (contorno + resplandor) -->
-		<neon2>4D8DFF</neon2>        <!-- second colour of the selection frame gradient (baked by tools/make_neon.py) -->
-		<menuAccent>0899A0</menuAccent> <!-- menu: selected-item bar, group titles, subtitles and footers; a shade of the set colour with contrast >= 5 against <box> (the menu background and the selected item's text) -->
+		<neon>ADCCFF</neon>         <!-- color del selector neon (contorno + resplandor) -->
+		<neon2>5292FF</neon2>        <!-- second colour of the selection frame gradient (baked by tools/make_neon.py) -->
+		<menuAccent>4B88F0</menuAccent> <!-- menu: selected-item bar, group titles, subtitles and footers; a shade of the set colour with contrast >= 5 against <box> (the menu background and the selected item's text) -->
 		<neonSet>deep-blue</neonSet> <!-- suffix of assets/ui/neon-<set>.png and neon-row-<set>.png (see tools/make_neon.py) -->
 		<logoColorScheme>dark</logoColorScheme> <!-- dark|light: picks <system>/<scheme>[-<region>].svg in _inc/system_logos -->
 		<!-- Texture (iconic-style): shadow + vertical gradient body + hairline edge, selected row, separators, scrollbar. Derived from tile / accent / text. -->
