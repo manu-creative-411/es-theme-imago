@@ -101,7 +101,7 @@ Renaming the theme = renaming the folder; all paths use `${themePath}` or are re
 ## Iconos de sistema (_inc/system_icons/)
 - `_folder.svg` es la carpeta generica que se usa cuando un sistema no tiene icono propio (el tema pone primero `_folder.svg` y despues `<system>.svg`; ES se queda con el ultimo `<path>` que existe).
 - Los colores de todas las carpetas son pastel: `python3 tools/make_folder_icons.py [--mix 0.30] [--sat 1.05]` mezcla con blanco los degradados de carpeta (guarda los colores originales en `data-orig`, asi que se puede volver a ejecutar con otros valores cuando quieras) y regenera `_folder.svg` desde `_template.svg`.
-- Sombra difuminada (desplazamiento 0,0): `python3 tools/make_icon_shadow.py [--pad 10] [--radius 9] [--strength 0.05]`. ES no tiene shader en los tiles ni NanoSVG filtros, asi que la sombra esta horneada en cada SVG como capas de trazo negro redondeado con opacidad muy baja, y el viewBox se amplia `--pad` unidades por lado (las carpetas se ven ~13 % mas pequenas). Ejecutalo SIEMPRE despues de `make_folder_icons.py` (se puede repetir: reemplaza la sombra anterior).
+- Pastel level currently used: `python3 tools/make_folder_icons.py --mix 0.18` (saturation left at the 1.05 default).
 - Se editan directamente estos SVG (Inkscape). Sin capas multiply ni modos de mezcla (ES/NanoSVG no los soporta): la carpeta son dos formas
   (pestana + cuerpo) con degradado ya tintado, y encima los glifos.
 - Plantillas: `_template.svg` (carpeta con pestana) y `_template_app.svg` (carpeta de apps). Cada una trae **13 grupos de color** (capas de Inkscape,
