@@ -29,7 +29,7 @@ assets/branding/                 retrobat.svg, batocera.svg, retrobox.svg (PLACE
 ```
 
 ## Options (UI Settings > Theme Configuration)
-Color set / Help icons / Branding / Console logo region / **Banner** (off [default], on) / **Banner height** (30-50 %, default 40) /
+Color set / **System icon set** / Help icons / Branding / Console logo region / **Banner** (off [default], on) / **Banner height** (30-50 %, default 40) /
 **System view** (icons 1-4 rows [default 3], carousel) / **Game icons** (1-4 rows [default 3]) / List rows (auto, 7-17). Default game view:
 `detailed`; `basic` and the custom **Icons** view are in the same menu (Game list view style).
 
@@ -112,6 +112,12 @@ Renaming the theme = renaming the folder; all paths use `${themePath}` or are re
   Navy Blue #305591, Electric Violet #8347ff, Neon Magenta #d924ff, Slate Gray #6b7a88, Dusk Blue #47617a, Silver #d3dce6, Pure Magenta #ff00ff (marker).
 - Gradient of each combo: grey `#e5e5e5 -> #a8a8a8` multiplied by the base colour (lighter on top, darker at the bottom).
 - `app_j2me_loader.svg` is a copy of the (amber yellow) `j2me.svg` folder.
+
+## System icon sets (option "System icon set", `_inc/icons_<set>/`)
+Three sets for the icons of the system view (grid and carousel): **Imago** (default, own SVG folders), **iiSU** and **Alekfull** (square artwork by those authors, see `NOTICE.md` section 4b; **not** the theme author's work).
+- Only consoles, handhelds, computers and arcade platforms have an icon in iiSU / Alekfull; any other system, or one missing there, keeps the Imago folder (the `<path>` list is: generic folder, own folder, `_inc/icons_${iconSet}/<system>.jpg`; the last existing file wins, and `icons_imago/` does not exist on purpose).
+- The files are `<ES system name>.jpg` (400 px, JPEG). Regenerate them with `python3 tools/import_icon_sets.py --iisu <clone of iisu-interpreted-es-de> --alekfull <clone of Alekfull-NX>`; the list of systems and the name aliases are in that script.
+- The selection frame draws around the square art as around the folders. Untested in a real ES (JPEG images in `<path>`, aspect and size of the squares).
 
 ## Selector neon y tiles (assets/ui/neon-<set>.png, _inc/options/tiles.xml)
 - Los tiles ya no tienen placa: icono/caratula a todo el ancho o alto del tile (`imageSizeMode=maxSize`). El seleccionado lleva un contorno neon que rodea

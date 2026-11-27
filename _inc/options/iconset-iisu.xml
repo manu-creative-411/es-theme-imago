@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+	<formatVersion>7</formatVersion>
+	<!-- System icon set: iiSU. Square artwork from _inc/icons_iisu/ for consoles, computers and arcades; any other system keeps the Imago folder. -->
+	<variables>
+		<iconSet>iisu</iconSet>
+	</variables>
+</theme>

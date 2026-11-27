@@ -16,6 +16,7 @@
 		<t_gamerows>Game icon rows</t_gamerows>
 		<t_listrows>List rows</t_listrows>
 		<t_helpicons>Help icons</t_helpicons>
+		<t_iconset>System icon set</t_iconset>
 		<o_default>(default)</o_default>
 		<o_on>On</o_on>
 		<o_off>Off</o_off>
@@ -57,6 +58,7 @@
 		<t_gamerows>Filas de iconos de juegos</t_gamerows>
 		<t_listrows>Filas de la lista</t_listrows>
 		<t_helpicons>Iconos de ayuda</t_helpicons>
+		<t_iconset>Conjunto de iconos de sistemas</t_iconset>
 		<o_default>(por defecto)</o_default>
 		<o_on>Activado</o_on>
 		<o_off>Desactivado</o_off>
@@ -98,6 +100,7 @@
 		<t_gamerows>Linhas de ícones de jogos</t_gamerows>
 		<t_listrows>Linhas da lista</t_listrows>
 		<t_helpicons>Ícones de ajuda</t_helpicons>
+		<t_iconset>Conjunto de ícones de sistemas</t_iconset>
 		<o_default>(padrão)</o_default>
 		<o_on>Ativado</o_on>
 		<o_off>Desativado</o_off>
@@ -139,6 +142,7 @@
 		<t_gamerows>Filas de iconas de xogos</t_gamerows>
 		<t_listrows>Filas da lista</t_listrows>
 		<t_helpicons>Iconas de axuda</t_helpicons>
+		<t_iconset>Conxunto de iconas de sistemas</t_iconset>
 		<o_default>(por defecto)</o_default>
 		<o_on>Activado</o_on>
 		<o_off>Desactivado</o_off>
@@ -180,6 +184,7 @@
 		<t_gamerows>Files d'icones de jocs</t_gamerows>
 		<t_listrows>Files de la llista</t_listrows>
 		<t_helpicons>Icones d'ajuda</t_helpicons>
+		<t_iconset>Joc d'icones de sistemes</t_iconset>
 		<o_default>(per defecte)</o_default>
 		<o_on>Activat</o_on>
 		<o_off>Desactivat</o_off>
@@ -221,6 +226,7 @@
 		<t_gamerows>Jokoen ikonoen errenkadak</t_gamerows>
 		<t_listrows>Zerrendaren errenkadak</t_listrows>
 		<t_helpicons>Laguntza-ikonoak</t_helpicons>
+		<t_iconset>Sistemen ikono-multzoa</t_iconset>
 		<o_default>(lehenetsia)</o_default>
 		<o_on>Aktibatuta</o_on>
 		<o_off>Desaktibatuta</o_off>
@@ -262,6 +268,7 @@
 		<t_gamerows>Lignes d'icônes de jeux</t_gamerows>
 		<t_listrows>Lignes de la liste</t_listrows>
 		<t_helpicons>Icônes d'aide</t_helpicons>
+		<t_iconset>Jeu d'icônes des systèmes</t_iconset>
 		<o_default>(par défaut)</o_default>
 		<o_on>Activé</o_on>
 		<o_off>Désactivé</o_off>
@@ -303,6 +310,7 @@
 		<t_gamerows>Righe di icone dei giochi</t_gamerows>
 		<t_listrows>Righe dell'elenco</t_listrows>
 		<t_helpicons>Icone della guida</t_helpicons>
+		<t_iconset>Set di icone dei sistemi</t_iconset>
 		<o_default>(predefinito)</o_default>
 		<o_on>Attivato</o_on>
 		<o_off>Disattivato</o_off>
@@ -344,6 +352,7 @@
 		<t_gamerows>Zeilen der Spielsymbole</t_gamerows>
 		<t_listrows>Zeilen der Liste</t_listrows>
 		<t_helpicons>Hilfesymbole</t_helpicons>
+		<t_iconset>Systemsymbol-Set</t_iconset>
 		<o_default>(Standard)</o_default>
 		<o_on>Ein</o_on>
 		<o_off>Aus</o_off>
@@ -385,6 +394,7 @@
 		<t_gamerows>Рядки значків ігор</t_gamerows>
 		<t_listrows>Рядки списку</t_listrows>
 		<t_helpicons>Значки підказок</t_helpicons>
+		<t_iconset>Набір значків систем</t_iconset>
 		<o_default>(за замовчуванням)</o_default>
 		<o_on>Увімкнено</o_on>
 		<o_off>Вимкнено</o_off>
@@ -426,6 +436,7 @@
 		<t_gamerows>Строки значков игр</t_gamerows>
 		<t_listrows>Строки списка</t_listrows>
 		<t_helpicons>Значки подсказок</t_helpicons>
+		<t_iconset>Набор значков систем</t_iconset>
 		<o_default>(по умолчанию)</o_default>
 		<o_on>Включено</o_on>
 		<o_off>Выключено</o_off>
@@ -467,6 +478,7 @@
 		<t_gamerows>Rzędy ikon gier</t_gamerows>
 		<t_listrows>Wiersze listy</t_listrows>
 		<t_helpicons>Ikony pomocy</t_helpicons>
+		<t_iconset>Zestaw ikon systemów</t_iconset>
 		<o_default>(domyślnie)</o_default>
 		<o_on>Włączone</o_on>
 		<o_off>Wyłączone</o_off>
@@ -508,6 +520,7 @@
 		<t_gamerows>Σειρές εικονιδίων παιχνιδιών</t_gamerows>
 		<t_listrows>Σειρές λίστας</t_listrows>
 		<t_helpicons>Εικονίδια βοήθειας</t_helpicons>
+		<t_iconset>Σύνολο εικονιδίων συστημάτων</t_iconset>
 		<o_default>(προεπιλογή)</o_default>
 		<o_on>Ενεργό</o_on>
 		<o_off>Ανενεργό</o_off>

@@ -36,6 +36,16 @@ Stated by the author to come from **es-theme-carbon** by fabricecaruso (https://
   are trademarks of their owners. Carbon's licence does not clear those rights.
 - Some backgrounds in `_inc/system_bg/collections/` look like game artwork (e.g. *Aladdin*, *Arkanoid*) rather than Carbon console art. Confirm their origin.
 
+## 4b. Alternative system icon sets - `_inc/icons_iisu/`, `_inc/icons_alekfull/` (option "System icon set")
+The artwork in these two folders is **not the theme author's work**. It belongs to the authors of the repositories it was taken from, and those repositories state no licence.
+All rights remain with them; the files are included only so the icons can be selected in the theme, with credit. If an author asks for the files to be removed, they will be removed.
+- `_inc/icons_iisu/`: from **iiSU Interpreted** by VictorUnlocked (https://github.com/VictorUnlocked/iisu-interpreted-es-de), a port of the iiSU interface to ES-DE
+  (`_inc/systems/artwork/*.webp`). Converted to JPEG, 400 px, renamed to Batocera system names.
+- `_inc/icons_alekfull/`: from **ALEKFULL NX** by Alekfull (https://github.com/fagnerpc/Alekfull-NX) (`assets/logos/*.jpg`; the author states in that repository that the artwork was made from scratch
+  and that the theme is not authorised for commercial use). Copied without changes except renaming to Batocera system names.
+- Only consoles, handhelds, computers and arcade platforms were taken (list in `tools/import_icon_sets.py`). The system logos and every other asset of those repositories are not included.
+- Console logos and names in the artwork are trademarks of their owners.
+
 ## 5. Fonts - `assets/fonts/`
 **Poppins**, Copyright 2014-2017 Indian Type Foundry, SIL Open Font License 1.1 (https://openfontlicense.org). Notice and licence URL are embedded in the font files and repeated in `assets/fonts/FONT-LICENSE.txt`.
 
@@ -51,6 +61,7 @@ Stated by the author to come from **es-theme-carbon** by fabricecaruso (https://
 Because of the NonCommercial parts, the package as a whole must not be sold or monetised. The author's own files (section 1) are CC0 and impose nothing on anyone.
 
 ## 7. Open items
+- Alternative icon sets (section 4b): no licence in the upstream repositories; ask the authors for explicit permission (or an open licence) if the theme is distributed widely.
 - Origin of some `system_bg/collections` images (e.g. *Aladdin*, *Arkanoid*): not Carbon console art as far as can be told. Document or remove them.
 - Authorship of the Iconic menu icons: replace them with own or clearly licensed icons to remove the uncertainty.
 - Official `OFL.txt` text next to the fonts (optional; the notice is already in the font files).

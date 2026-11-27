@@ -29,6 +29,9 @@
 	<include subset="systemview" subSetDisplayName="${t_systemview}" name="grid2" displayName="${o_rows2}">./_inc/options/sysview-grid-2.xml</include>
 	<include subset="systemview" subSetDisplayName="${t_systemview}" name="grid4" displayName="${o_rows4}">./_inc/options/sysview-grid-4.xml</include>
 	<include subset="systemview" subSetDisplayName="${t_systemview}" name="carousel" displayName="${o_carousel}">./_inc/options/sysview-carousel.xml</include>
+	<include subset="iconset" subSetDisplayName="${t_iconset}" name="imago" displayName="Imago ${o_default}">./_inc/options/iconset-imago.xml</include>
+	<include subset="iconset" subSetDisplayName="${t_iconset}" name="iisu" displayName="iiSU">./_inc/options/iconset-iisu.xml</include>
+	<include subset="iconset" subSetDisplayName="${t_iconset}" name="alekfull" displayName="Alekfull">./_inc/options/iconset-alekfull.xml</include>
 	<include subset="gamerows" subSetDisplayName="${t_gamerows}" name="3" displayName="${o_rows3} ${o_default}">./_inc/options/gamerows-3.xml</include>
 	<include subset="gamerows" subSetDisplayName="${t_gamerows}" name="1" displayName="${o_rows1}">./_inc/options/gamerows-1.xml</include>
 	<include subset="gamerows" subSetDisplayName="${t_gamerows}" name="2" displayName="${o_rows2}">./_inc/options/gamerows-2.xml</include>

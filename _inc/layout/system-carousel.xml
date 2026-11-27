@@ -15,7 +15,9 @@
 			<systemInfoDelay>800</systemInfoDelay>
 		</carousel>
 		<image name="logo">
+			<path>${themePath}/_inc/system_icons/_folder.svg</path>
 			<path>${themePath}/_inc/system_icons/${system.theme}.svg</path>
+			<path>${themePath}/_inc/icons_${iconSet}/${system.theme}.jpg</path>
 		</image>
 		<text name="logoText">
 			<fontPath>${fontTitle}</fontPath>
