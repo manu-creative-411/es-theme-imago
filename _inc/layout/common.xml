@@ -61,8 +61,8 @@
 			<fontPath>${fontMenuItem}</fontPath>
 			<fontSize>0.027</fontSize>
 			<color>${text}</color>
-			<selectedColor>${accentText}</selectedColor>
-			<selectorColor>${accent}</selectorColor>
+			<selectedColor>${text}</selectedColor>
+			<selectorColor>${neon}59</selectorColor>
 			<separatorColor>${subText}55</separatorColor>
 		</menuText>
 		<menuText name="menutitle">

@@ -356,6 +356,20 @@
 						<animation property="color" to="${rowSep}" duration="0"/>
 					</storyboard>
 				</rectangle>
+				<!-- Neon halo of the selected row: assets/ui/neon-row.png (white nine-patch), tinted with ${neon}; covers the whole row. -->
+				<ninepatch name="list-row-neon">
+					<path>${themePath}/assets/ui/neon-row.png</path>
+					<cornerSize>8 8</cornerSize>
+					<pos>0 0</pos>
+					<size>1 1</size>
+					<color>${neon}00</color>
+					<storyboard event="activate">
+						<animation property="color" to="${neon}FF" duration="0"/>
+					</storyboard>
+					<storyboard event="deactivate">
+						<animation property="color" to="${neon}00" duration="0"/>
+					</storyboard>
+				</ninepatch>
 				<rectangle name="list-row-selector">
 					<pos>0 0.06</pos>
 					<size>1 0.88</size>
