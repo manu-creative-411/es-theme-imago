@@ -2,7 +2,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1280" height="720" viewBox="0 0 1280 720" version="1.1">
   <defs>
     <linearGradient id="linearGradient444">
-      <stop style="stop-color:#000000;stop-opacity:0;" offset="0" id="stop444" />
+      <stop style="stop-color:#020003;stop-opacity:0;" offset="0" id="stop444" />
       <stop style="stop-color:#020003;stop-opacity:0.52403355;" offset="1" id="stop445" />
     </linearGradient>
     <linearGradient id="linearGradient3">
@@ -194,7 +194,7 @@
         <g transform="matrix(0.7,0,0,0.7,735.6,631.6) translate(0 0)">
           <rect style="display:inline;opacity:0.508144;fill:#2a3442;fill-opacity:1;stroke:none;stroke-width:7.28019" width="72" height="72" x="-728" y="16" transform="scale(-1,1)" />
         </g>
-        <rect style="opacity:1;fill:url(#linearGradient445);fill-opacity:1;stroke:none;stroke-width:73.1753" width="883.79993" height="1032.0001" x="972" y="24" transform="matrix(0.66666667,0,0,0.66666667,8.0000033,0)" />
+        <rect style="opacity:1;fill:url(#linearGradient445);fill-opacity:1;stroke:none;stroke-width:73.1753" width="948" height="1080" x="972" y="0" transform="matrix(0.66666667,0,0,0.66666667,8.0000033,0)" />
       </g>
       <g transform="matrix(-1,0,0,1,1920,0) translate(0 0)">
         <g transform="matrix(1.5,0,0,1.5,-12.000005,0)">
@@ -364,7 +364,7 @@
           <g transform="matrix(0.7,0,0,0.7,735.6,631.6) translate(0 0)">
             <rect style="display:inline;opacity:0.508144;fill:#2a3442;fill-opacity:1;stroke:none;stroke-width:7.28019" width="72" height="72" x="-728" y="16" transform="scale(-1,1)" />
           </g>
-          <rect style="opacity:1;fill:url(#linearGradient445);fill-opacity:1;stroke:none;stroke-width:73.1753" width="883.79993" height="1032.0001" x="972" y="24" transform="matrix(0.66666667,0,0,0.66666667,8.0000033,0)" />
+          <rect style="opacity:1;fill:url(#linearGradient445);fill-opacity:1;stroke:none;stroke-width:73.1753" width="948" height="1080" x="972" y="0" transform="matrix(0.66666667,0,0,0.66666667,8.0000033,0)" />
         </g>
       </g>
       <circle style="fill:#1a0c51;fill-opacity:1;stroke-width:20.0013;stroke-dasharray:none;paint-order:stroke fill markers" cx="1702" cy="6" r="2" />

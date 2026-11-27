@@ -93,7 +93,7 @@ Renaming the theme = renaming the folder; all paths use `${themePath}` or are re
 
 ## Wallpapers (assets/wallpapers/)
 - `<name>.svg` 16:9 (p. ej. 1280x720) = fondo a pantalla completa, capa `e_wallpaper` (z 1, sobre el color plano `bg`). **Debe estar aplanado** (sin `<use>`, `<clipPath>`, filtros ni capas ocultas: NanoSVG no los soporta). Si lo exportas de Inkscape: `python3 tools/flatten_svg.py original.svg assets/wallpapers/<nombre>.svg`.
-- Cada colorset elige el suyo en `_inc/colorsets/*.xml` (`wallpaper`, `wallpaperB1`, `wallpaperB2`). Hoy: Black -> `dark.svg`; el resto -> `none.png` (transparente).
+- Cada colorset elige el suyo en `_inc/colorsets/*.xml` (`wallpaper`, `wallpaperB1`, `wallpaperB2`). Hoy: Black -> `dark.svg`; el resto -> `<colorset>.svg` (la misma rejilla de cuadrados que Black, recoloreada: base = `bg`, cuadrados = `bg` aclarado, vineta = `bg` oscurecido). Se regeneran con `python3 tools/make_wallpapers.py` (paletas en el diccionario `SETS` del script).
 - `-b1`/`-b2` crops are no longer used (the banner is clipped with `clipRect`, nothing is drawn under it).
 - Opcion de tema `Wallpaper: on/off` (off = usa `none.png`).
 - Para anadir otro: copia `assets/wallpapers/<name>.svg`, ejecuta el script y apunta las 3 variables del colorset a `<name>.svg`, `<name>-b1.svg`, `<name>-b2.svg`.
