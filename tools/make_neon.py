@@ -16,12 +16,12 @@ from PIL import Image
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SS = 8            # supersampling
 TILE_BAND = 14    # px of the tile nine-patch border (== tPad)
-TILE_THICK = 7    # px of the gradient band on tiles (between the outer white line and the inner blend)
+TILE_THICK = 10   # px of the gradient band on tiles (between the outer white line and the inner blend)
 TILE_GAP = 1      # px between the frame and the image
 TILE_RADIUS = 12  # outer corner radius
 ROW_BAND = 12
-ROW_THICK = 3
-ROW_RADIUS = 8
+ROW_THICK = 6
+ROW_RADIUS = 11
 BLEND = 0.35      # fraction of the band, at its inner side, that fades smoothly to white
 CENTRE = 32       # stretchable centre
 
