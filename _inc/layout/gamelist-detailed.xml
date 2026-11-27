@@ -98,6 +98,78 @@
 		<image name="e_logo_sh24" extra="true">
 			<visible>false</visible>
 		</image>
+		<image name="e_logo_sh25" extra="true">
+			<visible>false</visible>
+		</image>
+		<image name="e_logo_sh26" extra="true">
+			<visible>false</visible>
+		</image>
+		<image name="e_logo_sh27" extra="true">
+			<visible>false</visible>
+		</image>
+		<image name="e_logo_sh28" extra="true">
+			<visible>false</visible>
+		</image>
+		<image name="e_logo_sh29" extra="true">
+			<visible>false</visible>
+		</image>
+		<image name="e_logo_sh30" extra="true">
+			<visible>false</visible>
+		</image>
+		<image name="e_logo_sh31" extra="true">
+			<visible>false</visible>
+		</image>
+		<image name="e_logo_sh32" extra="true">
+			<visible>false</visible>
+		</image>
+		<image name="e_logo_sh33" extra="true">
+			<visible>false</visible>
+		</image>
+		<image name="e_logo_sh34" extra="true">
+			<visible>false</visible>
+		</image>
+		<image name="e_logo_sh35" extra="true">
+			<visible>false</visible>
+		</image>
+		<image name="e_logo_sh36" extra="true">
+			<visible>false</visible>
+		</image>
+		<image name="e_logo_sh37" extra="true">
+			<visible>false</visible>
+		</image>
+		<image name="e_logo_sh38" extra="true">
+			<visible>false</visible>
+		</image>
+		<image name="e_logo_sh39" extra="true">
+			<visible>false</visible>
+		</image>
+		<image name="e_logo_sh40" extra="true">
+			<visible>false</visible>
+		</image>
+		<image name="e_logo_sh41" extra="true">
+			<visible>false</visible>
+		</image>
+		<image name="e_logo_sh42" extra="true">
+			<visible>false</visible>
+		</image>
+		<image name="e_logo_sh43" extra="true">
+			<visible>false</visible>
+		</image>
+		<image name="e_logo_sh44" extra="true">
+			<visible>false</visible>
+		</image>
+		<image name="e_logo_sh45" extra="true">
+			<visible>false</visible>
+		</image>
+		<image name="e_logo_sh46" extra="true">
+			<visible>false</visible>
+		</image>
+		<image name="e_logo_sh47" extra="true">
+			<visible>false</visible>
+		</image>
+		<image name="e_logo_sh48" extra="true">
+			<visible>false</visible>
+		</image>
 		<image name="e_logo" extra="true">
 			<pos>0.28 0.14</pos>
 			<origin>0.5 0.5</origin>

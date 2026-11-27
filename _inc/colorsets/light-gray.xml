@@ -21,8 +21,8 @@
 		<menuAccent>0A7660</menuAccent> <!-- menu: selected-item bar, group titles, subtitles and footers; a shade of the set colour with contrast >= 5 against <box> (the menu background and the selected item's text) -->
 		<neonSet>light-gray</neonSet> <!-- suffix of assets/ui/neon-<set>.png and neon-row-<set>.png (see tools/make_neon.py) -->
 		<logoColorScheme>light</logoColorScheme> <!-- dark|light: picks <system>/<scheme>[-<region>].svg in _inc/system_logos -->
-		<lsStep>4</lsStep> <!-- logo drop shadow (gamelist views): blur step in px, then alpha (hex) of the centre and the three rings -->
-		<lsA0>14</lsA0> <lsA1>0E</lsA1> <lsA2>0A</lsA2> <lsA3>06</lsA3>
+		<lsStep>3</lsStep> <!-- logo drop shadow: ring step in px, then alpha (hex) of the centre and the 4 rings -->
+		<lsA0>0E</lsA0> <lsA1>0A</lsA1> <lsA2>07</lsA2> <lsA3>05</lsA3> <lsA4>03</lsA4>
 		<!-- Texture (iconic-style): shadow + vertical gradient body + hairline edge, selected row, separators, scrollbar. Derived from tile / accent / text. -->
 		<panelTop>FFFFFF</panelTop>             <!-- card body, top of the vertical gradient -->
 		<panelBot>F0F0F0</panelBot>             <!-- card body, bottom -->
