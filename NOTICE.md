@@ -4,7 +4,7 @@ This theme is a **collection of separate works under different licences**. Nothi
 Informational only, not legal advice; check each source before redistributing.
 
 ## 1. Own work of the theme author
-Layouts and options XML, colour sets, `tools/`, `assets/ui/neon.png`, the wallpaper `assets/wallpapers/dark.svg` (made by the author),
+Layouts and options XML, colour sets, `tools/`, `assets/ui/neon-*.png`, the wallpaper `assets/wallpapers/dark.svg` (made by the author),
 `assets/icons/menu-icon-controller.svg` and `gamepad.svg` (author's controller icon), the console folder icons `_inc/system_icons/` (author's work: folder shapes, gradients and glyphs),
 and the SNES help icons `_inc/help/icons/snes/`.
 

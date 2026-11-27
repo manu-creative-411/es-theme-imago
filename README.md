@@ -23,7 +23,7 @@ _inc/options/list.xml            list geometry, row font size / corner radius, c
 _inc/system_icons/               <system>.svg         square icon of each system (system view tiles)
 _inc/system_bg/                  <system>.png|svg|jpg Carbon console art (system view; fallback for games without image)
 _inc/system_logos/               console logo, ordered <path> chain (see README.txt there)
-assets/ui/                       white.png, round.png, shadow.png (card shadow nine-patch), sheen.png (card gloss), neon.png, box-<set>-*.svg
+assets/ui/                       white.png, round.png, shadow.png (card shadow nine-patch), sheen.png (card gloss), neon-<set>.png + neon-row-<set>.png (selection frames), box-<set>-*.svg
 assets/branding/                 retrobat.svg, batocera.svg, retrobox.svg (PLACEHOLDERS)
 ```
 
@@ -112,11 +112,10 @@ Renaming the theme = renaming the folder; all paths use `${themePath}` or are re
 - Gradient of each combo: grey `#e5e5e5 -> #a8a8a8` multiplied by the base colour (lighter on top, darker at the bottom).
 - `app_j2me_loader.svg` is a copy of the (amber yellow) `j2me.svg` folder.
 
-## Selector neon y tiles (assets/ui/neon.png, _inc/options/tiles.xml)
+## Selector neon y tiles (assets/ui/neon-<set>.png, _inc/options/tiles.xml)
 - Los tiles ya no tienen placa: icono/caratula a todo el ancho o alto del tile (`imageSizeMode=maxSize`). El seleccionado lleva un contorno neon que rodea
   solo la imagen (`selectionMode=image`), tenido con `${neon}` (variable de cada color set). Si tu ES ignora `selectionMode`, el neon rodeara el tile entero.
-- `neon.png` es un nine-patch (nucleo + resplandor solo hacia fuera). Se regenera con `python3 tools/make_neon.py [BAND] [STROKE]`;
-  `BAND` debe ser igual a `tPad` (px entre la imagen y el borde del tile = `backgroundCornerSize`).
+- `neon-<set>.png` es un nine-patch con el marco de seleccion (ver "Selection halo everywhere"). Se regenera con `python3 tools/make_neon.py` (TILE_BAND debe ser igual a `tPad`).
 - `tiles.xml`: `tPad` (14), `tZoom` (1.06, zoom del seleccionado) `gPadX` / `gPadY` (holgura izquierda y arriba/abajo del grid, relativa a la pantalla), `gPeek` (en geometry.xml: fraccion del siguiente tile que se deja ver a la derecha, 0.45) y `mX` (separacion horizontal, 0.002).
   Si el zoom o el neon se cortan en los bordes del grid, sube `gPadY`; si quieres iconos mas grandes, baja `tPad` (y regenera el PNG con el mismo BAND).
 - El grid ocupa el 100 % del ancho (`pos 0`, `size 1`) y, en vertical, `gPad` extra arriba y abajo (la zona util es la de antes). Geometria: `geometry.xml`.
@@ -164,8 +163,9 @@ AFTER `common.xml`. Xbox, PlayStation and SNES map the *physical position* of Ba
 The system and game icon grids show `Cols` full columns and a part (`gPeek`, 45 %) of the next tile at the right edge. ES clips the tiles to the whole grid rectangle, padding included, so the right padding (`sPadR` / `gPadR`, computed in `geometry.xml`) is exactly the room of that tile. `Cols` is the number of FULL columns, so ES scrolls one column when the cursor passes the last full one. Untested in a real ES.
 
 ## Selection halo everywhere
-- Icon tiles (system and game grids): `assets/ui/neon.png`, tinted with `${neon}`; the line sits 1 px from the image and the inside has a 16 % veil of the same colour (`python3 tools/make_neon.py 14 3.0 neon.png 0.16`; `BAND` must equal `tPad`).
-- List rows (basic and detailed): `assets/ui/neon-row.png` (nine-patch, band 12 px) covers the whole selected row (`list-row-neon` in the row template), tinted with `${neon}`. Regenerate with `python3 tools/make_neon.py 12 3.0 neon-row.png 0`.
-- Menus: ES only offers a flat selector colour there (no image), so the bar is `${neon}` at 35 % opacity; no halo is possible.
-- The halo colour is `neon` in each colour set (`_inc/colorsets/*.xml`): Black = purple `9B6BFF`, Light gray = aquamarine `2EE6C0`; the other sets keep their previous value. Only one colour per set is possible (the nine-patch is tinted uniformly).
-- Untested in a real ES: the row halo relies on colour storyboards of a `ninepatch` inside the list item template.
+- The selection marker is a crisp rounded-rectangle frame: 1 px white outline, a band in the colour set's `neon` colour, and a 1 px white inner line. No glow, no veil.
+- Icon tiles (system and game grids): `assets/ui/neon-<set>.png` (nine-patch, band 14 px = `tPad`, coloured band 4 px), 1 px from the image. List rows (basic and detailed): `assets/ui/neon-row-<set>.png` (band 12 px, coloured band 3 px) covers the whole selected row (`list-row-neon` in the row template); the old filled pill is gone.
+- Colours are baked into the PNGs (white stays white), so layouts tint with `FFFFFFFF`; each colour set names its pair with `<neonSet>`. Regenerate all with `python3 tools/make_neon.py` (reads `<neon>` from `_inc/colorsets/*.xml`).
+- Menus: ES only offers a flat selector colour there (no image), so the bar is `${neon}` at 35 % opacity; no frame is possible.
+- Neon per set: Black `9B6BFF`, Light gray `2EE6C0`, Deep blue `7DF9FF`, GameCube purple `5CF2FF`, Vivid red `FFF04D`, Aqua green `FF2E9A`.
+- Untested in a real ES: the row frame relies on colour storyboards of a `ninepatch` inside the list item template.

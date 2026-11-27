@@ -356,36 +356,20 @@
 						<animation property="color" to="${rowSep}" duration="0"/>
 					</storyboard>
 				</rectangle>
-				<!-- Neon halo of the selected row: assets/ui/neon-row.png (white nine-patch, band 12 px), tinted with ${neon}; covers the whole row. -->
+				<!-- Neon halo of the selected row: assets/ui/neon-row-${neonSet}.png (nine-patch frame with baked colours, band 12 px), tinted white; covers the whole row. -->
 				<ninepatch name="list-row-neon">
-					<path>${themePath}/assets/ui/neon-row.png</path>
+					<path>${themePath}/assets/ui/neon-row-${neonSet}.png</path>
 					<cornerSize>12 12</cornerSize>
 					<pos>0 0</pos>
 					<size>1 1</size>
-					<color>${neon}00</color>
+					<color>FFFFFF00</color>
 					<storyboard event="activate">
-						<animation property="color" to="${neon}FF" duration="0"/>
+						<animation property="color" to="FFFFFFFF" duration="0"/>
 					</storyboard>
 					<storyboard event="deactivate">
-						<animation property="color" to="${neon}00" duration="0"/>
+						<animation property="color" to="FFFFFF00" duration="0"/>
 					</storyboard>
 				</ninepatch>
-				<rectangle name="list-row-selector">
-					<pos>0.009 0.09</pos>
-					<size>0.982 0.82</size>
-					<color>${rowSel}00</color>
-					<borderColor>${rowSelEdge}00</borderColor>
-					<borderSize>1</borderSize>
-					<roundCorners>${listRadius}</roundCorners>
-					<storyboard event="activate">
-						<animation property="color" to="${rowSel}FF" duration="0"/>
-						<animation property="borderColor" to="${rowSelEdge}" duration="0"/>
-					</storyboard>
-					<storyboard event="deactivate">
-						<animation property="color" to="${rowSel}00" duration="0"/>
-						<animation property="borderColor" to="${rowSelEdge}00" duration="0"/>
-					</storyboard>
-				</rectangle>
 				<text name="list-row-title">
 					<text>{game:fullName}</text>
 					<pos>0.04 0</pos>

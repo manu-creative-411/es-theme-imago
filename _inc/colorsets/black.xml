@@ -16,6 +16,7 @@
 		<wallpaperB1>${themePath}/assets/wallpapers/dark-b1.svg</wallpaperB1> <!-- recorte bajo el banner, 1 fila -->
 		<wallpaperB2>${themePath}/assets/wallpapers/dark-b2.svg</wallpaperB2> <!-- recorte bajo el banner, 2 filas -->
 		<neon>9B6BFF</neon>         <!-- color del selector neon (contorno + resplandor) -->
+		<neonSet>black</neonSet> <!-- suffix of assets/ui/neon-<set>.png and neon-row-<set>.png (see tools/make_neon.py) -->
 		<logoColorScheme>dark</logoColorScheme> <!-- dark|light: picks <system>/<scheme>[-<region>].svg in _inc/system_logos -->
 		<!-- Texture (iconic-style): shadow + vertical gradient body + hairline edge, selected row, separators, scrollbar. Derived from tile / accent / text. -->
 		<panelTop>373741</panelTop>             <!-- card body, top of the vertical gradient -->

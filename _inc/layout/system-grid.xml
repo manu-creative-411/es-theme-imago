@@ -6,7 +6,7 @@
 		<imagegrid name="imagegrid">
 			<pos>0 ${sGridY}</pos>
 			<size>1 ${sGridH}</size>
-			<padding>${gPad}</padding>
+			<padding>${gPadX} ${gPadY} ${sPadR} ${gPadY}</padding>
 			<autoLayout>${sCols} ${sRows}</autoLayout>
 			<margin>${mX} ${mY}</margin>
 			<autoLayoutSelectedZoom>${tZoom}</autoLayoutSelectedZoom>
@@ -17,7 +17,7 @@
 			<zIndex>40</zIndex>
 		</imagegrid>
 		<gridtile name="default">
-			<backgroundImage>${themePath}/assets/ui/neon.png</backgroundImage>
+			<backgroundImage>${themePath}/assets/ui/neon-${neonSet}.png</backgroundImage>
 			<backgroundCornerSize>${tPad} ${tPad}</backgroundCornerSize>
 			<backgroundColor>00000000</backgroundColor>
 			<selectionMode>image</selectionMode>
@@ -25,9 +25,9 @@
 			<padding>${tPad} ${tPad}</padding>
 		</gridtile>
 		<gridtile name="selected">
-			<backgroundImage>${themePath}/assets/ui/neon.png</backgroundImage>
+			<backgroundImage>${themePath}/assets/ui/neon-${neonSet}.png</backgroundImage>
 			<backgroundCornerSize>${tPad} ${tPad}</backgroundCornerSize>
-			<backgroundColor>${neon}</backgroundColor>
+			<backgroundColor>FFFFFFFF</backgroundColor>
 			<selectionMode>image</selectionMode>
 			<imageSizeMode>maxSize</imageSizeMode>
 			<padding>${tPad} ${tPad}</padding>
