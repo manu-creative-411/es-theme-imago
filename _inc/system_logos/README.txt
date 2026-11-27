@@ -2,7 +2,8 @@ Console logos (system view banner + top-left of the game list). Same logic as es
 
 The layouts list several <path> elements, from LOWEST to HIGHEST priority; the LAST one whose file exists wins.
 Variables: logoRegion = eu (default) | us | jp   (option "Console logo region")
-           logoColorScheme = dark | light        (set by the colour set)
+           logoColorScheme = dark | light        (set by the colour set; list views only)
+           Banners (system view, game icon view) ignore it and always use the dark variants (the <scheme> in the list below is `dark`).
 
   1  <system>.svg                          generic
   2  <system>-<region>.svg                 generic, regional

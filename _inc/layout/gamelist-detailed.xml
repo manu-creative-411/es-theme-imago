@@ -62,6 +62,42 @@
 		<image name="e_logo_sh12" extra="true">
 			<visible>false</visible>
 		</image>
+		<image name="e_logo_sh13" extra="true">
+			<visible>false</visible>
+		</image>
+		<image name="e_logo_sh14" extra="true">
+			<visible>false</visible>
+		</image>
+		<image name="e_logo_sh15" extra="true">
+			<visible>false</visible>
+		</image>
+		<image name="e_logo_sh16" extra="true">
+			<visible>false</visible>
+		</image>
+		<image name="e_logo_sh17" extra="true">
+			<visible>false</visible>
+		</image>
+		<image name="e_logo_sh18" extra="true">
+			<visible>false</visible>
+		</image>
+		<image name="e_logo_sh19" extra="true">
+			<visible>false</visible>
+		</image>
+		<image name="e_logo_sh20" extra="true">
+			<visible>false</visible>
+		</image>
+		<image name="e_logo_sh21" extra="true">
+			<visible>false</visible>
+		</image>
+		<image name="e_logo_sh22" extra="true">
+			<visible>false</visible>
+		</image>
+		<image name="e_logo_sh23" extra="true">
+			<visible>false</visible>
+		</image>
+		<image name="e_logo_sh24" extra="true">
+			<visible>false</visible>
+		</image>
 		<image name="e_logo" extra="true">
 			<pos>0.28 0.14</pos>
 			<origin>0.5 0.5</origin>

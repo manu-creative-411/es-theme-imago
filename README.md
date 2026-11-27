@@ -42,8 +42,8 @@ Color set / Help icons / Branding / Console logo region / **Banner** (off [defau
   *cartel* (name plate), but only when there is no logo to show (system view: no console logo; game view: neither game logo nor console logo). It depends on the LOGO only, never on the console art.
 - **Info row** above the grid (always, with or without banner): system view = manufacturer . year at the left end, game count (`systemInfo`) at the right end;
   game view = game name at the left, developer and year at the right. `rowY` / `rowH` in `geometry.xml`; the grid zone starts under it.
-- **Logo drop shadow**: ES has no per-image shadow, so each logo (banner logos, console logo of the list views) gets thirteen black translucent copies of it
-  with zero net offset: one centre copy, a ring of 8 and 4 outer points (3 px steps `lsDx`, `lsDy`) = a soft blur right under the logo (`logo_shadow` in the generator). The stock `:/shaders/shadow.glsl` shader was not used because it cannot be tested here.
+- **Logo drop shadow**: ES has no per-image shadow, so each logo (banner logos, console logo of the list views) gets twenty-five black translucent copies of it
+  with zero net offset: one centre copy and three rings of 8 points at 1, 2 and 3 steps (4 px steps `lsDx`, `lsDy`, so the shadow reaches about 12 px) = a soft, wide blur under the logo (`logo_shadow` in the generator). The stock `:/shaders/shadow.glsl` shader was not used because it cannot be tested here.
 - Up to 4 rows without banner (default 3), 2 with it. Row count -> tile height (capped at 34 % of the screen height); columns = floor(width / tile height),
   so the cells fill the whole width and the icon is as big as the row allows. All of it is computed in `geometry.xml` (variables evaluate in order).
 - ES `MathExpr` notes: plain variables are strings, so a sum must start with a number (`0 + ${x} + ...`) or ES concatenates; `screen.ratio` is a NAME
@@ -63,7 +63,7 @@ and the built-in battery indicator hidden (same approach as es-theme-iconic). Ic
 - icon: _inc/system_icons/<system.theme>.svg
 - console art: _inc/system_bg/<system.theme>.jpg
 - console logo: ordered list of `<path>` in the layouts (last existing file wins), same logic as es-theme-iconic. Variables `logoRegion`
-  (eu/us/jp, option "Console logo region") and `logoColorScheme` (dark/light, set per colour set). Full order in `_inc/system_logos/README.txt`.
+  (eu/us/jp, option "Console logo region") and `logoColorScheme` (dark/light, set per colour set; used by the list views). The banners (system view and game icon view) always use the `dark` variants, in every colour set, since the shadow keeps them legible. Full order in `_inc/system_logos/README.txt`.
   No generated folders. NOTE: `firstfile()` only works inside expressions (`<visible>`), never as a `<path>` value.
 - `python3 tools/build_assets.py` only copies system_bg/collections, creates icon aliases and the wallpaper crops.
 
