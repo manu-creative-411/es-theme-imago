@@ -96,7 +96,7 @@
 			<pos>${lsSys0X} ${lsSys0Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA0}</color>
+			<color>00000014</color>
 			<zIndex>34</zIndex>
 		</image>
 		<image name="e_syslogo_sh1" extra="true" if="${bOn} == 1">
@@ -114,7 +114,7 @@
 			<pos>${lsSys1X} ${lsSys1Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA1}</color>
+			<color>0000000E</color>
 			<zIndex>34</zIndex>
 		</image>
 		<image name="e_syslogo_sh2" extra="true" if="${bOn} == 1">
@@ -132,7 +132,7 @@
 			<pos>${lsSys2X} ${lsSys2Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA1}</color>
+			<color>0000000E</color>
 			<zIndex>34</zIndex>
 		</image>
 		<image name="e_syslogo_sh3" extra="true" if="${bOn} == 1">
@@ -150,7 +150,7 @@
 			<pos>${lsSys3X} ${lsSys3Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA1}</color>
+			<color>0000000E</color>
 			<zIndex>34</zIndex>
 		</image>
 		<image name="e_syslogo_sh4" extra="true" if="${bOn} == 1">
@@ -168,7 +168,7 @@
 			<pos>${lsSys4X} ${lsSys4Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA1}</color>
+			<color>0000000E</color>
 			<zIndex>34</zIndex>
 		</image>
 		<image name="e_syslogo_sh5" extra="true" if="${bOn} == 1">
@@ -186,7 +186,7 @@
 			<pos>${lsSys5X} ${lsSys5Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA1}</color>
+			<color>0000000E</color>
 			<zIndex>34</zIndex>
 		</image>
 		<image name="e_syslogo_sh6" extra="true" if="${bOn} == 1">
@@ -204,7 +204,7 @@
 			<pos>${lsSys6X} ${lsSys6Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA1}</color>
+			<color>0000000E</color>
 			<zIndex>34</zIndex>
 		</image>
 		<image name="e_syslogo_sh7" extra="true" if="${bOn} == 1">
@@ -222,7 +222,7 @@
 			<pos>${lsSys7X} ${lsSys7Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA1}</color>
+			<color>0000000E</color>
 			<zIndex>34</zIndex>
 		</image>
 		<image name="e_syslogo_sh8" extra="true" if="${bOn} == 1">
@@ -240,7 +240,7 @@
 			<pos>${lsSys8X} ${lsSys8Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA1}</color>
+			<color>0000000E</color>
 			<zIndex>34</zIndex>
 		</image>
 		<image name="e_syslogo_sh9" extra="true" if="${bOn} == 1">
@@ -258,7 +258,7 @@
 			<pos>${lsSys9X} ${lsSys9Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA1}</color>
+			<color>0000000A</color>
 			<zIndex>34</zIndex>
 		</image>
 		<image name="e_syslogo_sh10" extra="true" if="${bOn} == 1">
@@ -276,7 +276,7 @@
 			<pos>${lsSys10X} ${lsSys10Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA1}</color>
+			<color>0000000A</color>
 			<zIndex>34</zIndex>
 		</image>
 		<image name="e_syslogo_sh11" extra="true" if="${bOn} == 1">
@@ -294,7 +294,7 @@
 			<pos>${lsSys11X} ${lsSys11Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA1}</color>
+			<color>0000000A</color>
 			<zIndex>34</zIndex>
 		</image>
 		<image name="e_syslogo_sh12" extra="true" if="${bOn} == 1">
@@ -312,7 +312,7 @@
 			<pos>${lsSys12X} ${lsSys12Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA1}</color>
+			<color>0000000A</color>
 			<zIndex>34</zIndex>
 		</image>
 		<image name="e_syslogo_sh13" extra="true" if="${bOn} == 1">
@@ -330,7 +330,7 @@
 			<pos>${lsSys13X} ${lsSys13Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA2}</color>
+			<color>0000000A</color>
 			<zIndex>34</zIndex>
 		</image>
 		<image name="e_syslogo_sh14" extra="true" if="${bOn} == 1">
@@ -348,7 +348,7 @@
 			<pos>${lsSys14X} ${lsSys14Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA2}</color>
+			<color>0000000A</color>
 			<zIndex>34</zIndex>
 		</image>
 		<image name="e_syslogo_sh15" extra="true" if="${bOn} == 1">
@@ -366,7 +366,7 @@
 			<pos>${lsSys15X} ${lsSys15Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA2}</color>
+			<color>0000000A</color>
 			<zIndex>34</zIndex>
 		</image>
 		<image name="e_syslogo_sh16" extra="true" if="${bOn} == 1">
@@ -384,7 +384,7 @@
 			<pos>${lsSys16X} ${lsSys16Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA2}</color>
+			<color>0000000A</color>
 			<zIndex>34</zIndex>
 		</image>
 		<image name="e_syslogo_sh17" extra="true" if="${bOn} == 1">
@@ -402,7 +402,7 @@
 			<pos>${lsSys17X} ${lsSys17Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA2}</color>
+			<color>00000006</color>
 			<zIndex>34</zIndex>
 		</image>
 		<image name="e_syslogo_sh18" extra="true" if="${bOn} == 1">
@@ -420,7 +420,7 @@
 			<pos>${lsSys18X} ${lsSys18Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA2}</color>
+			<color>00000006</color>
 			<zIndex>34</zIndex>
 		</image>
 		<image name="e_syslogo_sh19" extra="true" if="${bOn} == 1">
@@ -438,7 +438,7 @@
 			<pos>${lsSys19X} ${lsSys19Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA2}</color>
+			<color>00000006</color>
 			<zIndex>34</zIndex>
 		</image>
 		<image name="e_syslogo_sh20" extra="true" if="${bOn} == 1">
@@ -456,7 +456,7 @@
 			<pos>${lsSys20X} ${lsSys20Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA2}</color>
+			<color>00000006</color>
 			<zIndex>34</zIndex>
 		</image>
 		<image name="e_syslogo_sh21" extra="true" if="${bOn} == 1">
@@ -474,7 +474,7 @@
 			<pos>${lsSys21X} ${lsSys21Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA2}</color>
+			<color>00000006</color>
 			<zIndex>34</zIndex>
 		</image>
 		<image name="e_syslogo_sh22" extra="true" if="${bOn} == 1">
@@ -492,7 +492,7 @@
 			<pos>${lsSys22X} ${lsSys22Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA2}</color>
+			<color>00000006</color>
 			<zIndex>34</zIndex>
 		</image>
 		<image name="e_syslogo_sh23" extra="true" if="${bOn} == 1">
@@ -510,7 +510,7 @@
 			<pos>${lsSys23X} ${lsSys23Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA2}</color>
+			<color>00000006</color>
 			<zIndex>34</zIndex>
 		</image>
 		<image name="e_syslogo_sh24" extra="true" if="${bOn} == 1">
@@ -528,439 +528,7 @@
 			<pos>${lsSys24X} ${lsSys24Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA2}</color>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="e_syslogo_sh25" extra="true" if="${bOn} == 1">
-			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-${logoRegion}.svg</path>
-			<pos>${lsSys25X} ${lsSys25Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA3}</color>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="e_syslogo_sh26" extra="true" if="${bOn} == 1">
-			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-${logoRegion}.svg</path>
-			<pos>${lsSys26X} ${lsSys26Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA3}</color>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="e_syslogo_sh27" extra="true" if="${bOn} == 1">
-			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-${logoRegion}.svg</path>
-			<pos>${lsSys27X} ${lsSys27Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA3}</color>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="e_syslogo_sh28" extra="true" if="${bOn} == 1">
-			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-${logoRegion}.svg</path>
-			<pos>${lsSys28X} ${lsSys28Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA3}</color>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="e_syslogo_sh29" extra="true" if="${bOn} == 1">
-			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-${logoRegion}.svg</path>
-			<pos>${lsSys29X} ${lsSys29Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA3}</color>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="e_syslogo_sh30" extra="true" if="${bOn} == 1">
-			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-${logoRegion}.svg</path>
-			<pos>${lsSys30X} ${lsSys30Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA3}</color>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="e_syslogo_sh31" extra="true" if="${bOn} == 1">
-			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-${logoRegion}.svg</path>
-			<pos>${lsSys31X} ${lsSys31Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA3}</color>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="e_syslogo_sh32" extra="true" if="${bOn} == 1">
-			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-${logoRegion}.svg</path>
-			<pos>${lsSys32X} ${lsSys32Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA3}</color>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="e_syslogo_sh33" extra="true" if="${bOn} == 1">
-			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-${logoRegion}.svg</path>
-			<pos>${lsSys33X} ${lsSys33Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA3}</color>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="e_syslogo_sh34" extra="true" if="${bOn} == 1">
-			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-${logoRegion}.svg</path>
-			<pos>${lsSys34X} ${lsSys34Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA3}</color>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="e_syslogo_sh35" extra="true" if="${bOn} == 1">
-			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-${logoRegion}.svg</path>
-			<pos>${lsSys35X} ${lsSys35Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA3}</color>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="e_syslogo_sh36" extra="true" if="${bOn} == 1">
-			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-${logoRegion}.svg</path>
-			<pos>${lsSys36X} ${lsSys36Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA3}</color>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="e_syslogo_sh37" extra="true" if="${bOn} == 1">
-			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-${logoRegion}.svg</path>
-			<pos>${lsSys37X} ${lsSys37Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA4}</color>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="e_syslogo_sh38" extra="true" if="${bOn} == 1">
-			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-${logoRegion}.svg</path>
-			<pos>${lsSys38X} ${lsSys38Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA4}</color>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="e_syslogo_sh39" extra="true" if="${bOn} == 1">
-			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-${logoRegion}.svg</path>
-			<pos>${lsSys39X} ${lsSys39Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA4}</color>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="e_syslogo_sh40" extra="true" if="${bOn} == 1">
-			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-${logoRegion}.svg</path>
-			<pos>${lsSys40X} ${lsSys40Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA4}</color>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="e_syslogo_sh41" extra="true" if="${bOn} == 1">
-			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-${logoRegion}.svg</path>
-			<pos>${lsSys41X} ${lsSys41Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA4}</color>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="e_syslogo_sh42" extra="true" if="${bOn} == 1">
-			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-${logoRegion}.svg</path>
-			<pos>${lsSys42X} ${lsSys42Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA4}</color>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="e_syslogo_sh43" extra="true" if="${bOn} == 1">
-			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-${logoRegion}.svg</path>
-			<pos>${lsSys43X} ${lsSys43Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA4}</color>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="e_syslogo_sh44" extra="true" if="${bOn} == 1">
-			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-${logoRegion}.svg</path>
-			<pos>${lsSys44X} ${lsSys44Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA4}</color>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="e_syslogo_sh45" extra="true" if="${bOn} == 1">
-			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-${logoRegion}.svg</path>
-			<pos>${lsSys45X} ${lsSys45Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA4}</color>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="e_syslogo_sh46" extra="true" if="${bOn} == 1">
-			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-${logoRegion}.svg</path>
-			<pos>${lsSys46X} ${lsSys46Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA4}</color>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="e_syslogo_sh47" extra="true" if="${bOn} == 1">
-			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-${logoRegion}.svg</path>
-			<pos>${lsSys47X} ${lsSys47Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA4}</color>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="e_syslogo_sh48" extra="true" if="${bOn} == 1">
-			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-${logoRegion}.svg</path>
-			<pos>${lsSys48X} ${lsSys48Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA4}</color>
+			<color>00000006</color>
 			<zIndex>34</zIndex>
 		</image>
 		<image name="e_syslogo" extra="true" if="${bOn} == 1">

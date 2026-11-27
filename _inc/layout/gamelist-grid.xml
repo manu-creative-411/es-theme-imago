@@ -42,7 +42,7 @@
 			<pos>${lsMq0X} ${lsMq0Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA0}</color>
+			<color>00000014</color>
 			<visible>${bVis}</visible>
 			<zIndex>34</zIndex>
 		</image>
@@ -51,7 +51,7 @@
 			<pos>${lsMq1X} ${lsMq1Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA1}</color>
+			<color>0000000E</color>
 			<visible>${bVis}</visible>
 			<zIndex>34</zIndex>
 		</image>
@@ -60,7 +60,7 @@
 			<pos>${lsMq2X} ${lsMq2Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA1}</color>
+			<color>0000000E</color>
 			<visible>${bVis}</visible>
 			<zIndex>34</zIndex>
 		</image>
@@ -69,7 +69,7 @@
 			<pos>${lsMq3X} ${lsMq3Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA1}</color>
+			<color>0000000E</color>
 			<visible>${bVis}</visible>
 			<zIndex>34</zIndex>
 		</image>
@@ -78,7 +78,7 @@
 			<pos>${lsMq4X} ${lsMq4Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA1}</color>
+			<color>0000000E</color>
 			<visible>${bVis}</visible>
 			<zIndex>34</zIndex>
 		</image>
@@ -87,7 +87,7 @@
 			<pos>${lsMq5X} ${lsMq5Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA1}</color>
+			<color>0000000E</color>
 			<visible>${bVis}</visible>
 			<zIndex>34</zIndex>
 		</image>
@@ -96,7 +96,7 @@
 			<pos>${lsMq6X} ${lsMq6Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA1}</color>
+			<color>0000000E</color>
 			<visible>${bVis}</visible>
 			<zIndex>34</zIndex>
 		</image>
@@ -105,7 +105,7 @@
 			<pos>${lsMq7X} ${lsMq7Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA1}</color>
+			<color>0000000E</color>
 			<visible>${bVis}</visible>
 			<zIndex>34</zIndex>
 		</image>
@@ -114,7 +114,7 @@
 			<pos>${lsMq8X} ${lsMq8Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA1}</color>
+			<color>0000000E</color>
 			<visible>${bVis}</visible>
 			<zIndex>34</zIndex>
 		</image>
@@ -123,7 +123,7 @@
 			<pos>${lsMq9X} ${lsMq9Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA1}</color>
+			<color>0000000A</color>
 			<visible>${bVis}</visible>
 			<zIndex>34</zIndex>
 		</image>
@@ -132,7 +132,7 @@
 			<pos>${lsMq10X} ${lsMq10Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA1}</color>
+			<color>0000000A</color>
 			<visible>${bVis}</visible>
 			<zIndex>34</zIndex>
 		</image>
@@ -141,7 +141,7 @@
 			<pos>${lsMq11X} ${lsMq11Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA1}</color>
+			<color>0000000A</color>
 			<visible>${bVis}</visible>
 			<zIndex>34</zIndex>
 		</image>
@@ -150,7 +150,7 @@
 			<pos>${lsMq12X} ${lsMq12Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA1}</color>
+			<color>0000000A</color>
 			<visible>${bVis}</visible>
 			<zIndex>34</zIndex>
 		</image>
@@ -159,7 +159,7 @@
 			<pos>${lsMq13X} ${lsMq13Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA2}</color>
+			<color>0000000A</color>
 			<visible>${bVis}</visible>
 			<zIndex>34</zIndex>
 		</image>
@@ -168,7 +168,7 @@
 			<pos>${lsMq14X} ${lsMq14Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA2}</color>
+			<color>0000000A</color>
 			<visible>${bVis}</visible>
 			<zIndex>34</zIndex>
 		</image>
@@ -177,7 +177,7 @@
 			<pos>${lsMq15X} ${lsMq15Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA2}</color>
+			<color>0000000A</color>
 			<visible>${bVis}</visible>
 			<zIndex>34</zIndex>
 		</image>
@@ -186,7 +186,7 @@
 			<pos>${lsMq16X} ${lsMq16Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA2}</color>
+			<color>0000000A</color>
 			<visible>${bVis}</visible>
 			<zIndex>34</zIndex>
 		</image>
@@ -195,7 +195,7 @@
 			<pos>${lsMq17X} ${lsMq17Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA2}</color>
+			<color>00000006</color>
 			<visible>${bVis}</visible>
 			<zIndex>34</zIndex>
 		</image>
@@ -204,7 +204,7 @@
 			<pos>${lsMq18X} ${lsMq18Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA2}</color>
+			<color>00000006</color>
 			<visible>${bVis}</visible>
 			<zIndex>34</zIndex>
 		</image>
@@ -213,7 +213,7 @@
 			<pos>${lsMq19X} ${lsMq19Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA2}</color>
+			<color>00000006</color>
 			<visible>${bVis}</visible>
 			<zIndex>34</zIndex>
 		</image>
@@ -222,7 +222,7 @@
 			<pos>${lsMq20X} ${lsMq20Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA2}</color>
+			<color>00000006</color>
 			<visible>${bVis}</visible>
 			<zIndex>34</zIndex>
 		</image>
@@ -231,7 +231,7 @@
 			<pos>${lsMq21X} ${lsMq21Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA2}</color>
+			<color>00000006</color>
 			<visible>${bVis}</visible>
 			<zIndex>34</zIndex>
 		</image>
@@ -240,7 +240,7 @@
 			<pos>${lsMq22X} ${lsMq22Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA2}</color>
+			<color>00000006</color>
 			<visible>${bVis}</visible>
 			<zIndex>34</zIndex>
 		</image>
@@ -249,7 +249,7 @@
 			<pos>${lsMq23X} ${lsMq23Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA2}</color>
+			<color>00000006</color>
 			<visible>${bVis}</visible>
 			<zIndex>34</zIndex>
 		</image>
@@ -258,223 +258,7 @@
 			<pos>${lsMq24X} ${lsMq24Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA2}</color>
-			<visible>${bVis}</visible>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="md_marquee_sh25" extra="true">
-			<path>{game:marquee}</path>
-			<pos>${lsMq25X} ${lsMq25Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA3}</color>
-			<visible>${bVis}</visible>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="md_marquee_sh26" extra="true">
-			<path>{game:marquee}</path>
-			<pos>${lsMq26X} ${lsMq26Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA3}</color>
-			<visible>${bVis}</visible>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="md_marquee_sh27" extra="true">
-			<path>{game:marquee}</path>
-			<pos>${lsMq27X} ${lsMq27Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA3}</color>
-			<visible>${bVis}</visible>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="md_marquee_sh28" extra="true">
-			<path>{game:marquee}</path>
-			<pos>${lsMq28X} ${lsMq28Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA3}</color>
-			<visible>${bVis}</visible>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="md_marquee_sh29" extra="true">
-			<path>{game:marquee}</path>
-			<pos>${lsMq29X} ${lsMq29Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA3}</color>
-			<visible>${bVis}</visible>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="md_marquee_sh30" extra="true">
-			<path>{game:marquee}</path>
-			<pos>${lsMq30X} ${lsMq30Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA3}</color>
-			<visible>${bVis}</visible>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="md_marquee_sh31" extra="true">
-			<path>{game:marquee}</path>
-			<pos>${lsMq31X} ${lsMq31Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA3}</color>
-			<visible>${bVis}</visible>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="md_marquee_sh32" extra="true">
-			<path>{game:marquee}</path>
-			<pos>${lsMq32X} ${lsMq32Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA3}</color>
-			<visible>${bVis}</visible>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="md_marquee_sh33" extra="true">
-			<path>{game:marquee}</path>
-			<pos>${lsMq33X} ${lsMq33Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA3}</color>
-			<visible>${bVis}</visible>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="md_marquee_sh34" extra="true">
-			<path>{game:marquee}</path>
-			<pos>${lsMq34X} ${lsMq34Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA3}</color>
-			<visible>${bVis}</visible>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="md_marquee_sh35" extra="true">
-			<path>{game:marquee}</path>
-			<pos>${lsMq35X} ${lsMq35Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA3}</color>
-			<visible>${bVis}</visible>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="md_marquee_sh36" extra="true">
-			<path>{game:marquee}</path>
-			<pos>${lsMq36X} ${lsMq36Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA3}</color>
-			<visible>${bVis}</visible>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="md_marquee_sh37" extra="true">
-			<path>{game:marquee}</path>
-			<pos>${lsMq37X} ${lsMq37Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA4}</color>
-			<visible>${bVis}</visible>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="md_marquee_sh38" extra="true">
-			<path>{game:marquee}</path>
-			<pos>${lsMq38X} ${lsMq38Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA4}</color>
-			<visible>${bVis}</visible>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="md_marquee_sh39" extra="true">
-			<path>{game:marquee}</path>
-			<pos>${lsMq39X} ${lsMq39Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA4}</color>
-			<visible>${bVis}</visible>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="md_marquee_sh40" extra="true">
-			<path>{game:marquee}</path>
-			<pos>${lsMq40X} ${lsMq40Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA4}</color>
-			<visible>${bVis}</visible>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="md_marquee_sh41" extra="true">
-			<path>{game:marquee}</path>
-			<pos>${lsMq41X} ${lsMq41Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA4}</color>
-			<visible>${bVis}</visible>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="md_marquee_sh42" extra="true">
-			<path>{game:marquee}</path>
-			<pos>${lsMq42X} ${lsMq42Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA4}</color>
-			<visible>${bVis}</visible>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="md_marquee_sh43" extra="true">
-			<path>{game:marquee}</path>
-			<pos>${lsMq43X} ${lsMq43Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA4}</color>
-			<visible>${bVis}</visible>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="md_marquee_sh44" extra="true">
-			<path>{game:marquee}</path>
-			<pos>${lsMq44X} ${lsMq44Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA4}</color>
-			<visible>${bVis}</visible>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="md_marquee_sh45" extra="true">
-			<path>{game:marquee}</path>
-			<pos>${lsMq45X} ${lsMq45Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA4}</color>
-			<visible>${bVis}</visible>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="md_marquee_sh46" extra="true">
-			<path>{game:marquee}</path>
-			<pos>${lsMq46X} ${lsMq46Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA4}</color>
-			<visible>${bVis}</visible>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="md_marquee_sh47" extra="true">
-			<path>{game:marquee}</path>
-			<pos>${lsMq47X} ${lsMq47Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA4}</color>
-			<visible>${bVis}</visible>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="md_marquee_sh48" extra="true">
-			<path>{game:marquee}</path>
-			<pos>${lsMq48X} ${lsMq48Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA4}</color>
+			<color>00000006</color>
 			<visible>${bVis}</visible>
 			<zIndex>34</zIndex>
 		</image>
@@ -500,7 +284,7 @@
 			<pos>${lsGame0X} ${lsGame0Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA0}</color>
+			<color>00000014</color>
 			<visible>{game:name} != '' &amp;&amp; !exists({game:marquee})</visible>
 			<zIndex>34</zIndex>
 		</image>
@@ -519,7 +303,7 @@
 			<pos>${lsGame1X} ${lsGame1Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA1}</color>
+			<color>0000000E</color>
 			<visible>{game:name} != '' &amp;&amp; !exists({game:marquee})</visible>
 			<zIndex>34</zIndex>
 		</image>
@@ -538,7 +322,7 @@
 			<pos>${lsGame2X} ${lsGame2Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA1}</color>
+			<color>0000000E</color>
 			<visible>{game:name} != '' &amp;&amp; !exists({game:marquee})</visible>
 			<zIndex>34</zIndex>
 		</image>
@@ -557,7 +341,7 @@
 			<pos>${lsGame3X} ${lsGame3Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA1}</color>
+			<color>0000000E</color>
 			<visible>{game:name} != '' &amp;&amp; !exists({game:marquee})</visible>
 			<zIndex>34</zIndex>
 		</image>
@@ -576,7 +360,7 @@
 			<pos>${lsGame4X} ${lsGame4Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA1}</color>
+			<color>0000000E</color>
 			<visible>{game:name} != '' &amp;&amp; !exists({game:marquee})</visible>
 			<zIndex>34</zIndex>
 		</image>
@@ -595,7 +379,7 @@
 			<pos>${lsGame5X} ${lsGame5Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA1}</color>
+			<color>0000000E</color>
 			<visible>{game:name} != '' &amp;&amp; !exists({game:marquee})</visible>
 			<zIndex>34</zIndex>
 		</image>
@@ -614,7 +398,7 @@
 			<pos>${lsGame6X} ${lsGame6Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA1}</color>
+			<color>0000000E</color>
 			<visible>{game:name} != '' &amp;&amp; !exists({game:marquee})</visible>
 			<zIndex>34</zIndex>
 		</image>
@@ -633,7 +417,7 @@
 			<pos>${lsGame7X} ${lsGame7Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA1}</color>
+			<color>0000000E</color>
 			<visible>{game:name} != '' &amp;&amp; !exists({game:marquee})</visible>
 			<zIndex>34</zIndex>
 		</image>
@@ -652,7 +436,7 @@
 			<pos>${lsGame8X} ${lsGame8Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA1}</color>
+			<color>0000000E</color>
 			<visible>{game:name} != '' &amp;&amp; !exists({game:marquee})</visible>
 			<zIndex>34</zIndex>
 		</image>
@@ -671,7 +455,7 @@
 			<pos>${lsGame9X} ${lsGame9Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA1}</color>
+			<color>0000000A</color>
 			<visible>{game:name} != '' &amp;&amp; !exists({game:marquee})</visible>
 			<zIndex>34</zIndex>
 		</image>
@@ -690,7 +474,7 @@
 			<pos>${lsGame10X} ${lsGame10Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA1}</color>
+			<color>0000000A</color>
 			<visible>{game:name} != '' &amp;&amp; !exists({game:marquee})</visible>
 			<zIndex>34</zIndex>
 		</image>
@@ -709,7 +493,7 @@
 			<pos>${lsGame11X} ${lsGame11Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA1}</color>
+			<color>0000000A</color>
 			<visible>{game:name} != '' &amp;&amp; !exists({game:marquee})</visible>
 			<zIndex>34</zIndex>
 		</image>
@@ -728,7 +512,7 @@
 			<pos>${lsGame12X} ${lsGame12Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA1}</color>
+			<color>0000000A</color>
 			<visible>{game:name} != '' &amp;&amp; !exists({game:marquee})</visible>
 			<zIndex>34</zIndex>
 		</image>
@@ -747,7 +531,7 @@
 			<pos>${lsGame13X} ${lsGame13Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA2}</color>
+			<color>0000000A</color>
 			<visible>{game:name} != '' &amp;&amp; !exists({game:marquee})</visible>
 			<zIndex>34</zIndex>
 		</image>
@@ -766,7 +550,7 @@
 			<pos>${lsGame14X} ${lsGame14Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA2}</color>
+			<color>0000000A</color>
 			<visible>{game:name} != '' &amp;&amp; !exists({game:marquee})</visible>
 			<zIndex>34</zIndex>
 		</image>
@@ -785,7 +569,7 @@
 			<pos>${lsGame15X} ${lsGame15Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA2}</color>
+			<color>0000000A</color>
 			<visible>{game:name} != '' &amp;&amp; !exists({game:marquee})</visible>
 			<zIndex>34</zIndex>
 		</image>
@@ -804,7 +588,7 @@
 			<pos>${lsGame16X} ${lsGame16Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA2}</color>
+			<color>0000000A</color>
 			<visible>{game:name} != '' &amp;&amp; !exists({game:marquee})</visible>
 			<zIndex>34</zIndex>
 		</image>
@@ -823,7 +607,7 @@
 			<pos>${lsGame17X} ${lsGame17Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA2}</color>
+			<color>00000006</color>
 			<visible>{game:name} != '' &amp;&amp; !exists({game:marquee})</visible>
 			<zIndex>34</zIndex>
 		</image>
@@ -842,7 +626,7 @@
 			<pos>${lsGame18X} ${lsGame18Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA2}</color>
+			<color>00000006</color>
 			<visible>{game:name} != '' &amp;&amp; !exists({game:marquee})</visible>
 			<zIndex>34</zIndex>
 		</image>
@@ -861,7 +645,7 @@
 			<pos>${lsGame19X} ${lsGame19Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA2}</color>
+			<color>00000006</color>
 			<visible>{game:name} != '' &amp;&amp; !exists({game:marquee})</visible>
 			<zIndex>34</zIndex>
 		</image>
@@ -880,7 +664,7 @@
 			<pos>${lsGame20X} ${lsGame20Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA2}</color>
+			<color>00000006</color>
 			<visible>{game:name} != '' &amp;&amp; !exists({game:marquee})</visible>
 			<zIndex>34</zIndex>
 		</image>
@@ -899,7 +683,7 @@
 			<pos>${lsGame21X} ${lsGame21Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA2}</color>
+			<color>00000006</color>
 			<visible>{game:name} != '' &amp;&amp; !exists({game:marquee})</visible>
 			<zIndex>34</zIndex>
 		</image>
@@ -918,7 +702,7 @@
 			<pos>${lsGame22X} ${lsGame22Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA2}</color>
+			<color>00000006</color>
 			<visible>{game:name} != '' &amp;&amp; !exists({game:marquee})</visible>
 			<zIndex>34</zIndex>
 		</image>
@@ -937,7 +721,7 @@
 			<pos>${lsGame23X} ${lsGame23Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA2}</color>
+			<color>00000006</color>
 			<visible>{game:name} != '' &amp;&amp; !exists({game:marquee})</visible>
 			<zIndex>34</zIndex>
 		</image>
@@ -956,463 +740,7 @@
 			<pos>${lsGame24X} ${lsGame24Y}</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA2}</color>
-			<visible>{game:name} != '' &amp;&amp; !exists({game:marquee})</visible>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="e_syslogo_sh25" extra="true" if="${bOn} == 1">
-			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-${logoRegion}.svg</path>
-			<pos>${lsGame25X} ${lsGame25Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA3}</color>
-			<visible>{game:name} != '' &amp;&amp; !exists({game:marquee})</visible>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="e_syslogo_sh26" extra="true" if="${bOn} == 1">
-			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-${logoRegion}.svg</path>
-			<pos>${lsGame26X} ${lsGame26Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA3}</color>
-			<visible>{game:name} != '' &amp;&amp; !exists({game:marquee})</visible>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="e_syslogo_sh27" extra="true" if="${bOn} == 1">
-			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-${logoRegion}.svg</path>
-			<pos>${lsGame27X} ${lsGame27Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA3}</color>
-			<visible>{game:name} != '' &amp;&amp; !exists({game:marquee})</visible>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="e_syslogo_sh28" extra="true" if="${bOn} == 1">
-			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-${logoRegion}.svg</path>
-			<pos>${lsGame28X} ${lsGame28Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA3}</color>
-			<visible>{game:name} != '' &amp;&amp; !exists({game:marquee})</visible>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="e_syslogo_sh29" extra="true" if="${bOn} == 1">
-			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-${logoRegion}.svg</path>
-			<pos>${lsGame29X} ${lsGame29Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA3}</color>
-			<visible>{game:name} != '' &amp;&amp; !exists({game:marquee})</visible>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="e_syslogo_sh30" extra="true" if="${bOn} == 1">
-			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-${logoRegion}.svg</path>
-			<pos>${lsGame30X} ${lsGame30Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA3}</color>
-			<visible>{game:name} != '' &amp;&amp; !exists({game:marquee})</visible>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="e_syslogo_sh31" extra="true" if="${bOn} == 1">
-			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-${logoRegion}.svg</path>
-			<pos>${lsGame31X} ${lsGame31Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA3}</color>
-			<visible>{game:name} != '' &amp;&amp; !exists({game:marquee})</visible>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="e_syslogo_sh32" extra="true" if="${bOn} == 1">
-			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-${logoRegion}.svg</path>
-			<pos>${lsGame32X} ${lsGame32Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA3}</color>
-			<visible>{game:name} != '' &amp;&amp; !exists({game:marquee})</visible>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="e_syslogo_sh33" extra="true" if="${bOn} == 1">
-			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-${logoRegion}.svg</path>
-			<pos>${lsGame33X} ${lsGame33Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA3}</color>
-			<visible>{game:name} != '' &amp;&amp; !exists({game:marquee})</visible>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="e_syslogo_sh34" extra="true" if="${bOn} == 1">
-			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-${logoRegion}.svg</path>
-			<pos>${lsGame34X} ${lsGame34Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA3}</color>
-			<visible>{game:name} != '' &amp;&amp; !exists({game:marquee})</visible>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="e_syslogo_sh35" extra="true" if="${bOn} == 1">
-			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-${logoRegion}.svg</path>
-			<pos>${lsGame35X} ${lsGame35Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA3}</color>
-			<visible>{game:name} != '' &amp;&amp; !exists({game:marquee})</visible>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="e_syslogo_sh36" extra="true" if="${bOn} == 1">
-			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-${logoRegion}.svg</path>
-			<pos>${lsGame36X} ${lsGame36Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA3}</color>
-			<visible>{game:name} != '' &amp;&amp; !exists({game:marquee})</visible>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="e_syslogo_sh37" extra="true" if="${bOn} == 1">
-			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-${logoRegion}.svg</path>
-			<pos>${lsGame37X} ${lsGame37Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA4}</color>
-			<visible>{game:name} != '' &amp;&amp; !exists({game:marquee})</visible>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="e_syslogo_sh38" extra="true" if="${bOn} == 1">
-			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-${logoRegion}.svg</path>
-			<pos>${lsGame38X} ${lsGame38Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA4}</color>
-			<visible>{game:name} != '' &amp;&amp; !exists({game:marquee})</visible>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="e_syslogo_sh39" extra="true" if="${bOn} == 1">
-			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-${logoRegion}.svg</path>
-			<pos>${lsGame39X} ${lsGame39Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA4}</color>
-			<visible>{game:name} != '' &amp;&amp; !exists({game:marquee})</visible>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="e_syslogo_sh40" extra="true" if="${bOn} == 1">
-			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-${logoRegion}.svg</path>
-			<pos>${lsGame40X} ${lsGame40Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA4}</color>
-			<visible>{game:name} != '' &amp;&amp; !exists({game:marquee})</visible>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="e_syslogo_sh41" extra="true" if="${bOn} == 1">
-			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-${logoRegion}.svg</path>
-			<pos>${lsGame41X} ${lsGame41Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA4}</color>
-			<visible>{game:name} != '' &amp;&amp; !exists({game:marquee})</visible>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="e_syslogo_sh42" extra="true" if="${bOn} == 1">
-			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-${logoRegion}.svg</path>
-			<pos>${lsGame42X} ${lsGame42Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA4}</color>
-			<visible>{game:name} != '' &amp;&amp; !exists({game:marquee})</visible>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="e_syslogo_sh43" extra="true" if="${bOn} == 1">
-			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-${logoRegion}.svg</path>
-			<pos>${lsGame43X} ${lsGame43Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA4}</color>
-			<visible>{game:name} != '' &amp;&amp; !exists({game:marquee})</visible>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="e_syslogo_sh44" extra="true" if="${bOn} == 1">
-			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-${logoRegion}.svg</path>
-			<pos>${lsGame44X} ${lsGame44Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA4}</color>
-			<visible>{game:name} != '' &amp;&amp; !exists({game:marquee})</visible>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="e_syslogo_sh45" extra="true" if="${bOn} == 1">
-			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-${logoRegion}.svg</path>
-			<pos>${lsGame45X} ${lsGame45Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA4}</color>
-			<visible>{game:name} != '' &amp;&amp; !exists({game:marquee})</visible>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="e_syslogo_sh46" extra="true" if="${bOn} == 1">
-			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-${logoRegion}.svg</path>
-			<pos>${lsGame46X} ${lsGame46Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA4}</color>
-			<visible>{game:name} != '' &amp;&amp; !exists({game:marquee})</visible>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="e_syslogo_sh47" extra="true" if="${bOn} == 1">
-			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-${logoRegion}.svg</path>
-			<pos>${lsGame47X} ${lsGame47Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA4}</color>
-			<visible>{game:name} != '' &amp;&amp; !exists({game:marquee})</visible>
-			<zIndex>34</zIndex>
-		</image>
-		<image name="e_syslogo_sh48" extra="true" if="${bOn} == 1">
-			<path>${themePath}/_inc/system_logos/${system.theme}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}-${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-jp.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-us.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-eu.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/${logoRegion}.svg</path>
-			<path>${themePath}/_inc/system_logos/${system.theme}/dark-${logoRegion}.svg</path>
-			<pos>${lsGame48X} ${lsGame48Y}</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>${logoMaxW} ${logoMaxH}</maxSize>
-			<color>000000${lsA4}</color>
+			<color>00000006</color>
 			<visible>{game:name} != '' &amp;&amp; !exists({game:marquee})</visible>
 			<zIndex>34</zIndex>
 		</image>
