@@ -55,13 +55,13 @@
 
 	<view name="menu">
 		<menuBackground name="menubg">
-			<color>${box}F2</color>
+			<color>${menuBg}F2</color>
 		</menuBackground>
 		<menuText name="menutext">
 			<fontPath>${fontMenuItem}</fontPath>
 			<fontSize>0.027</fontSize>
 			<color>${text}</color>
-			<selectedColor>${box}</selectedColor> <!-- the menu background colour on the selected bar -->
+			<selectedColor>${menuBg}</selectedColor> <!-- the menu background colour on the selected bar -->
 			<selectorColor>${menuAccent}</selectorColor>
 			<separatorColor>${menuAccent}55</separatorColor>
 		</menuText>
