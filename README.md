@@ -163,9 +163,9 @@ AFTER `common.xml`. Xbox, PlayStation and SNES map the *physical position* of Ba
 The system and game icon grids show `Cols` full columns and a part (`gPeek`, 45 %) of the next tile at the right edge. ES clips the tiles to the whole grid rectangle, padding included, so the right padding (`sPadR` / `gPadR`, computed in `geometry.xml`) is exactly the room of that tile. `Cols` is the number of FULL columns, so ES scrolls one column when the cursor passes the last full one. Untested in a real ES.
 
 ## Selection halo everywhere
-- The selection marker is a crisp rounded-rectangle frame: 1 px white outline, a band in the colour set's `neon` colour, and a 1 px white inner line. No glow, no veil.
-- Icon tiles (system and game grids): `assets/ui/neon-<set>.png` (nine-patch, band 14 px = `tPad`, coloured band 4 px), 1 px from the image. List rows (basic and detailed): `assets/ui/neon-row-<set>.png` (band 12 px, coloured band 3 px) covers the whole selected row (`list-row-neon` in the row template); the old filled pill is gone.
-- Colours are baked into the PNGs (white stays white), so layouts tint with `FFFFFFFF`; each colour set names its pair with `<neonSet>`. Regenerate all with `python3 tools/make_neon.py` (reads `<neon>` from `_inc/colorsets/*.xml`).
+- The selection marker is a crisp rounded-rectangle frame: 1 px white outline, then a band that runs from the colour set's `neon` (outside) to `neon2` (inside) and fades into white at its inner edge. No glow, no veil.
+- Icon tiles (system and game grids): `assets/ui/neon-<set>.png` (nine-patch, band 14 px = `tPad`, gradient band 7 px), 1 px from the image. List rows (basic and detailed): `assets/ui/neon-row-<set>.png` (band 12 px, gradient band 3 px) covers the whole selected row (`list-row-neon` in the row template); the old filled pill is gone.
+- Colours are baked into the PNGs (white stays white), so layouts tint with `FFFFFFFF`; each colour set names its pair with `<neonSet>`. Regenerate all with `python3 tools/make_neon.py` (reads `<neon>` and `<neon2>` from `_inc/colorsets/*.xml`).
 - Menus: ES only offers a flat selector colour there (no image), so the bar is `${neon}` at 35 % opacity; no frame is possible.
-- Neon per set: Black `9B6BFF`, Light gray `2EE6C0`, Deep blue `7DF9FF`, GameCube purple `5CF2FF`, Vivid red `FFF04D`, Aqua green `FF2E9A`.
+- Frame colours per set (neon -> neon2): Black purple `9B6BFF` -> indigo `3F36F0`, Light gray aquamarine `2EE6C0` -> cyan `12C4FF`, Deep blue `7DF9FF` -> `4D8DFF`, GameCube purple `5CF2FF` -> `7A6BFF`, Vivid red `FFF04D` -> `FF9A3D`, Aqua green `FF2E9A` -> `C03DFF`.
 - Untested in a real ES: the row frame relies on colour storyboards of a `ninepatch` inside the list item template.

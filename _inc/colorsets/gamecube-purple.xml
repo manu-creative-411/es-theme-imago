@@ -16,6 +16,7 @@
 		<wallpaperB1>${themePath}/assets/wallpapers/gamecube-purple-b1.svg</wallpaperB1> <!-- recorte bajo el banner, 1 fila -->
 		<wallpaperB2>${themePath}/assets/wallpapers/gamecube-purple-b2.svg</wallpaperB2> <!-- recorte bajo el banner, 2 filas -->
 		<neon>5CF2FF</neon>         <!-- color del selector neon (contorno + resplandor) -->
+		<neon2>7A6BFF</neon2>        <!-- second colour of the selection frame gradient (baked by tools/make_neon.py) -->
 		<neonSet>gamecube-purple</neonSet> <!-- suffix of assets/ui/neon-<set>.png and neon-row-<set>.png (see tools/make_neon.py) -->
 		<logoColorScheme>dark</logoColorScheme> <!-- dark|light: picks <system>/<scheme>[-<region>].svg in _inc/system_logos -->
 		<!-- Texture (iconic-style): shadow + vertical gradient body + hairline edge, selected row, separators, scrollbar. Derived from tile / accent / text. -->

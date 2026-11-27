@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Generate the selection frames: assets/ui/neon-<set>.png (grid tiles) and assets/ui/neon-row-<set>.png (list rows).
 
-Each PNG is a nine-patch holding a crisp rounded-rectangle frame: 1 px white outline, a band in the colour set's
-<neon> colour, and a 1 px white inner line. The colours are baked in, so the layouts tint with white (FFFFFFFF).
-One pair of files per colour set in _inc/colorsets/ (the <neon> value is read from each XML).
+Each PNG is a nine-patch holding a crisp rounded-rectangle frame: 1 px white outline, then a band that goes from the
+<neon> colour (outside) to <neon2> (inside) and fades into white at its inner edge. The colours are baked in, so the layouts tint with white (FFFFFFFF).
+One pair of files per colour set in _inc/colorsets/ (<neon> and <neon2> are read from each XML).
 
 Usage: python3 tools/make_neon.py            (all sets)
 Constraint: TILE_BAND must equal <tPad> in _inc/options/tiles.xml; ROW_BAND must equal cornerSize in gen lists (12).
@@ -16,44 +16,44 @@ from PIL import Image
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SS = 8            # supersampling
 TILE_BAND = 14    # px of the tile nine-patch border (== tPad)
-TILE_THICK = 4    # px of the coloured band on tiles
-TILE_GAP = 1      # px between the inner white line and the image
-TILE_RADIUS = 9   # outer corner radius
+TILE_THICK = 7    # px of the gradient band on tiles (between the outer white line and the inner blend)
+TILE_GAP = 1      # px between the frame and the image
+TILE_RADIUS = 12  # outer corner radius
 ROW_BAND = 12
 ROW_THICK = 3
 ROW_RADIUS = 8
+BLEND = 0.35      # fraction of the band, at its inner side, that fades smoothly to white
 CENTRE = 32       # stretchable centre
 
 
 def hex_rgb(value):
-    return tuple(int(value[i:i + 2], 16) for i in (0, 2, 4))
+    return np.array([int(value[i:i + 2], 16) for i in (0, 2, 4)], np.float32) / 255
 
 
-def frame(band, thick, offset, radius, colour):
-    """Return an RGBA image: white / colour / white rounded frame whose outer edge is `offset` px from the edge."""
+def frame(band, thick, offset, radius, col1, col2):
+    """RGBA nine-patch: 1 px white outline, a band going from col1 (outside) to col2 (inside) whose inner part
+    blends into white, all in a rounded rectangle whose outer edge is `offset` px from the patch edge."""
     size = band * 2 + CENTRE
     big = size * SS
-    acc = np.zeros((big, big, 4), np.float32)   # premultiplied
-
-    def paint(inset, rad, rgb, alpha):
-        img = np.zeros((big, big), bool)
-        yy, xx = np.mgrid[0:big, 0:big]
-        lo, hi = inset * SS, big - inset * SS
-        r = max(rad, 0.01) * SS
-        cx = np.clip(xx + 0.5, lo + r, hi - r)
-        cy = np.clip(yy + 0.5, lo + r, hi - r)
-        img = ((xx + 0.5 - cx) ** 2 + (yy + 0.5 - cy) ** 2 <= r * r) & (xx >= lo) & (xx < hi) & (yy >= lo) & (yy < hi)
-        acc[img, :3] = np.array(rgb, np.float32) / 255 * alpha
-        acc[img, 3] = alpha
-
-    paint(offset, radius, (255, 255, 255), 1.0)
-    paint(offset + 1, radius - 1, colour, 1.0)
-    paint(offset + 1 + thick, radius - 1 - thick, (255, 255, 255), 1.0)
-    paint(offset + 2 + thick, radius - 2 - thick, (0, 0, 0), 0.0)
+    yy, xx = np.mgrid[0:big, 0:big]
+    px, py = (xx + 0.5) / SS - size / 2, (yy + 0.5) / SS - size / 2
+    half = size / 2 - offset
+    qx, qy = np.abs(px) - (half - radius), np.abs(py) - (half - radius)
+    sd = np.hypot(np.maximum(qx, 0), np.maximum(qy, 0)) + np.minimum(np.maximum(qx, qy), 0) - radius
+    depth = -sd                                   # px inwards from the outer edge
+    inside = (depth >= 0) & (depth < 1 + thick)
+    t = np.clip((depth - 1) / thick, 0, 1)[..., None]
+    rgb = col1 * (1 - t) + col2 * t
+    w = np.clip((t - (1 - BLEND)) / BLEND, 0, 1)  # 0 -> 1 across the inner part of the band
+    w = w * w * (3 - 2 * w)
+    rgb = rgb * (1 - w) + w
+    rgb = np.where((depth < 1)[..., None], 1.0, rgb)   # crisp 1 px white outline
+    acc = np.zeros((big, big, 4), np.float32)
+    acc[..., :3] = rgb * inside[..., None]
+    acc[..., 3] = inside
     small = acc.reshape(size, SS, size, SS, 4).mean(axis=(1, 3))
     alpha = small[..., 3:4]
-    rgb = np.where(alpha > 0, small[..., :3] / np.maximum(alpha, 1e-6), 1.0)
-    out = np.concatenate([rgb, alpha], axis=2)
+    out = np.concatenate([np.where(alpha > 0, small[..., :3] / np.maximum(alpha, 1e-6), 1.0), alpha], axis=2)
     return Image.fromarray((np.clip(out, 0, 1) * 255 + 0.5).astype(np.uint8), "RGBA")
 
 
@@ -65,15 +65,17 @@ def main():
             continue
         name = fname[:-4]
         with open(os.path.join(sets_dir, fname), encoding="utf-8") as fh:
-            match = re.search(r"<neon>([0-9A-Fa-f]{6})</neon>", fh.read())
-        if not match:
+            text = fh.read()
+        match = re.search(r"<neon>([0-9A-Fa-f]{6})</neon>", text)
+        match2 = re.search(r"<neon2>([0-9A-Fa-f]{6})</neon2>", text)
+        if not match or not match2:
             continue
-        colour = hex_rgb(match.group(1))
-        tile = frame(TILE_BAND, TILE_THICK, TILE_BAND - TILE_GAP - 2 - TILE_THICK, TILE_RADIUS, colour)
-        row = frame(ROW_BAND, ROW_THICK, 0, ROW_RADIUS, colour)
+        col1, col2 = hex_rgb(match.group(1)), hex_rgb(match2.group(1))
+        tile = frame(TILE_BAND, TILE_THICK, TILE_BAND - TILE_GAP - 1 - TILE_THICK, TILE_RADIUS, col1, col2)
+        row = frame(ROW_BAND, ROW_THICK, 0, ROW_RADIUS, col1, col2)
         tile.save(os.path.join(ui_dir, f"neon-{name}.png"))
         row.save(os.path.join(ui_dir, f"neon-row-{name}.png"))
-        print("ok:", name, match.group(1))
+        print("ok:", name, match.group(1), match2.group(1))
 
 
 if __name__ == "__main__":
