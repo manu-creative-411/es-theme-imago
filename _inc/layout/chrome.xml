@@ -80,6 +80,10 @@
 				<networkIcon>${themePath}/assets/icons/network-icon-on.svg</networkIcon>
 				<planemodeIcon>${themePath}/assets/icons/network-icon-off.svg</planemodeIcon>
 			</networkIcon>
+			<rectangle name="e_status_gap" extra="true">
+				<size>0.012 0.01</size>
+				<color>00000000</color>
+			</rectangle>
 			<clock name="e_status_clock" extra="true">
 				<color>${text}</color>
 				<fontSize>0.024</fontSize>

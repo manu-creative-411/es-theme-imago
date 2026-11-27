@@ -91,7 +91,7 @@
 		<rowYearX>0.915</rowYearX>
 		<rowDevX>0.615</rowDevX>
 		<capR>${screen.height} * ${capH} / 2</capR>
-		<capInW>0.2176 / ${scrRatio} + 0.024</capInW>
+		<capInW>0.2176 / ${scrRatio} + 0.044</capInW>
 		<capInX>0 + ${capX} + (${capW} - ${capInW}) / 2</capInX>
 		<capStackH>0.044</capStackH>
 		<capStackY>0 + ${capY} + (${capH} - ${capStackH}) / 2</capStackY>
